@@ -1,22 +1,29 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div style="text-align: center;">
 
-## Getting Started
+## Клиент системы аренды сельскохозяйственной техники
 
-First, run the development server:
+Разработан в рамках Акселератора Яндекс Практикума 🚀
+
+![next](https://img.shields.io/badge/Next-13.4.10-blue)
+![react](https://img.shields.io/badge/React-18.2.0-blue)
+![typescript](https://img.shields.io/badge/Typescript-5.1.6-blue)
+![storybook](https://img.shields.io/badge/Storybook-7.1.0-blue)
+![jest](https://img.shields.io/badge/Jest-29.6.1-blue)
+![node](https://img.shields.io/badge/Node-18-blue)
+
+</div>
+
+Development next server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Storybook:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+npm run storybook
+```
 
 ## Learn More
 

@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
-    "test": "jest"
+    "test": "jest",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@types/node": "20.4.2",
@@ -22,10 +24,20 @@
     "typescript": "5.1.6"
   },
   "devDependencies": {
+    "@storybook/addon-essentials": "7.1.0",
+    "@storybook/addon-interactions": "7.1.0",
+    "@storybook/addon-links": "7.1.0",
+    "@storybook/addon-onboarding": "1.0.7",
+    "@storybook/blocks": "7.1.0",
+    "@storybook/nextjs": "7.1.0",
+    "@storybook/react": "7.1.0",
+    "@storybook/testing-library": "0.2.0",
     "@types/jest": "29.5.3",
+    "eslint-plugin-storybook": "0.6.12",
     "jest": "29.6.1",
     "jest-environment-jsdom": "29.6.1",
     "prettier": "3.0.0",
+    "storybook": "7.1.0",
     "ts-jest": "29.1.1"
   },
   "engines": {
