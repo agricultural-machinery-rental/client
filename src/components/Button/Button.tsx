@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import React, { FC } from "react";
+import React, { FC } from 'react';
 
 export type TButton = {
   label: string;
