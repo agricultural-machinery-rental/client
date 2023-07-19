@@ -10,9 +10,9 @@ const Button: FC<TButton> = ({ label }) => {
   const handleClick = () => {
     alert(label);
     alert(label);
-    alert(label)
-    alert(label)
     alert(label);
+    alert(label)
+    alert(label)
     alert(label);
   };
 
