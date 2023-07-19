@@ -8,17 +8,10 @@
     "prettier"
   ],
   "plugins": ["@typescript-eslint", "react-hooks"],
-  "ignorePatterns": [
-    "/node_modules",
-    "/.stotybook",
-    "/.next"
-  ],
+  "ignorePatterns": ["/node_modules", "/.stotybook", "/.next"],
   "rules": {
     "no-unused-vars": "off",
-    "no-multiple-empty-lines": [
-      "error",
-      {"max": 2, "maxEOF": 1}
-    ],
+    "no-multiple-empty-lines": ["error", { "max": 2, "maxEOF": 1 }],
     "@typescript-eslint/no-unused-vars": "warn",
     "@typescript-eslint/no-inferrable-types": "off",
     "@typescript-eslint/ban-ts-comment": "warn",

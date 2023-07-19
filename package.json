@@ -51,7 +51,6 @@
     "node": ">=18"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": "npm run lint",
-    "*.{js,jsx,ts,tsx,json,css,scss,md}": "npm run format"
+    "*.{js,jsx,ts,tsx}": "npm run lint"
   }
 }
