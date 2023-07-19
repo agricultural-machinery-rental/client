@@ -17,7 +17,7 @@
     "no-unused-vars": "off",
     "no-multiple-empty-lines": [
       "error",
-      {"max": 1, "maxEOF": 0}
+      {"max": 2, "maxEOF": 1}
     ],
     "@typescript-eslint/no-unused-vars": "warn",
     "@typescript-eslint/no-inferrable-types": "off",
