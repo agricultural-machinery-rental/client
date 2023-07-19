@@ -4,8 +4,7 @@ import React, { FC } from 'react';
 
 export type TButton = {
   label: string;
-}
-
+};
 
 const Button: FC<TButton> = ({ label }) => {
   const handleClick = () => {
