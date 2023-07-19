@@ -10,7 +10,8 @@
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
     "test": "jest",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@types/node": "20.4.2",
@@ -38,13 +39,19 @@
     "eslint-config-prettier": "8.8.0",
     "eslint-plugin-prettier": "5.0.0",
     "eslint-plugin-storybook": "0.6.12",
+    "husky": "8.0.3",
     "jest": "29.6.1",
     "jest-environment-jsdom": "29.6.1",
+    "lint-staged": "13.2.3",
     "prettier": "3.0.0",
     "storybook": "7.1.0",
     "ts-jest": "29.1.1"
   },
   "engines": {
     "node": ">=18"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": "npm run lint",
+    "*.{js,jsx,ts,tsx,json,css,scss,md}": "npm run format"
   }
 }
