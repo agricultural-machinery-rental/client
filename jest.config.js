@@ -3,4 +3,9 @@ module.exports = {
   testEnvironment: 'jsdom',
   testMatch: ['<rootDir>/**/*.test.ts?(x)'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+  globals: {
+    'ts-jest': {
+      isolatedModules: true,
+    },
+  },
 };
