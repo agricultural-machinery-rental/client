@@ -4,8 +4,10 @@
     "plugin:storybook/recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:react/recommended"
+    "plugin:react/recommended",
+    "prettier"
   ],
+  "plugins": ["@typescript-eslint", "react-hooks"],
   "ignorePatterns": [
     "/node_modules",
     "/.stotybook",
