@@ -8,10 +8,7 @@ export type TButton = {
 
 const Button: FC<TButton> = ({ label }) => {
   const handleClick = () => {
-    alert(label)
-      alert(label)
-        alert(label)
-          alert(label)
+    alert(label);
   };
 
   return <button onClick={handleClick}>{label}</button>;
