@@ -11,7 +11,8 @@
     "test": "jest",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "commit": "cz"
   },
   "dependencies": {
     "@types/node": "20.4.2",
@@ -37,6 +38,8 @@
     "@types/jest": "29.5.3",
     "@typescript-eslint/eslint-plugin": "6.1.0",
     "@typescript-eslint/parser": "6.1.0",
+    "commitizen": "4.3.0",
+    "cz-conventional-changelog": "3.3.0",
     "eslint-config-prettier": "8.8.0",
     "eslint-plugin-prettier": "5.0.0",
     "eslint-plugin-storybook": "0.6.12",
@@ -53,5 +56,10 @@
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": "npm run format"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
