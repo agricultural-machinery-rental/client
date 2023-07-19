@@ -8,7 +8,7 @@
     "prettier"
   ],
   "plugins": ["@typescript-eslint", "react-hooks"],
-  "ignorePatterns": ["/node_modules", "/.stotybook", "/.next"],
+  "ignorePatterns": ["/node_modules", "/.stotybook", "/.next", "/storybook-static"],
   "rules": {
     "no-unused-vars": "off",
     "no-multiple-empty-lines": ["error", { "max": 2, "maxEOF": 1 }],
