@@ -1,5 +1,5 @@
 export {};
 
 test('Example test', () => {
-  expect(1 + 4).toBe(5);
+  expect(1 + 5).toBe(6);
 });
