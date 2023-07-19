@@ -22,8 +22,8 @@
     "next": "13.4.10",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "typescript": "4.9.5",
-    "ts-jest": "29.1.1"
+    "ts-jest": "29.1.1",
+    "typescript": "4.9.5"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "7.1.0",
