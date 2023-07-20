@@ -1,0 +1,65 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "prettier . --write \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
+    "test": "jest",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "prepare": "husky install",
+    "commit": "cz"
+  },
+  "dependencies": {
+    "@types/node": "20.4.2",
+    "@types/react": "18.2.15",
+    "@types/react-dom": "18.2.7",
+    "eslint": "8.45.0",
+    "eslint-config-next": "13.4.10",
+    "next": "13.4.10",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "ts-jest": "29.1.1",
+    "typescript": "4.9.5"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "7.1.0",
+    "@storybook/addon-interactions": "7.1.0",
+    "@storybook/addon-links": "7.1.0",
+    "@storybook/addon-onboarding": "1.0.7",
+    "@storybook/blocks": "7.1.0",
+    "@storybook/nextjs": "7.1.0",
+    "@storybook/react": "7.1.0",
+    "@storybook/testing-library": "0.2.0",
+    "@types/jest": "29.5.3",
+    "@typescript-eslint/eslint-plugin": "6.1.0",
+    "@typescript-eslint/parser": "6.1.0",
+    "commitizen": "4.3.0",
+    "cz-conventional-changelog": "3.3.0",
+    "eslint-config-prettier": "8.8.0",
+    "eslint-plugin-prettier": "5.0.0",
+    "eslint-plugin-storybook": "0.6.12",
+    "husky": "8.0.3",
+    "jest": "29.6.1",
+    "jest-environment-jsdom": "29.6.1",
+    "lint-staged": "13.2.3",
+    "prettier": "3.0.0",
+    "storybook": "7.1.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": "npm run format"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
