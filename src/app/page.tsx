@@ -1,44 +1,11 @@
 import Image from 'next/image';
 import styles from './page.module.css';
-import Button from '@/components/Button/Button';
+import Button from '@/components/UI/Button/Button';
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          1Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <Button label='Баттон' />
-        <div>
-          <a
-            href='https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <Image
-              src='/vercel.svg'
-              alt='Vercel Logo'
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src='/next.svg'
-          alt='Next.js Logo'
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <Button label='Баттон' />
 
       <div className={styles.grid}>
         <a
@@ -48,9 +15,8 @@ export default function Home() {
           rel='noopener noreferrer'
         >
           <h2>
-            Docs <span>-&gt;</span>
+            Тракторы <span>-&gt;</span>
           </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
         </a>
 
         <a
@@ -60,9 +26,8 @@ export default function Home() {
           rel='noopener noreferrer'
         >
           <h2>
-            Learn <span>-&gt;</span>
+            Комбаины <span>-&gt;</span>
           </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
         </a>
 
         <a
@@ -72,9 +37,8 @@ export default function Home() {
           rel='noopener noreferrer'
         >
           <h2>
-            Templates <span>-&gt;</span>
+            Сеялки <span>-&gt;</span>
           </h2>
-          <p>Explore the Next.js 13 playground.</p>
         </a>
 
         <a
@@ -84,9 +48,8 @@ export default function Home() {
           rel='noopener noreferrer'
         >
           <h2>
-            Deploy <span>-&gt;</span>
+            Опрыскиватели <span>-&gt;</span>
           </h2>
-          <p>Instantly deploy your Next.js site to a shareable URL with Vercel.</p>
         </a>
       </div>
     </main>
