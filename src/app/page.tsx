@@ -5,7 +5,7 @@ import Button from '@/components/UI/Button/Button';
 export default function Home() {
   return (
     <main className={styles.main}>
-      <Button label='Баттон' />
+      <Button label='Баттон' $designType='primary' />
 
       <div className={styles.grid}>
         <a
