@@ -1,12 +1,8 @@
 'use client';
 
+import type { TButton } from '@/components/UI/Button/typing';
 import React, { FC } from 'react';
 import { StButton } from './styled';
-
-export type TButton = {
-  label?: string;
-  $designType?: 'primary' | 'secondary';
-};
 
 const Button: FC<TButton> = ({ label, $designType }) => {
   const handleClick = () => {
