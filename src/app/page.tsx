@@ -1,11 +1,25 @@
-import Image from 'next/image';
-import styles from './page.module.css';
-import Button from '@/components/UI/Button/Button';
+const Home = () => {
+  const hello = () => {
+    let result = 'Hello, world! ';
+    for (let x = 0; x < 10; x++) {
+      result += result;
+    }
+    return result;
+  };
+
+  return <div>{hello()}</div>;
+};
+export default Home;
+
+/*import styles from './page.module.css';
+import { Button, DesignType, type TButton } from '@/components/UI/Button';
 
 export default function Home() {
+  const x: TButton = null;
   return (
     <main className={styles.main}>
-      <Button label='Баттон' $designType='primary' />
+      <Button label='Баттон' $designType={DesignType.Primary} />
+
 
       <div className={styles.grid}>
         <a
@@ -55,3 +69,4 @@ export default function Home() {
     </main>
   );
 }
+*/

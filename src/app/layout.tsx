@@ -6,6 +6,8 @@ import React from 'react';
 import { Footer } from '@/components/Footer/Footer';
 import StyledComponentsRegistry from '../../lib/registry';
 
+import { BodyWrapper, HeaderWrapper, MainContentWrapper, FooterWrapper } from './styles';
+
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
@@ -18,9 +20,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang='en'>
       <body className={inter.className}>
         <StyledComponentsRegistry>
-          <Header />
-          <main>{children}</main>
-          <Footer />
+          <BodyWrapper>
+            <HeaderWrapper>
+              <Header />
+            </HeaderWrapper>
+            <MainContentWrapper>{children}</MainContentWrapper>
+            <FooterWrapper>
+              <Footer />
+            </FooterWrapper>
+          </BodyWrapper>
         </StyledComponentsRegistry>
       </body>
     </html>
