@@ -1,17 +1,16 @@
 'use client';
 
-/* Core */
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { FC } from 'react';
 
-export const Nav = () => {
-  const pathname = usePathname();
+import { StNav, StNavLink } from './styled';
+import type { TNavProps } from './typing';
 
-  return (
-    <nav>
-      <Link href='/about'>О нас</Link>
-
-      <Link href='/signin'>Вход</Link>
-    </nav>
-  );
-};
+export const Nav: FC<TNavProps> = ({ navItems }) => (
+  <StNav $gap={52}>
+    {navItems.map((item, index) => (
+      <StNavLink key={`menu-item-${index}`} href={item.link} $justifyContent='center'>
+        {item.title}
+      </StNavLink>
+    ))}
+  </StNav>
+);
