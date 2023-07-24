@@ -1,10 +1,10 @@
 'use client';
 
-import type { TButton } from '@/components/UI/Button/typing';
 import React, { FC } from 'react';
+import type { TButton } from '@/components/UI/Button/typing';
 import { StButton } from './styled';
 
-const Button: FC<TButton> = ({
+export const Button: FC<TButton> = ({
   label,
   designType = 'primary',
   shape = 'round',
@@ -18,7 +18,7 @@ const Button: FC<TButton> = ({
   return (
     <StButton
       designType={designType}
-      sizeType={sizeType}
+      //sizeType={sizeType}
       shape={shape}
       {...props}
       onClick={handleClick}
@@ -27,5 +27,3 @@ const Button: FC<TButton> = ({
     </StButton>
   );
 };
-
-export default Button;

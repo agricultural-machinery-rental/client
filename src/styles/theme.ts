@@ -30,7 +30,7 @@ export const theme = {
     large: '20px 50px',
   },
   borderRadius: {
-    round: '9px',
+    round: '8px',
     square: '0px',
   },
 };
