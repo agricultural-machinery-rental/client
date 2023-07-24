@@ -50,3 +50,16 @@ export const StNextLink = styled(Link)<TNextLink>`
     text-decoration: underline;
   }
 `;
+
+export const StNextSpan = styled.span<TNextLink>`
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: ${({ $justifyContent }) => ($justifyContent ? $justifyContent : 'flex-start')};
+
+  &&:hover {
+    text-decoration: underline;
+  }
+`;

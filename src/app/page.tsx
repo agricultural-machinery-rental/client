@@ -1,11 +1,10 @@
-import Image from 'next/image';
+import { Button, DesignType } from '@/components/UI/Button';
 import styles from './page.module.css';
-import Button from '@/components/UI/Button/Button';
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <Button label='Баттон' $designType='primary' />
+      <Button label='Баттон' $designType={DesignType.Primary} />
 
       <div className={styles.grid}>
         <a
