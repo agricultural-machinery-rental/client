@@ -5,4 +5,5 @@ export enum PATH {
   SignUp = '/signUp',
   Profile = '/profile',
   Catalog = '/catalog',
+  Categories = '/categories',
 }
