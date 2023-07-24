@@ -1,17 +1,47 @@
 import styled from 'styled-components';
 import { DesignType, type TButton } from './typing';
-
-export const COLOR_ELEMENT_PRIMARY = '#fff';
-export const COLOR_ELEMENT_SECONDARY = '#000';
+import { theme } from '@/styles/theme';
 
 export const StButton = styled.button<TButton>`
-  background-color: ${({ $designType }) => {
-    return $designType === DesignType.Primary ? COLOR_ELEMENT_PRIMARY : COLOR_ELEMENT_SECONDARY;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border: 1px solid black;
+  cursor: pointer;
+
+  border-radius: ${({ shape }) =>
+    shape === 'round' ? theme.borderRadius.round : theme.borderRadius.square};
+
+  color: ${({ designType }) =>
+    designType === 'primary' ? theme.colorsText.primary : theme.colorsText.secondary};
+
+  background-color: ${({ designType }) =>
+    designType === 'primary' ? theme.colors.primary : theme.colors.secondary};
+
+  line-height: ${({ sizeType }) => {
+    return sizeType === 'small'
+      ? theme.sizesHeight.small
+      : 'middle'
+      ? theme.sizesHeight.medium
+      : 'large'
+      ? theme.sizesHeight.large
+      : '';
+  }};
+
+  padding: ${({ sizeType }) => {
+    return sizeType === 'small'
+      ? theme.padding.small
+      : 'middle'
+      ? theme.padding.medium
+      : 'large'
+      ? theme.padding.large
+      : '';
   }};
 
   &:hover {
-    background-color: ${({ $designType }) => {
-      return $designType === DesignType.Primary ? COLOR_ELEMENT_SECONDARY : COLOR_ELEMENT_PRIMARY;
-    }};
+    background: ${theme.colors.secondary};
   }
 `;

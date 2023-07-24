@@ -1,6 +1,13 @@
 export type TButton = {
   label?: string;
-  $designType?: DesignType;
+  designType?: 'primary' | 'secondary';
+  sizeType?: 'small' | 'medium' | 'large';
+  shape?: 'round' | 'square';
+  icon?: React.ReactNode;
+  onClick?: () => void;
+  disabled?: boolean;
+  type?: 'submit' | 'reset' | 'button';
+  children?: React.ReactNode;
 };
 
 export enum DesignType {
