@@ -1,15 +1,11 @@
-'use client';
-
 import { FC } from 'react';
 
-import { Nav } from '@/components/Nav/Nav';
-import { Logo } from '@/components/Logo/Logo';
 import UserSVG from '@/assets/icons/user.svg';
 import NavigationSVG from '@/assets/icons/navigation.svg';
-import { headerNavItems } from '../Nav/constants';
+import { Logo } from '@/components/Logo';
+import { Nav, HeaderNavItems } from '@/components/Nav';
 import { StContainer, StFlex, StNextLink } from '@/styles/global';
-import { StHeader, StMenu, StLocationLink } from './styled';
-import type { THeaderProps } from './typing';
+import { type THeaderProps, StHeader, StMenu, StLocationLink } from './';
 
 export const Header: FC<THeaderProps> = ({ location }) => {
   return (
@@ -18,7 +14,7 @@ export const Header: FC<THeaderProps> = ({ location }) => {
         <StFlex $alignItems={'center'}>
           <Logo width={195} height={104} />
           <StMenu $justifyContent='end' $gap={50}>
-            <Nav navItems={headerNavItems} />
+            <Nav navItems={HeaderNavItems} />
             <StLocationLink $justifyContent='center' $alignItems='center' $gap={8}>
               <NavigationSVG width={24} height={24} />
               {location}
