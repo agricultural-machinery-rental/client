@@ -1,7 +1,7 @@
 import { styled } from 'styled-components';
 import { createGlobalStyle } from 'styled-components';
 import Link from 'next/link';
-import type { TFlexProps, TNextLink } from './typing';
+import type { TFlexProps, TNextLink, TTextBoxProps } from './typing';
 
 export const GlobalStyle = createGlobalStyle`
   body {
@@ -19,6 +19,17 @@ export const GlobalStyle = createGlobalStyle`
 
   html {
     font-size: 16px;
+  }
+
+  html,
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  ul {
+    margin: 0;
   }
 `;
 
@@ -50,3 +61,14 @@ export const StNextLink = styled(Link)<TNextLink>`
     text-decoration: underline;
   }
 `;
+
+export const StTextBox = styled.p<TTextBoxProps>(props => {
+  const { $textAlign, $fontWeight, $fontSize, $lineHeight } = props;
+
+  return {
+    textAlign: $textAlign || 'left',
+    fontWeight: $fontWeight || 'normal',
+    fontSize: $fontSize ? `${$fontSize}rem` : 'medium',
+    lineHeight: $lineHeight ? `${$lineHeight}rem` : 'normal',
+  };
+});

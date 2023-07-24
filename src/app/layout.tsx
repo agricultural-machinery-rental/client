@@ -1,7 +1,10 @@
+'use client';
+
 import type { Metadata } from 'next';
 import React from 'react';
 import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer/Footer';
+import { Footer } from '@/components/Footer';
+import { GlobalStyle } from '@/styles/global';
 import StyledComponentsRegistry from '../../lib/registry';
 
 export const metadata: Metadata = {
@@ -14,6 +17,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang='en'>
       <body>
         <StyledComponentsRegistry>
+          <GlobalStyle />
           <Header location={'Москва'} />
           <main>{children}</main>
           <Footer />
