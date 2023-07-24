@@ -2,6 +2,8 @@
 import { ModalContext } from '@/providers/modalContext';
 import { MouseEventHandler, useContext } from 'react';
 import { StModalBackground, StModalWindow } from './styled';
+import { Close } from './Close';
+import { Title } from './Title';
 
 const Modal = () => {
   const { isOpen, closeModal } = useContext(ModalContext);
@@ -19,8 +21,8 @@ const Modal = () => {
   return (
     <StModalBackground onClick={backgroundClickHandler}>
       <StModalWindow>
-        <div>Modal Window</div>
-        <span onClick={closeModal}>Close</span>
+        <Close onClick={closeModal} />
+        <Title title='Modal Window' />
       </StModalWindow>
     </StModalBackground>
   );

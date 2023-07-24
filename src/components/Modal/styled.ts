@@ -11,6 +11,7 @@ export const StModalBackground = styled.div`
 `;
 
 export const StModalWindow = styled.div`
+  position: relative;
   width: 100px;
   height: 100px;
   border: 1px solid #000;
