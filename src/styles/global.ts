@@ -4,8 +4,16 @@ import Link from 'next/link';
 import type { TFlexProps, TNextLink } from './typing';
 
 export const GlobalStyle = createGlobalStyle`
+  * {
+    margin:0;
+    padding: 0;
+  }
+  
   body {
     font-family: Open-Sans, Helvetica, Sans-Serif, serif;
+    font-size: 24px;
+    line-height: 1;
+    background: #fff;
   }
   
   #root,
@@ -17,9 +25,15 @@ export const GlobalStyle = createGlobalStyle`
     overflow: auto;
   }
 
-  html {
-    font-size: 16px;
+  ol, ul {
+    list-style: none;
   }
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
 `;
 
 export const StFlex = styled.div<TFlexProps>(props => {
