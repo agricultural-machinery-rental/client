@@ -1,3 +1,4 @@
+import '@/styles/global.css';
 import { Header } from '@/components/Header/Header';
 import type { Metadata } from 'next';
 import React from 'react';

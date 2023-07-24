@@ -1,8 +1,10 @@
+'use client';
 import { styled } from 'styled-components';
-import { createGlobalStyle } from 'styled-components';
+// import { createGlobalStyle } from 'styled-components';
 import Link from 'next/link';
 import type { TFlexProps, TNextLink } from './typing';
 
+/*
 export const GlobalStyle = createGlobalStyle`
   * {
     margin:0;
@@ -113,7 +115,7 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-user-select: auto;
   }
 `;
-
+*/
 export const StFlex = styled.div<TFlexProps>(props => {
   const { $flexDirection, $justifyContent, $alignItems, $gap } = props;
 
