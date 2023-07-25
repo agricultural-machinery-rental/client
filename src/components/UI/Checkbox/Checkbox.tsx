@@ -6,7 +6,7 @@ import { FC } from 'react';
 import CheckboxUncheckedSVG from '@/assets/icons/checkbox-unchecked.svg';
 import CheckboxCheckedSVG from '@/assets/icons/checkbox-checked.svg';
 
-export const Checkbox: FC<TCheckbox> = ({ text, checked = false, onChange }) => {
+export const Checkbox: FC<TCheckbox> = ({ text, checked = false, onChange, ...props }) => {
   const onChangeHandler = () => {
     if (onChange) {
       onChange(!checked);
@@ -14,7 +14,7 @@ export const Checkbox: FC<TCheckbox> = ({ text, checked = false, onChange }) => 
   };
 
   return (
-    <StCheckboxWrapper>
+    <StCheckboxWrapper {...props}>
       <StCheckboxContainer onClick={onChangeHandler}>
         {checked ? <CheckboxCheckedSVG /> : <CheckboxUncheckedSVG />}
         {/*<CheckboxCheckedSVG />*/}
