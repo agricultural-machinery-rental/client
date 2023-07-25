@@ -19,7 +19,7 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  body, html {
+  body {
     font-family: Open-Sans, Helvetica, Sans-Serif, serif;
     font-size: 24px;
     background: #fff;
