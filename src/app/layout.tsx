@@ -1,10 +1,8 @@
-'use client';
-
 import type { Metadata } from 'next';
 import React from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-import { GlobalStyle } from '@/styles/global';
+import { GlobalStyle } from '@/styles/reset';
 import StyledComponentsRegistry from '../../lib/registry';
 
 export const metadata: Metadata = {
