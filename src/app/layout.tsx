@@ -1,6 +1,6 @@
 // import '@/styles/global.css';
 import { Header } from '@/components/Header/Header';
-import { GlobalStyle } from '@/styles/global';
+import { GlobalStyle } from '@/styles/reset';
 import type { Metadata } from 'next';
 import React from 'react';
 import { Footer } from '@/components/Footer/Footer';
