@@ -1,6 +1,6 @@
 // import '@/styles/global.css';
 import { Header } from '@/components/Header/Header';
-import { GlobalStyle } from '@/styles/reset';
+import { GlobalStyles } from '@/styles/reset';
 import type { Metadata } from 'next';
 import React from 'react';
 import { Footer } from '@/components/Footer/Footer';
@@ -16,7 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang='en'>
       <body>
         <StyledComponentsRegistry>
-          <GlobalStyle />
+          <GlobalStyles />
           <Header location={'Москва'} />
           <main>{children}</main>
           <Footer />
