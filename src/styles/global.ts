@@ -1,16 +1,15 @@
 'use client';
 import { styled } from 'styled-components';
-// import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 import Link from 'next/link';
 import type { TFlexProps, TNextLink } from './typing';
 
-/*
 export const GlobalStyle = createGlobalStyle`
   * {
     margin:0;
     padding: 0;
     vertical-align: baseline;
-    font-size: 1rem;
+    font-size: 1em;
     line-height: 1.15;
   }
 
@@ -20,7 +19,7 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  body {
+  body, html {
     font-family: Open-Sans, Helvetica, Sans-Serif, serif;
     font-size: 24px;
     background: #fff;
@@ -33,6 +32,8 @@ export const GlobalStyle = createGlobalStyle`
   .App {
     width: 100%;
     height: 100%;
+    margin:0;
+    padding: 0;
     overflow: auto;
   }
 
@@ -115,7 +116,7 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-user-select: auto;
   }
 `;
-*/
+
 export const StFlex = styled.div<TFlexProps>(props => {
   const { $flexDirection, $justifyContent, $alignItems, $gap } = props;
 
