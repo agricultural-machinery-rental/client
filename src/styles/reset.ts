@@ -1,3 +1,4 @@
+'use client';
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
@@ -54,6 +55,11 @@ export const GlobalStyle = createGlobalStyle`
 
   input, textarea {
     -webkit-user-select: auto;
+  }
+
+  input:focus,
+  textarea:focus {
+    outline: none;
   }
 
   button, input, select, textarea {
