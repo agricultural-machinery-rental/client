@@ -3,11 +3,9 @@ import { FC, InputHTMLAttributes } from 'react';
 
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   name: string;
-  //register: UseFormRegister<DataType>;
   label?: string;
-  error?: boolean;
+  isError?: boolean;
   errorMessage?: string;
   required?: boolean;
   placeholder?: string;
-  className?: string;
 }

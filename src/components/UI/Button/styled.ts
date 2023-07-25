@@ -17,7 +17,7 @@ export const StButton = styled.button<TButton>`
 
   &:hover {
     background: ${theme.colors.btnSecond};
-    box-shadow: inset 0 0 2px ${theme.colors.btnBorder};
+    box-shadow: inset 0 0 2px ${theme.colors.border};
   }
 
   &:disabled {
