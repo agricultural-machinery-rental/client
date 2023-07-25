@@ -1,5 +1,6 @@
 'use client';
 import { createGlobalStyle } from 'styled-components';
+import '@fontsource/open-sans';
 
 export const GlobalStyles = createGlobalStyle`
   * {
