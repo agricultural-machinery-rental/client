@@ -1,10 +1,11 @@
-import { Button } from '@/components/UI/Button/Button';
-import { Input } from '@/components/UI/Input/Input';
+'use client';
+import { Form, signupConfig } from '@/components/Form';
 
 export default function Home() {
   return (
     <main>
       <h1>Home</h1>
+      <Form fileds={signupConfig} title='Авторизация' handleFormSubmit={() => console.log()} />
     </main>
   );
 }

@@ -1,22 +1,32 @@
 'use client';
 
 import React, { FC } from 'react';
-import type { InputProps } from '@/components/UI/Input/typing';
-import { StError, StInput } from '@/components/UI/Input/styled';
+import { type TInputProps, StError, StInput } from './';
+import { ValidationPattern } from '@/components/Form';
 
-export const Input: FC<InputProps> = ({
+export const Input: FC<TInputProps> = ({
   name,
-  label,
-  required,
-  isError,
-  errorMessage,
   placeholder,
+  errorMessage,
+  required,
+  pattern,
+  register,
   ...props
 }) => {
+  const registerOptions = {
+    ...(required && { required: 'Поле не может быть пустым' }),
+    ...(pattern && { pattern: ValidationPattern[pattern] }),
+  };
+
   return (
     <>
-      <StInput placeholder={placeholder || ''} id={name} {...props} />
-      {isError && <StError>{errorMessage}</StError>}
+      <StInput
+        {...register(name, registerOptions)}
+        placeholder={placeholder || ''}
+        name={name}
+        {...props}
+      />
+      {errorMessage && <StError>{errorMessage}</StError>}
     </>
   );
 };

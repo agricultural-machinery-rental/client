@@ -1,11 +1,12 @@
-import { FC, InputHTMLAttributes } from 'react';
-//import { UseFormRegister } from 'react-hook-form';
+import { InputHTMLAttributes } from 'react';
+import { UseFormRegister, FieldValues } from 'react-hook-form';
+import { ValidationTypes } from '@/components/Form';
 
-export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+export type TInputProps = {
   name: string;
-  label?: string;
-  isError?: boolean;
   errorMessage?: string;
-  required?: boolean;
   placeholder?: string;
-}
+  register: UseFormRegister<FieldValues>;
+  required: boolean;
+  pattern?: ValidationTypes;
+} & InputHTMLAttributes<HTMLInputElement>;
