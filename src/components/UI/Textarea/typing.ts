@@ -6,5 +6,5 @@ export type TTextarea = {
 };
 
 export type TTextareaStyled = {
-  resize?: boolean;
+  $resize?: boolean;
 };
