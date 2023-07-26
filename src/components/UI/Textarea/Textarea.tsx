@@ -1,4 +1,3 @@
-'use client';
 import { ChangeEventHandler, FC } from 'react';
 import { StTextarea } from './styled';
 import { TTextarea } from './typing';

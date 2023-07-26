@@ -1,4 +1,3 @@
-'use client';
 import { TTextareaStyled } from './typing';
 import styled from 'styled-components';
 
