@@ -1,5 +1,4 @@
 'use client';
-
 import { StCheckboxContainer, StCheckboxWrapper } from './styled';
 import { type TCheckbox } from './typing';
 import { FC } from 'react';
@@ -17,7 +16,6 @@ export const Checkbox: FC<TCheckbox> = ({ text, checked = false, onChange, ...pr
     <StCheckboxWrapper {...props}>
       <StCheckboxContainer onClick={onChangeHandler}>
         {checked ? <CheckboxCheckedSVG /> : <CheckboxUncheckedSVG />}
-        {/*<CheckboxCheckedSVG />*/}
         <span>{text}</span>
       </StCheckboxContainer>
     </StCheckboxWrapper>
