@@ -1,4 +1,3 @@
-'use client';
 import { StCheckboxContainer, StCheckboxWrapper } from './styled';
 import { type TCheckbox } from './typing';
 import { FC } from 'react';
