@@ -1,7 +1,8 @@
 'use client';
 import { createGlobalStyle } from 'styled-components';
+import '@fontsource/open-sans';
 
-export const GlobalStyle = createGlobalStyle`
+export const GlobalStyles = createGlobalStyle`
   * {
     margin:0;
     padding: 0;
@@ -17,7 +18,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: Open-Sans, Helvetica, Sans-Serif, serif;
+    font-family: "Open Sans", Open-Sans, Helvetica, Sans-Serif, serif;
     font-size: 24px;
     background: #fff;
     cursor: default;
