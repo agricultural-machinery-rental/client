@@ -3,10 +3,11 @@ import { ChangeEventHandler, FC } from 'react';
 import { StTextarea } from './styled';
 import { TTextarea } from './typing';
 
-export const Textarea: FC<TTextarea> = ({ value, onChangeCallback, ...props }) => {
+export const Textarea: FC<TTextarea> = ({ value, onChange, ...props }) => {
   const onChangeHandler: ChangeEventHandler<HTMLTextAreaElement> = e => {
-    if (onChangeCallback) {
-      onChangeCallback(e.target.value);
+    e.preventDefault();
+    if (onChange) {
+      onChange(e.target.value);
     }
   };
 
