@@ -1,17 +1,18 @@
 'use client';
-import { ModalContext } from '@/providers/modalContext';
-import { MouseEventHandler, useContext, useState, useEffect } from 'react';
+import { ModalContext, modalWindowContent } from '@/providers/modalContext';
+import React, { MouseEventHandler, useContext, useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { StModalBackground, StModalWindow } from './styled';
 import { Close } from './Close';
-import { Title } from './Title';
+import { zindex } from '@/styles/zindex';
 
 const Modal = () => {
-  const { isOpen, closeModal } = useContext(ModalContext);
+  const { isOpen, closeModal, content } = useContext(ModalContext);
   const [portalDiv, setPortalDiv] = useState<HTMLElement>();
 
   useEffect(() => {
     const div = document.createElement('div');
+    div.style.zIndex = zindex.modal.toString();
     document.body.appendChild(div);
     setPortalDiv(div);
 
@@ -34,7 +35,7 @@ const Modal = () => {
     <StModalBackground onClick={backgroundClickHandler}>
       <StModalWindow>
         <Close onClick={closeModal} />
-        <Title title='Modal Window' />
+        {content && modalWindowContent[content]}
       </StModalWindow>
     </StModalBackground>,
     portalDiv,
