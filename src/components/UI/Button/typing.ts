@@ -1,9 +1,7 @@
 export type TButton = {
   label?: string;
-  $designType?: DesignType;
+  onClick?: () => void;
+  isDisabled?: boolean;
+  type?: 'submit' | 'reset' | 'button';
+  children?: React.ReactNode;
 };
-
-export enum DesignType {
-  Primary = 'primary',
-  Secondary = 'secondary',
-}

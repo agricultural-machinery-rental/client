@@ -1,7 +1,7 @@
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
-import Button from './Button';
-import { DesignType, type TButton } from './typing';
+import { Button } from '@/components/UI/Button/Button';
+import { type TButton } from './typing';
 
 export default {
   title: 'Components/Button',
@@ -13,11 +13,9 @@ const Template: Story<TButton> = args => <Button {...args} />;
 export const Primary = Template.bind({});
 Primary.args = {
   label: 'Кнопка-кнопка',
-  $designType: DesignType.Primary,
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
   label: 'Кнопка-кнопка',
-  $designType: DesignType.Secondary,
 };

@@ -1,17 +1,28 @@
 import styled from 'styled-components';
-import { DesignType, type TButton } from './typing';
-
-export const COLOR_ELEMENT_PRIMARY = '#fff';
-export const COLOR_ELEMENT_SECONDARY = '#000';
+import { type TButton } from './typing';
+import { theme } from '@/styles/theme';
 
 export const StButton = styled.button<TButton>`
-  background-color: ${({ $designType }) => {
-    return $designType === DesignType.Primary ? COLOR_ELEMENT_PRIMARY : COLOR_ELEMENT_SECONDARY;
-  }};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  color: ${theme.colorsText.primary};
+  background-color: ${theme.colors.btnFirst};
+  line-height: ${theme.sizesHeight.button};
+  width: ${theme.sizesWidth.button};
+  border-radius: ${theme.borderRadius.round};
+  border: none;
 
   &:hover {
-    background-color: ${({ $designType }) => {
-      return $designType === DesignType.Primary ? COLOR_ELEMENT_SECONDARY : COLOR_ELEMENT_PRIMARY;
-    }};
+    background: ${theme.colors.btnSecond};
+    box-shadow: inset 0 0 2px ${theme.colors.border};
+  }
+
+  &:disabled {
+    background-color: ${theme.colors.btnThird};
+    color: ${theme.colorsText.disabled};
+    pointer-events: none;
   }
 `;

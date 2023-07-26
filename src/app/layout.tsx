@@ -1,13 +1,10 @@
 // import '@/styles/global.css';
 import { Header } from '@/components/Header/Header';
-import { GlobalStyle } from '@/styles/reset';
+import { GlobalStyles } from '@/styles/reset';
 import type { Metadata } from 'next';
 import React from 'react';
 import { Footer } from '@/components/Footer/Footer';
 import StyledComponentsRegistry from '../../lib/registry';
-
-import { Modal } from '@/components/Modal/Modal';
-import { ModalProvider } from '@/providers/modalContext';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -19,13 +16,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang='en'>
       <body>
         <StyledComponentsRegistry>
-          <GlobalStyle />
-          <ModalProvider>
-            <Header location={'Москва'} />
-            <main>{children}</main>
-            <Footer />
-            <Modal />
-          </ModalProvider>
+          <GlobalStyles />
+          <Header location={'Москва'} />
+          <main>{children}</main>
+          <Footer />
         </StyledComponentsRegistry>
       </body>
     </html>
