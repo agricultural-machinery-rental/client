@@ -5,7 +5,6 @@ import { GlobalStyles } from '@/styles/reset';
 import { Header } from '@/components/Header/Header';
 import { Footer } from '@/components/Footer/Footer';
 import { Modal } from '@/components/Modal/Modal';
-import { InfoConditions } from '@/components/InfoConditions/InfoConditions';
 import { ModalProvider } from '@/providers/modalContext';
 import { PageContent } from './styled';
 
@@ -24,7 +23,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <ModalProvider>
               <Header location={'Москва'} />
               <main>{children}</main>
-              <InfoConditions />
               <Footer />
               <Modal />
             </ModalProvider>

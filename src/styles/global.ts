@@ -19,13 +19,6 @@ export const StContainer = styled.div`
   width: 1104px;
 `;
 
-export const StHeading3 = styled.h3`
-  font-size: 2rem;
-  line-height: 2.5rem;
-  text-align: center;
-  margin: 0 auto;
-`;
-
 export const StNextLink = styled(Link)<TNextLink>`
   font-size: 1rem;
   text-decoration: none;
