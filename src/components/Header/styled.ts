@@ -2,7 +2,7 @@ import { styled } from 'styled-components';
 import { StFlex } from '@/styles/global';
 
 export const StHeader = styled.header`
-  position: fixed;
+  // position: fixed;
   width: 100%;
   display: flex;
   justify-content: center;

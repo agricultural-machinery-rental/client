@@ -3,6 +3,7 @@ import { Header } from '@/components/Header/Header';
 import { GlobalStyle } from '@/styles/reset';
 import type { Metadata } from 'next';
 import React from 'react';
+import { InfoConditions } from '@/components/InfoConditions/InfoConditions';
 import { Footer } from '@/components/Footer/Footer';
 import StyledComponentsRegistry from '../../lib/registry';
 
@@ -19,6 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <GlobalStyle />
           <Header location={'Москва'} />
           <main>{children}</main>
+          <InfoConditions />
           <Footer />
         </StyledComponentsRegistry>
       </body>
