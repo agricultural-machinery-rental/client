@@ -1,6 +1,6 @@
 'use client';
-import { ModalContext, modalWindowContent } from '@/providers/modalContext';
 import React, { MouseEventHandler, useContext, useState, useEffect } from 'react';
+import { ModalContext, modalWindowContent } from '@/providers/modalContext';
 import { createPortal } from 'react-dom';
 import { StModalBackground, StModalWindow } from './styled';
 import { Close } from './Close';

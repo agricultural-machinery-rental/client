@@ -1,14 +1,9 @@
 'use client';
 import { TLayout } from '@/types';
+import { modalWindows } from '@/utils/modalWindows';
 import { createContext, useState } from 'react';
-
-export enum modalWindows {
-  example = 'example',
-}
-
-export const modalWindowContent = {
-  [modalWindows.example]: <span>Компонент содержимого окна</span>,
-} as const;
+export { modalWindows };
+export { modalWindowContent } from '@/utils/modalWindows';
 
 type TModalContext = {
   isOpen: boolean;
