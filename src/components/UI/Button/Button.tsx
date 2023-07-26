@@ -1,20 +1,13 @@
 'use client';
 
-import type { TButton } from '@/components/UI/Button/typing';
 import React, { FC } from 'react';
+import type { TButton } from '@/components/UI/Button/typing';
 import { StButton } from './styled';
 
-const Button: FC<TButton> = ({ label, $designType }) => {
-  const handleClick = () => {
-    alert(label);
-    alert(label);
-  };
-
+export const Button: FC<TButton> = ({ label, isDisabled = false, ...props }) => {
   return (
-    <StButton $designType={$designType} onClick={handleClick}>
+    <StButton disabled={isDisabled} {...props}>
       {label}
     </StButton>
   );
 };
-
-export default Button;
