@@ -1,10 +1,13 @@
-import { Button } from '@/components/UI/Button/Button';
-import { Input } from '@/components/UI/Input/Input';
+'use client';
+
+import { ChosenUs } from '@/components/ChosenUs/ChosenUs';
+import { data } from '@/utils/data';
 
 export default function Home() {
   return (
     <main>
       <h1>Home</h1>
+      <ChosenUs data={data} />
     </main>
   );
 }
