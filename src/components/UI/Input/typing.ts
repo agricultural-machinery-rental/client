@@ -4,7 +4,6 @@ import { ValidationTypes, FormFieldNames } from '@/components/Form';
 
 export type TInputProps = {
   name: FormFieldNames;
-  errorMessage?: string;
   register: UseFormRegister<FieldValues>;
   required: boolean;
   pattern?: ValidationTypes;

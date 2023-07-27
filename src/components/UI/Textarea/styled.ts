@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { TTextareaStyled } from './';
-import { theme } from '@/styles/theme';
 
 export const StTextarea = styled.textarea<TTextareaStyled>`
   padding: 16px 8px; // TODO: Взял из UI Kit для Input
@@ -10,11 +9,4 @@ export const StTextarea = styled.textarea<TTextareaStyled>`
 
   height: 112px;
   width: 100%;
-`;
-
-export const StError = styled.div`
-  color: ${theme.colorsText.error};
-  margin: 8px 0 0;
-  font-size: 15px;
-  line-height: 1.2;
 `;

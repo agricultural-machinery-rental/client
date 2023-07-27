@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { type TFormProps, StFieldset } from './';
 import { Input } from '@/components/UI/Input/Input';
 import { Textarea } from '@/components/UI/Textarea';
+import { Error } from '@/components/UI/Error';
 
 export const Form: FC<TFormProps> = ({
   title,
@@ -24,28 +25,19 @@ export const Form: FC<TFormProps> = ({
       {title}
       <form onSubmit={handleSubmit(handleFormSubmit)}>
         <StFieldset>
-          {fileds.map(({ kindOfField, name, ...rest }) => {
-            return kindOfField === 'input' ? (
-              <Input
-                key={`input-${name}`}
-                name={name}
-                register={register}
-                errorMessage={errors[name]?.message?.toString()}
-                {...rest}
-              />
-            ) : (
-              <Textarea
-                key={`textarea-${name}`}
-                name={name}
-                register={register}
-                errorMessage={errors[name]?.message?.toString()}
-                {...rest}
-              />
-            );
-          })}
+          {fileds.map(({ kindOfField, name, ...rest }) => (
+            <div key={`field-${name}`}>
+              {kindOfField === 'input' ? (
+                <Input name={name} register={register} {...rest} />
+              ) : (
+                <Textarea key={`textarea-${name}`} name={name} register={register} {...rest} />
+              )}
+              {errors[name] && <Error errorMessage={errors[name]?.message?.toString()} />}
+            </div>
+          ))}
         </StFieldset>
         {footer}
-        <div className='error-from-backend'></div>
+        {/* <Error errorMessage='' /> TODO настроить error from backend */}
       </form>
     </>
   );
