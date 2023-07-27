@@ -15,9 +15,12 @@ export const StInfoConditionsWrap = styled(StContainer)`
 export const StHeadingInfoConditions = styled(StHeading3)`
   margin-bottom: 80px;
   width: 80%;
+  line-height: 4rem;
 `;
+
 export const StSubHeadingInfoConditions = styled(StHeading3)`
   text-align: left;
+  margin-top: 115px;
   margin-bottom: 50px;
 `;
 
@@ -36,4 +39,14 @@ export const StConditionsList = styled.ul`
 
 export const StListItem = styled.li`
   font-size: 1rem;
+  margin-top: 8px;
+`;
+
+export const StLink = styled.a`
+  color: #e57c4e;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 `;

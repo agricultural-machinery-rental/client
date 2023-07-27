@@ -8,11 +8,12 @@ import {
   StParagraph,
   StConditionsList,
   StListItem,
+  StLink,
 } from './styled';
 import { StFlex } from '@/styles/global';
 
-// import infoConditionsLine1 from '@/assets/icons/infoConditionsLine1.svg';
-// import infoConditionsLine2 from '@/assets/icons/infoConditionsLine2.svg';
+import InfoConditionsLine1 from '@/assets/icons/infoConditionsLine1.svg';
+import InfoConditionsLine2 from '@/assets/icons/infoConditionsLine2.svg';
 
 export const InfoConditions = () => {
   return (
@@ -23,12 +24,19 @@ export const InfoConditions = () => {
         </StHeadingInfoConditions>
         <StFlex $alignItems={'center'} $justifyContent='center' $gap={35}>
           <StParagraph>
-            Выбирайте технику в каталоге, позвоните или оставьте заявку на сайте
+            Выбирайте технику в<StLink href='#'> каталоге</StLink>, позвоните или
+            <StLink href='#'> оставьте заявку </StLink>
+            на сайте
           </StParagraph>
           <StParagraph>Получите информацию о наличии спецтехники в указанные даты</StParagraph>
           <StParagraph>Оформите доставку спецтехники или заберите самостоятельно</StParagraph>
         </StFlex>
-        {/* <infoConditionsLine1 width={24} height={24} /> */}
+
+        <StFlex $justifyContent='center'>
+          <InfoConditionsLine1 width={399} height={17} />
+          <InfoConditionsLine2 width={416} height={17} />
+        </StFlex>
+
         <StSubHeadingInfoConditions>
           Перед бронированием ознакомьтесь с Правилами аренды сельскохозяйственной техники в ОАО
           Агропарк:
