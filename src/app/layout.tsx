@@ -6,7 +6,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Modal } from '@/components/Modal/Modal';
 import { ModalProvider } from '@/providers/modalContext';
-import { PageContent } from './styled';
+import { PageContent, StMain } from './styled';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -22,7 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <PageContent>
             <ModalProvider>
               <Header location={'Москва'} />
-              <main>{children}</main>
+              <StMain>{children}</StMain>
               <Footer />
               <Modal />
             </ModalProvider>
