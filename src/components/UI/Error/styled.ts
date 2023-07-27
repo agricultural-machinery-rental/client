@@ -3,7 +3,7 @@ import { theme } from '@/styles/theme';
 
 export const StError = styled.div`
   color: ${theme.colorsText.error};
-  margin: 8px 0 0;
-  font-size: 15px;
-  line-height: 1.2;
+  font-size: 0.5rem;
+  line-height: 1.3;
+  margin: 0 0 0 8px;
 `;

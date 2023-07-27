@@ -2,12 +2,20 @@ import { ReactNode } from 'react';
 import { ValidationTypes, InputTypes, FormFieldNames } from './';
 
 export type TFormProps = {
-  title?: string;
   header?: ReactNode;
   footer?: ReactNode;
   fileds: FormConfigType[];
   handleFormSubmit: () => void;
   defaultValues?: Record<string, string>;
+  classNames: {
+    fieldset?: string;
+    field?: string;
+    error?: string;
+  };
+};
+
+export type TAsterisk = {
+  visibility?: 'visible' | 'hidden';
 };
 
 export type FormConfigType = {
@@ -18,6 +26,7 @@ export type FormConfigType = {
   value?: string;
   type?: InputTypes;
   placeholder?: string;
+  asterisk?: 'visible' | 'hidden';
 };
 
 export type ValidationProps = {

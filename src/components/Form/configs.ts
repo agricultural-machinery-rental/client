@@ -27,6 +27,7 @@ export const signupConfig: FormConfigType[] = [
     required: true,
     type: InputTypes.text,
     placeholder: 'Фамилия',
+    asterisk: 'visible',
   },
   {
     kindOfField: 'input',
@@ -35,6 +36,7 @@ export const signupConfig: FormConfigType[] = [
     required: true,
     type: InputTypes.text,
     placeholder: 'Имя',
+    asterisk: 'visible',
   },
   {
     kindOfField: 'input',
@@ -43,6 +45,7 @@ export const signupConfig: FormConfigType[] = [
     required: false,
     type: InputTypes.text,
     placeholder: 'Отчество',
+    asterisk: 'hidden',
   },
   {
     kindOfField: 'input',
@@ -51,6 +54,7 @@ export const signupConfig: FormConfigType[] = [
     required: true,
     type: InputTypes.tel,
     placeholder: 'Телефон',
+    asterisk: 'visible',
   },
   {
     kindOfField: 'input',
@@ -59,6 +63,7 @@ export const signupConfig: FormConfigType[] = [
     required: true,
     type: InputTypes.email,
     placeholder: 'e-mail',
+    asterisk: 'visible',
   },
   {
     kindOfField: 'input',
@@ -67,6 +72,7 @@ export const signupConfig: FormConfigType[] = [
     required: true,
     type: InputTypes.password,
     placeholder: 'Пароль',
+    asterisk: 'visible',
   },
   {
     kindOfField: 'input',
@@ -74,6 +80,7 @@ export const signupConfig: FormConfigType[] = [
     required: true,
     type: InputTypes.password,
     placeholder: 'Повторите пароль',
+    asterisk: 'visible',
   },
 ];
 

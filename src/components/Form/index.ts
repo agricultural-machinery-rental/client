@@ -1,6 +1,6 @@
 'use client';
 
-export type { TFormProps, FormConfigType, ValidationProps } from './typing';
+export type { TFormProps, FormConfigType, ValidationProps, TAsterisk } from './typing';
 export { Form } from './Form';
 export { ValidationTypes, InputTypes, ValidationPattern, FormFieldNames } from './constants';
 export {
@@ -10,4 +10,4 @@ export {
   bookingConfig,
   callbackConfig,
 } from './configs';
-export { StFieldset } from './styled';
+export { StFieldset, StFieldWrapper, StAsterick, StRelativeBox } from './styled';

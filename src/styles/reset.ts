@@ -94,6 +94,10 @@ export const GlobalStyles = createGlobalStyle`
     white-space: revert;
   }
 
+  fieldset {
+    border: none;
+  }
+
   meter {
     -webkit-appearance: revert;
     appearance: revert;

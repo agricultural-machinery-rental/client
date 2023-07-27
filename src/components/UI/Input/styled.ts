@@ -7,10 +7,10 @@ export const StInput = styled.input`
   box-sizing: border-box;
   border: 1px solid ${theme.colors.border};
   color: ${theme.colorsText.primary};
-  font-size: 16px;
+  font-size: 0.6rem;
   line-height: 24px;
   height: ${theme.sizesHeight.input};
   outline: 0;
   padding: ${theme.padding.default};
-  width: ${theme.sizesWidth.input};
+  width: 100%;
 `;
