@@ -1,14 +1,31 @@
-import { ChangeEventHandler, FC } from 'react';
-import { StTextarea } from './styled';
-import { TTextarea } from './typing';
+import { FC } from 'react';
+import { type TTextarea, StTextarea, StError } from './';
+import { ValidationPattern } from '@/components/Form';
 
-export const Textarea: FC<TTextarea> = ({ value, onChange, resize }) => {
-  const onChangeHandler: ChangeEventHandler<HTMLTextAreaElement> = e => {
-    e.preventDefault();
-    if (onChange) {
-      onChange(e.target.value);
-    }
+export const Textarea: FC<TTextarea> = ({
+  name,
+  value,
+  resize,
+  required,
+  pattern,
+  register,
+  errorMessage,
+  ...props
+}) => {
+  const registerOptions = {
+    ...(required && { required: 'Поле не может быть пустым' }),
+    ...(pattern && { pattern: ValidationPattern[pattern] }),
   };
-
-  return <StTextarea value={value} onChange={onChangeHandler} $resize={resize} />;
+  return (
+    <>
+      <StTextarea
+        {...register(name, registerOptions)}
+        name={name}
+        value={value}
+        $resize={resize}
+        {...props}
+      />
+      {errorMessage && <StError>{errorMessage}</StError>}
+    </>
+  );
 };

@@ -8,6 +8,7 @@ export enum FormFieldNames {
   phone = 'phone',
   email = 'email',
   password = 'password',
+  passwordRepeat = 'repeatablePassword',
   message = 'message',
 }
 

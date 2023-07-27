@@ -34,7 +34,13 @@ export const Form: FC<TFormProps> = ({
                 {...rest}
               />
             ) : (
-              <Textarea key={`textarea-${name}`} {...rest} />
+              <Textarea
+                key={`textarea-${name}`}
+                name={name}
+                register={register}
+                errorMessage={errors[name]?.message?.toString()}
+                {...rest}
+              />
             );
           })}
         </StFieldset>

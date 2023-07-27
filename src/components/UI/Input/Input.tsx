@@ -6,7 +6,6 @@ import { ValidationPattern } from '@/components/Form';
 
 export const Input: FC<TInputProps> = ({
   name,
-  placeholder,
   errorMessage,
   required,
   pattern,
@@ -20,12 +19,7 @@ export const Input: FC<TInputProps> = ({
 
   return (
     <>
-      <StInput
-        {...register(name, registerOptions)}
-        placeholder={placeholder || ''}
-        name={name}
-        {...props}
-      />
+      <StInput {...register(name, registerOptions)} name={name} {...props} />
       {errorMessage && <StError>{errorMessage}</StError>}
     </>
   );

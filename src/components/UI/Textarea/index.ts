@@ -1,6 +1,6 @@
 'use client';
 import { Textarea } from './Textarea';
-import { TTextarea } from './typing';
-import { StTextarea } from './styled';
+import { TTextarea, TTextareaStyled } from './typing';
+import { StTextarea, StError } from './styled';
 
-export { Textarea, StTextarea, type TTextarea };
+export { Textarea, StTextarea, StError, type TTextarea, type TTextareaStyled };
