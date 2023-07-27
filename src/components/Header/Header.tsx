@@ -1,13 +1,20 @@
-import { FC } from 'react';
+'use client';
 
+import { FC, useContext } from 'react';
+import { ModalContext, modalWindows } from '@/providers/modalContext';
 import UserSVG from '@/assets/icons/user.svg';
 import NavigationSVG from '@/assets/icons/navigation.svg';
+import { HeaderNavItems } from '../Nav/constants';
+import { StContainer, StFlex, StNextLink, StNextSpan } from '@/styles/global';
+import { StHeader, StMenu, StLocationLink } from './styled';
+import type { THeaderProps } from './typing';
+
+import { Nav } from '@/components/Nav';
 import { Logo } from '@/components/Logo';
-import { Nav, HeaderNavItems } from '@/components/Nav';
-import { StContainer, StFlex, StNextLink } from '@/styles/global';
-import { type THeaderProps, StHeader, StMenu, StLocationLink } from './';
 
 export const Header: FC<THeaderProps> = ({ location }) => {
+  const { openModal } = useContext(ModalContext);
+
   return (
     <StHeader>
       <StContainer>
@@ -23,9 +30,9 @@ export const Header: FC<THeaderProps> = ({ location }) => {
             <StNextLink href='tel:+74954954949' $justifyContent='center'>
               +7 (495) XXX XX XX
             </StNextLink>
-            <StNextLink href='/' $justifyContent='center'>
+            <StNextSpan $justifyContent='center' onClick={() => openModal(modalWindows.example)}>
               <UserSVG width={24} height={24} />
-            </StNextLink>
+            </StNextSpan>
           </StMenu>
         </StFlex>
       </StContainer>
