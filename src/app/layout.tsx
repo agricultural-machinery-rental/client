@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import React from 'react';
 
-import { Footer } from '@/components/Footer/Footer';
 import StyledComponentsRegistry from '../../lib/registry';
 import { GlobalStyles } from '@/styles/reset';
 import { Header } from '@/components/Header';

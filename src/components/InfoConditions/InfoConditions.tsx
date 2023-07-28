@@ -9,8 +9,8 @@ import {
   StConditionsList,
   StListItem,
   StLink,
-} from './styled';
-import { StFlex } from '@/styles/global';
+  StFlex,
+} from './';
 
 import InfoConditionsLine1 from '@/assets/icons/infoConditionsLine1.svg';
 import InfoConditionsLine2 from '@/assets/icons/infoConditionsLine2.svg';
