@@ -1,10 +1,12 @@
+import Link from 'next/link';
 import styled from 'styled-components';
 import { StContainer, StHeading3 } from '@/styles/global';
+import { theme } from '@/styles/theme';
 
 export const StInfoConditions = styled.div`
   display: flex;
   width: 100%;
-  background-color: rgba(217, 217, 217, 0.3);
+  background-color: ${theme.colors.bg};
 `;
 
 export const StInfoConditionsWrap = styled(StContainer)`
@@ -42,9 +44,8 @@ export const StListItem = styled.li`
   margin-top: 8px;
 `;
 
-export const StLink = styled.a`
-  color: #e57c4e;
-  text-decoration: none;
+export const StLink = styled(Link)`
+  color: ${theme.colors.link};
 
   &:hover {
     text-decoration: underline;

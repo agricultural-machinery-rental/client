@@ -13,6 +13,7 @@ export const theme = {
     btnSecond: '#E6A63E',
     btnThird: '#F0D8B1',
     modalBackground: '#d9d9d97f',
+    link: '#e57c4e',
   },
   colorsText: {
     primary: '#000',

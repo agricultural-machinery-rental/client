@@ -24,9 +24,8 @@ export const InfoConditions = () => {
         </StHeadingInfoConditions>
         <StFlex $alignItems={'center'} $justifyContent='center' $gap={35}>
           <StParagraph>
-            Выбирайте технику в<StLink href='#'> каталоге</StLink>, позвоните или
-            <StLink href='#'> оставьте заявку </StLink>
-            на сайте
+            Выбирайте технику в <StLink href='#'>каталоге</StLink>, позвоните или{' '}
+            <StLink href='#'>оставьте заявку</StLink> на сайте
           </StParagraph>
           <StParagraph>Получите информацию о наличии спецтехники в указанные даты</StParagraph>
           <StParagraph>Оформите доставку спецтехники или заберите самостоятельно</StParagraph>
