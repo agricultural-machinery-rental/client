@@ -4,7 +4,6 @@ import { ValidationPattern } from '@/components/Form';
 
 export const Textarea: FC<TTextarea> = ({
   name,
-  value,
   resize,
   required,
   pattern,
@@ -17,12 +16,6 @@ export const Textarea: FC<TTextarea> = ({
   };
 
   return (
-    <StTextarea
-      {...register(name, registerOptions)}
-      name={name}
-      value={value}
-      $resize={resize}
-      {...props}
-    />
+    <StTextarea {...register(name, registerOptions)} name={name} $resize={resize} {...props} />
   );
 };

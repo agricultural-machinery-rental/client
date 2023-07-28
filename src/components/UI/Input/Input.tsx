@@ -1,5 +1,3 @@
-'use client';
-
 import React, { FC } from 'react';
 import { type TInputProps, StInput } from './';
 import { ValidationPattern } from '@/components/Form';

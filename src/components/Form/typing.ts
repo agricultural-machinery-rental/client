@@ -1,10 +1,10 @@
-import { ReactNode } from 'react';
-import { ValidationTypes, InputTypes, FormFieldNames } from './';
+import { ReactNode, HTMLInputTypeAttribute } from 'react';
+import { ValidationTypes, FormFieldNames } from './';
 
 export type TFormProps = {
   header?: ReactNode;
   footer?: ReactNode;
-  fileds: FormConfigType[];
+  fileds: TFormConfigType[];
   handleFormSubmit: () => void;
   defaultValues?: Record<string, string>;
   classNames: {
@@ -18,18 +18,18 @@ export type TAsterisk = {
   visibility?: 'visible' | 'hidden';
 };
 
-export type FormConfigType = {
+export type TFormConfigType = {
   kindOfField: 'input' | 'textarea';
   name: FormFieldNames;
   pattern?: ValidationTypes;
   required: boolean;
   value?: string;
-  type?: InputTypes;
+  type?: HTMLInputTypeAttribute;
   placeholder?: string;
   asterisk?: 'visible' | 'hidden';
 };
 
-export type ValidationProps = {
+export type TValidationProps = {
   value: RegExp;
   message: string;
 };

@@ -1,12 +1,12 @@
-import { type FormConfigType, ValidationTypes, InputTypes, FormFieldNames } from './';
+import { type TFormConfigType, ValidationTypes, FormFieldNames } from './';
 
-export const signinConfig: FormConfigType[] = [
+export const signinConfig: TFormConfigType[] = [
   {
     kindOfField: 'input',
     name: FormFieldNames.login,
     pattern: ValidationTypes.login,
     required: true,
-    type: InputTypes.text,
+    type: 'text',
     placeholder: 'Логин или номер телефона',
   },
   {
@@ -14,18 +14,18 @@ export const signinConfig: FormConfigType[] = [
     name: FormFieldNames.password,
     pattern: ValidationTypes.password,
     required: true,
-    type: InputTypes.password,
+    type: 'password',
     placeholder: 'Пароль',
   },
 ];
 
-export const signupConfig: FormConfigType[] = [
+export const signupConfig: TFormConfigType[] = [
   {
     kindOfField: 'input',
     name: FormFieldNames.lastNname,
     pattern: ValidationTypes.name,
     required: true,
-    type: InputTypes.text,
+    type: 'text',
     placeholder: 'Фамилия',
     asterisk: 'visible',
   },
@@ -34,7 +34,7 @@ export const signupConfig: FormConfigType[] = [
     name: FormFieldNames.firstNname,
     pattern: ValidationTypes.name,
     required: true,
-    type: InputTypes.text,
+    type: 'text',
     placeholder: 'Имя',
     asterisk: 'visible',
   },
@@ -43,7 +43,7 @@ export const signupConfig: FormConfigType[] = [
     name: FormFieldNames.middleNname,
     pattern: ValidationTypes.name,
     required: false,
-    type: InputTypes.text,
+    type: 'text',
     placeholder: 'Отчество',
     asterisk: 'hidden',
   },
@@ -52,7 +52,7 @@ export const signupConfig: FormConfigType[] = [
     name: FormFieldNames.phone,
     pattern: ValidationTypes.phone,
     required: true,
-    type: InputTypes.tel,
+    type: 'tel',
     placeholder: 'Телефон',
     asterisk: 'visible',
   },
@@ -61,7 +61,7 @@ export const signupConfig: FormConfigType[] = [
     name: FormFieldNames.email,
     pattern: ValidationTypes.email,
     required: true,
-    type: InputTypes.email,
+    type: 'email',
     placeholder: 'e-mail',
     asterisk: 'visible',
   },
@@ -70,7 +70,7 @@ export const signupConfig: FormConfigType[] = [
     name: FormFieldNames.password,
     pattern: ValidationTypes.password,
     required: true,
-    type: InputTypes.password,
+    type: 'password',
     placeholder: 'Пароль',
     asterisk: 'visible',
   },
@@ -78,15 +78,15 @@ export const signupConfig: FormConfigType[] = [
     kindOfField: 'input',
     name: FormFieldNames.passwordRepeat,
     required: true,
-    type: InputTypes.password,
+    type: 'password',
     placeholder: 'Повторите пароль',
     asterisk: 'visible',
   },
 ];
 
-export const profileConfig: FormConfigType[] = [];
+export const profileConfig: TFormConfigType[] = [];
 
-export const bookingConfig: FormConfigType[] = [
+export const bookingConfig: TFormConfigType[] = [
   {
     kindOfField: 'textarea',
     name: FormFieldNames.message,
@@ -95,13 +95,13 @@ export const bookingConfig: FormConfigType[] = [
   },
 ];
 
-export const callbackConfig: FormConfigType[] = [
+export const callbackConfig: TFormConfigType[] = [
   {
     kindOfField: 'input',
     name: FormFieldNames.firstNname,
     pattern: ValidationTypes.name,
     required: true,
-    type: InputTypes.text,
+    type: 'text',
     placeholder: 'Имя',
   },
   {
@@ -109,7 +109,7 @@ export const callbackConfig: FormConfigType[] = [
     name: FormFieldNames.phone,
     pattern: ValidationTypes.phone,
     required: true,
-    type: InputTypes.tel,
+    type: 'tel',
     placeholder: 'Телефон',
   },
 ];

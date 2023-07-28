@@ -1,4 +1,4 @@
-import { ValidationProps } from './';
+import { TValidationProps } from './';
 
 export enum FormFieldNames {
   lastNname = 'lastNname',
@@ -20,17 +20,8 @@ export enum ValidationTypes {
   password = 'password',
 }
 
-export enum InputTypes {
-  checkbox = 'checkbox',
-  email = 'email',
-  number = 'number',
-  password = 'password',
-  tel = 'tel',
-  text = 'text',
-}
-
 // TODO скорректировать рег.выражения и сообщения об ошибке
-export const ValidationPattern: Record<ValidationTypes, ValidationProps> = {
+export const ValidationPattern: Record<ValidationTypes, TValidationProps> = {
   name: {
     value: /^[A-Z]$/g,
     message: 'Ошибка',

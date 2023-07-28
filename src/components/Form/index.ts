@@ -1,8 +1,8 @@
 'use client';
 
-export type { TFormProps, FormConfigType, ValidationProps, TAsterisk } from './typing';
+export type { TFormProps, TFormConfigType, TValidationProps, TAsterisk } from './typing';
 export { Form } from './Form';
-export { ValidationTypes, InputTypes, ValidationPattern, FormFieldNames } from './constants';
+export { ValidationTypes, ValidationPattern, FormFieldNames } from './constants';
 export {
   signinConfig,
   signupConfig,

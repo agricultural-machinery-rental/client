@@ -1,5 +1,6 @@
 import { FC, useMemo } from 'react';
 import { useForm } from 'react-hook-form';
+import { ErrorMessage } from '@hookform/error-message';
 import { type TFormProps, StFieldset, StFieldWrapper, StAsterick, StRelativeBox } from './';
 import { Input } from '@/components/UI/Input/Input';
 import { Textarea } from '@/components/UI/Textarea';
@@ -35,12 +36,11 @@ export const Form: FC<TFormProps> = ({
                   <Textarea name={name} register={register} {...rest} />
                 )}
               </StRelativeBox>
-              {errors[name] && (
-                <Error
-                  errorMessage={errors[name]?.message?.toString()}
-                  className={classNames.error}
-                />
-              )}
+              <ErrorMessage
+                errors={errors}
+                name={name}
+                render={({ message }) => <Error errorMessage={message} />}
+              />
             </StFieldWrapper>
           ))}
         </StFieldset>
