@@ -1,8 +1,4 @@
-export enum MainPageAnchors {
-  catalog = '#catalog',
-  servieces = '#servieces',
-  about = '#about',
-}
+import { MainPageAnchors } from './';
 
 export type TNavProps = {
   navItems: { title: string; link: MainPageAnchors }[];

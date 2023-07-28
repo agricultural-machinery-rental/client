@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { styled } from 'styled-components';
-import type { TFlexProps, TNextLink } from './typing';
+import type { TFlexProps, TNextLink, TTextBoxProps } from './typing';
 
 export const StFlex = styled.div<TFlexProps>(props => {
   const { $flexDirection, $justifyContent, $alignItems, $gap } = props;
@@ -44,3 +44,14 @@ export const StNextSpan = styled.span<TNextLink>`
     text-decoration: underline;
   }
 `;
+
+export const StTextBox = styled.p<TTextBoxProps>(props => {
+  const { $textAlign, $fontWeight, $fontSize, $lineHeight } = props;
+
+  return {
+    textAlign: $textAlign || 'left',
+    fontWeight: $fontWeight || 'normal',
+    fontSize: $fontSize ? `${$fontSize}rem` : 'medium',
+    lineHeight: $lineHeight ? `${$lineHeight}rem` : 'normal',
+  };
+});
