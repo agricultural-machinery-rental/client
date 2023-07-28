@@ -9,3 +9,8 @@ export const PageContent = styled.div`
   min-height: 100vh;
   z-index: ${zindex.page};
 `;
+
+export const StMain = styled.main`
+  flex-grow: 1;
+  margin: 104px 0 0;
+`;

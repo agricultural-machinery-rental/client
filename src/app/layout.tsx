@@ -4,12 +4,12 @@ import React from 'react';
 import { Footer } from '@/components/Footer/Footer';
 import StyledComponentsRegistry from '../../lib/registry';
 import { GlobalStyles } from '@/styles/reset';
-import { Header } from '@/components/Header/Header';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
 import { InfoConditions } from '@/components/InfoConditions/InfoConditions';
-
 import { Modal } from '@/components/Modal/Modal';
 import { ModalProvider } from '@/providers/modalContext';
-import { PageContent } from './styled';
+import { PageContent, StMain } from './styled';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -25,7 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <PageContent>
             <ModalProvider>
               <Header location={'Москва'} />
-              <main>{children}</main>
+              <StMain>{children}</StMain>
               <InfoConditions />
               <Footer />
               <Modal />
