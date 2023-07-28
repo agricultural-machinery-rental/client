@@ -1,9 +1,7 @@
 'use client';
 
 import { FC } from 'react';
-import { StContainerInner, StList, StTitle } from './styled';
-import { ListItem } from './ListItem/ListItem';
-import { TChosenProps } from './typing';
+import { StContainerInner, StList, StTitle, ListItem, TChosenProps } from './';
 
 export const ChosenUs: FC<TChosenProps> = ({ data }) => {
   return (
@@ -11,8 +9,8 @@ export const ChosenUs: FC<TChosenProps> = ({ data }) => {
       <StContainerInner>
         <StTitle>Нас выбирают более 1000 клиентов по всей России</StTitle>
         <StList>
-          {data.map(item => {
-            return <ListItem key={item.id} icon={item.icon} text={item.text} />;
+          {data.map((item, index) => {
+            return <ListItem key={`item-${index}`} icon={item.icon} text={item.text} />;
           })}
         </StList>
       </StContainerInner>

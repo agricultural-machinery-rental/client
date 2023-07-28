@@ -7,13 +7,9 @@ export const StListItem = styled.li`
   gap: 24px;
 `;
 
-export const StListItemImg = styled.img`
-  align-self: flex-end;
-`;
-
 export const StListItemText = styled.p`
   font-family: Open Sans;
-  font-size: 24px;
+  font-size: 1em;
   font-style: normal;
   font-weight: 400;
   line-height: 32px;

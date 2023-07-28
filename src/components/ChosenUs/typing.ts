@@ -1,11 +1,11 @@
-type DataItem = {
+type TDataItem = {
   id: number;
   text: string;
   icon: JSX.Element;
 };
 
-type DataArray = DataItem[];
+type TDataArray = TDataItem[];
 
 export type TChosenProps = {
-  data: DataArray;
+  data: TDataArray;
 };
