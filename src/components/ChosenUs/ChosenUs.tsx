@@ -3,11 +3,7 @@
 import { FC } from 'react';
 import { StContainerInner, StList, StTitle } from './styled';
 import { ListItem } from './ListItem/ListItem';
-import { DataArray } from './typing';
-
-interface TChosenProps {
-  data: DataArray;
-}
+import { TChosenProps } from './typing';
 
 export const ChosenUs: FC<TChosenProps> = ({ data }) => {
   return (

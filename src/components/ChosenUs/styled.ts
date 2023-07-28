@@ -12,13 +12,12 @@ export const StContainerInner = styled(StContainer)`
 
 export const StTitle = styled.h3`
   font-family: Archivo;
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 700;
   line-height: 40px;
 `;
 
 export const StList = styled.ul`
-  list-style: none;
   display: grid;
   grid-template-columns: repeat(3, 346px);
   grid-template-rows: repeat(2, 280px);

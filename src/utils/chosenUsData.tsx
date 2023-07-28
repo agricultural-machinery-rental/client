@@ -5,7 +5,7 @@ import Icon4 from '@/assets/icons/chosen-4.svg';
 import Icon5 from '@/assets/icons/chosen-5.svg';
 import Icon6 from '@/assets/icons/chosen-6.svg';
 
-export const data = [
+export const chosenUsData = [
   {
     id: 1,
     text: 'Крупный автопарк спецтехники, в наличии более 350 единиц',

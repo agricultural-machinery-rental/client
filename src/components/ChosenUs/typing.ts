@@ -1,7 +1,11 @@
-interface DataItem {
+type DataItem = {
   id: number;
   text: string;
   icon: JSX.Element;
-}
+};
 
-export type DataArray = DataItem[];
+type DataArray = DataItem[];
+
+export type TChosenProps = {
+  data: DataArray;
+};
