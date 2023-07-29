@@ -7,7 +7,6 @@ export const StTextareaContainer = styled.div`
   position: relative;
 
   &:focus-within label {
-    top: 0;
     transform: translate(0, 2px) scale(0.8);
     color: blue; // TODO цвет взят условный, поправить, когда цвета будут готовы
   }
@@ -30,9 +29,8 @@ export type TLabelProps = {
 export const StLabel = styled.label<TLabelProps>`
   position: absolute;
   pointer-events: none;
-  top: ${({ $textareaValue }) => ($textareaValue ? '0' : '50%')};
   transform: ${({ $textareaValue }) =>
-    $textareaValue ? 'translate(0, 2px) scale(0.8)' : 'translate(0, -50%) scale(1)'};
+    $textareaValue ? 'translate(0, 2px) scale(0.8)' : 'translate(0, 14px) scale(1)'};
   color: ${({ $textareaValue }) =>
     $textareaValue
       ? 'blue'

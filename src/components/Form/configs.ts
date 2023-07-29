@@ -91,7 +91,7 @@ export const bookingConfig: TFormConfigType[] = [
     kindOfField: 'textarea',
     name: FormFieldNames.message,
     required: false,
-    label: 'Пароль',
+    label: 'Комментарии',
   },
 ];
 
