@@ -1,12 +1,18 @@
 import React, { FC } from 'react';
-import { type TInputProps, StInput } from './';
-import { ValidationPattern } from '@/components/Form';
+import { type TInputProps, StInput, StLabel, StInputContainer } from './';
 
-export const Input: FC<TInputProps> = ({ name, required, pattern, register, ...props }) => {
-  const registerOptions = {
-    ...(required && { required: 'Поле не может быть пустым' }),
-    ...(pattern && { pattern: ValidationPattern[pattern] }),
-  };
-
-  return <StInput {...register(name, registerOptions)} name={name} {...props} />;
-};
+export const Input: FC<TInputProps> = ({
+  name,
+  register,
+  label,
+  watch,
+  registerOptions,
+  ...props
+}) => (
+  <StInputContainer>
+    <StInput {...register(name, registerOptions)} name={name} {...props} />
+    <StLabel htmlFor={name} $inputValue={watch(name) ? true : false}>
+      {label}
+    </StLabel>
+  </StInputContainer>
+);

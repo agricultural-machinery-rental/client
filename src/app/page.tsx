@@ -12,7 +12,7 @@ const StMain = styled.main`
 
 export default function Home() {
   const defaultValues = {
-    firstNname: 'Login',
+    firstName: 'Login',
     phone: '7',
   };
   const classes = {

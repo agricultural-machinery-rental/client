@@ -7,7 +7,7 @@ export const signinConfig: TFormConfigType[] = [
     pattern: ValidationTypes.login,
     required: true,
     type: 'text',
-    placeholder: 'Логин или номер телефона',
+    label: 'Логин или номер телефона',
   },
   {
     kindOfField: 'input',
@@ -15,36 +15,36 @@ export const signinConfig: TFormConfigType[] = [
     pattern: ValidationTypes.password,
     required: true,
     type: 'password',
-    placeholder: 'Пароль',
+    label: 'Пароль',
   },
 ];
 
 export const signupConfig: TFormConfigType[] = [
   {
     kindOfField: 'input',
-    name: FormFieldNames.lastNname,
+    name: FormFieldNames.lastName,
     pattern: ValidationTypes.name,
     required: true,
     type: 'text',
-    placeholder: 'Фамилия',
+    label: 'Фамилия',
     asterisk: 'visible',
   },
   {
     kindOfField: 'input',
-    name: FormFieldNames.firstNname,
+    name: FormFieldNames.firstName,
     pattern: ValidationTypes.name,
     required: true,
     type: 'text',
-    placeholder: 'Имя',
+    label: 'Имя',
     asterisk: 'visible',
   },
   {
     kindOfField: 'input',
-    name: FormFieldNames.middleNname,
+    name: FormFieldNames.middleName,
     pattern: ValidationTypes.name,
     required: false,
     type: 'text',
-    placeholder: 'Отчество',
+    label: 'Отчество',
     asterisk: 'hidden',
   },
   {
@@ -53,7 +53,7 @@ export const signupConfig: TFormConfigType[] = [
     pattern: ValidationTypes.phone,
     required: true,
     type: 'tel',
-    placeholder: 'Телефон',
+    label: 'Телефон',
     asterisk: 'visible',
   },
   {
@@ -62,7 +62,7 @@ export const signupConfig: TFormConfigType[] = [
     pattern: ValidationTypes.email,
     required: true,
     type: 'email',
-    placeholder: 'e-mail',
+    label: 'e-mail',
     asterisk: 'visible',
   },
   {
@@ -71,7 +71,7 @@ export const signupConfig: TFormConfigType[] = [
     pattern: ValidationTypes.password,
     required: true,
     type: 'password',
-    placeholder: 'Пароль',
+    label: 'Пароль',
     asterisk: 'visible',
   },
   {
@@ -79,7 +79,7 @@ export const signupConfig: TFormConfigType[] = [
     name: FormFieldNames.passwordRepeat,
     required: true,
     type: 'password',
-    placeholder: 'Повторите пароль',
+    label: 'Повторите пароль',
     asterisk: 'visible',
   },
 ];
@@ -91,18 +91,18 @@ export const bookingConfig: TFormConfigType[] = [
     kindOfField: 'textarea',
     name: FormFieldNames.message,
     required: false,
-    placeholder: 'Пароль',
+    label: 'Пароль',
   },
 ];
 
 export const callbackConfig: TFormConfigType[] = [
   {
     kindOfField: 'input',
-    name: FormFieldNames.firstNname,
+    name: FormFieldNames.firstName,
     pattern: ValidationTypes.name,
     required: true,
     type: 'text',
-    placeholder: 'Имя',
+    label: 'Имя',
   },
   {
     kindOfField: 'input',
@@ -110,6 +110,6 @@ export const callbackConfig: TFormConfigType[] = [
     pattern: ValidationTypes.phone,
     required: true,
     type: 'tel',
-    placeholder: 'Телефон',
+    label: 'Телефон',
   },
 ];

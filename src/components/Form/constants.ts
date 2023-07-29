@@ -1,9 +1,9 @@
 import { TValidationProps } from './';
 
 export enum FormFieldNames {
-  lastNname = 'lastNname',
-  firstNname = 'firstNname',
-  middleNname = 'middleNname',
+  lastName = 'lastName',
+  firstName = 'firstName',
+  middleName = 'middleName',
   login = 'login',
   phone = 'phone',
   email = 'email',

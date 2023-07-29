@@ -25,6 +25,7 @@ export type TFormConfigType = {
   required: boolean;
   value?: string;
   type?: HTMLInputTypeAttribute;
+  label?: string;
   placeholder?: string;
   asterisk?: 'visible' | 'hidden';
 };

@@ -1,7 +1,14 @@
 import { FC, useMemo } from 'react';
 import { useForm } from 'react-hook-form';
 import { ErrorMessage } from '@hookform/error-message';
-import { type TFormProps, StFieldset, StFieldWrapper, StAsterick, StRelativeBox } from './';
+import {
+  type TFormProps,
+  StFieldset,
+  StFieldWrapper,
+  StAsterick,
+  StRelativeBox,
+  ValidationPattern,
+} from './';
 import { Input } from '@/components/UI/Input/Input';
 import { Textarea } from '@/components/UI/Textarea';
 import { Error } from '@/components/UI/Error';
@@ -19,6 +26,7 @@ export const Form: FC<TFormProps> = ({
     register,
     formState: { errors },
     handleSubmit,
+    watch,
   } = useForm({ mode: 'onBlur', defaultValues: useMemo(() => defaultValues, [defaultValues]) });
 
   return (
@@ -26,23 +34,46 @@ export const Form: FC<TFormProps> = ({
       {header}
       <form onSubmit={handleSubmit(handleFormSubmit)}>
         <StFieldset className={classNames.fieldset}>
-          {fileds.map(({ kindOfField, name, asterisk, ...rest }) => (
-            <StFieldWrapper key={`field-${name}`} className={classNames.field}>
-              <StRelativeBox>
-                {asterisk && <StAsterick visibility={asterisk}>*</StAsterick>}
-                {kindOfField === 'input' ? (
-                  <Input name={name} register={register} {...rest} />
-                ) : (
-                  <Textarea name={name} register={register} {...rest} />
-                )}
-              </StRelativeBox>
-              <ErrorMessage
-                errors={errors}
-                name={name}
-                render={({ message }) => <Error errorMessage={message} />}
-              />
-            </StFieldWrapper>
-          ))}
+          {fileds.map(({ kindOfField, name, asterisk, required, pattern, ...rest }) => {
+            const registerOptions = {
+              ...(required && { required: 'Поле не может быть пустым' }),
+              ...(pattern && { pattern: ValidationPattern[pattern] }),
+            };
+
+            return (
+              <StFieldWrapper key={`field-${name}`} className={classNames.field}>
+                <StRelativeBox>
+                  {asterisk && <StAsterick visibility={asterisk}>*</StAsterick>}
+                  {kindOfField === 'input' ? (
+                    <Input
+                      name={name}
+                      register={register}
+                      registerOptions={registerOptions}
+                      watch={watch}
+                      required={required}
+                      pattern={pattern}
+                      {...rest}
+                    />
+                  ) : (
+                    <Textarea
+                      name={name}
+                      register={register}
+                      registerOptions={registerOptions}
+                      watch={watch}
+                      required={required}
+                      pattern={pattern}
+                      {...rest}
+                    />
+                  )}
+                </StRelativeBox>
+                <ErrorMessage
+                  errors={errors}
+                  name={name}
+                  render={({ message }) => <Error errorMessage={message} />}
+                />
+              </StFieldWrapper>
+            );
+          })}
         </StFieldset>
         {footer}
         {/* <Error errorMessage='' /> TODO настроить error from backend */}
