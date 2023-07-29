@@ -1,4 +1,4 @@
 'use client';
 
-export type { TInputProps } from './typing';
+export type { TInputProps, TLabelProps } from './typing';
 export { StInput, StLabel, StInputContainer } from './styled';

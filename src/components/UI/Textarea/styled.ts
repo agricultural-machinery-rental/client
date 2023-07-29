@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { TTextareaStyled } from './';
+import { type TTextareaStyled, type TLabelProps } from './';
 
 export const StTextareaContainer = styled.div`
   width: 100%;
@@ -21,10 +21,6 @@ export const StTextarea = styled.textarea<TTextareaStyled>`
   height: 100%;
   width: 100%;
 `;
-
-export type TLabelProps = {
-  $textareaValue: boolean;
-};
 
 export const StLabel = styled.label<TLabelProps>`
   position: absolute;

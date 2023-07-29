@@ -14,3 +14,7 @@ export type TInputProps = {
   label?: string;
   watch: UseFormWatch<Record<string, string>>;
 } & InputHTMLAttributes<HTMLInputElement>;
+
+export type TLabelProps = {
+  $inputValue: boolean;
+};

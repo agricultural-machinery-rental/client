@@ -19,3 +19,7 @@ export type TTextarea = {
 export type TTextareaStyled = {
   $resize?: boolean;
 };
+
+export type TLabelProps = {
+  $textareaValue: boolean;
+};

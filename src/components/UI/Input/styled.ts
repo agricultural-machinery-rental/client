@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { theme } from '@/styles/theme';
+import { type TLabelProps } from './';
 
 export const StInputContainer = styled.div`
   width: 100%;
@@ -26,10 +27,6 @@ export const StInput = styled.input`
   padding: ${theme.padding.default};
   width: 100%;
 `;
-
-export type TLabelProps = {
-  $inputValue: boolean;
-};
 
 export const StLabel = styled.label<TLabelProps>`
   position: absolute;
