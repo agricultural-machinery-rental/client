@@ -24,10 +24,12 @@ export const theme = {
   sizesHeight: {
     button: '80px',
     input: '56px',
+    dateRange: '56px',
   },
   sizesWidth: {
     button: '347px',
     input: '346px',
+    dateRange: '441px',
   },
   padding: {
     default: '16px 8px',
