@@ -1,8 +1,7 @@
 import { FC } from 'react';
 import { useRouter } from 'next/navigation';
 
-import { StLogoSVG } from './styled';
-import type { TLogoProps } from './typing';
+import { StLogoSVG, type TLogoProps } from './';
 
 export const Logo: FC<TLogoProps> = ({ width, height }) => {
   const router = useRouter();

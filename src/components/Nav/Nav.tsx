@@ -1,9 +1,6 @@
-'use client';
-
 import { FC } from 'react';
 
-import { StNav, StNavLink } from './styled';
-import type { TNavProps } from './typing';
+import { StNav, StNavLink, type TNavProps } from './';
 
 export const Nav: FC<TNavProps> = ({ navItems }) => (
   <StNav $gap={52}>

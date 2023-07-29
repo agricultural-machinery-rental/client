@@ -8,3 +8,10 @@ export type TFlexProps = {
 export type TNextLink = {
   $justifyContent?: 'center' | 'flex-end' | 'flex-start';
 };
+
+export type TTextBoxProps = {
+  $textAlign?: string;
+  $fontWeight?: number;
+  $fontSize?: number;
+  $lineHeight?: number;
+};
