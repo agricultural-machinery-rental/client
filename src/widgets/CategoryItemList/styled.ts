@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { theme } from '@/styles/theme';
 import { StContainer } from '@/styles/global';
 
 export const StCategoryListWrapper = styled(StContainer)`

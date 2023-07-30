@@ -7,6 +7,7 @@ export const StCategoryItem = styled.li`
   position: relative;
   display: flex;
   flex-direction: column;
+  background-color: ${theme.colors.bg};
 `;
 
 export const StCategoryItemImage = styled.div`
@@ -17,10 +18,20 @@ export const StCategoryItemImage = styled.div`
   -o-object-fit: cover;
   object-fit: cover;
   opacity: 0.9;
-  width: 100%;
+  width: 252px;
+  height: 168px;
+  display: flex;
+  justify-content: center;
 `;
 
-export const StCategoryItemTitle = styled.h4`
+export const StCategoryTitleWrapper = styled.div`
+  min-height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const StCategoryItemTitle = styled.p`
   display: flex;
   justify-content: center;
   font-family: Archivo;
@@ -28,4 +39,5 @@ export const StCategoryItemTitle = styled.h4`
   overflow: hidden;
   padding: ${theme.padding.default};
   text-overflow: ellipsis;
+  text-align: center;
 `;
