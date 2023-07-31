@@ -12,6 +12,8 @@ export const theme = {
     btnFirst: '#E5940F',
     btnSecond: '#E6A63E',
     btnThird: '#F0D8B1',
+    modalBackground: '#d9d9d97f',
+    link: '#e57c4e',
   },
   colorsText: {
     primary: '#000',
@@ -29,6 +31,7 @@ export const theme = {
   },
   padding: {
     default: '16px 8px',
+    modal: '95px',
   },
   borderRadius: {
     round: '8px',

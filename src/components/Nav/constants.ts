@@ -1,6 +1,10 @@
-import { MainPageAnchors } from '@/components/Nav/typing';
+export enum MainPageAnchors {
+  catalog = '#catalog',
+  servieces = '#servieces',
+  about = '#about',
+}
 
-export const headerNavItems: { title: string; link: MainPageAnchors }[] = [
+export const HeaderNavItems: { title: string; link: MainPageAnchors }[] = [
   {
     title: 'Автопарк',
     link: MainPageAnchors.catalog,
