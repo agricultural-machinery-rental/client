@@ -12,7 +12,6 @@ export const StFieldset = styled.fieldset`
 export const StFieldWrapper = styled(StFlex)`
   position: relative;
   width: 346px;
-  height: 80px;
   flex-direction: column;
   gap: 8px;
 `;

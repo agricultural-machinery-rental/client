@@ -23,7 +23,7 @@ export default function Home() {
       <h1>Home</h1>
       <Form
         fileds={signupConfig}
-        handleFormSubmit={() => console.log()}
+        handleFormSubmit={console.log}
         defaultValues={defaultValues}
         classNames={classes}
       />
