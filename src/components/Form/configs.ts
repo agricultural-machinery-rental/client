@@ -1,5 +1,38 @@
 import { type TFormConfigType, ValidationTypes, FormFieldNames } from './';
 
+export const exampleConfig: TFormConfigType[] = [
+  {
+    kindOfField: 'input',
+    name: FormFieldNames.login,
+    // pattern: ValidationTypes.login,
+    required: true,
+    type: 'text',
+    label: 'Логин или номер телефона',
+  },
+  {
+    kindOfField: 'textarea',
+    name: FormFieldNames.message,
+    // pattern: ValidationTypes.message,
+    required: false,
+    type: 'text',
+    label: 'Комментарий',
+  },
+  {
+    kindOfField: 'input',
+    name: FormFieldNames.password,
+    // pattern: ValidationTypes.password,
+    required: true,
+    type: 'password',
+    label: 'Пароль',
+  },
+  {
+    kindOfField: 'checkbox',
+    name: FormFieldNames.checkbox,
+    required: false,
+    label: 'Проверка чекбокса',
+  },
+];
+
 export const signinConfig: TFormConfigType[] = [
   {
     kindOfField: 'input',

@@ -1,6 +1,6 @@
 'use client';
 import styled from 'styled-components';
-import { Form, signupConfig } from '@/components/Form';
+import { Form, exampleConfig } from '@/components/Form';
 
 const StMain = styled.main`
   padding: 80px 0 0;
@@ -12,8 +12,8 @@ const StMain = styled.main`
 
 export default function Home() {
   const defaultValues = {
-    firstName: 'Login',
-    phone: '7',
+    // firstName: 'Login',
+    // phone: '7',
   };
   const classes = {
     fieldset: 'fieldset',
@@ -22,8 +22,8 @@ export default function Home() {
     <StMain>
       <h1>Home</h1>
       <Form
-        fileds={signupConfig}
-        handleFormSubmit={() => console.log()}
+        fileds={exampleConfig}
+        handleFormSubmit={console.log}
         defaultValues={defaultValues}
         classNames={classes}
       />

@@ -1,20 +1,16 @@
-import { TextareaHTMLAttributes } from 'react';
-import { UseFormRegister, FieldValues, UseFormWatch } from 'react-hook-form';
-import { ValidationTypes, FormFieldNames, TValidationProps } from '@/components/Form';
+import { HTMLAttributes } from 'react';
+import { UseFormWatch, UseFormRegisterReturn } from 'react-hook-form';
+import { ValidationTypes, FormFieldNames } from '@/components/Form';
 
 export type TTextarea = {
   name: FormFieldNames;
   resize?: boolean;
-  register: UseFormRegister<FieldValues>;
-  registerOptions: {
-    pattern?: TValidationProps | undefined;
-    required?: string | undefined;
-  };
+  register: UseFormRegisterReturn<FormFieldNames>;
   required: boolean;
   pattern?: ValidationTypes;
   label?: string;
   watch: UseFormWatch<Record<string, string>>;
-} & TextareaHTMLAttributes<HTMLTextAreaElement>;
+} & HTMLAttributes<HTMLTextAreaElement>;
 
 export type TTextareaStyled = {
   $resize?: boolean;
