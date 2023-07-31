@@ -12,8 +12,8 @@ const StMain = styled.main`
 
 export default function Home() {
   const defaultValues = {
-    // firstName: 'Login',
-    // phone: '7',
+    firstName: 'Login',
+    phone: '7',
   };
   const classes = {
     fieldset: 'fieldset',

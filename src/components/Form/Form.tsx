@@ -72,7 +72,6 @@ export const Form: FC<TFormProps> = ({
               </StFieldWrapper>
             );
           })}
-          <button type='submit'>Самбит</button>
         </StFieldset>
         {footer}
         {/* <Error errorMessage='' /> TODO настроить error from backend */}
