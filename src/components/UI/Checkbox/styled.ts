@@ -1,9 +1,5 @@
 import styled from 'styled-components';
 
-export const StCheckboxWrapper = styled.div`
-  margin: 24px 24px 24px 32px;
-`;
-
 export const StCheckboxContainer = styled.div`
   position: relative;
   display: inline-flex;
@@ -20,5 +16,10 @@ export const StCheckboxContainer = styled.div`
     height: 24px;
     margin: auto;
     opacity: 0;
+    cursor: pointer;
   }
+`;
+
+export const StLabel = styled.label`
+  cursor: pointer;
 `;
