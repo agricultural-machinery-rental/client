@@ -1,6 +1,6 @@
 import { InputHTMLAttributes } from 'react';
 import { UseFormWatch, UseFormRegisterReturn } from 'react-hook-form';
-import { ValidationTypes, FormFieldNames } from '@/components/Form';
+import { FormFieldNames } from '@/components/Form';
 
 export type TInputProps = {
   name: FormFieldNames;

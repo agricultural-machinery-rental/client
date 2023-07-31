@@ -1,6 +1,6 @@
-import { HTMLAttributes } from 'react';
+import { TextareaHTMLAttributes } from 'react';
 import { UseFormWatch, UseFormRegisterReturn } from 'react-hook-form';
-import { ValidationTypes, FormFieldNames } from '@/components/Form';
+import { FormFieldNames } from '@/components/Form';
 
 export type TTextarea = {
   name: FormFieldNames;
@@ -9,7 +9,7 @@ export type TTextarea = {
   required: boolean;
   label?: string;
   watch: UseFormWatch<Record<string, string>>;
-} & HTMLAttributes<HTMLTextAreaElement>;
+} & TextareaHTMLAttributes<HTMLTextAreaElement>;
 
 export type TTextareaStyled = {
   $resize?: boolean;

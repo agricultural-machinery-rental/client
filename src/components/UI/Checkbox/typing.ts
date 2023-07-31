@@ -1,5 +1,5 @@
 import { FormFieldNames, ValidationTypes } from '@/components/Form';
-import { HTMLAttributes } from 'react';
+import { InputHTMLAttributes } from 'react';
 import { UseFormRegisterReturn, UseFormWatch } from 'react-hook-form';
 
 export type TCheckbox = {
@@ -9,4 +9,4 @@ export type TCheckbox = {
   pattern?: ValidationTypes;
   watch: UseFormWatch<Record<string, string>>;
   label?: string;
-} & HTMLAttributes<HTMLInputElement>;
+} & InputHTMLAttributes<HTMLInputElement>;
