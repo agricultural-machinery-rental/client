@@ -15,6 +15,7 @@
     "commit": "cz"
   },
   "dependencies": {
+    "@fontsource/open-sans": "5.0.5",
     "@types/node": "20.4.2",
     "@types/react": "18.2.15",
     "@types/react-dom": "18.2.7",
@@ -23,10 +24,10 @@
     "next": "13.4.10",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hook-form": "7.45.2",
     "styled-components": "6.0.4",
     "ts-jest": "29.1.1",
-    "typescript": "4.9.5",
-    "@fontsource/open-sans": "5.0.5"
+    "typescript": "4.9.5"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "7.1.0",
