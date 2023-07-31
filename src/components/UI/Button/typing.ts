@@ -1,7 +1,7 @@
 export type TButton = {
   label?: string;
   onClick?: () => void;
-  isDisabled?: boolean;
+  disabled?: boolean;
   type?: 'submit' | 'reset' | 'button';
   children?: React.ReactNode;
 };
