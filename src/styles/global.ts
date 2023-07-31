@@ -19,9 +19,14 @@ export const StContainer = styled.div`
   width: 1104px;
 `;
 
+export const StHeading2 = styled.h2`
+  font-size: 2em;
+  line-height: 1.167em;
+`;
+
 export const StHeading3 = styled.h3`
-  font-size: 2rem;
-  line-height: 2.5rem;
+  font-size: 1.333em;
+  line-height: 1.25em;
   text-align: center;
   margin: 0 auto;
 `;

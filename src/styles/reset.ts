@@ -35,6 +35,11 @@ export const GlobalStyles = createGlobalStyle`
     overflow: auto;
   }
 
+  h1, h2, h3 {
+    font-family: Archivo;
+    font-weight: 700;
+  }
+
   ol, ul, menu {
     list-style: none;
   }
