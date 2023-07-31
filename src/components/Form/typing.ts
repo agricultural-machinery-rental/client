@@ -19,7 +19,7 @@ export type TAsterisk = {
 };
 
 export type TFormConfigType = {
-  kindOfField: 'input' | 'textarea';
+  kindOfField: 'input' | 'textarea' | 'checkbox';
   name: FormFieldNames;
   pattern?: ValidationTypes;
   required: boolean;

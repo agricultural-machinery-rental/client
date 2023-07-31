@@ -1,6 +1,6 @@
 'use client';
 import styled from 'styled-components';
-import { Form, signupConfig } from '@/components/Form';
+import { Form, exampleConfig } from '@/components/Form';
 
 const StMain = styled.main`
   padding: 80px 0 0;
@@ -22,7 +22,7 @@ export default function Home() {
     <StMain>
       <h1>Home</h1>
       <Form
-        fileds={signupConfig}
+        fileds={exampleConfig}
         handleFormSubmit={console.log}
         defaultValues={defaultValues}
         classNames={classes}

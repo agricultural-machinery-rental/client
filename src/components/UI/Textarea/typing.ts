@@ -1,5 +1,5 @@
 import { TextareaHTMLAttributes } from 'react';
-import { UseFormRegisterReturn, UseFormWatch } from 'react-hook-form';
+import { UseFormWatch, UseFormRegisterReturn } from 'react-hook-form';
 import { FormFieldNames } from '@/components/Form';
 
 export type TTextarea = {

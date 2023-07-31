@@ -4,6 +4,7 @@ export type { TFormProps, TFormConfigType, TValidationProps, TAsterisk } from '.
 export { Form } from './Form';
 export { ValidationTypes, ValidationPattern, FormFieldNames } from './constants';
 export {
+  exampleConfig,
   signinConfig,
   signupConfig,
   profileConfig,

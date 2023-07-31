@@ -10,6 +10,7 @@ export enum FormFieldNames {
   password = 'password',
   passwordRepeat = 'repeatablePassword',
   message = 'message',
+  checkbox = 'checkbox',
 }
 
 export enum ValidationTypes {
