@@ -1,4 +1,4 @@
 export type TErrorProps = {
-  errorMessage: string;
+  errorMessage?: string;
   className?: string;
 };

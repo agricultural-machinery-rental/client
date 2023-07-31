@@ -1,6 +1,5 @@
 import { FC, useMemo } from 'react';
 import { useForm } from 'react-hook-form';
-import { ErrorMessage } from '@hookform/error-message';
 import {
   type TFormProps,
   StFieldset,
@@ -69,11 +68,7 @@ export const Form: FC<TFormProps> = ({
                     {...rest}
                   />
                 </StRelativeBox>
-                <ErrorMessage
-                  errors={errors}
-                  name={name}
-                  render={({ message }) => <Error errorMessage={message} />}
-                />
+                <Error errorMessage={errors[name]?.message?.toString()} />
               </StFieldWrapper>
             );
           })}

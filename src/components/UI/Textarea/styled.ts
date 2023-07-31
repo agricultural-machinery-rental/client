@@ -3,7 +3,6 @@ import { type TTextareaStyled, type TLabelProps } from './';
 
 export const StTextareaContainer = styled.div`
   width: 100%;
-  height: 112px;
   position: relative;
 
   &:focus-within label {
@@ -18,7 +17,7 @@ export const StTextarea = styled.textarea<TTextareaStyled>`
   border-radius: 8px;
   resize: ${({ $resize }) => ($resize ? 'vertical' : 'none')};
 
-  height: 100%;
+  height: 112px;
   width: 100%;
 `;
 

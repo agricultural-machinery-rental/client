@@ -7,7 +7,6 @@ export type TTextarea = {
   resize?: boolean;
   register: UseFormRegisterReturn<FormFieldNames>;
   required: boolean;
-  pattern?: ValidationTypes;
   label?: string;
   watch: UseFormWatch<Record<string, string>>;
 } & HTMLAttributes<HTMLTextAreaElement>;
