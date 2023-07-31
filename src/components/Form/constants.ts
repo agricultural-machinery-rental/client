@@ -19,7 +19,6 @@ export enum ValidationTypes {
   phone = 'phone',
   email = 'email',
   password = 'password',
-  message = 'message',
 }
 
 // TODO скорректировать рег.выражения и сообщения об ошибке
@@ -41,10 +40,6 @@ export const ValidationPattern: Record<ValidationTypes, TValidationProps> = {
     message: 'Ошибка',
   },
   password: {
-    value: /^[A-Z]$/g,
-    message: 'Ошибка',
-  },
-  message: {
     value: /^[A-Z]$/g,
     message: 'Ошибка',
   },

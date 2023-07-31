@@ -12,7 +12,6 @@ export const exampleConfig: TFormConfigType[] = [
   {
     kindOfField: 'textarea',
     name: FormFieldNames.message,
-    // pattern: ValidationTypes.message,
     required: false,
     type: 'text',
     label: 'Комментарий',
@@ -20,7 +19,6 @@ export const exampleConfig: TFormConfigType[] = [
   {
     kindOfField: 'input',
     name: FormFieldNames.password,
-    // pattern: ValidationTypes.password,
     required: true,
     type: 'password',
     label: 'Пароль',
