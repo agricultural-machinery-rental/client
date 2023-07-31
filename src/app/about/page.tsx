@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { Info } from './info';
+import { NewsList } from '@/widgets/news/News';
 
 export const metadata: Metadata = {
   title: 'About agricultural machinery rental',
@@ -10,7 +11,7 @@ const About = () => {
     <>
       breadcrumbs
       <Info />
-      <div>Новости компании</div>
+      <NewsList />
     </>
   );
 };
