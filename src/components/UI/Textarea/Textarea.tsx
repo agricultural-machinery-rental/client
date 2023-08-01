@@ -1,14 +1,11 @@
-import { ChangeEventHandler, FC } from 'react';
-import { StTextarea } from './styled';
-import { TTextarea } from './typing';
+import { FC } from 'react';
+import { type TTextarea, StTextarea, StTextareaContainer, StLabel } from './';
 
-export const Textarea: FC<TTextarea> = ({ value, onChange, resize }) => {
-  const onChangeHandler: ChangeEventHandler<HTMLTextAreaElement> = e => {
-    e.preventDefault();
-    if (onChange) {
-      onChange(e.target.value);
-    }
-  };
-
-  return <StTextarea value={value} onChange={onChangeHandler} $resize={resize} />;
-};
+export const Textarea: FC<TTextarea> = ({ name, resize, register, label, watch, ...props }) => (
+  <StTextareaContainer>
+    <StTextarea {...register} name={name} $resize={resize} {...props} />
+    <StLabel htmlFor={name} $textareaValue={!!watch(name)}>
+      {label}
+    </StLabel>
+  </StTextareaContainer>
+);

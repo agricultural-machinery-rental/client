@@ -1,5 +1,4 @@
 type TDataItem = {
-  id: number;
   text: string;
   icon: JSX.Element;
 };
