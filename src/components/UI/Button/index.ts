@@ -1,4 +1,4 @@
-import Button from './Button';
-import { DesignType, type TButton } from './typing';
+import { Button } from './Button';
+import { type TButton } from './typing';
 
-export { Button, DesignType, type TButton };
+export { Button, type TButton };

@@ -10,7 +10,7 @@ export const StButton = styled.button<TButton>`
   cursor: pointer;
   color: ${theme.colorsText.primary};
   background-color: ${theme.colors.btnFirst};
-  line-height: ${theme.sizesHeight.button};
+  height: ${theme.sizesHeight.button};
   width: ${theme.sizesWidth.button};
   border-radius: ${theme.borderRadius.round};
   border: none;
