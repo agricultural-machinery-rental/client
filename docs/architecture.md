@@ -10,9 +10,9 @@
 
 ### Принципы идеальной архитектуры, которых мы придерживаемся:
 
-- <span style="color:#C37D09">Сильная связность</span> (модули направлены на решение одной четкой задачи), <span style="color:#C37D09">слабая зацепленность</span> (модули как можно менее зависимы от других модулей).
-- Любой <span style="color:#C37D09">модуль должно быть легко удалить</span> без нанесения вреда системе.
-- Модули могут <span style="color:#C37D09">взаимодействовать только с модулями из слоёв ниже</span>.
+- ${\color{#C37D09}Сильная \space связность}$ (модули направлены на решение одной четкой задачи), ${\color{#C37D09}слабая \space зацепленность}$ (модули как можно менее зависимы от других модулей).
+- Любой ${\color{#C37D09}модуль \space должно \space быть \space легко \space удалить}$ без нанесения вреда системе.
+- Модули могут ${\color{#C37D09}взаимодействовать \space только \space с \space модулями \space из \space слоёв \space ниже}$.
 
 ### Public API
 
@@ -21,17 +21,40 @@
 #### Правила Public API:
 
 - другие части приложения могут использовать только те сущности модуля, которые представлены в публичном интерфейсе <br>
-  Нельзя: <span style="background-color:#DB606080">import { Button } from "@/shared/UI/Button/UI/Button"</span><br>
-  Можно: <span style="background-color:#7BA65380">import { Button } from "@/shared/UI/Button"</span>
+
+```diff
+  Нельзя:
+- import { Button } from "@/shared/UI/Button/UI/Button"
+  Можно:
++ import { Button } from "@/shared/UI/Button"
+```
+
 - изменение внутренней структуры не должно приводить к изменению Public API, т.е. внешние "пользователи" не должны страдать от перемещения или переименования компонента внутри модуля <br>
 - именно public API решает проблему коллизии имён <br>
-  Плохо: <span style="background-color:#DB606080">export { Form } from "@/features/auth-form"</span><br>
-  Хорошо: <span style="background-color:#7BA65380">export { Form as AuthForm } from "@/features/auth-form"</span>
+
+```diff
+  Плохо:
+- export { Form } from "@/features/auth-form"
+  Хорошо:
++ export { Form as AuthForm } from "@/features/auth-form"
+```
+
 - коллизия имен должна решаться на уровне публичного интерфейса, а не реализации <br>
-  Плохо: <span style="background-color:#DB606080">export { AuthForm } from "./ui"</span><br>
-  Хорошо: <span style="background-color:#7BA65380">export { Form as PostForm } from "./ui"</span><br>
-  Плохо: <span style="background-color:#DB606080">export { authFormActions, authFormReducer } from "model"</span><br>
-  Хорошо: <span style="background-color:#7BA65380"><br>(features/auth-form/model.ts) export { actions, reducer }<br>(features/auth-form/index.ts) export \* as authFormModel from "./model"</span>
+
+```diff
+  Плохо:
+- export { AuthForm } from "./ui"
+  Хорошо:
++ export { Form as PostForm } from "./ui"
+```
+
+```diff
+  Плохо:
+- export { authFormActions, authFormReducer } from "model"
+  Хорошо:
++ (features/auth-form/model.ts) export { actions, reducer }
++ (features/auth-form/index.ts) export * as authFormModel from "./model"
+```
 
 ### Используемые слои (High-level-abstraction):
 
@@ -75,8 +98,7 @@
 
 > Если бизнес говорит пользователю "Хей, смотри, у нас есть стена" - это не фича. Если у нас что-то "есть", то это что-то - entity.<br>
 > Если бизнес говорит "смотри, ты можешь писать посты на стене", написать пост на стене - это фича. Действие, которое может выполнить пользователь, и есть фича.<br>
-> Но в то же время переход на какую-то страницу - это не фича. Действия пользователя должны привести к изменеию в БД (или любого другого хранилища).<br>
-> https://github.com/feature-sliced/documentation/discussions/23#discussioncomment-451017
+> Но в то же время переход на какую-то страницу - это не фича. Действия пользователя должны привести к изменеию в БД (или любого другого хранилища).<br> https://github.com/feature-sliced/documentation/discussions/23#discussioncomment-451017
 
 #### Пример
 
