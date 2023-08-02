@@ -1,16 +1,17 @@
-import { StCheckboxContainer, StCheckboxWrapper } from './styled';
+import { StCheckboxContainer, StLabel } from './styled';
 import { type TCheckbox } from './typing';
 import { FC } from 'react';
 import CheckboxUncheckedSVG from '@/assets/icons/checkbox-unchecked.svg';
 import CheckboxCheckedSVG from '@/assets/icons/checkbox-checked.svg';
 
-export const Checkbox: FC<TCheckbox> = ({ text, checked = false, onChange, ...props }) => {
+export const Checkbox: FC<TCheckbox> = ({ name, label, required, register, watch, ...props }) => {
+  const id = `checkbox-${name}`;
+
   return (
-    <StCheckboxWrapper {...props}>
-      <StCheckboxContainer onClick={onChange}>
-        {checked ? <CheckboxCheckedSVG /> : <CheckboxUncheckedSVG />}
-        <span>{text}</span>
-      </StCheckboxContainer>
-    </StCheckboxWrapper>
+    <StCheckboxContainer>
+      <input id={id} type='checkbox' required={required} {...register} {...props} />
+      {watch(name) ? <CheckboxCheckedSVG /> : <CheckboxUncheckedSVG />}
+      <StLabel htmlFor={id}>{label}</StLabel>
+    </StCheckboxContainer>
   );
 };

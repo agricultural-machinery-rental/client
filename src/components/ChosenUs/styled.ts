@@ -10,13 +10,6 @@ export const StContainerInner = styled(StContainer)`
   margin: 0 auto;
 `;
 
-export const StTitle = styled.h3`
-  font-family: Archivo;
-  font-size: 1.333em;
-  font-weight: 700;
-  line-height: 40px;
-`;
-
 export const StList = styled.ul`
   display: grid;
   grid-template-columns: repeat(3, 346px);
