@@ -4,7 +4,7 @@ export const StSwiper = styled.div`
   height: 347px;
   width: 347px;
 
-  .slick-dots li { 
+  .slick-dots li {
     margin: 0;
     &.slick-active button:before {
       opacity: 1;
@@ -15,4 +15,5 @@ export const StSwiper = styled.div`
       opacity: 0.7;
       color: #595858;
     }
+  }
 `;
