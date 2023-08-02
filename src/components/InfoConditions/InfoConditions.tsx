@@ -2,10 +2,8 @@ import {
   StInfoConditions,
   StInfoConditionsWrap,
   StHeadingInfoConditions,
-  StSubHeadingInfoConditions,
+  StText,
   StParagraph,
-  StConditionsList,
-  StListItem,
   StLink,
   StFlex,
 } from './';
@@ -18,12 +16,12 @@ export const InfoConditions = () => {
     <StInfoConditions>
       <StInfoConditionsWrap>
         <StHeadingInfoConditions>
-          Взять спецтехнику для сельского хозяйства в аренду стало проще:
+          Взять спецтехнику для сельского хозяйства в аренду стало проще
         </StHeadingInfoConditions>
-        <StFlex $alignItems={'center'} $justifyContent='center' $gap={35}>
+        <StFlex $alignItems={'center'} $justifyContent='space-between' $gap={15}>
           <StParagraph>
-            Выбирайте технику в <StLink href='#'>каталоге</StLink>, позвоните или{' '}
-            <StLink href='#'>оставьте заявку</StLink> на сайте
+            Выбирайте технику в <StLink href='#'>каталоге</StLink>, позвоните нам или{' '}
+            <StLink href='#'>оставьте заявку</StLink> на звонок
           </StParagraph>
           <StParagraph>Получите информацию о наличии спецтехники в указанные даты</StParagraph>
           <StParagraph>Оформите доставку спецтехники или заберите самостоятельно</StParagraph>
@@ -34,15 +32,10 @@ export const InfoConditions = () => {
           <InfoConditionsLine2 width={416} height={17} />
         </StFlex>
 
-        <StSubHeadingInfoConditions>
-          Перед бронированием ознакомьтесь с Правилами аренды сельскохозяйственной техники в ОАО
-          Агропарк:
-        </StSubHeadingInfoConditions>
-        <StConditionsList>
-          <StListItem>водительские права категории А или С</StListItem>
-          <StListItem>стаж вождения не менее 2 лет</StListItem>
-          <StListItem>паспорт</StListItem>
-        </StConditionsList>
+        <StText>
+          Перед бронированием, пожалуйста, ознакомьтесь с <StLink href='#'>Правилами аренды</StLink>{' '}
+          сельхозтехники ОАО “Агропарк”
+        </StText>
       </StInfoConditionsWrap>
     </StInfoConditions>
   );

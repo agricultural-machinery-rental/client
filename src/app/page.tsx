@@ -11,6 +11,7 @@ export default function Home() {
       <h1>Home</h1>
       <CategoryItemList />
       <ChosenUs data={chosenUsData} />
+      <InfoConditions />
     </>
   );
 }
