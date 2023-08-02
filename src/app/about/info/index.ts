@@ -7,8 +7,14 @@ export {
   StHeadingCompanyInfo,
   StSubHeadingCompanyInfo,
   StAdvantagesList,
+  StAdvantagesListWrap,
   StParagraph,
   StAdvantageItem,
   StLink,
+  AboutImageWrap,
 } from './styled';
 export { StFlex } from '@/styles/global';
+
+export { AboutImage } from '../../../entities/AboutImage';
+
+export { AboutImageData } from '../../../shared/api/AboutImage';

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import styled from 'styled-components';
-import { StContainer, StHeading3 } from '@/styles/global';
+import { StContainer, StHeading3, StFlex } from '@/styles/global';
 import { theme } from '@/styles/theme';
 
 export const StCompanyInfo = styled.div`
@@ -9,7 +9,7 @@ export const StCompanyInfo = styled.div`
 `;
 
 export const StCompanyInfoWrap = styled(StContainer)`
-  padding: 32px 0 88px 0;
+  padding: 60px 0 88px 0;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -19,20 +19,20 @@ export const StCompanyInfoWrap = styled(StContainer)`
 export const StHeadingCompanyInfo = styled.h1`
   text-align: left;
   margin-bottom: 8px;
-  font-size: 2rem;
-  line-height: 2.5rem;
+  font-size: 1.33rem;
+  line-height: 1.66rem;
 `;
 export const StSubHeadingCompanyInfo = styled(StHeading3)`
   text-align: left;
-  margin: 0;
-  font-size: 1.5rem;
-  line-height: 32px;
-  font-weight: 400;
+  margin: 20px 0;
+  font-size: 1rem;
+  line-height: 1.33rem;
+  font-weight: 700;
 `;
 
 export const StParagraph = styled.p`
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
 `;
 
 export const StAdvantagesList = styled.ul`
@@ -44,8 +44,8 @@ export const StAdvantagesList = styled.ul`
 `;
 
 export const StAdvantageItem = styled.li`
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
 `;
 
 export const StLink = styled(Link)`
@@ -54,4 +54,14 @@ export const StLink = styled(Link)`
   &:hover {
     text-decoration: underline;
   }
+`;
+
+export const StAdvantagesListWrap = styled.div`
+  display: grid;
+  column-gap: 35px;
+  grid-template-columns: minmax(100px, 250px) auto;
+`;
+
+export const AboutImageWrap = styled(StFlex)`
+  flex-direction: column;
 `;
