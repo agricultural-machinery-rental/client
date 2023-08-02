@@ -8,8 +8,6 @@ import { TDataArray } from './typing';
 import { StSwiper } from './styled';
 
 export const Swiper: FC<TDataArray> = ({ dataArray }) => {
-  console.log(dataArray);
-
   return (
     <StSwiper>
       <Slider {...config}>
