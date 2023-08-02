@@ -1,6 +1,5 @@
 import { dataTractors } from '../const/dataTractors';
 import { Swiper } from '@/features/Swiper';
-import { StarSVG } from './StarSVG/StarSVG';
 import {
   StBookingButton,
   StProductHeader,
@@ -12,6 +11,7 @@ import {
   StSection,
   StStarButton,
 } from './styled';
+import Star from '@/widgets/ProductCard/assets/icons/star.svg';
 
 export const ProductCard = () => {
   return (
@@ -20,7 +20,7 @@ export const ProductCard = () => {
         <StProductHeader>
           <StProductTitle>Трактор Название TRY-45</StProductTitle>
           <StStarButton>
-            <StarSVG />
+            <Star />
           </StStarButton>
         </StProductHeader>
         <StProductMain>
