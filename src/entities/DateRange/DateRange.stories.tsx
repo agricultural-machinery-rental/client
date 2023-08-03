@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
-import { DateRange, type TDateRange } from './index';
+import { DateRange, type TDateRange } from './';
 
 export default {
   title: 'Components/DateRange',

@@ -11,6 +11,7 @@ import {
 import { Input } from '@/components/UI/Input/Input';
 import { Textarea } from '@/components/UI/Textarea';
 import { Checkbox } from '@/components/UI/Checkbox';
+import { DateRange } from '@/entities/DateRange';
 import { Error } from '@/components/UI/Error';
 import { StFlex } from '@/styles/global';
 
@@ -27,18 +28,21 @@ export const Form: FC<TFormProps> = ({
     formState: { errors },
     handleSubmit,
     watch,
+    setValue,
   } = useForm({ mode: 'onBlur', defaultValues: useMemo(() => defaultValues, [defaultValues]) });
 
   const inputElementSwitch = (
     kindOfField: string,
-  ): typeof Input | typeof Textarea | typeof Checkbox => {
+  ): [typeof Input | typeof Textarea | typeof Checkbox | typeof DateRange, object] => {
     switch (kindOfField) {
       case 'textarea':
-        return Textarea;
+        return [Textarea, {}];
       case 'checkbox':
-        return Checkbox;
+        return [Checkbox, {}];
+      case 'daterange':
+        return [DateRange, { setValue: setValue }];
       default:
-        return Input;
+        return [Input, {}];
     }
   };
 
@@ -53,7 +57,7 @@ export const Form: FC<TFormProps> = ({
               ...(pattern && { pattern: ValidationPattern[pattern] }),
             };
 
-            const InputElement = inputElementSwitch(kindOfField);
+            const [InputElement, inputElementAdditionalProps] = inputElementSwitch(kindOfField);
 
             return (
               <StFieldWrapper key={key} className={classNames.field}>
@@ -65,6 +69,7 @@ export const Form: FC<TFormProps> = ({
                     watch={watch}
                     required={required}
                     pattern={pattern}
+                    {...inputElementAdditionalProps}
                     {...rest}
                   />
                 </StRelativeBox>
@@ -73,6 +78,7 @@ export const Form: FC<TFormProps> = ({
             );
           })}
         </StFieldset>
+        <button type='submit'>Submit</button>
         {footer}
         {/* <Error errorMessage='' /> TODO настроить error from backend */}
       </form>

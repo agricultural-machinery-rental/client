@@ -11,6 +11,7 @@ export enum FormFieldNames {
   passwordRepeat = 'repeatablePassword',
   message = 'message',
   checkbox = 'checkbox',
+  daterange = 'daterange',
 }
 
 export enum ValidationTypes {
