@@ -9,7 +9,7 @@ import {
   StAdvantageItem,
   AboutImageWrap,
   AboutImage,
-  AboutImageData,
+  aboutImageData,
 } from './';
 
 import type { TAboutImage } from '@/shared/api/AboutImage';
@@ -38,7 +38,7 @@ export const Info = () => {
 
         <StAdvantagesListWrap>
           <AboutImageWrap>
-            {AboutImageData.map((item: TAboutImage, index) => (
+            {aboutImageData.map((item: TAboutImage, index) => (
               <AboutImage image={item.image} key={`item-${index}`} />
             ))}
           </AboutImageWrap>

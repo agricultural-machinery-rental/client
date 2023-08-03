@@ -1,2 +1,2 @@
 export type { TAboutImage } from './typing';
-export { AboutImageData } from './AboutImageData';
+export { aboutImageData } from './AboutImageData';

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import styled from 'styled-components';
-import { StContainer, StHeading2 } from '@/styles/global';
+import { StContainer, StFlex, StHeading2 } from '@/styles/global';
 import { theme } from '@/styles/theme';
 
 export const StInfoConditions = styled.div`
@@ -26,6 +26,12 @@ export const StHeadingInfoConditions = styled(StHeading2)`
 export const StText = styled.p`
   font-size: 0.83rem;
   margin: 88px 0 0;
+`;
+
+export const StInfoBlockFlex = styled(StFlex)`
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
 `;
 
 export const StParagraph = styled.p`

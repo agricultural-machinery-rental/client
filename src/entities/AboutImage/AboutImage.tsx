@@ -1,12 +1,12 @@
 import React, { FC } from 'react';
-import type { TAboutImage } from '../../shared/api/AboutImage';
+import type { TAboutImage } from '@/shared/api/AboutImage';
 
-import { AboutImageWrap, AboutImageItem } from './styled';
+import { StAboutImageWrap, StAboutImageItem } from './styled';
 
 export const AboutImage: FC<TAboutImage> = ({ image }) => {
   return (
-    <AboutImageWrap>
-      <AboutImageItem src={image} />
-    </AboutImageWrap>
+    <StAboutImageWrap>
+      <StAboutImageItem src={image} />
+    </StAboutImageWrap>
   );
 };

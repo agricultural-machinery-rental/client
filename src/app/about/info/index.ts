@@ -13,8 +13,6 @@ export {
   StLink,
   AboutImageWrap,
 } from './styled';
-export { StFlex } from '@/styles/global';
+export { AboutImage } from '@/entities/AboutImage';
 
-export { AboutImage } from '../../../entities/AboutImage';
-
-export { AboutImageData } from '../../../shared/api/AboutImage';
+export { aboutImageData } from '@/shared/api/AboutImage';
