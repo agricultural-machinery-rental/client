@@ -6,7 +6,6 @@ export type TTextarea = {
   name: FormFieldNames;
   resize?: boolean;
   register: UseFormRegisterReturn<FormFieldNames>;
-  required: boolean;
   label?: string;
   watch: UseFormWatch<Record<string, string>>;
 } & TextareaHTMLAttributes<HTMLTextAreaElement>;
