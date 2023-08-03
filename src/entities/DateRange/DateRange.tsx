@@ -3,7 +3,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { TDateRange } from './typing';
 import { StDateRangeWrapper } from './styled';
-import ArrowSGV from './assets/arrow.svg';
+import CalendarSGV from './assets/calender.svg';
 import { registerLocale } from 'react-datepicker';
 import ru from 'date-fns/locale/ru';
 registerLocale('ru', ru);
@@ -24,7 +24,7 @@ export const DateRange: FC<TDateRange> = ({ name, required, placeholder, setValu
 
   return (
     <StDateRangeWrapper>
-      <ArrowSGV />
+      <CalendarSGV />
       <DatePicker
         locale='ru'
         dateFormat='dd MMMM yyyy'
