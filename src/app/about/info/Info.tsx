@@ -8,11 +8,9 @@ import {
   StAdvantagesListWrap,
   StAdvantageItem,
   AboutImageWrap,
-  AboutImage,
-  aboutImageData,
-} from './';
-
-import type { TAboutImage } from '@/shared/api/AboutImage';
+} from './styled';
+import { AboutImage } from '@/entities/AboutImage';
+import { aboutImageData, type TAboutImage } from '@/shared/api/AboutImage';
 
 export const Info = () => {
   return (

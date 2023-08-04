@@ -5,9 +5,9 @@ import {
   StText,
   StParagraph,
   StLink,
-  StFlex,
   StInfoBlockFlex,
-} from './';
+} from './styled';
+import { StFlex } from '@/styles/global';
 
 import InfoConditionsLine1 from '@/assets/icons/infoConditionsLine1.svg';
 import InfoConditionsLine2 from '@/assets/icons/infoConditionsLine2.svg';
