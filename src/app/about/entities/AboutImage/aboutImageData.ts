@@ -1,4 +1,4 @@
-import { TAboutImage } from 'src/app/about/entities/AboutImage/typing';
+import { TAboutImage } from './typing';
 
 import AboutImg from '@/assets/images/250x180.png';
 
