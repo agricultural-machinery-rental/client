@@ -9,7 +9,7 @@ import {
   StAdvantageItem,
   AboutImageWrap,
 } from './styled';
-import { AboutImage, aboutImageData, type TAboutImage } from '@/entities/AboutImage';
+import { AboutImage, aboutImageData, type TAboutImage } from '../AboutImage';
 
 export const Info = () => {
   return (
