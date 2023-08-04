@@ -1,6 +1,11 @@
 import { TAboutImage } from './typing';
 
-const AboutImg = 'http://placehold.it/250x180';
+export const aboutImageSize = {
+  width: 250,
+  height: 180,
+};
+
+const AboutImg = `https://placehold.it/${aboutImageSize.width}x${aboutImageSize.height}`;
 
 export const aboutImageData: TAboutImage[] = [
   {

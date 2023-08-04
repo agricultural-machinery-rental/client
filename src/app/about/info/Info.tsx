@@ -9,8 +9,7 @@ import {
   StAdvantageItem,
   AboutImageWrap,
 } from './styled';
-import { AboutImage } from '@/entities/AboutImage';
-import { aboutImageData, type TAboutImage } from '@/shared/api/AboutImage';
+import { AboutImage, aboutImageData, type TAboutImage } from '@/entities/AboutImage';
 
 export const Info = () => {
   return (
@@ -36,8 +35,8 @@ export const Info = () => {
 
         <StAdvantagesListWrap>
           <AboutImageWrap>
-            {aboutImageData.map((item: TAboutImage, index) => (
-              <AboutImage image={item.image} key={`item-${index}`} />
+            {aboutImageData.map((item: TAboutImage, index: number) => (
+              <AboutImage {...item} key={`item-${index}`} />
             ))}
           </AboutImageWrap>
 
