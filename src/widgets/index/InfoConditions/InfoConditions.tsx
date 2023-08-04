@@ -9,8 +9,8 @@ import {
 } from './styled';
 import { StFlex } from '@/styles/global';
 
-import InfoConditionsLine1 from '@/assets/icons/infoConditionsLine1.svg';
-import InfoConditionsLine2 from '@/assets/icons/infoConditionsLine2.svg';
+import InfoConditionsLine1 from './assets/infoConditionsLine1.svg';
+import InfoConditionsLine2 from './assets/infoConditionsLine2.svg';
 
 export const InfoConditions = () => {
   return (
