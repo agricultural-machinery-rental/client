@@ -11,8 +11,7 @@
     "test": "jest",
     "storybook": "storybook dev -p 6006 --no-open",
     "build-storybook": "storybook build",
-    "prepare": "husky install",
-    "commit": "cz"
+    "prepare": "husky install"
   },
   "dependencies": {
     "@fontsource/open-sans": "5.0.5",
@@ -46,8 +45,6 @@
     "@types/react-slick": "0.23.10",
     "@typescript-eslint/eslint-plugin": "6.1.0",
     "@typescript-eslint/parser": "6.1.0",
-    "commitizen": "4.3.0",
-    "cz-conventional-changelog": "3.3.0",
     "eslint-config-prettier": "8.8.0",
     "eslint-plugin-prettier": "5.0.0",
     "eslint-plugin-storybook": "0.6.12",
@@ -59,15 +56,10 @@
     "storybook": "7.1.0"
   },
   "engines": {
-    "node": ">=18"
+    "node": "18"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": "npm run format"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
   }
 }
