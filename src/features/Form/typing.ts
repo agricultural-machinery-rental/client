@@ -1,5 +1,5 @@
 import { ReactNode, HTMLInputTypeAttribute } from 'react';
-import { UseFormWatch, UseFormRegisterReturn } from 'react-hook-form';
+import { UseFormWatch, UseFormRegisterReturn, UseFormSetValue } from 'react-hook-form';
 import { ValidationTypes, FormFieldNames } from './consts';
 
 export type TFormProps = {
@@ -13,6 +13,7 @@ export type TFormProps = {
 export type TRhfProps = {
   register: UseFormRegisterReturn<FormFieldNames>;
   watch: UseFormWatch<Record<string, string>>;
+  setValue: UseFormSetValue<Record<string, string>>;
 };
 
 export type TFieldProps = {
@@ -25,7 +26,7 @@ export type TAsterisk = {
   visibility?: 'visible' | 'hidden';
 };
 
-export type TKindOfField = 'input' | 'textarea' | 'checkbox';
+export type TKindOfField = 'input' | 'textarea' | 'checkbox' | 'daterange';
 
 export type TFormConfigType = {
   kindOfField: TKindOfField;
