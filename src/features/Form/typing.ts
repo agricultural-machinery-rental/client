@@ -1,25 +1,34 @@
 import { ReactNode, HTMLInputTypeAttribute } from 'react';
-import { ValidationTypes, FormFieldNames } from './';
+import { UseFormWatch, UseFormRegisterReturn } from 'react-hook-form';
+import { ValidationTypes, FormFieldNames } from './consts';
 
 export type TFormProps = {
-  header?: ReactNode;
   footer?: ReactNode;
   fileds: TFormConfigType[];
   handleFormSubmit: () => void;
   defaultValues?: Record<string, string>;
-  classNames: {
-    fieldset?: string;
-    field?: string;
-    error?: string;
-  };
+  asterisk?: boolean;
 };
+
+export type TRhfProps = {
+  register: UseFormRegisterReturn<FormFieldNames>;
+  watch: UseFormWatch<Record<string, string>>;
+};
+
+export type TFieldProps = {
+  asterisk?: boolean;
+  errorMessage?: string;
+} & TFormConfigType &
+  TRhfProps;
 
 export type TAsterisk = {
   visibility?: 'visible' | 'hidden';
 };
 
+export type TKindOfField = 'input' | 'textarea' | 'checkbox';
+
 export type TFormConfigType = {
-  kindOfField: 'input' | 'textarea' | 'checkbox' | 'daterange';
+  kindOfField: TKindOfField;
   name: FormFieldNames;
   pattern?: ValidationTypes;
   required: boolean;
@@ -27,7 +36,6 @@ export type TFormConfigType = {
   type?: HTMLInputTypeAttribute;
   label?: string;
   placeholder?: string;
-  asterisk?: 'visible' | 'hidden';
 };
 
 export type TValidationProps = {

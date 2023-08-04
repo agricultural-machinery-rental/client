@@ -1,4 +1,5 @@
-import { type TFormConfigType, ValidationTypes, FormFieldNames } from './';
+import type { TFormConfigType } from './typing';
+import { ValidationTypes, FormFieldNames } from './consts';
 
 export const signinConfig: TFormConfigType[] = [
   {
@@ -27,7 +28,6 @@ export const signupConfig: TFormConfigType[] = [
     required: true,
     type: 'text',
     label: 'Фамилия',
-    asterisk: 'visible',
   },
   {
     kindOfField: 'input',
@@ -36,7 +36,6 @@ export const signupConfig: TFormConfigType[] = [
     required: true,
     type: 'text',
     label: 'Имя',
-    asterisk: 'visible',
   },
   {
     kindOfField: 'input',
@@ -45,7 +44,6 @@ export const signupConfig: TFormConfigType[] = [
     required: false,
     type: 'text',
     label: 'Отчество',
-    asterisk: 'hidden',
   },
   {
     kindOfField: 'input',
@@ -54,7 +52,6 @@ export const signupConfig: TFormConfigType[] = [
     required: true,
     type: 'tel',
     label: 'Телефон',
-    asterisk: 'visible',
   },
   {
     kindOfField: 'input',
@@ -63,7 +60,6 @@ export const signupConfig: TFormConfigType[] = [
     required: true,
     type: 'email',
     label: 'e-mail',
-    asterisk: 'visible',
   },
   {
     kindOfField: 'input',
@@ -72,7 +68,6 @@ export const signupConfig: TFormConfigType[] = [
     required: true,
     type: 'password',
     label: 'Пароль',
-    asterisk: 'visible',
   },
   {
     kindOfField: 'input',
@@ -80,7 +75,6 @@ export const signupConfig: TFormConfigType[] = [
     required: true,
     type: 'password',
     label: 'Повторите пароль',
-    asterisk: 'visible',
   },
 ];
 

@@ -1,7 +1,7 @@
 export enum MainPageAnchors {
   catalog = '#catalog',
   servieces = '#servieces',
-  about = '#about',
+  about = 'about',
 }
 
 export const HeaderNavItems: { title: string; link: MainPageAnchors }[] = [

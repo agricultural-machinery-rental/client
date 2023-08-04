@@ -1,4 +1,4 @@
-import { TValidationProps } from './';
+import type { TValidationProps } from './typing';
 
 export enum FormFieldNames {
   lastName = 'lastName',
