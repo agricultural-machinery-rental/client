@@ -8,7 +8,7 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0;
     vertical-align: baseline;
     font-size: 1em;
-    line-height: 1.15;
+    line-height: 1.333em;
   }
 
   *,
