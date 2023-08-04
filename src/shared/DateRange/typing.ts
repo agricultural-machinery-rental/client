@@ -1,4 +1,4 @@
-import { FormFieldNames, ValidationTypes } from '@/components/Form';
+import { FormFieldNames, ValidationTypes } from '@/features/Form';
 import { UseFormRegisterReturn, UseFormWatch, UseFormSetValue } from 'react-hook-form';
 import { InputHTMLAttributes } from 'react';
 

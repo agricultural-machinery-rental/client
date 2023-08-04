@@ -34,7 +34,6 @@ export const DateRange: FC<TDateRange> = ({ name, required, placeholder, setValu
         minDate={minDate}
         onChange={update => {
           setDateRange(update);
-          console.log(update);
         }}
         placeholderText={placeholder}
         required={required}

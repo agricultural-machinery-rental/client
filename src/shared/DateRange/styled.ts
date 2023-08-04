@@ -21,7 +21,6 @@ export const StDateRangeWrapper = styled.div`
   input {
     background-color: ${theme.colors.white};
     border-radius: ${theme.borderRadius.round};
-    //box-sizing: border-box;
     border: 1px solid ${theme.colors.border};
     color: ${theme.colorsText.primary};
     font-size: 1em;
