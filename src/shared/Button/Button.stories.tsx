@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
-import { Button } from '@/components/UI/Button/Button';
+import { Button } from '@/shared/Button/Button';
 import { type TButton } from './typing';
 
 export default {

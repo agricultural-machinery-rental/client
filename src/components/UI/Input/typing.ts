@@ -5,7 +5,6 @@ import { FormFieldNames } from '@/components/Form';
 export type TInputProps = {
   name: FormFieldNames;
   register: UseFormRegisterReturn<FormFieldNames>;
-  required: boolean;
   label?: string;
   watch: UseFormWatch<Record<string, string>>;
 } & InputHTMLAttributes<HTMLInputElement>;
