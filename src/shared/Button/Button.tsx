@@ -1,7 +1,7 @@
 'use client';
 
 import React, { FC } from 'react';
-import type { TButton } from '@/components/UI/Button/typing';
+import type { TButton } from '@/shared/Button/typing';
 import { StButton } from './styled';
 
 export const Button: FC<TButton> = ({ label, disabled = false, onClick, ...props }) => {

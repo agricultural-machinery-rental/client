@@ -1,7 +1,7 @@
 'use client';
 
-import React, { FC, useState } from 'react';
-import { Button } from '@/components/UI/Button';
+import React, { useState } from 'react';
+import { Button } from '@/shared/Button';
 
 export const ButtonBooking = () => {
   const [clicked, setClicked] = useState(false);
