@@ -1,11 +1,11 @@
 import { TAboutImage } from './typing';
 
+import AboutImg from '@/assets/images/250x180.png';
+
 export const aboutImageSize = {
   width: 250,
   height: 180,
 };
-
-const AboutImg = `https://placehold.it/${aboutImageSize.width}x${aboutImageSize.height}`;
 
 export const aboutImageData: TAboutImage[] = [
   {

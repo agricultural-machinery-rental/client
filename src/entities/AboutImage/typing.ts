@@ -1,4 +1,6 @@
+import { StaticImageData } from 'next/image';
+
 export type TAboutImage = {
-  image: string;
+  image: StaticImageData;
   alt: string;
 };
