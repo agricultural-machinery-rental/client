@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { Info } from './entities/Info';
+import { Info } from './widgets/Info';
 
 export const metadata: Metadata = {
   title: 'About agricultural machinery rental',
