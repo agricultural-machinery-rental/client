@@ -22,6 +22,7 @@ export const ProductCard = () => {
       <article>
         <StProductHeader>
           <StProductTitle>Трактор Название TRY-45</StProductTitle>
+          {/* // TODO вынести кнопку 'добавить в избранное' в features */}
           <StStarButton>
             <Star />
           </StStarButton>
