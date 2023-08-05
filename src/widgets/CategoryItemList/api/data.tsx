@@ -1,6 +1,8 @@
+import { TCategoryItemContainer } from '@/entities/Product/CategoryItemContainer';
+
 import TractorImg from './assets/blue-tractor.svg';
 
-export const CategoryItemData = [
+export const CategoryItemData: TCategoryItemContainer[] = [
   {
     image: <TractorImg />,
     title: 'Тракторы',

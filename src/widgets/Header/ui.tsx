@@ -1,5 +1,3 @@
-'use client';
-
 import { FC, useContext } from 'react';
 
 import { ModalContext } from '@/entities/Modal';
