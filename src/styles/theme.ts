@@ -33,7 +33,6 @@ export const theme = {
   },
   padding: {
     default: '16px 8px',
-    modal: '95px',
   },
   borderRadius: {
     round: '8px',

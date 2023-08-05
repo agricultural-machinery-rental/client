@@ -8,7 +8,7 @@ import type { TFormProps } from '../../typing';
 
 export const Form: FC<TFormProps> = ({
   footer,
-  fileds,
+  fields,
   handleFormSubmit,
   defaultValues,
   asterisk,
@@ -24,7 +24,7 @@ export const Form: FC<TFormProps> = ({
   return (
     <form onSubmit={handleSubmit(handleFormSubmit)}>
       <StFieldset>
-        {fileds.map(({ kindOfField, name, required, pattern, ...rest }, key) => {
+        {fields.map(({ kindOfField, name, required, pattern, ...rest }, key) => {
           const registerOptions = {
             ...(required && { required: 'Поле не может быть пустым' }),
             ...(pattern && { pattern: ValidationPattern[pattern] }),

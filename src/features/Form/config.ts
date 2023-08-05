@@ -1,25 +1,6 @@
 import type { TFormConfigType } from './typing';
 import { ValidationTypes, FormFieldNames } from './consts';
 
-export const signinConfig: TFormConfigType[] = [
-  {
-    kindOfField: 'input',
-    name: FormFieldNames.login,
-    pattern: ValidationTypes.login,
-    required: true,
-    type: 'text',
-    label: 'Логин или номер телефона',
-  },
-  {
-    kindOfField: 'input',
-    name: FormFieldNames.password,
-    pattern: ValidationTypes.password,
-    required: true,
-    type: 'password',
-    label: 'Пароль',
-  },
-];
-
 export const signupConfig: TFormConfigType[] = [
   {
     kindOfField: 'input',

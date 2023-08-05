@@ -1,10 +1,9 @@
 import { InputHTMLAttributes } from 'react';
 import { UseFormWatch, UseFormRegisterReturn } from 'react-hook-form';
-import { FormFieldNames } from '@/components/Form';
 
 export type TInputProps = {
-  name: FormFieldNames;
-  register: UseFormRegisterReturn<FormFieldNames>;
+  name: string;
+  register: UseFormRegisterReturn;
   label?: string;
   watch: UseFormWatch<Record<string, string>>;
 } & InputHTMLAttributes<HTMLInputElement>;

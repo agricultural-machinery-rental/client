@@ -16,5 +16,4 @@ export const StModalWindow = styled.div`
   border-radius: ${theme.borderRadius.round};
   background: ${theme.colors.white};
   margin: auto;
-  padding: ${theme.padding.modal};
 `;

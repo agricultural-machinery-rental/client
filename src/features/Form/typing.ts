@@ -1,17 +1,17 @@
 import { ReactNode, HTMLInputTypeAttribute } from 'react';
 import { UseFormWatch, UseFormRegisterReturn, UseFormSetValue } from 'react-hook-form';
-import { ValidationTypes, FormFieldNames } from './consts';
+import { ValidationTypes } from './consts';
 
 export type TFormProps = {
   footer?: ReactNode;
-  fileds: TFormConfigType[];
+  fields: TFormConfigType[];
   handleFormSubmit: () => void;
   defaultValues?: Record<string, string>;
   asterisk?: boolean;
 };
 
 export type TRhfProps = {
-  register: UseFormRegisterReturn<FormFieldNames>;
+  register: UseFormRegisterReturn;
   watch: UseFormWatch<Record<string, string>>;
   setValue: UseFormSetValue<Record<string, string>>;
 };
@@ -30,7 +30,7 @@ export type TKindOfField = 'input' | 'textarea' | 'checkbox' | 'daterange';
 
 export type TFormConfigType = {
   kindOfField: TKindOfField;
-  name: FormFieldNames;
+  name: string;
   pattern?: ValidationTypes;
   required: boolean;
   value?: string;

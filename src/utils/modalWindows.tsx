@@ -1,7 +1,12 @@
+import { AuthForm } from '@/widgets/auth';
+
 export enum modalWindows {
-  example = 'example',
+  signin = 'signin',
+  signup = 'signup',
+  passwordRecovery = 'passwordRecovery',
+  createPassword = 'createPassword',
 }
 
 export const modalWindowContent = {
-  [modalWindows.example]: <span>Компонент содержимого окна</span>,
+  [modalWindows.signin]: <AuthForm />,
 } as const;
