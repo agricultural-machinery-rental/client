@@ -42,5 +42,5 @@ export const StLabel = styled.label<TLabelProps>`
   transform-origin: top left;
   left: 16px;
   font-size: 0.6rem;
-  line-height: 24px;
+  line-height: 1rem;
 `;

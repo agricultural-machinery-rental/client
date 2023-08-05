@@ -23,7 +23,7 @@ export const Form: FC<TFormProps> = ({
 
   return (
     <form onSubmit={handleSubmit(handleFormSubmit)}>
-      <StFieldset>
+      <StFieldset className='fieldset'>
         {fields.map(({ kindOfField, name, required, pattern, ...rest }, key) => {
           const registerOptions = {
             ...(required && { required: 'Поле не может быть пустым' }),

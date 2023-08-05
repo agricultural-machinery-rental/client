@@ -5,9 +5,14 @@ import { theme } from '@/styles/theme';
 export const StContainer = styled.div`
   width: 346px;
   margin: 80px 190px;
+
+  & .fieldset {
+    gap: 48px;
+  }
 `;
 
 export const StTitle = styled(StHeading3)`
+  font-family: Archivo;
   margin: 0 0 56px;
 `;
 
