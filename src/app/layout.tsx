@@ -5,7 +5,7 @@ import StyledComponentsRegistry from '../../lib/registry';
 import { GlobalStyles } from '@/styles/reset';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-import { InfoConditions } from '@/components/InfoConditions/InfoConditions';
+
 import { Modal } from '@/components/Modal/Modal';
 import { ModalProvider } from '@/providers/modalContext';
 import { PageContent, StMain } from './styled';
@@ -25,7 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <ModalProvider>
               <Header location={'Москва'} />
               <StMain>{children}</StMain>
-              <InfoConditions />
+
               <Footer />
               <Modal />
             </ModalProvider>

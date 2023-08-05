@@ -11,18 +11,19 @@
     "test": "jest",
     "storybook": "storybook dev -p 6006 --no-open",
     "build-storybook": "storybook build",
-    "prepare": "husky install",
-    "commit": "cz"
+    "prepare": "husky install"
   },
   "dependencies": {
     "@fontsource/open-sans": "5.0.5",
     "@types/node": "20.4.2",
     "@types/react": "18.2.15",
     "@types/react-dom": "18.2.7",
+    "@types/react-datepicker": "4.15.0",
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.10",
     "next": "13.4.10",
     "react": "18.2.0",
+    "react-datepicker": "4.15.0",
     "react-dom": "18.2.0",
     "react-hook-form": "7.45.2",
     "react-slick": "0.29.0",
@@ -46,8 +47,6 @@
     "@types/react-slick": "0.23.10",
     "@typescript-eslint/eslint-plugin": "6.1.0",
     "@typescript-eslint/parser": "6.1.0",
-    "commitizen": "4.3.0",
-    "cz-conventional-changelog": "3.3.0",
     "eslint-config-prettier": "8.8.0",
     "eslint-plugin-prettier": "5.0.0",
     "eslint-plugin-storybook": "0.6.12",
@@ -59,15 +58,10 @@
     "storybook": "7.1.0"
   },
   "engines": {
-    "node": ">=18"
+    "node": "18"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": "npm run format"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
   }
 }
