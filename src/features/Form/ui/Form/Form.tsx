@@ -18,6 +18,7 @@ export const Form: FC<TFormProps> = ({
     formState: { errors },
     handleSubmit,
     watch,
+    setValue,
   } = useForm({ mode: 'onBlur', defaultValues: useMemo(() => defaultValues, [defaultValues]) });
 
   return (
@@ -39,6 +40,7 @@ export const Form: FC<TFormProps> = ({
               required={required}
               register={register(name, registerOptions)}
               watch={watch}
+              setValue={setValue}
               {...rest}
             />
           );
