@@ -13,6 +13,10 @@
 
 </div>
 
+## Документация
+
+- [Документация проекта](/docs)
+
 Development next server:
 
 ```bash
