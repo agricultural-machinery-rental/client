@@ -12,7 +12,7 @@ export const signinConfig: TFormConfigType[] = [
     pattern: ValidationTypes.login,
     required: true,
     type: 'text',
-    label: 'Логин или номер телефона',
+    label: 'Почта или номер телефона',
   },
   {
     kindOfField: 'input',
