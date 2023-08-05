@@ -1,7 +1,8 @@
 import Link from 'next/link';
-import styled from 'styled-components';
-import { StContainer, StFlex, StHeading2 } from '@/styles/global';
-import { theme } from '@/styles/theme';
+import { styled } from 'styled-components';
+
+import { StContainer, StFlex, StHeading2 } from '@/shared/styles/global';
+import { theme } from '@/shared/styles/theme';
 
 export const StInfoConditions = styled.div`
   display: flex;
@@ -18,8 +19,7 @@ export const StHeadingInfoConditions = styled(StHeading2)`
   font-size: 1.333em;
   line-height: 2.3rem;
   text-align: center;
-  margin: 0 auto;
-  margin-bottom: 80px;
+  margin: 0 auto 80px auto;
   width: 70%;
 `;
 

@@ -1,6 +1,7 @@
 'use client';
-import styled from 'styled-components';
-import { zindex } from '@/styles/zindex';
+import { styled } from 'styled-components';
+
+import { zindex } from '@/shared/styles/zindex';
 
 export const PageContent = styled.div`
   position: relative;

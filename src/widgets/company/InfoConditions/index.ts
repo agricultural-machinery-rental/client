@@ -1,3 +1,3 @@
 'use client';
 
-export { InfoConditions } from './InfoConditions';
+export { InfoConditions } from './ui';

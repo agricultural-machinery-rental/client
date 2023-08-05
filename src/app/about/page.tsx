@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+
 import { Info } from '@/widgets/company/Info';
 
 export const metadata: Metadata = {

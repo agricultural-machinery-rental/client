@@ -1,3 +1,5 @@
-export default function AboutLayout({ children }: { children: React.ReactNode }) {
+import { ReactNode } from 'react';
+
+export default function AboutLayout({ children }: { children: ReactNode }) {
   return <>{children}</>;
 }

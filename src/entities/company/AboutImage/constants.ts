@@ -1,6 +1,5 @@
+import AboutImg from './assets/250x180.png';
 import { TAboutImage } from './typing';
-
-import AboutImg from '@/assets/images/250x180.png';
 
 export const aboutImageData: TAboutImage[] = [
   {
