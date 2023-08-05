@@ -11,7 +11,7 @@ export const StSwiper = styled.div`
       color: black;
     }
     button:before {
-      font-size: 16px;
+      font-size: 0.666rem;
       opacity: 0.7;
       color: #595858;
     }

@@ -13,7 +13,7 @@ import {
   StProductFooter,
   StProductFooterInfo,
 } from './styled';
-import Star from '@/widgets/ProductCard/assets/icons/star.svg';
+import Star from '../assets/icons/star.svg';
 import { Button } from '@/shared/Button';
 
 export const ProductCard = () => {
