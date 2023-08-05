@@ -2,6 +2,7 @@ import { Input } from '@/components/UI/Input/Input';
 import { Textarea } from '@/components/UI/Textarea';
 import { Checkbox } from '@/components/UI/Checkbox';
 import { DateRange } from '@/shared/DateRange';
+import { PasswordInput } from '@/shared/PasswordInput';
 import type { TKindOfField } from './typing';
 
 export const switchFieldComponent = (
@@ -14,6 +15,8 @@ export const switchFieldComponent = (
       return Checkbox;
     case 'daterange':
       return DateRange;
+    case 'passwordInput':
+      return PasswordInput;
     default:
       return Input;
   }

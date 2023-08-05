@@ -15,7 +15,7 @@ export const signinConfig: TFormConfigType[] = [
     label: 'Почта или номер телефона',
   },
   {
-    kindOfField: 'input',
+    kindOfField: 'passwordInput',
     name: AuthFeildNames.password,
     pattern: ValidationTypes.password,
     required: true,

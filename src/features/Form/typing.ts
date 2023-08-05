@@ -26,7 +26,7 @@ export type TAsterisk = {
   visibility?: 'visible' | 'hidden';
 };
 
-export type TKindOfField = 'input' | 'textarea' | 'checkbox' | 'daterange';
+export type TKindOfField = 'input' | 'textarea' | 'checkbox' | 'daterange' | 'passwordInput';
 
 export type TFormConfigType = {
   kindOfField: TKindOfField;

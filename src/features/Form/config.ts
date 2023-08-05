@@ -43,7 +43,7 @@ export const signupConfig: TFormConfigType[] = [
     label: 'e-mail',
   },
   {
-    kindOfField: 'input',
+    kindOfField: 'passwordInput',
     name: FormFieldNames.password,
     pattern: ValidationTypes.password,
     required: true,
@@ -51,7 +51,7 @@ export const signupConfig: TFormConfigType[] = [
     label: 'Пароль',
   },
   {
-    kindOfField: 'input',
+    kindOfField: 'passwordInput',
     name: FormFieldNames.passwordRepeat,
     required: true,
     type: 'password',
