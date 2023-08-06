@@ -1,5 +1,6 @@
-import { TDynamicRoute } from '@/types';
 import { Metadata } from 'next';
+
+import { TDynamicRoute } from '@/shared/types';
 
 export const metadata: Metadata = {
   title: 'Categories',

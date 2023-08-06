@@ -1,9 +1,4 @@
 'use client';
 
-export { CategoryItemContainer } from './CategoryItemContainer';
-export {
-  StCategoryItem,
-  StCategoryItemImage,
-  StCategoryTitleWrapper,
-  StCategoryItemTitle,
-} from './styled';
+export { CategoryItemContainer } from './ui';
+export type { TCategoryItemContainer } from './typing';

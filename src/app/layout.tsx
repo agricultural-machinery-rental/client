@@ -1,13 +1,15 @@
 import type { Metadata } from 'next';
 import React from 'react';
 
-import StyledComponentsRegistry from '../../lib/registry';
-import { GlobalStyles } from '@/styles/reset';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
+import { Footer } from '@/widgets/Footer';
+import { Header } from '@/widgets/Header';
 
-import { Modal } from '@/components/Modal/Modal';
-import { ModalProvider } from '@/providers/modalContext';
+import { ModalProvider } from '@/entities/Modal';
+import { Modal } from '@/entities/Modal/ui';
+
+import StyledComponentsRegistry from '@/shared/styles/registry';
+import { GlobalStyles } from '@/shared/styles/reset';
+
 import { PageContent, StMain } from './styled';
 
 export const metadata: Metadata = {

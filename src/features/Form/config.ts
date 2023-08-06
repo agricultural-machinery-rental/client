@@ -1,11 +1,12 @@
-import type { TFormConfigType } from './typing';
-import { ValidationTypes, FormFieldNames } from './consts';
+import { FormFieldNames, validationTypes } from '@/shared/form';
 
-export const signinConfig: TFormConfigType[] = [
+import type { TFieldConfig } from './Field';
+
+export const signinConfig: TFieldConfig[] = [
   {
     kindOfField: 'input',
     name: FormFieldNames.login,
-    pattern: ValidationTypes.login,
+    pattern: validationTypes.login,
     required: true,
     type: 'text',
     label: 'Логин или номер телефона',
@@ -13,18 +14,18 @@ export const signinConfig: TFormConfigType[] = [
   {
     kindOfField: 'input',
     name: FormFieldNames.password,
-    pattern: ValidationTypes.password,
+    pattern: validationTypes.password,
     required: true,
     type: 'password',
     label: 'Пароль',
   },
 ];
 
-export const signupConfig: TFormConfigType[] = [
+export const signupConfig: TFieldConfig[] = [
   {
     kindOfField: 'input',
     name: FormFieldNames.lastName,
-    pattern: ValidationTypes.name,
+    pattern: validationTypes.name,
     required: true,
     type: 'text',
     label: 'Фамилия',
@@ -32,7 +33,7 @@ export const signupConfig: TFormConfigType[] = [
   {
     kindOfField: 'input',
     name: FormFieldNames.firstName,
-    pattern: ValidationTypes.name,
+    pattern: validationTypes.name,
     required: true,
     type: 'text',
     label: 'Имя',
@@ -40,7 +41,7 @@ export const signupConfig: TFormConfigType[] = [
   {
     kindOfField: 'input',
     name: FormFieldNames.middleName,
-    pattern: ValidationTypes.name,
+    pattern: validationTypes.name,
     required: false,
     type: 'text',
     label: 'Отчество',
@@ -48,7 +49,7 @@ export const signupConfig: TFormConfigType[] = [
   {
     kindOfField: 'input',
     name: FormFieldNames.phone,
-    pattern: ValidationTypes.phone,
+    pattern: validationTypes.phone,
     required: true,
     type: 'tel',
     label: 'Телефон',
@@ -56,7 +57,7 @@ export const signupConfig: TFormConfigType[] = [
   {
     kindOfField: 'input',
     name: FormFieldNames.email,
-    pattern: ValidationTypes.email,
+    pattern: validationTypes.email,
     required: true,
     type: 'email',
     label: 'e-mail',
@@ -64,7 +65,7 @@ export const signupConfig: TFormConfigType[] = [
   {
     kindOfField: 'input',
     name: FormFieldNames.password,
-    pattern: ValidationTypes.password,
+    pattern: validationTypes.password,
     required: true,
     type: 'password',
     label: 'Пароль',
@@ -78,9 +79,9 @@ export const signupConfig: TFormConfigType[] = [
   },
 ];
 
-export const profileConfig: TFormConfigType[] = [];
+export const profileConfig: TFieldConfig[] = [];
 
-export const bookingConfig: TFormConfigType[] = [
+export const bookingConfig: TFieldConfig[] = [
   {
     kindOfField: 'textarea',
     name: FormFieldNames.message,
@@ -89,11 +90,11 @@ export const bookingConfig: TFormConfigType[] = [
   },
 ];
 
-export const callbackConfig: TFormConfigType[] = [
+export const callbackConfig: TFieldConfig[] = [
   {
     kindOfField: 'input',
     name: FormFieldNames.firstName,
-    pattern: ValidationTypes.name,
+    pattern: validationTypes.name,
     required: true,
     type: 'text',
     label: 'Имя',
@@ -101,7 +102,7 @@ export const callbackConfig: TFormConfigType[] = [
   {
     kindOfField: 'input',
     name: FormFieldNames.phone,
-    pattern: ValidationTypes.phone,
+    pattern: validationTypes.phone,
     required: true,
     type: 'tel',
     label: 'Телефон',

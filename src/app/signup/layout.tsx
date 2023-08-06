@@ -1,4 +1,4 @@
-import { TLayout } from '@/types';
+import { TLayout } from '@/shared/types';
 
 const SignUpLayout: TLayout = ({ children }) => {
   return <>{children}</>;
