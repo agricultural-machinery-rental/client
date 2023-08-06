@@ -19,7 +19,7 @@ export const StHeadingInfoConditions = styled(StHeading2)`
   font-size: 1.333em;
   line-height: 2.3rem;
   text-align: center;
-  margin: 0 auto 80px auto;
+  margin: 0 auto 80px;
   width: 70%;
 `;
 
