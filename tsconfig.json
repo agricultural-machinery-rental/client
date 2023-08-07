@@ -29,6 +29,14 @@
     "declaration": false,
     "useDefineForClassFields": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/features/Breadcrumbs/BreadcrumbItem.jsx", "src/features/Breadcrumbs/BreadcrumbManager.jsx", "src/features/Breadcrumbs/Breadcrumbs.jsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/features/Breadcrumbs/BreadcrumbItem.tsx",
+    "src/features/Breadcrumbs/BreadcrumbManager.tsx",
+    "src/features/Breadcrumbs/Breadcrumbs.tsx"
+  ],
   "exclude": ["node_modules", ".next", ".storybook"]
 }

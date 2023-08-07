@@ -1,27 +1,15 @@
 'use client';
-import { useEffect } from 'react';
 import { Metadata } from 'next';
+import { useRouter } from 'next/navigation';
+import React from 'react';
 
 import { Info } from '@/widgets/company/Info';
-import { Breadcrumbs } from '@/features/Breadcrumbs/Breadcrumbs';
-import { BreadcrumbItem } from '@/features/Breadcrumbs/BreadcrumbItem';
-import { BreadcrumbManager } from '@/features/Breadcrumbs/BreadcrumbManager';
-import Link from 'next/link';
 
-import { useRouter } from 'next/navigation';
+import { Breadcrumbs } from '@/features/Breadcrumbs/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'О компании',
 };
-export enum MainPageAnchors {
-  catalog = 'news',
-}
-export const HeaderNavItems: { title: string; link: MainPageAnchors }[] = [
-  {
-    title: 'новости',
-    link: MainPageAnchors.catalog,
-  },
-];
 
 const About = () => {
   const router = useRouter();
@@ -30,10 +18,18 @@ const About = () => {
     router.push('/about/news');
   };
 
+  const breadcrumbs = [
+    { text: 'Главная', url: '/' },
+    { text: 'О компании', url: '/about' },
+  ];
+
   return (
     <>
-      <BreadcrumbManager />
+      <Breadcrumbs breadcrumbs={breadcrumbs} />
       <Info />
+
+      {/* Используем функцию goToNews для кнопки */}
+      <button onClick={goToNews}>Перейти к новостям</button>
     </>
   );
 };
