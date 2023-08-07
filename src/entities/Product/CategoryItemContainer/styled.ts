@@ -34,7 +34,7 @@ export const StCategoryTitleWrapper = styled.div`
 export const StCategoryItemTitle = styled.p`
   display: flex;
   justify-content: center;
-  font-family: Archivo;
+  font-family: Archivo, inherit, serif;
   font-size: 1em;
   overflow: hidden;
   padding: ${theme.padding.default};
