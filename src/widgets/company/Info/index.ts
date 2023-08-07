@@ -1,3 +1,3 @@
 'use client';
 
-export { Info } from './Info';
+export { Info } from './ui';

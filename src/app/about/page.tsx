@@ -1,6 +1,7 @@
 'use client';
 import { useEffect } from 'react';
 import { Metadata } from 'next';
+
 import { Info } from '@/widgets/company/Info';
 import { Breadcrumbs } from '@/features/Breadcrumbs/Breadcrumbs';
 import { BreadcrumbItem } from '@/features/Breadcrumbs/BreadcrumbItem';

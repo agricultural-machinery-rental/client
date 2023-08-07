@@ -1,5 +1,6 @@
-import styled from 'styled-components';
-import { StContainer } from '@/styles/global';
+import { styled } from 'styled-components';
+
+import { StContainer } from '@/shared/styles/global';
 
 export const StCategoryListWrapper = styled(StContainer)`
   margin: 0 auto;

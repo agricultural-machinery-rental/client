@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { StDotsContainer } from './styled';
 
 export const config = {

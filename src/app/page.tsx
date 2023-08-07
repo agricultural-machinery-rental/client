@@ -1,8 +1,7 @@
 'use client';
 
-import { ChosenUs } from '@/components/ChosenUs/ChosenUs';
 import { CategoryItemList } from '@/widgets/CategoryItemList';
-import { chosenUsData } from '@/utils/chosenUsData';
+import { chosenUsData, ChosenUs } from '@/widgets/company/ChosenUs';
 import { InfoConditions } from '@/widgets/company/InfoConditions';
 
 export default function Home() {

@@ -1,5 +1,6 @@
-import styled from 'styled-components';
-import { theme } from '@/styles/theme';
+import { styled } from 'styled-components';
+
+import { theme } from '@/shared/styles/theme';
 
 export const StCategoryItem = styled.li`
   border-radius: ${theme.borderRadius.round};
@@ -14,7 +15,6 @@ export const StCategoryItemImage = styled.div`
   aspect-ratio: 1;
   color: #fff;
   cursor: pointer;
-  display: block;
   -o-object-fit: cover;
   object-fit: cover;
   opacity: 0.9;
@@ -34,7 +34,7 @@ export const StCategoryTitleWrapper = styled.div`
 export const StCategoryItemTitle = styled.p`
   display: flex;
   justify-content: center;
-  font-family: Archivo;
+  font-family: Archivo, inherit, serif;
   font-size: 1em;
   overflow: hidden;
   padding: ${theme.padding.default};

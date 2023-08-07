@@ -1,7 +1,8 @@
 import Link from 'next/link';
-import styled from 'styled-components';
-import { StContainer, StHeading3, StFlex } from '@/styles/global';
-import { theme } from '@/styles/theme';
+import { styled } from 'styled-components';
+
+import { StContainer, StHeading3, StFlex } from '@/shared/styles/global';
+import { theme } from '@/shared/styles/theme';
 
 export const StCompanyInfo = styled.div`
   display: flex;
