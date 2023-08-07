@@ -23,7 +23,7 @@ export const StInput = styled.input`
   border: 1px solid ${theme.colors.border};
   color: ${theme.colorsText.primary};
   font-size: 0.6rem;
-  line-height: 24px;
+  line-height: 1rem;
   height: 100%;
   outline: 0;
   padding: ${theme.padding.default};
