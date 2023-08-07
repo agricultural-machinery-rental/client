@@ -9,7 +9,7 @@ export const signinConfig: TFieldConfig[] = [
     pattern: validationTypes.login,
     required: true,
     type: 'text',
-    label: 'Логин или номер телефона',
+    label: 'Почта или номер телефона',
   },
   {
     kindOfField: 'passwordInput',

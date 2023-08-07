@@ -13,7 +13,7 @@ export const AuthForm = () => {
       <StAuthFormLink onClick={() => console.log('Открыть форму восстановления пароля')}>
         Забыли пароль?
       </StAuthFormLink>
-      <Button label='Войти' />
+      <Button label='Войти' $designType='primary' />
       <StFlex $flexDirection='column' $alignItems='center' $gap={16}>
         <StTextBox $fontSize={0.67} $lineHeight={1} $textAlign='center'>
           Ещё нет профиля Агропарк?
@@ -21,6 +21,7 @@ export const AuthForm = () => {
         <Button
           type='button'
           label='Зарегистрироваться'
+          $designType='secondary'
           //   TODO заменить функцию в onClick
           onClick={() => console.log('Открыть форму регистрации')}
         />
