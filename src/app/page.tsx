@@ -7,7 +7,6 @@ import { InfoConditions } from '@/widgets/company/InfoConditions';
 export default function Home() {
   return (
     <>
-      <h1>Home</h1>
       <CategoryItemList />
       <ChosenUs data={chosenUsData} />
       <InfoConditions />

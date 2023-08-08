@@ -1,8 +1,7 @@
 import { styled } from 'styled-components';
 
 import { theme } from '@/shared/styles/theme';
-
-import { type TButton } from '../Button/typing';
+import { type TButton } from '@/shared/ui/Button';
 
 export const StButtonIcon = styled.button<TButton>`
   display: flex;

@@ -19,7 +19,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   html, body {
-    font-family: Archivo, Arial, sans-serif;
+    font-family: Open-sans, Helvetica, sans-serif;
     font-size: 24px;
     background: #fff;
     cursor: default;

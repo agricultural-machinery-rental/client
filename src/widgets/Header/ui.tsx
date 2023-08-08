@@ -7,7 +7,7 @@ import { StContainer, StFlex, StNextLink, StNextSpan } from '@/shared/styles/glo
 import { Logo } from '@/shared/ui/Logo';
 
 import { Nav, HeaderNavItems } from './Nav';
-import { PhoneButton } from './PhoneButton/PhoneButton';
+import { PhoneButton } from './PhoneButton';
 import { StHeader, StMenu } from './styled';
 
 export const Header: FC = () => {
