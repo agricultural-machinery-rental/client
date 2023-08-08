@@ -20,6 +20,11 @@ export const StContainer = styled.div`
   width: 1104px;
 `;
 
+export const StHeading1 = styled.h1`
+  font-size: 3em;
+  line-height: 1.63em;
+`;
+
 export const StHeading2 = styled.h2`
   font-size: 2em;
   line-height: 1.167em;
@@ -33,7 +38,7 @@ export const StHeading3 = styled.h3`
 `;
 
 export const StNextLink = styled(Link)<TNextLink>`
-  font-size: 1rem;
+  font-size: 0.6rem;
   text-decoration: none;
   cursor: pointer;
   display: inline-flex;
@@ -46,7 +51,7 @@ export const StNextLink = styled(Link)<TNextLink>`
 `;
 
 export const StNextSpan = styled.span<TNextLink>`
-  font-size: 1rem;
+  font-size: 0.6rem;
   text-decoration: none;
   cursor: pointer;
   display: inline-flex;

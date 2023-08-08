@@ -1,11 +1,13 @@
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import { FC } from 'react';
 
-import { StLogoSVG } from './styled';
-import { type TLogo } from './typing';
+import LogoPNG from './assets/logo-png.png';
+import { StLogoPNG } from './styled';
 
-export const Logo: FC<TLogo> = ({ width, height }) => {
-  const router = useRouter();
-
-  return <StLogoSVG width={width} height={height} onClick={() => router.push('/')} />;
+export const Logo: FC = () => {
+  return (
+    <Link href='/'>
+      <StLogoPNG src={LogoPNG} alt='Логотип' />
+    </Link>
+  );
 };

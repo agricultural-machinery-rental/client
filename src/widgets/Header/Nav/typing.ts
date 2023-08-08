@@ -1,5 +1,5 @@
-import { mainPageAnchors } from './constants';
+import { headerLinks } from './constants';
 
 export type TNav = {
-  navItems: { title: string; link: mainPageAnchors }[];
+  navItems: { title: string; link: headerLinks }[];
 };

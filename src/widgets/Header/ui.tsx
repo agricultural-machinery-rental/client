@@ -6,32 +6,31 @@ import { modalWindows } from '@/shared/modal/modalWindows';
 import { StContainer, StFlex, StNextLink, StNextSpan } from '@/shared/styles/global';
 import { Logo } from '@/shared/ui/Logo';
 
-import NavigationSVG from './assets/navigation.svg';
-import UserSVG from './assets/user.svg';
 import { Nav, HeaderNavItems } from './Nav';
-import { StHeader, StMenu, StLocationLink } from './styled';
-import type { THeader } from './typing';
+import { PhoneButton } from './PhoneButton';
+import { StHeader, StMenu } from './styled';
 
-export const Header: FC<THeader> = ({ location }) => {
+export const Header: FC = () => {
   const { openModal } = useContext(ModalContext);
 
   return (
     <StHeader>
       <StContainer>
         <StFlex $alignItems={'center'}>
-          <Logo width={195} height={104} />
+          <Logo />
           <StMenu $justifyContent='end' $gap={50}>
             <Nav navItems={HeaderNavItems} />
-            <StLocationLink $justifyContent='center' $alignItems='center' $gap={8}>
-              <NavigationSVG width={24} height={24} />
-              {location}
-            </StLocationLink>
             {/* TODO Заменить номер телефона в тексте и в href */}
-            <StNextLink href='tel:+74954954949' $justifyContent='center'>
-              +7 (495) XXX XX XX
-            </StNextLink>
-            <StNextSpan $justifyContent='center' onClick={() => openModal(modalWindows.signin)}>
-              <UserSVG width={24} height={24} />
+
+            <StFlex $gap={14} $justifyContent='center'>
+              <StNextLink href='tel:+74954954949' $justifyContent='center'>
+                +7 (495) XXX XX XX
+              </StNextLink>
+              <PhoneButton />
+            </StFlex>
+
+            <StNextSpan $justifyContent='center' onClick={() => openModal(modalWindows.example)}>
+              Войти
             </StNextSpan>
           </StMenu>
         </StFlex>
