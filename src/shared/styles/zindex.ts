@@ -1,5 +1,5 @@
 export enum zindex {
   page = 0,
-  modal,
+  modal = 2,
   header = 1,
 }
