@@ -2,9 +2,9 @@
 import Link from 'next/link';
 import { styled } from 'styled-components';
 
-import type { TFlexProps, TNextLink, TTextBoxProps } from './typing';
+import type { TFlex, TNextLink, TTextBox } from './typing';
 
-export const StFlex = styled.div<TFlexProps>(props => {
+export const StFlex = styled.div<TFlex>(props => {
   const { $flexDirection, $justifyContent, $alignItems, $gap, $flexWrap } = props;
 
   return {
@@ -22,6 +22,11 @@ export const StContainer = styled.div`
   margin: 0 auto;
 `;
 
+export const StHeading1 = styled.h1`
+  font-size: 3em;
+  line-height: 1.63em;
+`;
+
 export const StHeading2 = styled.h2`
   font-size: 2em;
   line-height: 1.167em;
@@ -35,7 +40,7 @@ export const StHeading3 = styled.h3`
 `;
 
 export const StNextLink = styled(Link)<TNextLink>`
-  font-size: 1rem;
+  font-size: 0.6rem;
   text-decoration: none;
   cursor: pointer;
   display: inline-flex;
@@ -48,7 +53,7 @@ export const StNextLink = styled(Link)<TNextLink>`
 `;
 
 export const StNextSpan = styled.span<TNextLink>`
-  font-size: 1rem;
+  font-size: 0.6rem;
   text-decoration: none;
   cursor: pointer;
   display: inline-flex;
@@ -60,7 +65,7 @@ export const StNextSpan = styled.span<TNextLink>`
   }
 `;
 
-export const StTextBox = styled.p<TTextBoxProps>(props => {
+export const StTextBox = styled.p<TTextBox>(props => {
   const { $textAlign, $fontWeight, $fontSize, $lineHeight } = props;
 
   return {

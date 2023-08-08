@@ -16,7 +16,7 @@ export const Field: FC<TField> = ({ kindOfField, errorMessage, required, asteris
         {asterisk && <StAsterick visibility={required ? 'visible' : 'hidden'}>*</StAsterick>}
         <Component {...props}></Component>
       </StRelativeBox>
-      <Error errorMessage={errorMessage} />
+      {errorMessage && <Error errorMessage={errorMessage} />}
     </StFieldWrapper>
   );
 };

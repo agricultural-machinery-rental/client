@@ -3,9 +3,15 @@ import { styled } from 'styled-components';
 import { theme } from '@/shared/styles/theme';
 
 export const StError = styled.div`
-  height: 0.5rem;
+  position: absolute;
+  max-width: 100%;
   color: ${theme.colorsText.error};
   font-size: 0.5rem;
-  line-height: 1.3;
-  margin: 0 0 0 8px;
+  line-height: 0.66rem;
+  padding: 16px;
+  background-color: ${theme.colors.tooltip};
+  border-radius: 8px;
+  box-shadow: 0 4px 4px 0 ${theme.colors.boxShadow};
+  left: 5px; // TODO Временный стиль, обговорить с дизайнерами
+  top: 70%; // Временный стиль
 `;

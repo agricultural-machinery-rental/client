@@ -11,7 +11,6 @@ export const StCompanyInfo = styled.div`
 
 export const StCompanyInfoWrap = styled(StContainer)`
   padding: 60px 0 88px 0;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 32px;

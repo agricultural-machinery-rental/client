@@ -25,9 +25,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <GlobalStyles />
           <PageContent>
             <ModalProvider>
-              <Header location={'Москва'} />
+              <Header />
               <StMain>{children}</StMain>
-
               <Footer />
               <Modal />
             </ModalProvider>

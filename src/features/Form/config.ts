@@ -2,25 +2,6 @@ import { FormFieldNames, validationTypes } from '@/shared/form';
 
 import type { TFieldConfig } from './Field';
 
-export const signinConfig: TFieldConfig[] = [
-  {
-    kindOfField: 'input',
-    name: FormFieldNames.login,
-    pattern: validationTypes.login,
-    required: true,
-    type: 'text',
-    label: 'Логин или номер телефона',
-  },
-  {
-    kindOfField: 'input',
-    name: FormFieldNames.password,
-    pattern: validationTypes.password,
-    required: true,
-    type: 'password',
-    label: 'Пароль',
-  },
-];
-
 export const signupConfig: TFieldConfig[] = [
   {
     kindOfField: 'input',
