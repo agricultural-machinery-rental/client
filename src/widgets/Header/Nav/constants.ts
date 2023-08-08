@@ -1,20 +1,15 @@
-export enum mainPageAnchors {
+export enum headerLinks {
   catalog = 'catalog',
-  services = '#services',
   about = 'about',
 }
 
-export const HeaderNavItems: { title: string; link: mainPageAnchors }[] = [
-  {
-    title: 'Автопарк',
-    link: mainPageAnchors.catalog,
-  },
+export const HeaderNavItems: { title: string; link: headerLinks }[] = [
   {
     title: 'О компании',
-    link: mainPageAnchors.about,
+    link: headerLinks.about,
   },
   {
-    title: 'Услуги',
-    link: mainPageAnchors.services,
+    title: 'Каталог',
+    link: headerLinks.catalog,
   },
 ];

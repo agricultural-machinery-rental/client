@@ -1,8 +1,8 @@
+import Image from 'next/image';
 import { styled } from 'styled-components';
 
-import LogoSVG from './assets/logo.svg';
-
-export const StLogoSVG = styled(LogoSVG)`
-  margin: 0 28px;
+export const StLogoPNG = styled(Image)`
+  width: 140px;
+  height: 70px;
   cursor: pointer;
 `;

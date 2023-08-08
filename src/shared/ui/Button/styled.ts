@@ -10,21 +10,60 @@ export const StButton = styled.button<TButton>`
   justify-content: center;
   box-sizing: border-box;
   cursor: pointer;
-  color: ${theme.colorsText.primary};
-  background-color: ${theme.colors.btnFirst};
+  color: ${props => {
+    switch (props.$designType) {
+      case 'secondary':
+        return theme.colorsText.alternate;
+      case 'primary':
+      default:
+        return theme.colorsText.secondary;
+    }
+  }};
+  background-color: ${props => {
+    switch (props.$designType) {
+      case 'secondary':
+        return theme.colors.bgBtnSecond;
+      case 'primary':
+      default:
+        return theme.colors.bgBtnFirst;
+    }
+  }};
   height: ${theme.sizesHeight.button};
   width: ${theme.sizesWidth.button};
   border-radius: ${theme.borderRadius.round};
-  border: none;
+  border: ${props => {
+    switch (props.$designType) {
+      case 'secondary':
+        return `1px solid ${theme.colors.borderSecond}`;
+      case 'primary':
+      default:
+        return 'none';
+    }
+  }};
 
+  /* TODO поправить кнопки в разных состояних, когда дизайнеры скорректируют */
   &:hover {
-    background: ${theme.colors.btnSecond};
-    box-shadow: inset 0 0 2px ${theme.colors.border};
+    background-color: ${theme.colors.bgBtnHover};
+    border: none;
   }
 
   &:disabled {
-    background-color: ${theme.colors.btnThird};
+    background-color: ${theme.colors.bgBtnDisabled};
+    border: none;
     color: ${theme.colorsText.disabled};
     pointer-events: none;
+  }
+
+  &:active {
+    box-shadow: 0px 4px 4px 0px ${theme.colors.boxShadow} inset;
+    background-color: ${props => {
+      switch (props.$designType) {
+        case 'secondary':
+          return theme.colors.bgBtnSecond;
+        case 'primary':
+        default:
+          return theme.colors.bgBtnFirst;
+      }
+    }};
   }
 `;

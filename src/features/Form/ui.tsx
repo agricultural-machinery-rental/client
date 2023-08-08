@@ -7,7 +7,7 @@ import { Field } from './Field';
 import { StFieldset } from './styled';
 import type { TForm } from './typing';
 
-export const Form: FC<TForm> = ({ footer, fileds, handleFormSubmit, defaultValues, asterisk }) => {
+export const Form: FC<TForm> = ({ footer, fields, handleFormSubmit, defaultValues, asterisk }) => {
   const {
     register,
     formState: { errors },
@@ -18,8 +18,8 @@ export const Form: FC<TForm> = ({ footer, fileds, handleFormSubmit, defaultValue
 
   return (
     <form onSubmit={handleSubmit(handleFormSubmit)}>
-      <StFieldset>
-        {fileds.map(({ kindOfField, name, required, pattern, ...rest }, key) => {
+      <StFieldset className='fieldset'>
+        {fields.map(({ kindOfField, name, required, pattern, ...rest }, key) => {
           const registerOptions = {
             ...(required && { required: 'Поле не может быть пустым' }),
             ...(pattern && { pattern: validationPattern[pattern] }),
