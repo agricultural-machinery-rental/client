@@ -38,7 +38,7 @@ export const StHeading3 = styled.h3`
 `;
 
 export const StNextLink = styled(Link)<TNextLink>`
-  font-size: 1rem;
+  font-size: 0.6rem;
   text-decoration: none;
   cursor: pointer;
   display: inline-flex;
@@ -51,7 +51,7 @@ export const StNextLink = styled(Link)<TNextLink>`
 `;
 
 export const StNextSpan = styled.span<TNextLink>`
-  font-size: 1rem;
+  font-size: 0.6rem;
   text-decoration: none;
   cursor: pointer;
   display: inline-flex;

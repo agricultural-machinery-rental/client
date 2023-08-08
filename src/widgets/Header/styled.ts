@@ -14,7 +14,6 @@ export const StHeader = styled.header`
   background-color: ${theme.colors.bgHeader};
   color: ${theme.colorsText.secondary};
   align-items: center;
-  font-size: 0.6rem;
   z-index: ${zindex.header};
 `;
 
