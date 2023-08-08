@@ -20,7 +20,7 @@ const Modal = () => {
     setPortalDiv(div);
 
     return () => {
-      document.body.removeChild(div);
+      // document.body.removeChild(div);
     };
   }, []);
 

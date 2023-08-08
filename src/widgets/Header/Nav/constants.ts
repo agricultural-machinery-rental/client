@@ -1,5 +1,5 @@
 export enum mainPageAnchors {
-  catalog = '#catalog',
+  catalog = 'catalog',
   services = '#services',
   about = 'about',
 }
