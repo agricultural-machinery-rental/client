@@ -1,9 +1,8 @@
 import { AuthForm } from '@/widgets/Auth';
 
-
 export enum modalWindows {
   signin = 'signin',
-  example = "example"
+  example = 'example',
 }
 
 export const modalWindowContent = {
