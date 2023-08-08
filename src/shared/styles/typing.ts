@@ -1,4 +1,4 @@
-export type TFlexProps = {
+export type TFlex = {
   $flexDirection?: 'column' | 'row';
   $justifyContent?:
     | 'center'
@@ -19,7 +19,7 @@ export type TNextLink = {
   $justifyContent?: 'center' | 'flex-end' | 'flex-start';
 };
 
-export type TTextBoxProps = {
+export type TTextBox = {
   $textAlign?: 'center' | 'left' | 'right' | 'inherit';
   $fontWeight?: number;
   $fontSize?: number;

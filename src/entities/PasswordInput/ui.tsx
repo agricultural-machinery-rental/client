@@ -4,6 +4,7 @@ import { Input } from '@/shared/ui/Input';
 
 import EyeOff from './assets/eye-off.svg';
 import Eye from './assets/eye.svg';
+import { passwordInputTypes } from './consts';
 import { StContainer, StIcon } from './styled';
 import { TPasswordInput } from './typing';
 
@@ -11,7 +12,9 @@ export const PasswordInput: FC<TPasswordInput> = ({ type, ...props }) => {
   const [inputType, setInputType] = useState(type);
 
   const toggleType = () => {
-    inputType === 'password' ? setInputType('text') : setInputType('password');
+    inputType === passwordInputTypes.password
+      ? setInputType(passwordInputTypes.text)
+      : setInputType(passwordInputTypes.password);
   };
 
   return (
