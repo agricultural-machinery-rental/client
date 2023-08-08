@@ -30,7 +30,7 @@ export const Header: FC<THeader> = ({ location }) => {
             <StNextLink href='tel:+74954954949' $justifyContent='center'>
               +7 (495) XXX XX XX
             </StNextLink>
-            <StNextSpan $justifyContent='center' onClick={() => openModal(modalWindows.example)}>
+            <StNextSpan $justifyContent='center' onClick={() => openModal(modalWindows.signin)}>
               <UserSVG width={24} height={24} />
             </StNextSpan>
           </StMenu>

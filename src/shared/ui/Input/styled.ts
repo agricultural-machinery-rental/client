@@ -12,22 +12,25 @@ export const StInputContainer = styled.div`
   &:focus-within label {
     top: 0;
     transform: translate(0, 2px) scale(0.8);
-    color: blue; // TODO цвет взят условный, поправить, когда цвета будут готовы
+    color: ${theme.colorsText.edit};
   }
 `;
 
 export const StInput = styled.input`
+  height: 100%;
+  width: 100%;
   background-color: ${theme.colors.white};
   border-radius: ${theme.borderRadius.round};
-  box-sizing: border-box;
-  border: 1px solid ${theme.colors.border};
+  border: 1px solid ${theme.colors.borderFirst};
   color: ${theme.colorsText.primary};
   font-size: 0.6rem;
-  line-height: 24px;
-  height: 100%;
+  line-height: 1rem;
   outline: 0;
   padding: ${theme.padding.default};
-  width: 100%;
+
+  &:focus {
+    border: 1px solid ${theme.colors.borderThird};
+  }
 `;
 
 export const StLabel = styled.label<TLabel>`
@@ -37,9 +40,7 @@ export const StLabel = styled.label<TLabel>`
   transform: ${({ $inputValue }) =>
     $inputValue ? 'translate(0, 2px) scale(0.8)' : 'translate(0, -50%) scale(1)'};
   color: ${({ $inputValue }) =>
-    $inputValue
-      ? 'blue'
-      : 'black'}; // TODO цвета взяты условные, поправить, когда цвета будут готовы
+    $inputValue ? `${theme.colorsText.edit}` : `${theme.colorsText.primary}`};
   transition: 200ms 0ms;
   transform-origin: top left;
   left: 16px;

@@ -2,9 +2,9 @@
 import Link from 'next/link';
 import { styled } from 'styled-components';
 
-import type { TFlexProps, TNextLink, TTextBoxProps } from './typing';
+import type { TFlex, TNextLink, TTextBox } from './typing';
 
-export const StFlex = styled.div<TFlexProps>(props => {
+export const StFlex = styled.div<TFlex>(props => {
   const { $flexDirection, $justifyContent, $alignItems, $gap } = props;
 
   return {
@@ -58,7 +58,7 @@ export const StNextSpan = styled.span<TNextLink>`
   }
 `;
 
-export const StTextBox = styled.p<TTextBoxProps>(props => {
+export const StTextBox = styled.p<TTextBox>(props => {
   const { $textAlign, $fontWeight, $fontSize, $lineHeight } = props;
 
   return {
