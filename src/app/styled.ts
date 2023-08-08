@@ -1,10 +1,10 @@
 'use client';
 import { styled } from 'styled-components';
 
+import { StFlex } from '@/shared/styles/global';
 import { zindex } from '@/shared/styles/zindex';
 
 export const PageContent = styled.div`
-  position: relative;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -13,5 +13,8 @@ export const PageContent = styled.div`
 
 export const StMain = styled.main`
   flex-grow: 1;
-  margin: 104px 0 0;
+`;
+
+export const StMainHeading = styled(StFlex)`
+  padding: 80px 0;
 `;

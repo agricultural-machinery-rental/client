@@ -20,6 +20,11 @@ export const StContainer = styled.div`
   width: 1104px;
 `;
 
+export const StHeading1 = styled.h1`
+  font-size: 3em;
+  line-height: 1.63em;
+`;
+
 export const StHeading2 = styled.h2`
   font-size: 2em;
   line-height: 1.167em;

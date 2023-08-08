@@ -1,7 +1,5 @@
-import React from 'react';
-
-import { TButton } from '@/shared/ui/Button';
+import React, { ButtonHTMLAttributes } from 'react';
 
 export type TButtonIcon = {
   icon: React.ReactNode;
-} & TButton;
+} & ButtonHTMLAttributes<HTMLButtonElement>;
