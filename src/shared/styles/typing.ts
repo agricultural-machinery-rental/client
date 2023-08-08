@@ -3,6 +3,7 @@ export type TFlexProps = {
   $justifyContent?: string;
   $alignItems?: string;
   $gap?: number;
+  $flexWrap?: 'nowrap' | 'wrap' | 'wrap-reverse';
 };
 
 export type TNextLink = {
