@@ -14,7 +14,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@fontsource/archivo": "5.0.7",
+    "@fontsource/ubuntu": "5.0.8",
     "@fontsource/open-sans": "5.0.5",
     "@types/node": "20.4.2",
     "@types/react": "18.2.15",

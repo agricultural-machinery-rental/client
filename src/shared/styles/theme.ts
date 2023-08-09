@@ -40,8 +40,10 @@ export const theme = {
   },
   padding: {
     default: '16px 8px',
+    catalogItem: '24px 16px 16px',
   },
   borderRadius: {
     round: '8px',
+    catalogItem: '16px',
   },
 };
