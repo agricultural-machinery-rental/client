@@ -17,4 +17,6 @@ export const StModalWindow = styled.div`
   border-radius: ${theme.borderRadius.round};
   background: ${theme.colors.white};
   margin: auto;
+  max-height: 90vh;
+  overflow: auto;
 `;

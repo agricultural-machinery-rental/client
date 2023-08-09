@@ -29,7 +29,9 @@ export const Header: FC = () => {
               <PhoneButton />
             </StFlex>
 
-            <StNextSpan $justifyContent='center' onClick={() => openModal(modalWindows.example)}>
+            <StNextSpan $justifyContent='center' onClick={() => openModal(modalWindows.signup)}>
+              {' '}
+              {/** TODO заменить signup на signin*/}
               Войти
             </StNextSpan>
           </StMenu>
