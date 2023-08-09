@@ -19,7 +19,7 @@ export type TField = {
 
 export type TFieldConfig = {
   kindOfField: TKindOfField;
-  name: FormFieldNames;
+  name: string;
   pattern?: validationTypes;
   required: boolean;
   value?: string;

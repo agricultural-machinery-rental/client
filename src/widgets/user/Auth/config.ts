@@ -1,11 +1,16 @@
 import { type TFieldConfig } from '@/features/Form/Field';
 
-import { FormFieldNames, validationTypes } from '@/shared/form';
+import { validationTypes } from '@/shared/form';
+
+export enum authFieldNames {
+  login = 'login',
+  password = 'password',
+}
 
 export const signinConfig: TFieldConfig[] = [
   {
     kindOfField: 'input',
-    name: FormFieldNames.login,
+    name: authFieldNames.login,
     pattern: validationTypes.login,
     required: true,
     type: 'text',
@@ -13,7 +18,7 @@ export const signinConfig: TFieldConfig[] = [
   },
   {
     kindOfField: 'passwordInput',
-    name: FormFieldNames.password,
+    name: authFieldNames.password,
     pattern: validationTypes.password,
     required: true,
     type: 'password',

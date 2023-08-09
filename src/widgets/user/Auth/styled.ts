@@ -12,7 +12,6 @@ export const StContainer = styled.div`
 `;
 
 export const StTitle = styled(StHeading3)`
-  font-family: Archivo;
   margin: 0 0 56px;
 `;
 
