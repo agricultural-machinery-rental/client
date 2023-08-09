@@ -35,7 +35,6 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   h1, h2, h3 {
-    font-family: Ubuntu, sans-serif;
     font-weight: 700;
   }
 

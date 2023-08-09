@@ -1,3 +1,5 @@
+import { FC } from 'react';
+
 import { Form } from '@/features/Form';
 
 import { StFlex, StTextBox } from '@/shared/styles/global';
@@ -6,7 +8,7 @@ import { Button } from '@/shared/ui/Button';
 import { signinConfig } from './config';
 import { StContainer, StTitle, StAuthFormLink } from './styled';
 
-export const AuthForm = () => {
+export const AuthForm: FC = () => {
   const footer = (
     <StFlex $flexDirection='column' $alignItems='center' $gap={40}>
       {/* TODO заменить функцию в onClick */}
