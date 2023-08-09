@@ -28,6 +28,7 @@ export const Item: FC<TItem> = ({ itemData }) => {
       </div>
       <StDescriptionBlock>
         <StTitle>{itemData.name}</StTitle>
+        {/*TODO Здесь будет кнопка для добавления в избранное*/}
         <StDescriptionText>
           <StCharacteristics>
             {/*{Сначала выводим характеристики}*/}
