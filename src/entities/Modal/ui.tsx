@@ -15,7 +15,10 @@ const Modal = () => {
 
   useEffect(() => {
     const div = document.createElement('div');
-    div.style.zIndex = zindex.modal.toString();
+    div.style.cssText = `
+    position: relative;
+    z-index: ${zindex.modal.toString()};
+    `;
     document.body.appendChild(div);
     setPortalDiv(div);
 

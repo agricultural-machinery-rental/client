@@ -11,7 +11,7 @@ export const StFooterWrapper = styled(StFlex)`
 export const StLink = styled(StNextLink)`
   display: inline;
   font-size: 0.5rem;
-  color: ${theme.colorsText.error}; // TODO заменить на alternate
+  color: ${theme.colorsText.alternate};
 `;
 
 export const StContainer = styled.div`
