@@ -13,7 +13,7 @@ export const StItem = styled.article`
   background: ${theme.colors.white};
   border-radius: ${theme.borderRadius.catalogItem};
   box-shadow: 0 4px 4px 0 ${theme.colors.boxShadow};
-  gap: 52px;
+  column-gap: 52px;
 `;
 
 export const StDescriptionBlock = styled.div`
@@ -35,13 +35,13 @@ export const StDescriptionText = styled(StFlex)`
 
 export const StCharacteristics = styled(StFlex)`
   flex-direction: column;
-  gap: 14px;
+  row-gap: 14px;
   margin: 26px 8px 0;
 `;
 
 export const StCharacteristicsLine = styled(StFlex)`
   justify-content: space-between;
-  gap: 10px;
+  column-gap: 10px;
 `;
 
 export const StPriceLabel = styled('span')`
