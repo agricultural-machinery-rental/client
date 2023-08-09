@@ -24,6 +24,7 @@ export const theme = {
   colorsText: {
     primary: '#000',
     secondary: '#fafafa',
+    alternate: '#ff9900',
     disabled: '#54514F',
     error: '#ff0000',
     edit: '#97B2C2',

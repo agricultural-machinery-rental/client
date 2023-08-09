@@ -1,10 +1,12 @@
-import { AuthForm } from '@/widgets/Auth';
+import { AuthForm } from '@/widgets/user/Auth';
+import { PasswordReset } from '@/widgets/user/PasswordReset';
 
 export enum modalWindows {
   signin = 'signin',
-  example = 'example',
+  passwordReset = 'passwordReset',
 }
 
 export const modalWindowContent = {
   [modalWindows.signin]: <AuthForm />,
+  [modalWindows.passwordReset]: <PasswordReset />,
 } as const;
