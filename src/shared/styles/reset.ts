@@ -33,6 +33,11 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
   }
 
+  sup {
+    vertical-align: super;
+    font-size: 0.66em;
+  }
+  
   h1, h2, h3 {
     font-weight: 700;
   }
