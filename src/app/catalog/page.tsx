@@ -15,6 +15,7 @@ const PageCatalog = () => {
     <StCatalog>
       <StHeading2>Каталог</StHeading2>
       <StFlex $flexDirection={'row'}>
+        {/*{TODO Awaiting for Filters module completion}*/}
         <div>Filters</div>
         <Catalog />
       </StFlex>
