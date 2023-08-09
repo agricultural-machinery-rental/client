@@ -22,6 +22,7 @@ export const catalogItemCharacteristicsUnits: Record<keyof TCatalogItemCharacter
   trackWidth: { label: 'Ширина гусеницы', unit: <>мм</> },
 };
 
+// Temporary preview item
 export const itemData: TCatalogItem = {
   name: 'Гусеничный трактор Марка Модель',
   photo,
