@@ -13,6 +13,7 @@ export type TFlex = {
     | 'inherit';
   $alignItems?: 'center' | 'flex-start' | 'flex-end' | 'inherit';
   $gap?: number;
+  $flexWrap?: 'nowrap' | 'wrap' | 'wrap-reverse';
 };
 
 export type TNextLink = {
