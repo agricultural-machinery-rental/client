@@ -1,23 +1,22 @@
 import type { TFooterColumn } from './typing';
 
-// TODO: Скорректировать ссылки
 export const footerColumns: TFooterColumn[] = [
   {
     title: 'Контакты',
     lines: [
       {
-        text: 'Адрес',
-      },
-      {
-        text: '+7 (495) XXX XX XX',
+        text: '+7 495 XXX XX XX',
         link: 'tel:+74954954949',
       },
       {
-        text: 'mail@mail.ru',
-        link: 'mail@mail.ru',
+        text: 'г. Москва, Валовый проезд д.43а оф.417',
       },
       {
-        text: 'Время работы',
+        text: 'agropark@yandex.ru',
+        link: 'agropark@yandex.ru',
+      },
+      {
+        text: '9:00 - 18:00 в будние дни',
       },
     ],
   },

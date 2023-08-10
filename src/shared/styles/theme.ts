@@ -12,6 +12,7 @@ export const theme = {
     error: '#f44336 ',
     bg: '#f5f5f5',
     bgElPrimary: '#FAFAFA',
+    bgSecondary: '#2F3954',
     bgBtnFirst: '#ff9900',
     bgBtnSecond: 'unset',
     bgBtnHover: '#ffcc80',

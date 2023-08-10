@@ -11,7 +11,7 @@ export const StHeader = styled.header`
   height: 72px;
   display: flex;
   justify-content: center;
-  background-color: ${theme.colors.bgHeader};
+  background-color: ${theme.colors.bgSecondary};
   color: ${theme.colorsText.secondary};
   align-items: center;
   z-index: ${zindex.header};

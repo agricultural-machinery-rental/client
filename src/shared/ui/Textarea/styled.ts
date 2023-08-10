@@ -1,5 +1,7 @@
 import { styled } from 'styled-components';
 
+import { theme } from '@/shared/styles/theme';
+
 import { type TTextareaStyledComponent, type TLabel } from './typing';
 
 export const StTextareaContainer = styled.div`
@@ -8,8 +10,7 @@ export const StTextareaContainer = styled.div`
 
   &:focus-within label {
     transform: translate(0, 2px) scale(0.8);
-    // TODO цвет взят условный, поправить, когда цвета будут готовы
-    color: blue;
+    color: ${theme.colorsText.edit};
   }
 `;
 
@@ -29,9 +30,7 @@ export const StLabel = styled.label<TLabel>`
   transform: ${({ $textareaValue }) =>
     $textareaValue ? 'translate(0, 2px) scale(0.8)' : 'translate(0, 14px) scale(1)'};
   color: ${({ $textareaValue }) =>
-    $textareaValue
-      ? 'blue'
-      : 'black'}; // TODO цвета взяты условные, поправить, когда цвета будут готовы
+    $textareaValue ? `${theme.colorsText.edit}` : `${theme.colorsText.primary}`};
   transition: 200ms 0ms;
   transform-origin: top left;
   left: 16px;

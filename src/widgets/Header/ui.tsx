@@ -22,8 +22,8 @@ export const Header: FC = () => {
           <Logo />
           <StMenu $justifyContent='end' $gap={50}>
             <Nav navItems={HeaderNavItems} />
-            {/* TODO Заменить номер телефона в тексте и в href */}
 
+            {/* TODO Заменить номер телефона в тексте и в href */}
             <StFlex $gap={14} $justifyContent='center'>
               <StNextLink href='tel:+74954954949' $justifyContent='center'>
                 +7 (495) XXX XX XX
