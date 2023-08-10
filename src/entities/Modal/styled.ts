@@ -15,7 +15,7 @@ export const StModalBackground = styled.div`
 export const StModalWindow = styled.div`
   position: relative;
   border-radius: ${theme.borderRadius.round};
-  background: ${theme.colors.white};
+  background: ${theme.colors.bgElPrimary};
   margin: auto;
   max-height: 90vh;
   overflow: auto;

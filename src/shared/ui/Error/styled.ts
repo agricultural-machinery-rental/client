@@ -10,7 +10,7 @@ export const StError = styled.div`
   font-size: 0.5rem;
   line-height: 0.66rem;
   padding: 16px;
-  background-color: ${theme.colors.tooltip};
+  background-color: ${theme.colors.bgElPrimary};
   border-radius: 8px;
   box-shadow: 0 4px 4px 0 ${theme.colors.boxShadow};
   left: 5px; // TODO Временный стиль, обговорить с дизайнерами

@@ -7,19 +7,21 @@ import {
   type TCategoryItemContainer,
 } from '@/entities/Product/CategoryItemContainer';
 
+import { StContainer } from '@/shared/styles/global';
+
 import { CategoryItemData } from './api/data';
-import { StCategoryList, StCategoryListWrapper } from './styled';
+import { StCategoryList } from './styled';
 
 export const CategoryItemList = () => {
   return (
     <section>
-      <StCategoryListWrapper>
+      <StContainer>
         <StCategoryList>
           {CategoryItemData.map((item: TCategoryItemContainer, index) => (
             <CategoryItemContainer image={item.image} title={item.title} key={`item-${index}`} />
           ))}
         </StCategoryList>
-      </StCategoryListWrapper>
+      </StContainer>
     </section>
   );
 };
