@@ -1,4 +1,5 @@
 'use client';
+
 import { Metadata } from 'next';
 import React from 'react';
 
@@ -10,15 +11,10 @@ export const metadata: Metadata = {
   title: 'О компании',
 };
 
-const breadcrumbs = [
-  { text: 'Главная', url: '/' },
-  { text: 'О компании', url: '/about' },
-];
-
 const About = () => {
   return (
     <>
-      <Breadcrumbs breadcrumbs={breadcrumbs} />
+      <Breadcrumbs />
       <Info />
     </>
   );

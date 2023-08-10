@@ -34,9 +34,6 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/features/Breadcrumbs/BreadcrumbItem.tsx",
-    "src/features/Breadcrumbs/BreadcrumbManager.tsx",
-    "src/features/Breadcrumbs/ui.tsx"
   ],
   "exclude": ["node_modules", ".next", ".storybook"]
 }
