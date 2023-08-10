@@ -1,27 +1,14 @@
-enum profileFieldNames {
-  lastName = 'lastName',
-  firstName = 'firstName',
-  middleName = 'middleName',
-  birthday = 'birthday',
-  phone = 'phone',
-  email = 'email',
-  companyName = 'companyName',
-  companyTIN = 'companyTIN',
-}
+import { TUser } from '../mockUser';
 
-export const profileLabels: Record<string, string> = {
-  [profileFieldNames.firstName]: 'Имя',
-  [profileFieldNames.lastName]: 'Фамилия',
-  [profileFieldNames.middleName]: 'Отчество',
-  [profileFieldNames.birthday]: 'Дата рождения',
-  [profileFieldNames.phone]: 'Телефон',
-  [profileFieldNames.email]: 'e-mail',
-  [profileFieldNames.companyName]: 'Название организации',
-  [profileFieldNames.companyTIN]: 'ИНН организации',
+export const profileLabels: Record<keyof TUser, string> = {
+  lastName: 'Фамилия',
+  firstName: 'Имя',
+  middleName: 'Отчество',
+  birthday: 'Дата рождения',
+  phone: 'Телефон',
+  email: 'e-mail',
+  companyName: 'Название организации',
+  companyTIN: 'ИНН организации',
 };
 
-export const nameFields: string[] = [
-  profileFieldNames.firstName,
-  profileFieldNames.lastName,
-  profileFieldNames.middleName,
-];
+export const nameFields: (keyof TUser)[] = ['firstName', 'lastName', 'middleName'];

@@ -1,6 +1,7 @@
 import { FC } from 'react';
 
 import { PATH } from '@/shared/constants/path';
+import { objectEntries } from '@/shared/lib';
 import { StFlex } from '@/shared/styles/global';
 import { Input } from '@/shared/ui/Input';
 
@@ -11,8 +12,8 @@ import { profileLabels, nameFields } from './consts';
 import { StContainer, StIcon, StName } from './styled';
 
 export const Info: FC = () => {
-  const userName = Object.entries(mockUser).filter(([key]) => nameFields.includes(key));
-  const restUserInfo = Object.entries(mockUser).filter(([key]) => !nameFields.includes(key));
+  const userName = objectEntries(mockUser).filter(([key]) => nameFields.includes(key));
+  const restUserInfo = objectEntries(mockUser).filter(([key]) => !nameFields.includes(key));
 
   return (
     <StContainer $flexDirection='column' $gap={16}>

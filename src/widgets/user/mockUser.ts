@@ -1,17 +1,16 @@
-import { profileFieldNames } from './InfoEdit/config';
-
-export type UserType = {
-  [profileFieldNames.lastName]: string;
-  [profileFieldNames.firstName]: string;
-  [profileFieldNames.middleName]: string;
-  [profileFieldNames.birthday]?: string;
-  [profileFieldNames.phone]: string;
-  [profileFieldNames.email]: string;
-  [profileFieldNames.companyName]?: string;
-  [profileFieldNames.companyTIN]?: string;
+// TODO переместить тип в папку api к запросу юзера с бэка
+export type TUser = {
+  lastName: string;
+  firstName: string;
+  middleName: string;
+  birthday?: string;
+  phone: string;
+  email: string;
+  companyName?: string;
+  companyTIN?: string;
 };
 
-export const mockUser: UserType = {
+export const mockUser: TUser = {
   lastName: 'Юркина',
   firstName: 'Ольга',
   middleName: 'Владимировна',

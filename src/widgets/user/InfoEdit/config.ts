@@ -2,21 +2,12 @@ import { TFieldConfig } from '@/features/Form/Field';
 
 import { validationTypes } from '@/shared/form';
 
-export enum profileFieldNames {
-  lastName = 'lastName',
-  firstName = 'firstName',
-  middleName = 'middleName',
-  birthday = 'birthday',
-  phone = 'phone',
-  email = 'email',
-  companyName = 'companyName',
-  companyTIN = 'companyTIN',
-}
+import { TUser } from '../mockUser';
 
-export const profileConfig: TFieldConfig[] = [
+export const profileConfig: TFieldConfig<keyof TUser>[] = [
   {
     kindOfField: 'input',
-    name: profileFieldNames.lastName,
+    name: 'lastName',
     pattern: validationTypes.name,
     required: true,
     type: 'text',
@@ -24,7 +15,7 @@ export const profileConfig: TFieldConfig[] = [
   },
   {
     kindOfField: 'input',
-    name: profileFieldNames.firstName,
+    name: 'firstName',
     pattern: validationTypes.name,
     required: true,
     type: 'text',
@@ -32,7 +23,7 @@ export const profileConfig: TFieldConfig[] = [
   },
   {
     kindOfField: 'input',
-    name: profileFieldNames.middleName,
+    name: 'middleName',
     pattern: validationTypes.name,
     required: false,
     type: 'text',
@@ -40,14 +31,14 @@ export const profileConfig: TFieldConfig[] = [
   },
   {
     kindOfField: 'input', // TODO заменить на компонент календаря с выбором даты
-    name: profileFieldNames.birthday,
+    name: 'birthday',
     required: false,
     type: 'text',
     label: 'День рождения',
   },
   {
     kindOfField: 'input',
-    name: profileFieldNames.phone,
+    name: 'phone',
     pattern: validationTypes.phone,
     required: true,
     type: 'tel',
@@ -55,7 +46,7 @@ export const profileConfig: TFieldConfig[] = [
   },
   {
     kindOfField: 'input',
-    name: profileFieldNames.email,
+    name: 'email',
     pattern: validationTypes.email,
     required: true,
     type: 'email',
@@ -63,14 +54,14 @@ export const profileConfig: TFieldConfig[] = [
   },
   {
     kindOfField: 'input',
-    name: profileFieldNames.companyName,
+    name: 'companyName',
     required: false,
     type: 'text',
     label: 'Название организации',
   },
   {
     kindOfField: 'input',
-    name: profileFieldNames.companyTIN,
+    name: 'companyTIN',
     required: false,
     type: 'text',
     label: 'ИНН организации',
