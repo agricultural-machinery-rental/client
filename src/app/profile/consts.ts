@@ -19,4 +19,8 @@ export const profileLinks: TProfileNavLink[] = [
     text: 'Избранное',
     href: PATH.Favourites,
   },
+  {
+    text: 'Настройки',
+    href: PATH.Settings,
+  },
 ];

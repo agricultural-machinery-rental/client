@@ -11,7 +11,7 @@ export const theme = {
     success: '#4caf50',
     error: '#f44336 ',
     bg: '#f5f5f5',
-    bgElPrimary: '#FAFAFA',
+    bgElPrimary: '#fff',
     bgSecondary: '#2F3954',
     bgBtnFirst: '#ff9900',
     bgBtnSecond: 'unset',

@@ -7,4 +7,5 @@ export enum PATH {
   Orders = '/profile/orders',
   BookingHistory = '/profile/booking-history',
   Favourites = '/profile/favourites',
+  Settings = '/profile/settings',
 }
