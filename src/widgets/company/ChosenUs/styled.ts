@@ -8,7 +8,6 @@ export const StContainerInner = styled(StContainer)`
   flex-direction: column;
   padding: 46px 0 41px;
   gap: 65px;
-  margin: 0 auto;
 `;
 
 export const StList = styled.ul`

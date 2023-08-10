@@ -1,9 +1,10 @@
-import { FC, useContext } from 'react';
+import { FC, useContext, useState } from 'react';
 
 import { ModalContext } from '@/entities/Modal';
 
+import { PATH } from '@/shared/constants/path';
 import { modalWindows } from '@/shared/modal/modalWindows';
-import { StContainer, StFlex } from '@/shared/styles/global';
+import { StContainer, StFlex, StNextLink } from '@/shared/styles/global';
 import { Logo } from '@/shared/ui/Logo';
 
 import { Nav, HeaderNavItems } from './Nav';
@@ -12,6 +13,7 @@ import { StHeader, StMenu, StPhoneLink, StSpan } from './styled';
 
 export const Header: FC = () => {
   const { openModal } = useContext(ModalContext);
+  const [user, setUser] = useState({ name: 'User' });
 
   return (
     <StHeader>
@@ -29,9 +31,15 @@ export const Header: FC = () => {
               <PhoneButton />
             </StFlex>
 
-            <StSpan $justifyContent='center' onClick={() => openModal(modalWindows.signin)}>
-              Войти
-            </StSpan>
+            {user ? (
+              <StNextLink href={PATH.Profile} $justifyContent='center'>
+                {user.name}
+              </StNextLink>
+            ) : (
+              <StSpan $justifyContent='center' onClick={() => openModal(modalWindows.signin)}>
+                Войти
+              </StSpan>
+            )}
           </StMenu>
         </StFlex>
       </StContainer>

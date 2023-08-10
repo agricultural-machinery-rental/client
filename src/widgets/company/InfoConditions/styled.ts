@@ -12,7 +12,6 @@ export const StInfoConditions = styled.div`
 
 export const StInfoConditionsWrap = styled(StContainer)`
   padding: 80px 0;
-  margin: 0 auto;
 `;
 
 export const StHeadingInfoConditions = styled(StHeading2)`

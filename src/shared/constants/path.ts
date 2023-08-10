@@ -1,9 +1,11 @@
 export enum PATH {
   MainPage = '/',
   About = '/about',
-  SignIn = '/signin',
-  SignUp = '/signUp',
-  Profile = '/profile',
   Catalog = '/catalog',
   Categories = '/categories',
+  Profile = '/profile',
+  Orders = '/profile/orders',
+  BookingHistory = '/profile/booking-history',
+  Favourites = '/profile/favourites',
+  Settings = '/profile/settings',
 }
