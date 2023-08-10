@@ -26,7 +26,7 @@ export const StInput = styled.input`
   font-size: 0.6rem;
   line-height: 1rem;
   outline: 0;
-  padding: ${theme.padding.default};
+  padding: ${theme.padding.input};
 
   &:focus {
     border: 1px solid ${theme.colors.borderThird};

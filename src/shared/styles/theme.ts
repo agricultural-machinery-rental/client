@@ -41,7 +41,8 @@ export const theme = {
     dateRange: '441px',
   },
   padding: {
-    default: '16px',
+    default: '16px 8px',
+    input: '16px 8px 16px 16px',
   },
   borderRadius: {
     round: '8px',

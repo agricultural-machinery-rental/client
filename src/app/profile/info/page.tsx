@@ -1,14 +1,13 @@
 import { Metadata } from 'next';
 
 import { Info } from '@/widgets/user/Info';
-// import { InfoEdit } from '@/widgets/user/InfoEdit';
 
 export const metadata: Metadata = {
-  title: 'Profile',
+  title: 'Profile Info',
 };
 
-const Profile = () => {
+const ProfileInfo = () => {
   return <Info />;
 };
 
-export default Profile;
+export default ProfileInfo;

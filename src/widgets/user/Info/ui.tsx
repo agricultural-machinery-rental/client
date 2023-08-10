@@ -1,6 +1,7 @@
 import { FC } from 'react';
 
-import { StFlex, StTextBox } from '@/shared/styles/global';
+import { PATH } from '@/shared/constants/path';
+import { StFlex } from '@/shared/styles/global';
 import { Input } from '@/shared/ui/Input';
 
 import { mockUser } from '../mockUser';
@@ -10,27 +11,27 @@ import { profileLabels, nameFields } from './consts';
 import { StContainer, StIcon, StName } from './styled';
 
 export const Info: FC = () => {
-  const userName = Object.entries(mockUser).filter(data => nameFields.includes(data[0]));
-  const restUserInfo = Object.entries(mockUser).filter(data => !nameFields.includes(data[0]));
+  const userName = Object.entries(mockUser).filter(([key]) => nameFields.includes(key));
+  const restUserInfo = Object.entries(mockUser).filter(([key]) => !nameFields.includes(key));
 
   return (
     <StContainer $flexDirection='column' $gap={16}>
+      <StIcon href={PATH.ProfileEdit}>
+        <Edit width={24} height={24} />
+      </StIcon>
       <div>
-        {userName.map((data, key) => (
+        {userName.map(([key, value]) => (
           <StName key={key} $fontSize={1} $lineHeight={1.33} $fontWeight={600} $textAlign='left'>
-            {data[1]}{' '}
+            {value}{' '}
           </StName>
         ))}
       </div>
       <StFlex $flexDirection='column' $gap={16}>
-        <StIcon href=''>
-          <Edit width={24} height={24} />
-        </StIcon>
-        {restUserInfo.map((data, key) => (
+        {restUserInfo.map(([key, value]) => (
           <Input
             key={key}
-            placeholder={data[1]}
-            label={!data[1] ? profileLabels[data[0]] : undefined}
+            placeholder={value}
+            label={!value ? profileLabels[key] : undefined}
             disabled
           />
         ))}

@@ -1,6 +1,6 @@
 export enum headerLinks {
-  catalog = 'catalog',
-  about = 'about',
+  catalog = '/catalog',
+  about = '/about',
 }
 
 export const HeaderNavItems: { title: string; link: headerLinks }[] = [
