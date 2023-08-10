@@ -39,7 +39,7 @@ export const profileConfig: TFieldConfig[] = [
     label: 'Отчество',
   },
   {
-    kindOfField: 'input',
+    kindOfField: 'input', // TODO заменить на компонент календаря с выбором даты
     name: profileFieldNames.birthday,
     required: false,
     type: 'text',
