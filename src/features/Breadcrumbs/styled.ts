@@ -9,13 +9,10 @@ export const StBreadcrumbsItemWrap = styled(StContainer)`
   align-items: center;
 `;
 export const StBreadcrumbsItem = styled.p`
-  display: flex;
-  padding-right: 16px;
-  align-items: center;
+  margin-right: 16px;
 `;
-export const ArrowSVGWrap = styled.div``;
 
 export const StBreadcrumbsLink = styled(StNextLink)`
   font-size: 0.66rem;
-  padding-right: 16px;
+  margin-right: 16px;
 `;

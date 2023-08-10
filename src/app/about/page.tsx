@@ -5,8 +5,6 @@ import React from 'react';
 
 import { Info } from '@/widgets/company/Info';
 
-import { Breadcrumbs } from '@/features/Breadcrumbs';
-
 export const metadata: Metadata = {
   title: 'О компании',
 };
@@ -14,7 +12,6 @@ export const metadata: Metadata = {
 const About = () => {
   return (
     <>
-      <Breadcrumbs />
       <Info />
     </>
   );
