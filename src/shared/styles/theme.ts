@@ -11,6 +11,7 @@ export const theme = {
     success: '#4caf50',
     error: '#f44336 ',
     bg: '#f5f5f5',
+    bgSecondary: '#2F3954',
     bgBtnFirst: '#ff9900',
     bgBtnSecond: 'unset',
     bgBtnHover: '#ffcc80',
@@ -24,6 +25,7 @@ export const theme = {
   colorsText: {
     primary: '#000',
     secondary: '#fafafa',
+    alternate: '#ff9900',
     disabled: '#54514F',
     error: '#ff0000',
     edit: '#97B2C2',
