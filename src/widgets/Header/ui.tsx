@@ -1,17 +1,20 @@
+import { usePathname } from 'next/navigation';
 import { FC, useContext, useState } from 'react';
 
 import { ModalContext } from '@/entities/Modal';
 
 import { PATH } from '@/shared/constants/path';
 import { modalWindows } from '@/shared/modal/modalWindows';
-import { StContainer, StFlex, StNextLink } from '@/shared/styles/global';
+import { StContainer, StFlex } from '@/shared/styles/global';
 import { Logo } from '@/shared/ui/Logo';
 
 import { Nav, HeaderNavItems } from './Nav';
 import { PhoneButton } from './PhoneButton';
-import { StHeader, StMenu, StPhoneLink, StSpan } from './styled';
+import { StHeader, StMenu, StNextLinkStyled, StSpan } from './styled';
 
 export const Header: FC = () => {
+  const pathName = usePathname();
+
   const { openModal } = useContext(ModalContext);
   const [user, setUser] = useState({ name: 'User' });
 
@@ -21,20 +24,24 @@ export const Header: FC = () => {
         <StFlex $alignItems={'center'}>
           <Logo />
           <StMenu $justifyContent='end' $gap={40}>
-            <Nav navItems={HeaderNavItems} />
+            <Nav navItems={HeaderNavItems} curPathName={pathName} />
 
             {/* TODO Заменить номер телефона в тексте и в href */}
             <StFlex $gap={8} $justifyContent='center'>
-              <StPhoneLink href='tel:+74954954949' $justifyContent='center'>
+              <StNextLinkStyled href='tel:+74954954949' $justifyContent='center'>
                 +7 (495) XXX XX XX
-              </StPhoneLink>
+              </StNextLinkStyled>
               <PhoneButton />
             </StFlex>
 
             {user ? (
-              <StNextLink href={PATH.Profile} $justifyContent='center'>
+              <StNextLinkStyled
+                href={PATH.Profile}
+                $justifyContent='center'
+                className={pathName === PATH.Profile ? 'active' : ''}
+              >
                 {user.name}
-              </StNextLink>
+              </StNextLinkStyled>
             ) : (
               <StSpan $justifyContent='center' onClick={() => openModal(modalWindows.signin)}>
                 Войти

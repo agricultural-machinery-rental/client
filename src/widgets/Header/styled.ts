@@ -22,7 +22,7 @@ export const StMenu = styled(StFlex)`
   margin: 0 8px;
 `;
 
-export const StPhoneLink = styled(StNextLink)`
+export const StNextLinkStyled = styled(StNextLink)`
   position: relative;
   color: ${theme.colorsText.secondary};
   padding: 0 8px;
@@ -44,6 +44,7 @@ export const StPhoneLink = styled(StNextLink)`
     text-decoration: none;
   }
 
+  &&.active:after,
   &&:hover:after {
     transform: scaleX(1);
   }
