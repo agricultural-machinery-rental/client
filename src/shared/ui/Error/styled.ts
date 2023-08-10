@@ -1,6 +1,7 @@
 import { styled } from 'styled-components';
 
 import { theme } from '@/shared/styles/theme';
+import { zindex } from '@/shared/styles/zindex';
 
 export const StError = styled.div`
   position: absolute;
@@ -14,4 +15,5 @@ export const StError = styled.div`
   box-shadow: 0 4px 4px 0 ${theme.colors.boxShadow};
   left: 5px; // TODO Временный стиль, обговорить с дизайнерами
   top: 70%; // Временный стиль
+  z-index: ${zindex.tooltip};
 `;
