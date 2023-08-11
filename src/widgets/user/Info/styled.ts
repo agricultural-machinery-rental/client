@@ -11,11 +11,14 @@ export const StContainer = styled(StFlex)`
 export const StIcon = styled(StNextLink)`
   position: absolute;
   top: 4px;
-  right: -93px;
+  right: -117px;
+`;
+
+export const StNameWrapper = styled.div`
+  width: 430px; /** Чтобы имя переносилось только если доходит до карандаша */
 `;
 
 export const StName = styled(StTextBox)`
   display: inline;
-  white-space: nowrap;
   color: ${theme.colorsText.primary};
 `;

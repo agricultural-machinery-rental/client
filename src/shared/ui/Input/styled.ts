@@ -40,7 +40,7 @@ export const StLabel = styled.label<TLabel>`
   transform: ${({ $inputValue }) =>
     $inputValue ? 'translate(0, 2px) scale(0.8)' : 'translate(0, -50%) scale(1)'};
   color: ${({ $inputValue }) =>
-    $inputValue ? `${theme.colorsText.edit}` : `${theme.colorsText.edit}`};
+    $inputValue ? `${theme.colorsText.edit}` : `${theme.colorsText.primary}`};
   transition: 200ms 0ms;
   transform-origin: top left;
   left: 16px;
