@@ -4,21 +4,19 @@ import { FC } from 'react';
 import { catalogItemCharacteristicsUnits, TCatalogItemCharacteristics } from '@/shared/catalog';
 import { StFlex } from '@/shared/styles/global';
 
+import { dimensionsUnit, priceUnit } from './constants';
 import {
-  StItem,
-  StDescriptionBlock,
-  StDescriptionText,
-  StTitle,
+  StButton,
   StCharacteristics,
   StCharacteristicsLine,
+  StDescriptionBlock,
+  StDescriptionText,
+  StItem,
   StPriceLabel,
   StPriceNumber,
-  StButton,
+  StTitle,
 } from './styled';
 import { TItem } from './typing';
-
-const priceUnit = '₽';
-const dimensionsUnit = 'мм';
 
 export const Item: FC<TItem> = ({ itemData }) => {
   return (
@@ -71,7 +69,7 @@ export const Item: FC<TItem> = ({ itemData }) => {
                 </StPriceNumber>
               </>
             )}
-            <StButton $designType={'primary'} label='Забронировать' />
+            <StButton $designType={'primary'} label='Забронировать' type='button' />
           </StFlex>
         </StDescriptionText>
       </StDescriptionBlock>
