@@ -34,6 +34,7 @@ export const theme = {
     button: '80px',
     input: '56px',
     dateRange: '56px',
+    textarea: '120px',
   },
   sizesWidth: {
     button: '347px',

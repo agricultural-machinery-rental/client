@@ -20,7 +20,7 @@ export const StTextarea = styled.textarea<TTextareaStyledComponent>`
   border-radius: 8px;
   resize: ${({ $resize }) => ($resize ? 'vertical' : 'none')};
 
-  height: 112px;
+  height: ${theme.sizesHeight.textarea};
   width: 100%;
 `;
 
