@@ -1,4 +1,4 @@
-import { FC, useContext, useState } from 'react';
+import { FC, useContext, useState, useEffect } from 'react';
 
 import { ModalContext } from '@/entities/Modal';
 
@@ -13,7 +13,9 @@ import { StHeader, StMenu } from './styled';
 
 export const Header: FC = () => {
   const { openModal } = useContext(ModalContext);
-  const [user, setUser] = useState({ name: 'User' });
+  const [user, setUser] = useState<Record<string, string> | null>({ name: 'User' });
+
+  useEffect(() => setUser(null), []);
 
   return (
     <StHeader>
