@@ -1,7 +1,8 @@
 'use client';
 import Link from 'next/link';
-import { styled } from 'styled-components';
+import { styled, css } from 'styled-components';
 
+import { theme } from './theme';
 import type { TFlex, TNextLink, TTextBox } from './typing';
 
 export const StFlex = styled.div<TFlex>(props => {
@@ -62,6 +63,34 @@ export const StNextSpan = styled.span<TNextLink>`
 
   &&:hover {
     text-decoration: underline;
+  }
+`;
+
+export const StyledLinkWithLine = css`
+  position: relative;
+  color: ${theme.colorsText.secondary};
+  padding: 0 8px;
+
+  &:after {
+    position: absolute;
+    transform: scaleX(0);
+    display: block;
+    content: '';
+    height: 1px;
+    width: 100%;
+    top: 100%;
+    background: ${theme.colorsText.secondary};
+    transition: transform 250ms ease-in-out;
+    left: 0;
+  }
+
+  &&:hover {
+    text-decoration: none;
+  }
+
+  &&.active:after,
+  &&:hover:after {
+    transform: scaleX(1);
   }
 `;
 
