@@ -4,7 +4,7 @@ import { StFlex } from '@/shared/styles/global';
 
 export const StProfileNav = styled(StFlex)`
   flex-direction: column;
-  width: 257px; // TODO обрезала ширину, пока кнопки не выходят за края
+  min-width: 252px;
   gap: 8px;
 
   & .first {

@@ -1,5 +1,7 @@
-const BookingHistory = () => {
-  return <h1>Booking history</h1>;
+import { BookingHistory } from '@/widgets/BookigHistory';
+
+const BookingHistoryPage = () => {
+  return <BookingHistory />;
 };
 
-export default BookingHistory;
+export default BookingHistoryPage;
