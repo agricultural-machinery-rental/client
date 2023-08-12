@@ -47,7 +47,8 @@ export const StRulesLink = styled.span`
   font-size: 0.83rem;
   text-decoration: none;
   cursor: pointer;
-  &&:hover {
+
+  &:hover {
     text-decoration: underline;
   }
 `;
