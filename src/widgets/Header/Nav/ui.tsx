@@ -10,7 +10,7 @@ export const Nav: FC<TNav> = ({ navItems, curPathName }) => (
         key={`menu-item-${index}`}
         href={item.link}
         $justifyContent='center'
-        className={item.link === curPathName ? 'active' : ''}
+        className={`${item.link === curPathName && 'active'}`}
       >
         {item.title}
       </StNavLink>
