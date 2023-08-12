@@ -19,7 +19,7 @@ export const StFlex = styled.div<TFlex>(props => {
 });
 
 export const StContainer = styled.div`
-  width: 1104px;
+  max-width: 1104px;
   margin: 0 auto;
 `;
 

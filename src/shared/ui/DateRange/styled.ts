@@ -5,6 +5,7 @@ import { theme } from '@/shared/styles/theme';
 export const StDateRangeWrapper = styled.div`
   position: relative;
   display: inline-block;
+  z-index: 1;
 
   > svg {
     position: absolute;
@@ -29,6 +30,6 @@ export const StDateRangeWrapper = styled.div`
     height: ${theme.sizesHeight.dateRange};
     outline: 0;
     padding: ${theme.padding.default};
-    width: ${theme.sizesWidth.dateRange};
+    width: ${theme.sizesWidth.input};
   }
 `;
