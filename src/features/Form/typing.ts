@@ -4,7 +4,7 @@ import { TFieldConfig } from './Field';
 
 export type TForm = {
   footer?: ReactNode;
-  fields: TFieldConfig<string>[];
+  fields: TFieldConfig[];
   handleFormSubmit: () => void;
   defaultValues?: Record<string, string>;
   asterisk?: boolean;

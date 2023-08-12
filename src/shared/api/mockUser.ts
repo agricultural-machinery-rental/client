@@ -1,4 +1,3 @@
-// TODO переместить тип в папку api к запросу юзера с бэка
 export type TUser = {
   lastName: string;
   firstName: string;

@@ -1,15 +1,14 @@
 import { Form } from '@/features/Form';
 
+import { mockUser, type TUser } from '@/shared/api/mockUser';
 import { Button } from '@/shared/ui/Button';
-
-import { mockUser, UserType } from '../mockUser';
 
 import { profileConfig } from './config';
 import { StContainer, StFooterWrapper } from './styled';
 
 export const InfoEdit = () => {
   const defaultValues: Record<string, string> = profileConfig.reduce(
-    (acc, { name }) => ({ ...acc, [name]: mockUser![name as keyof UserType] }),
+    (acc, { name }) => ({ ...acc, [name]: mockUser![name as keyof TUser] }),
     {},
   );
 

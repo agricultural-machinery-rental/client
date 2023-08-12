@@ -1,4 +1,4 @@
-import { TUser } from '../mockUser';
+import { type TUser } from '@/shared/api/mockUser';
 
 export const profileLabels: Record<keyof TUser, string> = {
   lastName: 'Фамилия',

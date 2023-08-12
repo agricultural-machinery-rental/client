@@ -2,9 +2,9 @@ import { FormFieldNames, validationTypes } from '@/shared/form';
 
 import type { TFieldConfig } from './Field';
 
-export const profileConfig: TFieldConfig<string>[] = [];
+export const profileConfig: TFieldConfig[] = [];
 
-export const bookingConfig: TFieldConfig<string>[] = [
+export const bookingConfig: TFieldConfig[] = [
   {
     kindOfField: 'textarea',
     name: FormFieldNames.message,
@@ -13,7 +13,7 @@ export const bookingConfig: TFieldConfig<string>[] = [
   },
 ];
 
-export const callbackConfig: TFieldConfig<string>[] = [
+export const callbackConfig: TFieldConfig[] = [
   {
     kindOfField: 'input',
     name: FormFieldNames.firstName,

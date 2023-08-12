@@ -1,8 +1,7 @@
 import { TFieldConfig } from '@/features/Form/Field';
 
+import { type TUser } from '@/shared/api/mockUser';
 import { validationTypes } from '@/shared/form';
-
-import { TUser } from '../mockUser';
 
 export const profileConfig: TFieldConfig<keyof TUser>[] = [
   {
