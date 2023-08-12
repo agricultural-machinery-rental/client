@@ -1,17 +1,20 @@
+import { ButtonBooking } from '@/features/Button/ButtonBooking';
 import { Swiper } from '@/features/Swiper';
 
 import StarSVG from './assets/icons/star.svg';
 import { dataTractors } from './constants';
 import {
-  StBookingButton,
   StProductHeader,
   StProductList,
   StProductMain,
-  StProductPrice,
+  StProductItemInfo,
   StProductText,
   StProductTitle,
   StSection,
   StStarButton,
+  StProductFooter,
+  StProductFooterInfo,
+  StProductPrice,
 } from './styled';
 
 export const ProductCard = () => {
@@ -35,12 +38,42 @@ export const ProductCard = () => {
               <li>Возможность почасовой оплаты</li>
               <li>Подходит для ...</li>
             </StProductList>
-            <StProductPrice>13500 ₽/смена 8 часов</StProductPrice>
+            <ul>
+              <StProductItemInfo>
+                <span>Общая масса</span>
+                <span>7800 кг</span>
+              </StProductItemInfo>
+              <StProductItemInfo>
+                <span>Объём ковша</span>
+                <span>0,3 м³</span>
+              </StProductItemInfo>
+              <StProductItemInfo>
+                <span>Глубина копания</span>
+                <span>4150 мм</span>
+              </StProductItemInfo>
+              <StProductItemInfo>
+                <span>Ширина гусеницы</span>
+                <span>450 мм</span>
+              </StProductItemInfo>
+              <StProductItemInfo>
+                <span>Габариты</span>
+                <span>6080×2260×2640 мм</span>
+              </StProductItemInfo>
+            </ul>
           </div>
           <Swiper dataArray={dataTractors} />
         </StProductMain>
-        {/* TODO Кнопка добавлена на время, будет заменена на общую кнопку из entities */}
-        <StBookingButton>Забронировать</StBookingButton>
+        <StProductFooter>
+          <StProductFooterInfo>
+            <span>Стоимость за 1 ч.</span>
+            <StProductPrice>1600 ₽</StProductPrice>
+          </StProductFooterInfo>
+          <StProductFooterInfo>
+            <span>Стоимость за смену 8 ч.</span>
+            <StProductPrice>12800 ₽</StProductPrice>
+          </StProductFooterInfo>
+          <ButtonBooking />
+        </StProductFooter>
       </article>
     </StSection>
   );
