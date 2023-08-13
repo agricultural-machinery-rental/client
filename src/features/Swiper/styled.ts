@@ -1,19 +1,18 @@
 import { styled } from 'styled-components';
 
 export const StSwiper = styled.div`
-  height: 479px;
+  height: 476px;
   width: 536px;
 
   .slick-dots li {
     margin: 0 8px 25px;
     &.slick-active button:before {
-      opacity: 1;
-      color: black;
+      color: #ff9900;
     }
     button:before {
       font-size: 0.666rem;
-      opacity: 0.7;
-      color: #595858;
+      opacity: 1;
+      color: #ffffff;
     }
   }
 `;

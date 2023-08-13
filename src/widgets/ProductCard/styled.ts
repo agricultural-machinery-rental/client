@@ -5,6 +5,8 @@ import { StHeading3 } from '@/shared/styles/global';
 export const StSection = styled.section`
   max-width: 1104px;
   margin: 0 auto 80px;
+  padding: 40px 0;
+  background: rgba(255, 255, 255, 0.6);
 `;
 
 export const StProductHeader = styled.div`
@@ -16,37 +18,48 @@ export const StProductHeader = styled.div`
 export const StProductTitle = styled(StHeading3)`
   margin: 0;
   align-self: flex-start;
+  margin-bottom: 67px;
 `;
 
 export const StStarButton = styled.button`
   background-color: transparent;
   border: none;
   cursor: pointer;
-  align-self: flex-end;
-  margin-right: 20px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
 `;
 
 export const StProductMain = styled.div`
   display: grid;
   grid-template-columns: 536px auto;
   justify-content: space-between;
-  margin-bottom: 77px;
+  margin-bottom: 69px;
   gap: 0 42px;
+  position: relative;
 `;
 
 export const StProductText = styled.p`
-  margin-bottom: 40px;
+  font-size: 0.75em;
+  line-height: 1.667em;
+  margin-bottom: 5px;
 `;
 
 export const StProductList = styled.ul`
   padding-left: 35px;
-  margin-bottom: 55px;
+  margin-bottom: 95px;
   list-style: disc;
+  font-size: 0.75em;
+
+  & li {
+    line-height: 1.667em;
+  }
 `;
 
 export const StProductItemInfo = styled.li`
   display: flex;
   justify-content: space-between;
+  margin-bottom: 8px;
 `;
 
 export const StProductFooter = styled.div`

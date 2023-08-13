@@ -23,9 +23,6 @@ export const ProductCard = () => {
       <article>
         <StProductHeader>
           <StProductTitle>Трактор Название TRY-45</StProductTitle>
-          <StStarButton>
-            <StarSVG />
-          </StStarButton>
         </StProductHeader>
         <StProductMain>
           <div>
@@ -34,7 +31,7 @@ export const ProductCard = () => {
               года выпуска, используется для таких то целей, расход топлива и бла бла
             </StProductText>
             <StProductList>
-              <li>требуемая категория прав - Д</li>
+              <li>требуемая категория прав - C</li>
               <li>Возможность почасовой оплаты</li>
               <li>Подходит для ...</li>
             </StProductList>
@@ -62,6 +59,9 @@ export const ProductCard = () => {
             </ul>
           </div>
           <Swiper dataArray={dataTractors} />
+          <StStarButton>
+            <StarSVG />
+          </StStarButton>
         </StProductMain>
         <StProductFooter>
           <StProductFooterInfo>
