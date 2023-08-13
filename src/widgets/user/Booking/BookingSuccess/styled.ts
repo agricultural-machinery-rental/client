@@ -1,6 +1,7 @@
 import { styled } from 'styled-components';
 
 import { StHeading3, StTextBox } from '@/shared/styles/global';
+import { Button } from '@/shared/ui/Button';
 
 export const StContainer = styled.div`
   width: 534px;
@@ -22,8 +23,10 @@ export const StTitle = styled(StHeading3)`
   gap: 20px;
 `;
 
-export const StButton = styled.div`
-  margin-top: 80px;
+export const StButton = styled(Button)`
+  font-weight: 700;
+  font-size: 1rem;
+  border: 2px solid #ff9900;
 `;
 
 export const StSubtitle = styled(StTextBox)`

@@ -15,6 +15,7 @@ export const BookingForm: FC = () => {
   const { openModal, closeModal } = useContext(ModalContext);
 
   const handleBookingConfirm = () => {
+    // TODO добавить submit формы
     closeModal();
     openModal(modalWindows.bookingSuccess);
   };
@@ -24,7 +25,7 @@ export const BookingForm: FC = () => {
       <Button
         label='Забронировать'
         $designType='primary'
-        //   TODO заменить функцию в onClick
+        // TODO заменить console.log
         onClick={() => console.log('Отправить данные бронирования')}
       />
     </StButton>

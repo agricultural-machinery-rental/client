@@ -1,12 +1,20 @@
-import { FC } from 'react';
+import Link from 'next/link';
+import { FC, useContext } from 'react';
+
+import { ModalContext } from '@/entities/Modal';
 
 import { itemData } from '@/shared/catalog';
 import { StFlex, StTextBox } from '@/shared/styles/global';
-import { Button } from '@/shared/ui/Button';
 
-import { StContainer, StTitle, StWrapper, StSubtitle } from './styled';
+import { StContainer, StTitle, StWrapper, StSubtitle, StButton } from './styled';
 
 export const BookingSuccess: FC = () => {
+  const { closeModal } = useContext(ModalContext);
+
+  const handleClick = () => {
+    closeModal();
+  };
+
   return (
     <StContainer>
       {/* TODO получать данные itemData.name */}
@@ -21,7 +29,7 @@ export const BookingSuccess: FC = () => {
         <StSubtitle $fontSize={1} $lineHeight={1.333} $fontWeight={700} $textAlign='center'>
           Заказ оформлен!
         </StSubtitle>
-        <StFlex $flexDirection='column' $alignItems='center' $gap={40}>
+        <StFlex $flexDirection='column' $alignItems='center' $gap={52}>
           <StTextBox $fontSize={0.67} $lineHeight={1} $textAlign='center'>
             {/* TODO получать данные itemData.date */}
             {itemData.name} забронирован {/* {itemData.date} */} c 27.07.2023 по 12.08.2023
@@ -33,13 +41,14 @@ export const BookingSuccess: FC = () => {
           <StTextBox $fontSize={0.67} $lineHeight={1} $textAlign='center'>
             Наш оператор скоро свяжется с Вами для уточнения деталей
           </StTextBox>
-          <Button
-            type='button'
-            label='На главную'
-            $designType='secondary'
-            //   TODO заменить функцию в onClick
-            onClick={() => console.log('На главную')}
-          />
+          <Link href='/'>
+            <StButton
+              type='button'
+              label='На главную'
+              $designType='secondary'
+              onClick={handleClick}
+            />
+          </Link>
         </StFlex>
       </StWrapper>
     </StContainer>
