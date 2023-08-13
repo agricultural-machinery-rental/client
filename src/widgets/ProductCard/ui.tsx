@@ -1,5 +1,10 @@
-import { ButtonBooking } from '@/features/Button/ButtonBooking';
+import { useContext } from 'react';
+
 import { Swiper } from '@/features/Swiper';
+
+import { ModalContext } from '@/entities/Modal';
+
+import { modalWindows } from '@/shared/modal/modalWindows';
 
 import StarSVG from './assets/icons/star.svg';
 import { dataTractors } from './constants';
@@ -15,9 +20,12 @@ import {
   StProductFooter,
   StProductFooterInfo,
   StProductPrice,
+  StButton,
 } from './styled';
 
 export const ProductCard = () => {
+  const { openModal } = useContext(ModalContext);
+
   return (
     <StSection>
       <article>
@@ -72,7 +80,12 @@ export const ProductCard = () => {
             <span>Стоимость за смену 8 ч.</span>
             <StProductPrice>12800 ₽</StProductPrice>
           </StProductFooterInfo>
-          <ButtonBooking />
+          <StButton
+            $designType={'primary'}
+            label='Забронировать'
+            type='button'
+            onClick={() => openModal(modalWindows.booking)}
+          />
         </StProductFooter>
       </article>
     </StSection>
