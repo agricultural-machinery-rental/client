@@ -38,7 +38,7 @@ export const Header: FC = () => {
               <StNextLinkStyled
                 href={PATH.Profile}
                 $justifyContent='center'
-                className={pathName === PATH.Profile ? 'active' : ''}
+                className={pathName.includes(PATH.Profile) ? 'active' : ''}
               >
                 {user.name}
               </StNextLinkStyled>

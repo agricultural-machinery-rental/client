@@ -1,21 +1,12 @@
 import { TFieldConfig } from '@/features/Form/Field';
 
+import { type TUser } from '@/shared/api/mockUser';
 import { validationTypes } from '@/shared/form';
 
-enum signupFieldNames {
-  lastName = 'lastName',
-  firstName = 'firstName',
-  middleName = 'middleName',
-  phone = 'phone',
-  email = 'email',
-  password = 'password',
-  passwordRepeat = 'passwordRepeat',
-}
-
-export const signupConfig: TFieldConfig<signupFieldNames>[] = [
+export const profileConfig: TFieldConfig<keyof TUser>[] = [
   {
     kindOfField: 'input',
-    name: signupFieldNames.lastName,
+    name: 'lastName',
     pattern: validationTypes.name,
     required: true,
     type: 'text',
@@ -23,7 +14,7 @@ export const signupConfig: TFieldConfig<signupFieldNames>[] = [
   },
   {
     kindOfField: 'input',
-    name: signupFieldNames.firstName,
+    name: 'firstName',
     pattern: validationTypes.name,
     required: true,
     type: 'text',
@@ -31,15 +22,22 @@ export const signupConfig: TFieldConfig<signupFieldNames>[] = [
   },
   {
     kindOfField: 'input',
-    name: signupFieldNames.middleName,
+    name: 'middleName',
     pattern: validationTypes.name,
     required: false,
     type: 'text',
     label: 'Отчество',
   },
   {
+    kindOfField: 'input', // TODO заменить на компонент календаря с выбором даты
+    name: 'birthday',
+    required: false,
+    type: 'text',
+    label: 'День рождения',
+  },
+  {
     kindOfField: 'input',
-    name: signupFieldNames.phone,
+    name: 'phone',
     pattern: validationTypes.phone,
     required: true,
     type: 'tel',
@@ -47,25 +45,24 @@ export const signupConfig: TFieldConfig<signupFieldNames>[] = [
   },
   {
     kindOfField: 'input',
-    name: signupFieldNames.email,
+    name: 'email',
     pattern: validationTypes.email,
     required: true,
     type: 'email',
     label: 'e-mail',
   },
   {
-    kindOfField: 'passwordInput',
-    name: signupFieldNames.password,
-    pattern: validationTypes.password,
-    required: true,
-    type: 'password',
-    label: 'Пароль',
+    kindOfField: 'input',
+    name: 'companyName',
+    required: false,
+    type: 'text',
+    label: 'Название организации',
   },
   {
-    kindOfField: 'passwordInput',
-    name: signupFieldNames.passwordRepeat,
-    required: true,
-    type: 'password',
-    label: 'Повторите пароль',
+    kindOfField: 'input',
+    name: 'companyTIN',
+    required: false,
+    type: 'text',
+    label: 'ИНН организации',
   },
 ];
