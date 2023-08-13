@@ -43,6 +43,7 @@ export const theme = {
   },
   padding: {
     default: '16px 8px',
+    input: '16px 8px 16px 16px',
     catalogItem: '24px 16px 16px',
   },
   borderRadius: {
