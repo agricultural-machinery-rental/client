@@ -23,6 +23,8 @@ export const StTextarea = styled.textarea<TTextareaStyledComponent>`
 
   height: 112px;
   width: 100%;
+  font-size: 0.6rem;
+  }
 `;
 
 export const StLabel = styled.label<TLabel>`

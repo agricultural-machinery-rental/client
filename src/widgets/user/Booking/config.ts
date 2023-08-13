@@ -6,14 +6,13 @@ export const bookingConfig: TFieldConfig[] = [
   {
     kindOfField: 'daterange',
     name: FormFieldNames.daterange,
-    required: false,
-    label: 'Комментарии',
+    required: true,
   },
   {
     kindOfField: 'textarea',
     name: FormFieldNames.message,
     required: true,
     type: 'text',
-    label: 'Пожалуйста, укажите другую\nдополнительную информацию: город, ..."-',
+    placeholder: 'Пожалуйста, укажите другую\nдополнительную информацию: город и т.д.',
   },
 ];
