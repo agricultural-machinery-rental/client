@@ -1,5 +1,14 @@
+import { StFlex } from '@/shared/styles/global';
+import { BookingItem } from '@/shared/ui/BookingItem';
+
 const Orders = () => {
-  return <h1>Orders</h1>;
+  return (
+    <StFlex $flexDirection='column' $gap={16}>
+      <BookingItem />
+      <BookingItem />
+      <BookingItem />
+    </StFlex>
+  );
 };
 
 export default Orders;

@@ -1,0 +1,57 @@
+import { styled } from 'styled-components';
+
+import { theme } from '@/shared/styles/theme';
+const itemHeight = theme.sizesHeight.bookingItem;
+
+export const StBookingItem = styled.article`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 725px;
+  height: ${itemHeight};
+  box-shadow: 0 0 1px #000;
+  border-radius: ${theme.borderRadius.catalogItem};
+  overflow: hidden;
+`;
+
+export const StImage = styled.div`
+  position: relative;
+  height: ${itemHeight};
+  width: ${itemHeight};
+`;
+
+export const StDescriptionBlock = styled.div`
+  position: relative;
+  flex: 1;
+  padding: 28px 40px 12px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+`;
+
+export const StTitle = styled.h3`
+  font-size: 0.75rem;
+  font-weight: 700;
+`;
+
+export const StDates = styled.p`
+  font-size: 0.75rem;
+  line-height: 1rem;
+`;
+
+export const StCategory = styled.p`
+  font-size: 0.75rem;
+  line-height: 1rem;
+`;
+
+export const StComment = styled.p`
+  font-size: 0.66rem;
+  padding-top: 4px;
+  line-height: 1rem;
+`;
+
+export const StEditButton = styled.div`
+  position: absolute;
+  right: 20px;
+  top: 22px;
+`;
