@@ -22,12 +22,7 @@ export const BookingForm: FC = () => {
 
   const footer = (
     <StButton>
-      <Button
-        label='Забронировать'
-        $designType='primary'
-        // TODO заменить console.log
-        onClick={() => console.log('Отправить данные бронирования')}
-      />
+      <Button label='Забронировать' $designType='primary' />
     </StButton>
   );
 

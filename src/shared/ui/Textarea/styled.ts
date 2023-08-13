@@ -24,6 +24,7 @@ export const StTextarea = styled.textarea<TTextareaStyledComponent>`
   height: 112px;
   width: 100%;
   font-size: 0.6rem;
+  line-height: 1rem;
   }
 `;
 

@@ -11,8 +11,7 @@ export const bookingConfig: TFieldConfig[] = [
   {
     kindOfField: 'textarea',
     name: FormFieldNames.message,
-    required: true,
-    type: 'text',
+    required: false,
     placeholder: 'Пожалуйста, укажите другую\nдополнительную информацию: город и т.д.',
   },
 ];

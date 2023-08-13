@@ -1,11 +1,12 @@
 import { styled } from 'styled-components';
 
 import { theme } from '@/shared/styles/theme';
+import { zindex } from '@/shared/styles/zindex';
 
 export const StDateRangeWrapper = styled.div`
   position: relative;
   display: inline-block;
-  z-index: 1;
+  z-index: ${zindex.dateRange};
 
   > svg {
     position: absolute;
