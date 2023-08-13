@@ -4,9 +4,9 @@ import { Swiper } from '@/features/Swiper';
 
 import { ModalContext } from '@/entities/Modal';
 
+import StarSVG from '@/shared/icons/star.svg';
 import { modalWindows } from '@/shared/modal/modalWindows';
 
-import StarSVG from './assets/icons/star.svg';
 import { dataTractors } from './constants';
 import {
   StProductHeader,
