@@ -1,5 +1,5 @@
 import { usePathname } from 'next/navigation';
-import { FC, useContext, useState } from 'react';
+import { FC, useContext, useState, useEffect } from 'react';
 
 import { ModalContext } from '@/entities/Modal';
 
@@ -16,7 +16,9 @@ export const Header: FC = () => {
   const pathName = usePathname();
 
   const { openModal } = useContext(ModalContext);
-  const [user, setUser] = useState({ name: 'User' });
+  // TODO временный стейт для теста
+  const [user, setUser] = useState<Record<string, string> | null>({ name: 'User' });
+  useEffect(() => setUser(null), []);
 
   return (
     <StHeader>

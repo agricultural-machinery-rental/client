@@ -26,4 +26,5 @@ export const modalWindowContent = {
   [modalWindows.consent]: <Consent />,
   [modalWindows.booking]: <BookingForm />,
   [modalWindows.bookingSuccess]: <BookingSuccess />,
+  [modalWindows.newPassword]: <NewPassword />,
 } as const;
