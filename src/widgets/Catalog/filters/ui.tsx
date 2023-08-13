@@ -1,6 +1,6 @@
-import { styled } from 'styled-components';
-import { FiltersField } from './field';
+import { FiltersField } from './field/field';
 import { filters } from './filters';
+import { WrapFilters } from './styles';
 
 export const Filters = () => {
   return (
@@ -17,10 +17,3 @@ export const Filters = () => {
     </WrapFilters>
   );
 };
-
-const WrapFilters = styled.div`
-  margin-right: 1.5rem;
-  li {
-    margin: 0.5rem 0;
-  }
-`;
