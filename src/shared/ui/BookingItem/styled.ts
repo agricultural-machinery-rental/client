@@ -7,9 +7,8 @@ export const StBookingItem = styled.article`
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  width: 725px;
+  width: 100%;
   height: ${itemHeight};
-  box-shadow: 0 0 1px #000;
   border-radius: ${theme.borderRadius.catalogItem};
   overflow: hidden;
 `;

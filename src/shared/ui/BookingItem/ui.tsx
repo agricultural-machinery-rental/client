@@ -1,8 +1,6 @@
 import Image from 'next/image';
+import { FC } from 'react';
 
-import Edit from '@/shared/icons/edit.svg';
-
-import photoJPG from './assets/photo.jpg';
 import {
   StComment,
   StBookingItem,
@@ -11,23 +9,22 @@ import {
   StImage,
   StTitle,
   StEditButton,
+  StCategory,
 } from './styled';
+import { TBookingItem } from './typing';
 
-const BookingItem = () => {
+const BookingItem: FC<TBookingItem> = ({ photo, name, button, dates, category, comment }) => {
   return (
     <StBookingItem>
       <StImage>
-        <Image src={photoJPG} layout='fill' alt='Картинка трактора' />
+        <Image src={photo} layout='fill' alt={name} />
       </StImage>
       <StDescriptionBlock>
-        <StTitle>Трактор R-40</StTitle>
-        <StDates>Забронирован с 30.07 по 12.08</StDates>
-        <StComment>
-          Обл. Ростовская, район Зерноградский, поселок Донской. Аренда с экипажем.
-        </StComment>
-        <StEditButton>
-          <Edit width={24} height={24} />
-        </StEditButton>
+        <StTitle>{name}</StTitle>
+        {dates && <StDates>{dates}</StDates>}
+        {category && <StCategory>{category}</StCategory>}
+        {comment && <StComment>{comment}</StComment>}
+        <StEditButton>{button}</StEditButton>
       </StDescriptionBlock>
     </StBookingItem>
   );
