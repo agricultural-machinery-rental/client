@@ -84,7 +84,7 @@ export const ProductCard = () => {
             $designType={'primary'}
             label='Забронировать'
             type='button'
-            onClick={() => openModal(modalWindows.bookingEdit)}
+            onClick={() => openModal(modalWindows.booking)}
           />
         </StProductFooter>
       </article>
