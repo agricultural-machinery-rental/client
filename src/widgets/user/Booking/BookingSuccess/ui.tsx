@@ -32,7 +32,7 @@ export const BookingSuccess: FC = () => {
         <StFlex $flexDirection='column' $alignItems='center' $gap={52}>
           <StTextBox $fontSize={0.67} $lineHeight={1} $textAlign='center'>
             {/* TODO получать данные itemData.date */}
-            {itemData.name} забронирован {/* {itemData.date} */} c 27.07.2023 по 12.08.2023
+            {itemData.name} забронирован {/* {itemData.date} */} 13.08.2023 - 13.08.2023
           </StTextBox>
           <StTextBox $fontSize={0.67} $lineHeight={1} $textAlign='center'>
             {/* TODO получать данные date-picker */}

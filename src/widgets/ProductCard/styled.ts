@@ -1,6 +1,7 @@
 import { styled } from 'styled-components';
 
 import { StHeading3 } from '@/shared/styles/global';
+import { Button } from '@/shared/ui/Button';
 
 export const StSection = styled.section`
   max-width: 1104px;
@@ -83,4 +84,10 @@ export const StProductPrice = styled.span`
   font-weight: 700;
   font-size: 1.333em;
   line-height: 1.666em;
+`;
+
+export const StButton = styled(Button)`
+  margin-top: 10px;
+  height: 80px;
+  width: 347px;
 `;

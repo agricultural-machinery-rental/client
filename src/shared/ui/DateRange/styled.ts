@@ -25,7 +25,7 @@ export const StDateRangeWrapper = styled.div`
     border-radius: ${theme.borderRadius.round};
     border: 1px solid ${theme.colors.borderFirst};
     color: ${theme.colorsText.primary};
-    font-size: 1em;
+    font-size: 0.66rem;
     line-height: ${theme.sizesHeight.dateRange};
     height: ${theme.sizesHeight.dateRange};
     outline: 0;
