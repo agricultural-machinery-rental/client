@@ -53,7 +53,6 @@ module.exports = {
       'error',
       {
         alphabetize: { order: 'asc', caseInsensitive: true },
-        'newlines-between': 'always',
         pathGroups: [
           { group: 'internal', position: 'after', pattern: '@/widgets/**' },
           { group: 'internal', position: 'after', pattern: '@/features/**' },
