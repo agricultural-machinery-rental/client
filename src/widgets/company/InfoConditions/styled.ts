@@ -42,6 +42,16 @@ export const StParagraph = styled.p`
   margin-bottom: 32px;
 `;
 
+export const StRulesLink = styled.span`
+  color: ${theme.colors.link};
+  font-size: 0.83rem;
+  text-decoration: none;
+  cursor: pointer;
+  &&:hover {
+    text-decoration: underline;
+  }
+`;
+
 export const StLink = styled(Link)`
   color: ${theme.colors.link};
 

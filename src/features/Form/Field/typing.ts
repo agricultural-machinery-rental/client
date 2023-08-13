@@ -17,9 +17,9 @@ export type TField = {
 } & TReactHookFormInputElement &
   TFieldConfig;
 
-export type TFieldConfig = {
+export type TFieldConfig<T = string> = {
   kindOfField: TKindOfField;
-  name: string;
+  name: T;
   pattern?: validationTypes;
   required: boolean;
   value?: string;
