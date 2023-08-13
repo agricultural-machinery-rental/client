@@ -40,8 +40,10 @@ export const StButton = styled.button<TButton>`
         return 'none';
     }
   }};
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.33rem;
 
-  /* TODO поправить кнопки в разных состояних, когда дизайнеры скорректируют */
   &:hover {
     background-color: ${theme.colors.bgBtnHover};
     border: none;
