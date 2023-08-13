@@ -8,20 +8,6 @@ export const StCategoryItem = styled.li`
   position: relative;
   display: flex;
   flex-direction: column;
-  background-color: ${theme.colors.bg};
-`;
-
-export const StCategoryItemImage = styled.div`
-  aspect-ratio: 1;
-  color: #fff;
-  cursor: pointer;
-  -o-object-fit: cover;
-  object-fit: cover;
-  opacity: 0.9;
-  width: 252px;
-  height: 168px;
-  display: flex;
-  justify-content: center;
 `;
 
 export const StCategoryTitleWrapper = styled.div`
@@ -39,4 +25,5 @@ export const StCategoryItemTitle = styled.p`
   padding: ${theme.padding.default};
   text-overflow: ellipsis;
   text-align: center;
+  font-weight: 700;
 `;
