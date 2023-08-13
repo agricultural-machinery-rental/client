@@ -1,19 +1,15 @@
-'use client';
-import styled from 'styled-components';
-import FiltersField from './field';
-import filters from './filters';
+import { styled } from 'styled-components';
+import { FiltersField } from './field';
+import { filters } from './filters';
 
-type Keys = keyof typeof filters;
-
-const Filters = () => {
+export const Filters = () => {
   return (
     <WrapFilters>
       <ul>
-        {Object.keys(filters).map(key => {
-          const { name } = filters[key as Keys];
+        {Object.entries(filters).map(([key, data]) => {
           return (
             <li key={key}>
-              <FiltersField id={key} name={name} />
+              <FiltersField id={key} name={data.name} />
             </li>
           );
         })}
@@ -28,5 +24,3 @@ const WrapFilters = styled.div`
     margin: 0.5rem 0;
   }
 `;
-
-export default Filters;

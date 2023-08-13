@@ -1,3 +1,2 @@
-import Filters from './ui';
-
-export default Filters;
+'use client';
+export { Filters } from './ui';

@@ -1,4 +1,8 @@
-const filters = {
+interface filtersMap {
+  [key: string]: Record<string, string>;
+}
+
+export const filters: filtersMap = {
   category: { name: 'Категория' },
   location: { name: 'Расположение' },
   price: { name: 'Стоимость' },
@@ -7,5 +11,3 @@ const filters = {
   purpose: { name: 'Тип работ' },
   condition: { name: 'Состояние' },
 };
-
-export default filters;

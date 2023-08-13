@@ -1,21 +1,22 @@
-import { useState } from 'react';
+import { FC, useState } from 'react';
 import styled from 'styled-components';
-import ArrowDown from './asserts/arrow-down.svg';
-import ArrowUp from './asserts/arrow-up.svg';
+import ArrowDown from './assets/arrow-down.svg';
 
-type Props = {
+type TFiltersField = {
   id: string;
   name: string;
 };
 
-const FiltersField = (props: Props) => {
+export const FiltersField: FC<TFiltersField> = props => {
   const [epanded, setExpand] = useState(false);
   const { name } = props;
   return (
     <WrapFiltersField>
       <Header onClick={() => setExpand(!epanded)}>
         <h5>{name}</h5>
-        <ExpandIcon>{epanded ? <ArrowUp /> : <ArrowDown />}</ExpandIcon>
+        <ExpandIcon down={!epanded}>
+          <ArrowDown />
+        </ExpandIcon>
       </Header>
     </WrapFiltersField>
   );
@@ -37,12 +38,11 @@ const Header = styled.div`
     opacity: 0.75;
   }
 `;
-const ExpandIcon = styled.div`
+const ExpandIcon = styled.div<{ down: boolean }>`
   position: absolute;
   top: 0.5rem;
   right: 1rem;
   width: 1rem;
   height: 1rem;
+  transform: rotate(${props => (props.down ? 0 : '180deg')});
 `;
-
-export default FiltersField;
