@@ -1,6 +1,7 @@
 import Image from 'next/image';
 
-import EditSVG from './assets/edit.svg';
+import Edit from '@/shared/icons/edit.svg';
+
 import photoJPG from './assets/photo.jpg';
 import {
   StComment,
@@ -25,7 +26,7 @@ const BookingItem = () => {
           Обл. Ростовская, район Зерноградский, поселок Донской. Аренда с экипажем.
         </StComment>
         <StEditButton>
-          <EditSVG />
+          <Edit width={24} height={24} />
         </StEditButton>
       </StDescriptionBlock>
     </StBookingItem>

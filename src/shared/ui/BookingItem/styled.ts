@@ -54,4 +54,5 @@ export const StEditButton = styled.div`
   position: absolute;
   right: 20px;
   top: 22px;
+  cursor: pointer;
 `;
