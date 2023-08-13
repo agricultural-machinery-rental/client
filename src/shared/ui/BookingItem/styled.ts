@@ -11,6 +11,7 @@ export const StBookingItem = styled.article`
   height: ${itemHeight};
   border-radius: ${theme.borderRadius.catalogItem};
   overflow: hidden;
+  background: ${theme.colors.white};
 `;
 
 export const StImage = styled.div`
