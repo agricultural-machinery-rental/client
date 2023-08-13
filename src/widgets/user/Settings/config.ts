@@ -8,7 +8,7 @@ enum settingsFieldNames {
   passwordRepeat = 'passwordRepeat',
 }
 
-export const changePasswordConfig: TFieldConfig[] = [
+export const changePasswordConfig: TFieldConfig<settingsFieldNames>[] = [
   {
     kindOfField: 'passwordInput',
     name: settingsFieldNames.oldPassword,
