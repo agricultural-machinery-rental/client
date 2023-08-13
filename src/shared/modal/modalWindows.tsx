@@ -1,8 +1,8 @@
 import { Rules } from '@/widgets/company/Rules';
 import { AuthForm } from '@/widgets/user/Auth';
-import { Consent } from '@/widgets/user/Consent';
 import { BookingForm } from '@/widgets/user/Booking';
 import { BookingSuccess } from '@/widgets/user/Booking';
+import { Consent } from '@/widgets/user/Consent';
 import { PasswordReset } from '@/widgets/user/PasswordReset';
 import { SignupForm } from '@/widgets/user/Signup';
 

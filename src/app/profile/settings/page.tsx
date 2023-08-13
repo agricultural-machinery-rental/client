@@ -1,11 +1,13 @@
 import { Metadata } from 'next';
 
+import { ProfileSettings } from '@/widgets/user/Settings';
+
 export const metadata: Metadata = {
   title: 'Settings',
 };
 
 const Settings = () => {
-  return <h1>Settings</h1>;
+  return <ProfileSettings />;
 };
 
 export default Settings;
