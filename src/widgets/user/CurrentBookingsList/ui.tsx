@@ -1,4 +1,4 @@
-import { BookingCurrentItem } from '@/entities/booking/BookingCurrentItem';
+import { BookingCurrentItem } from '@/features/BookingCurrentItem';
 
 import { orders } from './constants';
 import { StContainer } from './styled';

@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 
+import { ProductCard } from '@/widgets/ProductCard';
+
 import { TDynamicRoute } from '@/shared/types';
 
 export const metadata: Metadata = {
@@ -8,7 +10,7 @@ export const metadata: Metadata = {
 
 const SomeTractor: TDynamicRoute<'id'> = ({ params }) => {
   const { id } = params;
-  return <h1>Categories {id}</h1>;
+  return <ProductCard />;
 };
 
 export default SomeTractor;

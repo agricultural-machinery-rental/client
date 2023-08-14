@@ -1,4 +1,4 @@
-import { TFavoriteItem } from '@/entities/booking/FavoriteItem';
+import { TFavoriteItem } from '@/features/FavoriteItem';
 
 import photo from '@/shared/photos/photo.jpg';
 

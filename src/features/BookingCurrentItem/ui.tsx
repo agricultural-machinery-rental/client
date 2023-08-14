@@ -1,16 +1,17 @@
 import { FC } from 'react';
 
-import Star from '@/shared/icons/star.svg';
+import Edit from '@/shared/icons/edit.svg';
 import { BookingItem } from '@/shared/ui/BookingItem';
 
-import { TFavoriteItem } from './typing';
-const FavoriteItem: FC<TFavoriteItem> = ({ name, ...props }) => {
+import { TBookingCurrentItem } from './typing';
+
+const BookingCurrentItem: FC<TBookingCurrentItem> = ({ name, ...props }) => {
   const editButton = (
     <div onClick={() => console.log('Клик')}>
-      <Star width={40} height={37} />
+      <Edit width={24} height={24} />
     </div>
   );
   return <BookingItem name={name} button={editButton} {...props} />;
 };
 
-export { FavoriteItem };
+export { BookingCurrentItem };

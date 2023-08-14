@@ -1,4 +1,4 @@
-import { FavoriteItem } from '@/entities/booking/FavoriteItem';
+import { FavoriteItem } from '@/features/FavoriteItem';
 
 import { favorites } from './constants';
 import { StContainer } from './styled';
