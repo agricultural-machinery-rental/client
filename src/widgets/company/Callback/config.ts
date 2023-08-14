@@ -7,7 +7,7 @@ export enum callbackFieldNames {
   note = 'note',
 }
 
-export const callbackConfig: TFieldConfig[] = [
+export const callbackConfig: TFieldConfig<callbackFieldNames>[] = [
   {
     kindOfField: 'input',
     name: callbackFieldNames.phone,

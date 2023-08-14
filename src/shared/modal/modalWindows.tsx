@@ -1,4 +1,4 @@
-import { Callback } from '@/widgets/company/Callback';
+import { Callback, CallbackSuccess } from '@/widgets/company/Callback';
 import { Rules } from '@/widgets/company/Rules';
 import { AuthForm } from '@/widgets/user/Auth';
 import {
@@ -26,6 +26,7 @@ export enum modalWindows {
   bookingCancel = 'bookingCancel',
   bookingCancelSuccess = 'bookingCancelSuccess',
   callback = 'callback',
+  callbackSuccess = 'callbackSuccess',
 }
 
 export const modalWindowContent = {
@@ -41,4 +42,5 @@ export const modalWindowContent = {
   [modalWindows.bookingCancel]: <BookingCancel />,
   [modalWindows.bookingCancelSuccess]: <BookingCancelSuccess />,
   [modalWindows.callback]: <Callback />,
+  [modalWindows.callbackSuccess]: <CallbackSuccess />,
 } as const;

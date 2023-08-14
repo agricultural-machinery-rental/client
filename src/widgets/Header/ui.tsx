@@ -32,14 +32,14 @@ export const Header: FC = () => {
               <StNextLinkStyled href='tel:+74954954949' $justifyContent='center'>
                 +7 (495) XXX XX XX
               </StNextLinkStyled>
-              <PhoneButton />
+              <PhoneButton onClick={() => openModal(modalWindows.callback)} />
             </StFlex>
 
             {user ? (
               <StNextLinkStyled
                 href={PATH.Profile}
                 $justifyContent='center'
-                className={pathName.includes(PATH.Profile) ? 'active' : ''}
+                className={`${pathName.includes(PATH.Profile) && 'active'}`}
               >
                 {user.name}
               </StNextLinkStyled>
