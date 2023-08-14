@@ -1,3 +1,8 @@
+import { useContext } from 'react';
+
+import { ModalContext } from '@/entities/Modal';
+
+import { modalWindows } from '@/shared/modal/modalWindows';
 import { StFlex } from '@/shared/styles/global';
 
 import InfoConditionsLine1 from './assets/infoConditionsLine1.svg';
@@ -10,9 +15,11 @@ import {
   StParagraph,
   StLink,
   StInfoBlockFlex,
+  StRulesLink,
 } from './styled';
 
 export const InfoConditions = () => {
+  const { openModal } = useContext(ModalContext);
   return (
     <StInfoConditions>
       <StInfoConditionsWrap>
@@ -34,7 +41,8 @@ export const InfoConditions = () => {
         </StFlex>
 
         <StText>
-          Перед бронированием, пожалуйста, ознакомьтесь с <StLink href='#'>Правилами аренды</StLink>{' '}
+          Перед бронированием, пожалуйста, ознакомьтесь с{' '}
+          <StRulesLink onClick={() => openModal(modalWindows.rules)}>Правилами аренды</StRulesLink>{' '}
           сельхозтехники ОАО “Агропарк”
         </StText>
       </StInfoConditionsWrap>

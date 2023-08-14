@@ -1,7 +1,10 @@
-import { FC } from 'react';
+import { FC, useContext } from 'react';
 
 import { Form } from '@/features/Form';
 
+import { ModalContext } from '@/entities/Modal';
+
+import { modalWindows } from '@/shared/modal/modalWindows';
 import { StFlex, StTextBox } from '@/shared/styles/global';
 import { Button } from '@/shared/ui/Button';
 
@@ -9,10 +12,17 @@ import { signinConfig } from './config';
 import { StContainer, StTitle, StAuthFormLink } from './styled';
 
 export const AuthForm: FC = () => {
+  const { openModal } = useContext(ModalContext);
+
   const footer = (
     <StFlex $flexDirection='column' $alignItems='center' $gap={40}>
       {/* TODO заменить функцию в onClick */}
-      <StAuthFormLink onClick={() => console.log('Открыть форму восстановления пароля')}>
+      <StAuthFormLink
+        onClick={() => {
+          openModal(modalWindows.newPassword);
+          console.log('Открыть форму восстановления пароля');
+        }}
+      >
         Забыли пароль?
       </StAuthFormLink>
       <Button label='Войти' $designType='primary' />

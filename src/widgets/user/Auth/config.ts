@@ -7,7 +7,7 @@ export enum authFieldNames {
   password = 'password',
 }
 
-export const signinConfig: TFieldConfig[] = [
+export const signinConfig: TFieldConfig<authFieldNames>[] = [
   {
     kindOfField: 'input',
     name: authFieldNames.login,

@@ -12,7 +12,7 @@ enum signupFieldNames {
   passwordRepeat = 'passwordRepeat',
 }
 
-export const signupConfig: TFieldConfig[] = [
+export const signupConfig: TFieldConfig<signupFieldNames>[] = [
   {
     kindOfField: 'input',
     name: signupFieldNames.lastName,
