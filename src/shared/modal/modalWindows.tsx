@@ -6,6 +6,8 @@ import { NewPassword } from '@/widgets/user/NewPassword';
 import { PasswordReset } from '@/widgets/user/PasswordReset';
 import { SignupForm } from '@/widgets/user/Signup';
 
+import { ErrorModal } from '@/features/ErrorModal';
+
 export enum modalWindows {
   signin = 'signin',
   passwordReset = 'passwordReset',
@@ -15,6 +17,7 @@ export enum modalWindows {
   booking = 'booking',
   bookingSuccess = 'bookingSuccess',
   newPassword = 'newPassword',
+  error = 'error',
 }
 
 export const modalWindowContent = {
@@ -26,4 +29,5 @@ export const modalWindowContent = {
   [modalWindows.booking]: <BookingForm />,
   [modalWindows.bookingSuccess]: <BookingSuccess />,
   [modalWindows.newPassword]: <NewPassword />,
+  [modalWindows.error]: <ErrorModal />,
 } as const;
