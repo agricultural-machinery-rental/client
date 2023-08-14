@@ -9,10 +9,6 @@ export const StListItem = styled.li`
 `;
 
 export const StListItemText = styled.p`
-  font-family:
-    Open Sans,
-    inherit,
-    serif;
   font-size: 1em;
   font-style: normal;
   font-weight: 400;
