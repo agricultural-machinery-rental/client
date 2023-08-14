@@ -28,8 +28,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <PageContent>
             <ModalProvider>
               <Header />
-              <Breadcrumbs />
-              <StMain>{children}</StMain>
+              <StMain>
+                <Breadcrumbs />
+                {children}
+              </StMain>
               <Footer />
               <Modal />
             </ModalProvider>

@@ -24,8 +24,10 @@ export const StContainer = styled.div`
 `;
 
 export const StHeading1 = styled.h1`
-  font-size: 3em;
-  line-height: 1.63em;
+  font-size: 2em;
+  line-height: 1.167em;
+  text-align: center;
+  margin-bottom: 56px;
 `;
 
 export const StHeading2 = styled.h2`
