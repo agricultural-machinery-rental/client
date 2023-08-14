@@ -27,13 +27,9 @@ export const Callback: FC = () => {
   return (
     <StContainer>
       <StTopTextBox>
-        <StTextBox $fontSize={0.75} $lineHeight={1.25} $textAlign='center'>
-          Здравствуйте!
-        </StTextBox>
+        <StTextBox>Здравствуйте!</StTextBox>
         <br />
-        <StTextBox $fontSize={0.75} $lineHeight={1.25} $textAlign='center'>
-          Оставьте свой номер, и мы Вам обязательно перезвоним!
-        </StTextBox>
+        <StTextBox>Оставьте свой номер, и мы Вам обязательно перезвоним!</StTextBox>
       </StTopTextBox>
       <Form
         handleFormSubmit={() => openModal(modalWindows.callbackSuccess)}

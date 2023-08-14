@@ -1,6 +1,6 @@
 import { styled } from 'styled-components';
 
-import { StFlex, StNextLink } from '@/shared/styles/global';
+import { StFlex, StNextLink, StTextBox } from '@/shared/styles/global';
 import { theme } from '@/shared/styles/theme';
 
 export const StFooterWrapper = styled(StFlex)`
@@ -24,4 +24,10 @@ export const StContainer = styled.div`
 
 export const StTopTextBox = styled.div`
   margin: 0 0 32px;
+
+  ${StTextBox} {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    text-align: center;
+  }
 `;
