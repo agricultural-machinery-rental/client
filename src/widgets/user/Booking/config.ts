@@ -1,6 +1,6 @@
 import { type TFieldConfig } from '@/features/Form/Field';
 
-import { FormFieldNames } from '@/shared/form';
+import { FormFieldNames, validationTypes } from '@/shared/form';
 
 export const bookingConfig: TFieldConfig[] = [
   {
@@ -12,6 +12,7 @@ export const bookingConfig: TFieldConfig[] = [
     kindOfField: 'textarea',
     name: FormFieldNames.message,
     required: false,
+    pattern: validationTypes.comment,
     placeholder: 'Пожалуйста, укажите другую\nдополнительную информацию: город и т.д.',
   },
 ];
