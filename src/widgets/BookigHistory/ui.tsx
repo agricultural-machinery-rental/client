@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
 import { mockOrders } from './api';
-import { Booking } from './Booking';
+import { BookingRow } from './BookingRow';
 import { StGrid, StGridHead } from './styled';
 
 export const BookingHistory: FC = () => {
@@ -12,7 +12,7 @@ export const BookingHistory: FC = () => {
       <StGridHead>Статус</StGridHead>
       <StGridHead>Сумма</StGridHead>
       {mockOrders.map((booking, key) => (
-        <Booking key={key} data={booking} />
+        <BookingRow key={key} data={booking} />
       ))}
     </StGrid>
   );

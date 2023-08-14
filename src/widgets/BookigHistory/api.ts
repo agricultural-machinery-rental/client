@@ -1,4 +1,4 @@
-import { type TBookingData } from './Booking';
+import { type TBookingData } from './BookingRow';
 
 export const mockOrders: TBookingData[] = [
   {

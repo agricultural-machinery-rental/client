@@ -1,8 +1,8 @@
 import { FC } from 'react';
 
-import { TBooking } from './typing';
+import type { TBookingRow } from './typing';
 
-export const Booking: FC<TBooking> = ({ data }) => {
+export const BookingRow: FC<TBookingRow> = ({ data }) => {
   return (
     <>
       <div>{data.date}</div>

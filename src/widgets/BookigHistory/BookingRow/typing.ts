@@ -5,6 +5,6 @@ export type TBookingData = {
   price: string;
 };
 
-export type TBooking = {
+export type TBookingRow = {
   data: TBookingData;
 };
