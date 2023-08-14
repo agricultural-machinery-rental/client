@@ -1,9 +1,11 @@
 import { styled } from 'styled-components';
 
+import { theme } from '@/shared/styles/theme';
+
 export const StSection = styled.section`
   padding: 80px 0 48px;
   margin-bottom: 126px;
-  background: rgba(255, 255, 255, 0.3);
+  background: ${theme.colors.bgOpacity3};
 `;
 
 export const StCategoryList = styled.ul`

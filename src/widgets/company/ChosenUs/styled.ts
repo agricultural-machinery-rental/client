@@ -1,10 +1,11 @@
 import { styled } from 'styled-components';
 
 import { StContainer } from '@/shared/styles/global';
+import { theme } from '@/shared/styles/theme';
 
 export const StSection = styled.section`
   margin-bottom: 80px;
-  background: rgba(255, 255, 255, 0.7);
+  background: ${theme.colors.bgOpacity7};
 `;
 
 export const StContainerInner = styled(StContainer)`
@@ -17,7 +18,7 @@ export const StContainerInner = styled(StContainer)`
 
 export const StList = styled.ul`
   display: grid;
-  grid-template-columns: repeat(3, 346px);
-  grid-template-rows: repeat(2, 280px);
+  grid-template-columns: repeat(auto-fill, minmax(346px, 1fr));
+  grid-auto-rows: 280px;
   gap: 0 32px;
 `;

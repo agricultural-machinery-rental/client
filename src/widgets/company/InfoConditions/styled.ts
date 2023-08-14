@@ -7,8 +7,7 @@ import { theme } from '@/shared/styles/theme';
 export const StInfoConditions = styled.section`
   display: flex;
   width: 100%;
-  margin-bottom: 80px;
-  background: rgba(255, 255, 255, 0.7);
+  background: ${theme.colors.bgOpacity7};
 `;
 
 export const StInfoConditionsWrap = styled(StContainer)`

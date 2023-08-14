@@ -14,6 +14,8 @@ export const PageContent = styled.div`
 export const StMain = styled.main`
   flex-grow: 1;
   background: url('/background.png') no-repeat center;
+  background-size: cover;
+  padding-bottom: 80px;
 `;
 
 export const StMainHeading = styled(StFlex)`

@@ -11,8 +11,6 @@ export const StFooter = styled.footer`
 export const StFooterContainer = styled(StContainer)`
   padding: 40px 0 80px;
   color: ${theme.colors.primary};
-  max-width: 1104px;
-  margin: 0 auto;
 `;
 
 export const StFooterColumn = styled(StFlex)`
