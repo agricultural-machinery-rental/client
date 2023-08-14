@@ -1,6 +1,7 @@
 import { styled } from 'styled-components';
 
 import { StHeading3 } from '@/shared/styles/global';
+import { theme } from '@/shared/styles/theme';
 import { Button } from '@/shared/ui/Button';
 
 export const StContainer = styled.div`
@@ -26,5 +27,5 @@ export const StTitle = styled(StHeading3)`
 export const StButton = styled(Button)`
   font-weight: 700;
   font-size: 1rem;
-  border: 2px solid #ff9900;
+  border: 2px solid ${theme.colors.borderSecond};
 `;
