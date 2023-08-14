@@ -16,7 +16,8 @@ export const Header: FC = () => {
   const pathName = usePathname();
 
   const { openModal } = useContext(ModalContext);
-  const [user, setUser] = useState({ name: 'User' });
+  // TODO state юзера для теста. Когда будет запрос на бэк, удалить
+  const [user, setUser] = useState<Record<string, string> | null>({ name: 'User' });
 
   return (
     <StHeader>
