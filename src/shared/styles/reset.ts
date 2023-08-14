@@ -1,6 +1,8 @@
 'use client';
 import { createGlobalStyle } from 'styled-components';
+
 import '@fontsource/open-sans';
+import { theme } from './theme';
 
 export const GlobalStyles = createGlobalStyle`
   * {
@@ -22,6 +24,7 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 24px;
     background: #fff;
     cursor: default;
+    color: ${theme.colorsText.primary}
   }
 
   #root,

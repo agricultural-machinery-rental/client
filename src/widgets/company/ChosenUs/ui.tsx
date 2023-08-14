@@ -5,12 +5,12 @@ import { FC } from 'react';
 import { StHeading3 } from '@/shared/styles/global';
 
 import { ListItem } from './ListItem';
-import { StContainerInner, StList } from './styled';
+import { StContainerInner, StList, StSection } from './styled';
 import { type TChosenProps } from './typing';
 
 export const ChosenUs: FC<TChosenProps> = ({ data }) => {
   return (
-    <section>
+    <StSection>
       <StContainerInner>
         <StHeading3>Нас выбирают более 1000 клиентов по всей России</StHeading3>
         <StList>
@@ -19,6 +19,6 @@ export const ChosenUs: FC<TChosenProps> = ({ data }) => {
           })}
         </StList>
       </StContainerInner>
-    </section>
+    </StSection>
   );
 };
