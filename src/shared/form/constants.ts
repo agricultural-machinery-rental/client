@@ -23,6 +23,9 @@ export enum validationTypes {
   comment = 'comment',
 }
 
+const regexpEmail = /^(?=^.{7,25}$)([A-Za-z\d._%+-]+)@([A-Za-z\d.-]+)\.([A-Za-z.-]+)$/;
+const regexpPhone = /^\+(?=(?:\D*\d){11})[\d()\-\s]+$/;
+
 // TODO скорректировать рег.выражения и сообщения об ошибке
 export const validationPattern: Record<validationTypes, TValidation> = {
   name: {
@@ -34,8 +37,7 @@ export const validationPattern: Record<validationTypes, TValidation> = {
   },
   phoneOrEmail: {
     /* Проверяет, что строка подходит под правила email ИЛИ телефона */
-    value:
-      /^((?=^[^@.]+$)(^\+(?=(?:\D*\d){11})[\d()\-\s]+$)|(^(?=^.{7,25}$)([A-Za-z\d._%+-]+)@([A-Za-z\d.-]+)\.([A-Za-z.-]+)$))$/,
+    value: new RegExp(`^((?=^[^@.]+$)(${regexpPhone.source})|(${regexpEmail.source}))$`),
     message:
       'Телефон должен начинаться с + и содержать минимум 11 цифр. Email должен быть корректным.',
   },
@@ -44,7 +46,7 @@ export const validationPattern: Record<validationTypes, TValidation> = {
      * Далее проверяет, чтобы строка содержала 11 цифр (не обязательно подряд)
      * Далее проверяет, что срока состоит из цифр, скобок, дефиса и пробелов
      * */
-    value: /^\+(?=(?:\D*\d){11})[\d()\-\s]+$/,
+    value: regexpPhone,
     message: 'Телефон должен начинаться с + и содержать минимум 11 цифр.',
   },
   email: {
@@ -55,7 +57,7 @@ export const validationPattern: Record<validationTypes, TValidation> = {
      * Затем точка
      * В конце латинские буквы
      */
-    value: /^(?=^.{7,25}$)([A-Za-z\d._%+-]+)@([A-Za-z\d.-]+)\.([A-Za-z.-]+)$/,
+    value: regexpEmail,
     message: 'Email должен быть корректным',
   },
   password: {
