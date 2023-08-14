@@ -5,7 +5,7 @@ import { PATH } from '@/shared/constants/path';
 export const profileLinks: TProfileNavLink[] = [
   {
     text: 'Мой профиль',
-    href: PATH.Profile,
+    href: PATH.ProfileInfo,
   },
   {
     text: 'Текущие заявки',

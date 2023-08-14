@@ -4,6 +4,8 @@ import React from 'react';
 import { Footer } from '@/widgets/Footer';
 import { Header } from '@/widgets/Header';
 
+import { Breadcrumbs } from '@/features/Breadcrumbs';
+
 import { ModalProvider } from '@/entities/Modal';
 import { Modal } from '@/entities/Modal/ui';
 
@@ -26,6 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <PageContent>
             <ModalProvider>
               <Header />
+              <Breadcrumbs />
               <StMain>{children}</StMain>
               <Footer />
               <Modal />
