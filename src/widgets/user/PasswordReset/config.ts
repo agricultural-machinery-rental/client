@@ -6,7 +6,7 @@ export enum passwordResetFieldNames {
   email = 'email',
 }
 
-export const passwordResetConfig: TFieldConfig[] = [
+export const passwordResetConfig: TFieldConfig<passwordResetFieldNames>[] = [
   {
     kindOfField: 'input',
     name: passwordResetFieldNames.email,

@@ -10,7 +10,8 @@ import { TDateRange } from './typing';
 registerLocale('ru', ru);
 
 export const DateRange: FC<TDateRange> = ({ name, required, placeholder, setValue }) => {
-  const [dateRange, setDateRange] = useState<(Date | null)[]>([null, null]);
+  // TODO передавать дефолтное значение периода от родителя
+  const [dateRange, setDateRange] = useState<(Date | null)[]>([new Date(), new Date()]);
   const [startDate, endDate] = dateRange;
 
   const minDate = new Date();
@@ -28,7 +29,7 @@ export const DateRange: FC<TDateRange> = ({ name, required, placeholder, setValu
       <CalendarSGV />
       <DatePicker
         locale='ru'
-        dateFormat='dd MMMM yyyy'
+        dateFormat='dd.MM.yyyy'
         selectsRange={true}
         startDate={startDate}
         endDate={endDate}

@@ -5,7 +5,15 @@ import CheckboxUncheckedSVG from './assets/unchecked.svg';
 import { StCheckboxContainer, StLabel } from './styled';
 import { type TCheckbox } from './typing';
 
-export const Checkbox: FC<TCheckbox> = ({ name, label, required, register, watch, ...props }) => {
+export const Checkbox: FC<TCheckbox> = ({
+  name,
+  label,
+  required,
+  register,
+  watch,
+  setValue,
+  ...props
+}) => {
   const id = `checkbox-${name}`;
 
   return (
