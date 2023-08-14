@@ -17,7 +17,12 @@ export const AuthForm: FC = () => {
   const footer = (
     <StFlex $flexDirection='column' $alignItems='center' $gap={40}>
       {/* TODO заменить функцию в onClick */}
-      <StAuthFormLink onClick={() => console.log('Открыть форму восстановления пароля')}>
+      <StAuthFormLink
+        onClick={() => {
+          openModal(modalWindows.newPassword);
+          console.log('Открыть форму восстановления пароля');
+        }}
+      >
         Забыли пароль?
       </StAuthFormLink>
       <Button label='Войти' $designType='primary' />
