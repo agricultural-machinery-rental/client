@@ -1,11 +1,6 @@
 import { HTMLInputTypeAttribute } from 'react';
 
-import {
-  FormFieldNames,
-  TKindOfField,
-  TReactHookFormInputElement,
-  validationTypes,
-} from '@/shared/form';
+import { TKindOfField, TReactHookFormInputElement, validationTypes } from '@/shared/form';
 
 export type TAsterisk = {
   visibility?: 'visible' | 'hidden';

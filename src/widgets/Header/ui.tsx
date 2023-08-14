@@ -17,7 +17,7 @@ export const Header: FC = () => {
 
   const { openModal } = useContext(ModalContext);
   // TODO state юзера для теста. Когда будет запрос на бэк, удалить
-  const [user, setUser] = useState<Record<string, string> | null>({ name: 'User' });
+  const [user] = useState<Record<string, string> | null>({ name: 'User' });
 
   return (
     <StHeader>

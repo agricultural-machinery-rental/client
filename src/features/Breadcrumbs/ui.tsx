@@ -11,7 +11,7 @@ export const Breadcrumbs = () => {
   const activeBreadcrumbs: Tbreadcrumb[] = BREADCRUMBS.filter(breadcrumb =>
     pathname.includes(breadcrumb.url),
   );
-  if (pathname !== '/')
+  if (pathname !== '/') {
     return (
       <StBreadcrumbsItemWrap>
         {activeBreadcrumbs.map((breadcrumb, index) => (
@@ -28,4 +28,6 @@ export const Breadcrumbs = () => {
         ))}
       </StBreadcrumbsItemWrap>
     );
+  }
+  return null;
 };
