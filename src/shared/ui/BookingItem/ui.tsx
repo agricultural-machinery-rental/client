@@ -8,7 +8,7 @@ import {
   StDescriptionBlock,
   StImage,
   StTitle,
-  StEditButton,
+  StButton,
   StCategory,
 } from './styled';
 import { TBookingItem } from './typing';
@@ -24,7 +24,7 @@ const BookingItem: FC<TBookingItem> = ({ photo, name, button, dates, category, c
         {dates && <StDates>{dates}</StDates>}
         {category && <StCategory>{category}</StCategory>}
         {comment && <StComment>{comment}</StComment>}
-        <StEditButton>{button}</StEditButton>
+        <StButton>{button}</StButton>
       </StDescriptionBlock>
     </StBookingItem>
   );
