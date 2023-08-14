@@ -50,9 +50,8 @@ export const StComment = styled.p`
   line-height: 1rem;
 `;
 
-export const StEditButton = styled.div`
+export const StButton = styled.div`
   position: absolute;
   right: 20px;
   top: 22px;
-  cursor: pointer;
 `;

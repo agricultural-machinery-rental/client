@@ -18,7 +18,7 @@ export const Breadcrumbs = () => {
   return (
     <StBreadcrumbsItemWrap>
       {activeBreadcrumbs.map((breadcrumb, index) => (
-        <StBreadcrumbsItem key={breadcrumb.url}>
+        <StBreadcrumbsItem key={index}>
           {index < activeBreadcrumbs.length - 1 ? (
             <>
               <StBreadcrumbsLink href={breadcrumb.url}>{breadcrumb.text}</StBreadcrumbsLink>
