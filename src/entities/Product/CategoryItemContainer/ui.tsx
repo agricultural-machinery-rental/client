@@ -1,17 +1,13 @@
+import Image from 'next/image';
 import React, { FC } from 'react';
 
-import {
-  StCategoryItem,
-  StCategoryItemImage,
-  StCategoryItemTitle,
-  StCategoryTitleWrapper,
-} from './styled';
+import { StCategoryItem, StCategoryItemTitle, StCategoryTitleWrapper } from './styled';
 import type { TCategoryItemContainer } from './typing';
 
 export const CategoryItemContainer: FC<TCategoryItemContainer> = ({ image, title }) => {
   return (
     <StCategoryItem>
-      <StCategoryItemImage>{image}</StCategoryItemImage>
+      <Image src={image} alt={title} height={168} />
       <StCategoryTitleWrapper>
         <StCategoryItemTitle>{title}</StCategoryItemTitle>
       </StCategoryTitleWrapper>
