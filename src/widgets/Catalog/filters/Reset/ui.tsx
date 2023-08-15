@@ -1,12 +1,14 @@
 import { FC } from 'react';
-import { WrapFiltersField } from '../field/styles';
-import { ResetButton } from './styles';
+
+import { StWrapFiltersField } from '../Field/styled';
+
+import { ResetButton } from './styled';
 import { TResetField } from './types';
 
 export const ResetField: FC<TResetField> = ({ callback }) => {
   return (
-    <WrapFiltersField>
+    <StWrapFiltersField>
       <ResetButton onClick={callback}>Сбросить фильтр</ResetButton>
-    </WrapFiltersField>
+    </StWrapFiltersField>
   );
 };

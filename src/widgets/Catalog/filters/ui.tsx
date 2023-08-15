@@ -1,7 +1,7 @@
-import { FiltersField } from './field/field';
+import { FiltersField } from './Field/ui';
 import { filters } from './filters';
-import { ResetField } from './reset/ui';
-import { WrapFilters } from './styles';
+import { ResetField } from './Reset/ui';
+import { StWrapFilters } from './styled';
 
 export const Filters = () => {
   const resetFilters = () => {
@@ -9,7 +9,7 @@ export const Filters = () => {
   };
 
   return (
-    <WrapFilters>
+    <StWrapFilters>
       <ul>
         {Object.entries(filters).map(([key, data]) => {
           return (
@@ -22,6 +22,6 @@ export const Filters = () => {
           <ResetField callback={resetFilters} />
         </li>
       </ul>
-    </WrapFilters>
+    </StWrapFilters>
   );
 };
