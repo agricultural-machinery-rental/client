@@ -32,7 +32,7 @@ const Modal = () => {
   }
 
   const backgroundClickHandler: MouseEventHandler<HTMLDivElement> = e => {
-    if (e.target === e.currentTarget) {
+    if (e.target === e.currentTarget && content !== 'error') {
       closeModal();
     }
   };
@@ -40,7 +40,7 @@ const Modal = () => {
   return createPortal(
     <StModalBackground onClick={backgroundClickHandler}>
       <StModalWindow>
-        <Close onClick={closeModal} />
+        {content === 'error' ? null : <Close onClick={closeModal} />}
         {content && modalWindowContent[content]}
       </StModalWindow>
     </StModalBackground>,

@@ -42,7 +42,7 @@ export const InfoConditions = () => {
 
         <StText>
           Перед бронированием, пожалуйста, ознакомьтесь с{' '}
-          <StRulesLink onClick={() => openModal(modalWindows.error)}>Правилами аренды</StRulesLink>{' '}
+          <StRulesLink onClick={() => openModal(modalWindows.rules)}>Правилами аренды</StRulesLink>{' '}
           сельхозтехники ОАО “Агропарк”
         </StText>
       </StInfoConditionsWrap>
