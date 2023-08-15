@@ -1,8 +1,8 @@
-interface filtersMap {
+type TFiltersMap = {
   [key: string]: Record<string, string>;
-}
+};
 
-export const filters: filtersMap = {
+export const filters: TFiltersMap = {
   category: { name: 'Категория' },
   location: { name: 'Расположение' },
   price: { name: 'Стоимость' },

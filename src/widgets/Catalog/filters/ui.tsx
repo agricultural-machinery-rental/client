@@ -1,10 +1,10 @@
-import { FiltersField } from './field/field';
+import { FiltersField } from './Field/ui';
 import { filters } from './filters';
-import { WrapFilters } from './styles';
+import { StWrapFilters } from './styled';
 
 export const Filters = () => {
   return (
-    <WrapFilters>
+    <StWrapFilters>
       <ul>
         {Object.entries(filters).map(([key, data]) => {
           return (
@@ -14,6 +14,6 @@ export const Filters = () => {
           );
         })}
       </ul>
-    </WrapFilters>
+    </StWrapFilters>
   );
 };
