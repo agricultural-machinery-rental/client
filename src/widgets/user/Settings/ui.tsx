@@ -1,11 +1,14 @@
 import { Form } from '@/features/Form';
 
+import { useUserContext } from '@/shared/model/userContext';
 import { Button } from '@/shared/ui/Button';
 
 import { changePasswordConfig } from './config';
 import { StContainer, StTitle, StFooterWrapper } from './styled';
 
 export const ProfileSettings = () => {
+  const { user, logout } = useUserContext();
+
   const footer = (
     <StFooterWrapper>
       <Button label='Сохранить изменения' $designType='primary' />
@@ -13,7 +16,12 @@ export const ProfileSettings = () => {
         label='Выйти из профиля'
         type='button'
         $designType='secondary'
-        onClick={() => console.log('Выйти из профиля')}
+        onClick={() => {
+          if (user) {
+            logout();
+            console.log('Exit');
+          }
+        }}
       />
     </StFooterWrapper>
   );
