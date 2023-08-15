@@ -1,8 +1,13 @@
 import { FiltersField } from './field/field';
 import { filters } from './filters';
+import { ResetField } from './reset/ui';
 import { WrapFilters } from './styles';
 
 export const Filters = () => {
+  const resetFilters = () => {
+    console.log('Reset filters');
+  };
+
   return (
     <WrapFilters>
       <ul>
@@ -13,6 +18,9 @@ export const Filters = () => {
             </li>
           );
         })}
+        <li>
+          <ResetField callback={resetFilters} />
+        </li>
       </ul>
     </WrapFilters>
   );
