@@ -1,12 +1,12 @@
 import { useContext } from 'react';
 
+import { AddToFavorite } from '@/features/AddToFavorite';
 import { Swiper } from '@/features/Swiper';
 
 import { ModalContext } from '@/entities/Modal';
 
 import { modalWindows } from '@/shared/modal/modalWindows';
 
-import StarSVG from './assets/icons/star.svg';
 import { dataTractors } from './constants';
 import {
   StProductHeader,
@@ -68,7 +68,7 @@ export const ProductCard = () => {
           </div>
           <Swiper dataArray={dataTractors} />
           <StStarButton>
-            <StarSVG />
+            <AddToFavorite />
           </StStarButton>
         </StProductMain>
         <StProductFooter>

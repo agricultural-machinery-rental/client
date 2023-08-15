@@ -2,11 +2,11 @@ import { FC } from 'react';
 
 import { mockUser } from '@/shared/api/mockUser';
 import { PATH } from '@/shared/constants/path';
+import Edit from '@/shared/icons/edit.svg';
 import { objectEntries } from '@/shared/lib';
 import { StFlex } from '@/shared/styles/global';
 import { Input } from '@/shared/ui/Input';
 
-import Edit from './assets/edit.svg';
 import { profileLabels, nameFields } from './consts';
 import { StContainer, StIcon, StNameWrapper, StName } from './styled';
 
