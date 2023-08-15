@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
+
 import { Catalog } from '@/widgets/Catalog';
 import { Filters } from '@/widgets/Catalog/filters';
+
 import { StFlex, StHeading2 } from '@/shared/styles/global';
 
 export const metadata: Metadata = {

@@ -1,5 +1,7 @@
 import { FC, useState } from 'react';
+
 import ArrowDown from '../assets/arrow-down.svg';
+
 import { WrapFiltersField, Header, HeaderName, ExpandIcon } from './styles';
 import { TFiltersField } from './types';
 
