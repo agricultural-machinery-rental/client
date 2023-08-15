@@ -3,7 +3,7 @@ import { FC } from 'react';
 import Edit from '@/shared/icons/edit.svg';
 import { BookingItem } from '@/shared/ui/BookingItem';
 
-import { TBookingCurrentItem } from './typing';
+import { type TBookingCurrentItem } from './typing';
 
 const BookingCurrentItem: FC<TBookingCurrentItem> = ({ name, ...props }) => {
   const editButton = (

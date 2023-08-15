@@ -4,7 +4,7 @@ import { AddToFavorite } from '@/entities/AddToFavorite';
 
 import { BookingItem } from '@/shared/ui/BookingItem';
 
-import { TFavoriteItem } from './typing';
+import { type TFavoriteItem } from './typing';
 
 const FavoriteItem: FC<TFavoriteItem> = ({ name, ...props }) => {
   const button = <AddToFavorite />;
