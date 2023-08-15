@@ -1,6 +1,6 @@
 import { FC, useState } from 'react';
 import ArrowDown from '../assets/arrow-down.svg';
-import { WrapFiltersField, Header, ExpandIcon } from './styles';
+import { WrapFiltersField, Header, HeaderName, ExpandIcon } from './styles';
 import { TFiltersField } from './types';
 
 export const FiltersField: FC<TFiltersField> = props => {
@@ -9,7 +9,7 @@ export const FiltersField: FC<TFiltersField> = props => {
   return (
     <WrapFiltersField>
       <Header onClick={() => setExpand(!epanded)}>
-        <h5>{name}</h5>
+        <HeaderName down={!epanded}>{name}</HeaderName>
         <ExpandIcon down={!epanded}>
           <ArrowDown />
         </ExpandIcon>
