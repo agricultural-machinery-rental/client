@@ -1,4 +1,5 @@
 'use client';
+
 import { createContext, useState } from 'react';
 
 import { modalWindows } from '@/shared/modal/modalWindows';
@@ -24,7 +25,9 @@ export const ModalProvider: TLayout = ({ children }) => {
   const openModal = (content: modalWindows) => {
     setContent(content);
   };
-  const closeModal = () => setContent(null);
+  const closeModal = () => {
+    setContent(null);
+  };
 
   return (
     <ModalContext.Provider value={{ isOpen: content !== null, openModal, closeModal, content }}>
