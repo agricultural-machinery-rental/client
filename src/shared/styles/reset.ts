@@ -1,6 +1,8 @@
 'use client';
 import { createGlobalStyle } from 'styled-components';
+
 import '@fontsource/open-sans';
+import { theme } from './theme';
 
 export const GlobalStyles = createGlobalStyle`
   * {
@@ -8,7 +10,7 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0;
     vertical-align: baseline;
     font-size: 1em;
-    line-height: 1.15;
+    line-height: 1.333em;
   }
 
   *,
@@ -22,13 +24,14 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 24px;
     background: #fff;
     cursor: default;
+    color: ${theme.colorsText.primary}
   }
 
   #root,
   html,
   body,
   .App {
-    max-width: 100vw; 
+    max-width: 100vw;
     height: 100%;
     margin: 0;
   }

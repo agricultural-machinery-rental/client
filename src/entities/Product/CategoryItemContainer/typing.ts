@@ -1,6 +1,7 @@
+import { StaticImageData } from 'next/image';
 import { JSX } from 'react';
 
 export type TCategoryItemContainer = {
-  image: JSX.Element;
+  image: StaticImageData;
   title: string;
 };

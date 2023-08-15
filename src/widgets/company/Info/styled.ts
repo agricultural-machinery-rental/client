@@ -4,13 +4,8 @@ import { styled } from 'styled-components';
 import { StContainer, StHeading3, StFlex } from '@/shared/styles/global';
 import { theme } from '@/shared/styles/theme';
 
-export const StCompanyInfo = styled.div`
-  display: flex;
-  width: 100%;
-`;
-
 export const StCompanyInfoWrap = styled(StContainer)`
-  padding: 60px 0 88px 0;
+  padding-bottom: 30px;
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -24,7 +19,7 @@ export const StHeadingCompanyInfo = styled.h1`
 `;
 export const StSubHeadingCompanyInfo = styled(StHeading3)`
   text-align: left;
-  margin: 20px 0;
+  margin-bottom: 44px;
   font-size: 1rem;
   line-height: 1.33rem;
   font-weight: 700;
@@ -33,6 +28,14 @@ export const StSubHeadingCompanyInfo = styled(StHeading3)`
 export const StParagraph = styled.p`
   font-size: 0.75rem;
   line-height: 1.25rem;
+`;
+
+export const StSectionCompanyInfo = styled.section`
+  background: ${theme.colors.bgOpacity6};
+`;
+
+export const StCompanyAdvantagesWrap = styled(StContainer)`
+  padding: 34px 0 24px;
 `;
 
 export const StAdvantagesList = styled.ul`

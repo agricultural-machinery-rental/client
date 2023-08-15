@@ -1,5 +1,7 @@
+import { CurrentBookingsList } from '@/widgets/user/CurrentBookingsList';
+
 const Orders = () => {
-  return <h1>Orders</h1>;
+  return <CurrentBookingsList />;
 };
 
 export default Orders;

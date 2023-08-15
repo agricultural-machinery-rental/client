@@ -7,6 +7,7 @@ import { type TTextareaStyledComponent, type TLabel } from './typing';
 export const StTextareaContainer = styled.div`
   width: 100%;
   position: relative;
+  white-space: pre-wrap;
 
   &:focus-within label {
     transform: translate(0, 2px) scale(0.8);
@@ -20,8 +21,11 @@ export const StTextarea = styled.textarea<TTextareaStyledComponent>`
   border-radius: 8px;
   resize: ${({ $resize }) => ($resize ? 'vertical' : 'none')};
 
-  height: 112px;
+  height: ${theme.sizesHeight.textarea};
   width: 100%;
+  font-size: 0.6rem;
+  line-height: 1rem;
+  }
 `;
 
 export const StLabel = styled.label<TLabel>`

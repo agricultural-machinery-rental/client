@@ -1,7 +1,11 @@
 import Image from 'next/image';
-import { FC } from 'react';
+import { FC, useContext } from 'react';
+
+import { ModalContext } from '@/entities/Modal';
 
 import { catalogItemCharacteristicsUnits, TCatalogItemCharacteristics } from '@/shared/catalog';
+import { modalWindows } from '@/shared/modal/modalWindows';
+import { useUserContext } from '@/shared/model/userContext';
 import { StFlex } from '@/shared/styles/global';
 
 import { dimensionsUnit, priceUnit } from './constants';
@@ -19,6 +23,9 @@ import {
 import { TItem } from './typing';
 
 export const Item: FC<TItem> = ({ itemData }) => {
+  const { openModal } = useContext(ModalContext);
+  const { user } = useUserContext();
+
   return (
     <StItem>
       <div>
@@ -69,7 +76,14 @@ export const Item: FC<TItem> = ({ itemData }) => {
                 </StPriceNumber>
               </>
             )}
-            <StButton $designType={'primary'} label='Забронировать' type='button' />
+            <StButton
+              $designType={'primary'}
+              label='Забронировать'
+              type='button'
+              onClick={() =>
+                user ? openModal(modalWindows.booking) : openModal(modalWindows.signin)
+              }
+            />
           </StFlex>
         </StDescriptionText>
       </StDescriptionBlock>

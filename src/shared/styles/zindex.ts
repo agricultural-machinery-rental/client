@@ -2,5 +2,6 @@ export enum zindex {
   page = 0,
   modal = 2,
   tooltip,
-  header = 1,
+  header,
+  dateRange = 1,
 }

@@ -1,28 +1,36 @@
+import { useContext } from 'react';
+
+import { AddToFavorite } from '@/features/AddToFavorite';
 import { Swiper } from '@/features/Swiper';
 
-import StarSVG from './assets/icons/star.svg';
+import { ModalContext } from '@/entities/Modal';
+
+import { modalWindows } from '@/shared/modal/modalWindows';
+
 import { dataTractors } from './constants';
 import {
-  StBookingButton,
   StProductHeader,
   StProductList,
   StProductMain,
-  StProductPrice,
+  StProductItemInfo,
   StProductText,
   StProductTitle,
   StSection,
   StStarButton,
+  StProductFooter,
+  StProductFooterInfo,
+  StProductPrice,
+  StButton,
 } from './styled';
 
 export const ProductCard = () => {
+  const { openModal } = useContext(ModalContext);
+
   return (
     <StSection>
       <article>
         <StProductHeader>
           <StProductTitle>Трактор Название TRY-45</StProductTitle>
-          <StStarButton>
-            <StarSVG />
-          </StStarButton>
         </StProductHeader>
         <StProductMain>
           <div>
@@ -31,16 +39,54 @@ export const ProductCard = () => {
               года выпуска, используется для таких то целей, расход топлива и бла бла
             </StProductText>
             <StProductList>
-              <li>требуемая категория прав - Д</li>
+              <li>требуемая категория прав - C</li>
               <li>Возможность почасовой оплаты</li>
               <li>Подходит для ...</li>
             </StProductList>
-            <StProductPrice>13500 ₽/смена 8 часов</StProductPrice>
+            <ul>
+              <StProductItemInfo>
+                <span>Общая масса</span>
+                <span>7800 кг</span>
+              </StProductItemInfo>
+              <StProductItemInfo>
+                <span>Объём ковша</span>
+                <span>0,3 м³</span>
+              </StProductItemInfo>
+              <StProductItemInfo>
+                <span>Глубина копания</span>
+                <span>4150 мм</span>
+              </StProductItemInfo>
+              <StProductItemInfo>
+                <span>Ширина гусеницы</span>
+                <span>450 мм</span>
+              </StProductItemInfo>
+              <StProductItemInfo>
+                <span>Габариты</span>
+                <span>6080×2260×2640 мм</span>
+              </StProductItemInfo>
+            </ul>
           </div>
           <Swiper dataArray={dataTractors} />
+          <StStarButton>
+            <AddToFavorite />
+          </StStarButton>
         </StProductMain>
-        {/* TODO Кнопка добавлена на время, будет заменена на общую кнопку из entities */}
-        <StBookingButton>Забронировать</StBookingButton>
+        <StProductFooter>
+          <StProductFooterInfo>
+            <span>Стоимость за 1 ч.</span>
+            <StProductPrice>1600 ₽</StProductPrice>
+          </StProductFooterInfo>
+          <StProductFooterInfo>
+            <span>Стоимость за смену 8 ч.</span>
+            <StProductPrice>12800 ₽</StProductPrice>
+          </StProductFooterInfo>
+          <StButton
+            $designType={'primary'}
+            label='Забронировать'
+            type='button'
+            onClick={() => openModal(modalWindows.booking)}
+          />
+        </StProductFooter>
       </article>
     </StSection>
   );

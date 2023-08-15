@@ -7,11 +7,11 @@ export enum authFieldNames {
   password = 'password',
 }
 
-export const signinConfig: TFieldConfig[] = [
+export const signinConfig: TFieldConfig<authFieldNames>[] = [
   {
     kindOfField: 'input',
     name: authFieldNames.login,
-    pattern: validationTypes.login,
+    pattern: validationTypes.phoneOrEmail,
     required: true,
     type: 'text',
     label: 'Почта или номер телефона',

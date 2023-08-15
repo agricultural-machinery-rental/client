@@ -4,10 +4,10 @@ import { styled } from 'styled-components';
 import { StContainer, StFlex, StHeading2 } from '@/shared/styles/global';
 import { theme } from '@/shared/styles/theme';
 
-export const StInfoConditions = styled.div`
+export const StInfoConditions = styled.section`
   display: flex;
   width: 100%;
-  background-color: ${theme.colors.bg};
+  background: ${theme.colors.bgOpacity7};
 `;
 
 export const StInfoConditionsWrap = styled(StContainer)`
@@ -16,10 +16,10 @@ export const StInfoConditionsWrap = styled(StContainer)`
 
 export const StHeadingInfoConditions = styled(StHeading2)`
   font-size: 1.333em;
-  line-height: 2.3rem;
+  line-height: 3rem;
   text-align: center;
   margin: 0 auto 80px;
-  width: 70%;
+  width: 80%;
 `;
 
 export const StText = styled.p`
@@ -40,6 +40,17 @@ export const StParagraph = styled.p`
   line-height: 1.25rem;
   padding: 0 35px;
   margin-bottom: 32px;
+`;
+
+export const StRulesLink = styled.span`
+  color: ${theme.colors.link};
+  font-size: 0.83rem;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 export const StLink = styled(Link)`
