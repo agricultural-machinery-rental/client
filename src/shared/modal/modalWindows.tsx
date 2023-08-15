@@ -1,6 +1,13 @@
+import { Callback, CallbackSuccess } from '@/widgets/company/Callback';
 import { Rules } from '@/widgets/company/Rules';
 import { AuthForm } from '@/widgets/user/Auth';
-import { BookingForm, BookingSuccess } from '@/widgets/user/Booking';
+import {
+  BookingCancel,
+  BookingCancelSuccess,
+  BookingForm,
+  BookingSuccess,
+  BookingEditForm,
+} from '@/widgets/user/Booking';
 import { Consent } from '@/widgets/user/Consent';
 import { NewPassword } from '@/widgets/user/NewPassword';
 import { PasswordReset } from '@/widgets/user/PasswordReset';
@@ -18,6 +25,11 @@ export enum modalWindows {
   bookingSuccess = 'bookingSuccess',
   newPassword = 'newPassword',
   error = 'error',
+  bookingEdit = 'bookingEdit',
+  bookingCancel = 'bookingCancel',
+  bookingCancelSuccess = 'bookingCancelSuccess',
+  callback = 'callback',
+  callbackSuccess = 'callbackSuccess',
 }
 
 export const modalWindowContent = {
@@ -30,4 +42,9 @@ export const modalWindowContent = {
   [modalWindows.bookingSuccess]: <BookingSuccess />,
   [modalWindows.newPassword]: <NewPassword />,
   [modalWindows.error]: <ErrorModal />,
+  [modalWindows.bookingEdit]: <BookingEditForm />,
+  [modalWindows.bookingCancel]: <BookingCancel />,
+  [modalWindows.bookingCancelSuccess]: <BookingCancelSuccess />,
+  [modalWindows.callback]: <Callback />,
+  [modalWindows.callbackSuccess]: <CallbackSuccess />,
 } as const;

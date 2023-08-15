@@ -9,11 +9,8 @@ export const StHeader = styled.header`
   top: 0;
   width: 100%;
   height: 72px;
-  display: flex;
-  justify-content: center;
   background-color: ${theme.colors.bgSecondary};
   color: ${theme.colorsText.secondary};
-  align-items: center;
   z-index: ${zindex.header};
 `;
 

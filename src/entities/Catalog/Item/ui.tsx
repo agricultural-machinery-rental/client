@@ -5,6 +5,7 @@ import { ModalContext } from '@/entities/Modal';
 
 import { catalogItemCharacteristicsUnits, TCatalogItemCharacteristics } from '@/shared/catalog';
 import { modalWindows } from '@/shared/modal/modalWindows';
+import { useUserContext } from '@/shared/model/userContext';
 import { StFlex } from '@/shared/styles/global';
 
 import { dimensionsUnit, priceUnit } from './constants';
@@ -23,6 +24,7 @@ import { TItem } from './typing';
 
 export const Item: FC<TItem> = ({ itemData }) => {
   const { openModal } = useContext(ModalContext);
+  const { user } = useUserContext();
 
   return (
     <StItem>
@@ -78,7 +80,9 @@ export const Item: FC<TItem> = ({ itemData }) => {
               $designType={'primary'}
               label='Забронировать'
               type='button'
-              onClick={() => openModal(modalWindows.booking)}
+              onClick={() =>
+                user ? openModal(modalWindows.booking) : openModal(modalWindows.signin)
+              }
             />
           </StFlex>
         </StDescriptionText>

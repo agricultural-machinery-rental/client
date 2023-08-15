@@ -1,10 +1,11 @@
 import { usePathname } from 'next/navigation';
-import { FC, useContext, useState } from 'react';
+import { FC, useContext } from 'react';
 
 import { ModalContext } from '@/entities/Modal';
 
 import { PATH } from '@/shared/constants/path';
 import { modalWindows } from '@/shared/modal/modalWindows';
+import { useUserContext } from '@/shared/model/userContext';
 import { StContainer, StFlex } from '@/shared/styles/global';
 import { Logo } from '@/shared/ui/Logo';
 
@@ -14,10 +15,9 @@ import { StHeader, StMenu, StNextLinkStyled, StSpan } from './styled';
 
 export const Header: FC = () => {
   const pathName = usePathname();
+  const { user } = useUserContext();
 
   const { openModal } = useContext(ModalContext);
-  // TODO state юзера для теста. Когда будет запрос на бэк, удалить
-  const [user, setUser] = useState<Record<string, string> | null>({ name: 'User' });
 
   return (
     <StHeader>
@@ -32,16 +32,16 @@ export const Header: FC = () => {
               <StNextLinkStyled href='tel:+74954954949' $justifyContent='center'>
                 +7 (495) XXX XX XX
               </StNextLinkStyled>
-              <PhoneButton />
+              <PhoneButton onClick={() => openModal(modalWindows.callback)} />
             </StFlex>
 
             {user ? (
               <StNextLinkStyled
                 href={PATH.Profile}
                 $justifyContent='center'
-                className={pathName.includes(PATH.Profile) ? 'active' : ''}
+                className={`${pathName.includes(PATH.Profile) && 'active'}`}
               >
-                {user.name}
+                {user.firstName}
               </StNextLinkStyled>
             ) : (
               <StSpan $justifyContent='center' onClick={() => openModal(modalWindows.signin)}>

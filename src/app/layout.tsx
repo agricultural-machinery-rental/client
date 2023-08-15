@@ -9,6 +9,7 @@ import { Breadcrumbs } from '@/features/Breadcrumbs';
 import { ModalProvider } from '@/entities/Modal';
 import { Modal } from '@/entities/Modal/ui';
 
+import { UserProvider } from '@/shared/model/userContext';
 import StyledComponentsRegistry from '@/shared/styles/registry';
 import { GlobalStyles } from '@/shared/styles/reset';
 
@@ -26,13 +27,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <StyledComponentsRegistry>
           <GlobalStyles />
           <PageContent>
-            <ModalProvider>
-              <Header />
-              <Breadcrumbs />
-              <StMain>{children}</StMain>
-              <Footer />
-              <Modal />
-            </ModalProvider>
+            <UserProvider>
+              <ModalProvider>
+                <Header />
+                <StMain>
+                  <Breadcrumbs />
+                  {children}
+                </StMain>
+                <Footer />
+                <Modal />
+              </ModalProvider>
+            </UserProvider>
           </PageContent>
         </StyledComponentsRegistry>
       </body>

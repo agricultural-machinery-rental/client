@@ -10,6 +10,7 @@ export const StRulesWrap = styled.div``;
 export const StRulesTitle = styled(StHeading3)`
   font-size: 1rem;
   margin-bottom: 40px;
+  line-height: 1.33rem;
 `;
 export const StRulesList = styled.ul`
   list-style-type: decimal;
