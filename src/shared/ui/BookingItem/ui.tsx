@@ -8,12 +8,11 @@ import {
   StDescriptionBlock,
   StImage,
   StTitle,
-  StButton,
   StCategory,
 } from './styled';
 import { TBookingItem } from './typing';
 
-const BookingItem: FC<TBookingItem> = ({ photo, name, button, dates, category, comment }) => {
+const BookingItem: FC<TBookingItem> = ({ photo, name, dates, category, comment, children }) => {
   return (
     <StBookingItem>
       <StImage>
@@ -24,8 +23,8 @@ const BookingItem: FC<TBookingItem> = ({ photo, name, button, dates, category, c
         {dates && <StDates>{dates}</StDates>}
         {category && <StCategory>{category}</StCategory>}
         {comment && <StComment>{comment}</StComment>}
-        <StButton>{button}</StButton>
       </StDescriptionBlock>
+      {children}
     </StBookingItem>
   );
 };

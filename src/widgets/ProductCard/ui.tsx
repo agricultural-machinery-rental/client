@@ -1,8 +1,8 @@
 import { useContext } from 'react';
 
+import { AddToFavorite } from '@/features/AddToFavorite';
 import { Swiper } from '@/features/Swiper';
 
-import { AddToFavorite } from '@/entities/AddToFavorite';
 import { ModalContext } from '@/entities/Modal';
 
 import { modalWindows } from '@/shared/modal/modalWindows';

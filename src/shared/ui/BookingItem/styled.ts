@@ -4,6 +4,7 @@ import { theme } from '@/shared/styles/theme';
 const itemHeight = theme.sizesHeight.bookingItem;
 
 export const StBookingItem = styled.article`
+  position: relative;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -48,10 +49,4 @@ export const StComment = styled.p`
   font-size: 0.66rem;
   padding-top: 4px;
   line-height: 1rem;
-`;
-
-export const StButton = styled.div`
-  position: absolute;
-  right: 20px;
-  top: 22px;
 `;

@@ -1,4 +1,4 @@
-import { type TBookingCurrentItem } from '@/features/BookingCurrentItem';
+import { type TBookingCurrentItem } from '@/entities/BookingCurrentItem';
 
 import photo from '@/shared/photos/photo.jpg';
 

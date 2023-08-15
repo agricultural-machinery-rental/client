@@ -1,14 +1,26 @@
-import { FavoriteItem } from '@/features/FavoriteItem';
+import { AddToFavorite } from '@/features/AddToFavorite';
+
+import { FavoriteItem } from '@/entities/FavoriteItem';
 
 import { favorites } from './constants';
-import { StContainer } from './styled';
+import { StButton, StContainer } from './styled';
 
 const FavoritesList = () => {
   return (
     <section>
       <StContainer $flexDirection='column' $gap={16}>
         {favorites.map((favoriteData, key) => {
-          return <FavoriteItem key={key} {...favoriteData} />;
+          const AddButton = () => (
+            <StButton>
+              <AddToFavorite />
+            </StButton>
+          );
+
+          return (
+            <FavoriteItem key={key} {...favoriteData}>
+              <AddButton />
+            </FavoriteItem>
+          );
         })}
       </StContainer>
     </section>
