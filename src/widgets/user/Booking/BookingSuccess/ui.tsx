@@ -3,7 +3,7 @@ import { FC, useContext } from 'react';
 
 import { ModalContext } from '@/entities/Modal';
 
-import { itemData } from '@/shared/catalog';
+import { temporatyItemData } from '@/shared/catalog';
 import { StFlex, StTextBox } from '@/shared/styles/global';
 
 import { StContainer, StTitle, StWrapper, StSubtitle, StButton } from './styled';
@@ -21,7 +21,7 @@ export const BookingSuccess: FC = () => {
       <StTitle>
         Бронирование <br />
         <StTextBox $fontSize={1} $lineHeight={1.333} $textAlign='center'>
-          {itemData.name}
+          {temporatyItemData[0].name}
         </StTextBox>
       </StTitle>
 
@@ -32,7 +32,7 @@ export const BookingSuccess: FC = () => {
         <StFlex $flexDirection='column' $alignItems='center' $gap={52}>
           <StTextBox $fontSize={0.67} $lineHeight={1} $textAlign='center'>
             {/* TODO получать данные itemData.date */}
-            {itemData.name} забронирован {/* {itemData.date} */} 13.08.2023 - 13.08.2023
+            {temporatyItemData[0].name} забронирован {/* {itemData.date} */} 13.08.2023 - 13.08.2023
           </StTextBox>
           <StTextBox $fontSize={0.67} $lineHeight={1} $textAlign='center'>
             {/* TODO получать данные date-picker */}

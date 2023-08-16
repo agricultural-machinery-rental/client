@@ -1,17 +1,15 @@
 import { Item } from '@/entities/Catalog';
 
-import { itemData } from '@/shared/catalog';
+import { temporatyItemData } from '@/shared/catalog';
 
 import { StCatalogFlex } from './styled';
 
 export const Catalog = () => {
   return (
     <StCatalogFlex>
-      <Item itemData={itemData} />
-      <Item itemData={itemData} />
-      <Item itemData={itemData} />
-      <Item itemData={itemData} />
-      <Item itemData={itemData} />
+      {temporatyItemData.map((item, id) => (
+        <Item key={id} itemData={item} />
+      ))}
     </StCatalogFlex>
   );
 };

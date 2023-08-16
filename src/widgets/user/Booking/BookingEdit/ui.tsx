@@ -4,7 +4,7 @@ import { Form } from '@/features/Form';
 
 import { ModalContext } from '@/entities/Modal';
 
-import { itemData } from '@/shared/catalog';
+import { temporatyItemData } from '@/shared/catalog';
 import { modalWindows } from '@/shared/modal/modalWindows';
 import { StFlex, StTextBox } from '@/shared/styles/global';
 import { Button } from '@/shared/ui/Button';
@@ -44,7 +44,7 @@ export const BookingEditForm: FC = () => {
   return (
     <StContainer>
       {/* TODO получать данные itemData.name */}
-      <StTitle>Редактирование бронирования {itemData.name}</StTitle>
+      <StTitle>Редактирование бронирования {temporatyItemData[0].name}</StTitle>
       <StFormWrapper>
         {/* TODO заменить handleFormSubmit */}
         <Form fields={bookingConfig} handleFormSubmit={handleBookingConfirm} footer={footer} />
