@@ -17,7 +17,7 @@ export const EditBookingSuccess: FC<TBookingSuccess> = ({ productName, daterange
 
     <StWrapper>
       <StSubtitle $fontSize={1} $lineHeight={1.333} $fontWeight={700} $textAlign='center'>
-        Заказ отредактирован!
+        Заказ изменен!
       </StSubtitle>
       <StFlex $flexDirection='column' $alignItems='center' $gap={52}>
         <StTextBox $fontSize={0.67} $lineHeight={1} $textAlign='center'>

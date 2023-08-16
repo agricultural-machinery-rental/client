@@ -1,17 +1,19 @@
-import Link from 'next/link';
-import { FC, useContext } from 'react';
+import router from 'next/router';
+import { FC } from 'react';
 
-import { ModalContext } from '@/entities/Modal';
+import { useModalContext } from '@/entities/Modal';
 
+import { PATH } from '@/shared/constants/path';
 import { StTextBox } from '@/shared/styles/global';
 import { Button } from '@/shared/ui/Button';
 
 import { StContainer, StTopTextBox } from './styled';
 
 export const CallbackSuccess: FC = () => {
-  const { closeModal } = useContext(ModalContext);
+  const { closeModal } = useModalContext();
 
   const handleClick = () => {
+    router.push(PATH.MainPage);
     closeModal();
   };
 
@@ -22,9 +24,7 @@ export const CallbackSuccess: FC = () => {
         <br />
         <StTextBox>Ваша заявка отправлена, ожидайте звонок от нашего менеджера.</StTextBox>
       </StTopTextBox>
-      <Link href='/'>
-        <Button label='На главную' $designType='secondary' onClick={handleClick} />
-      </Link>
+      <Button label='На главную' $designType='secondary' onClick={handleClick} />
     </StContainer>
   );
 };
