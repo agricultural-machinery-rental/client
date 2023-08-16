@@ -1,4 +1,4 @@
 'use client';
 
 export { Modal } from './ui';
-export { ModalContext, ModalProvider } from './model/modalContext';
+export { ModalProvider, useModalContext } from './model/modalContext';

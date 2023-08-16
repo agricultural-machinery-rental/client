@@ -1,28 +1,27 @@
 'use client';
 
-import { createContext, useState } from 'react';
+import { ReactNode, createContext, useState, useContext } from 'react';
 
-import { modalWindows } from '@/shared/modal/modalWindows';
 import { TLayout } from '@/shared/types';
 
 type TModalContext = {
   isOpen: boolean;
-  openModal: (content: modalWindows) => void;
+  openModal: (content: ReactNode) => void;
   closeModal: () => void;
-  content: modalWindows | null;
+  children: ReactNode | null;
 };
 
-export const ModalContext = createContext<TModalContext>({
+const ModalContext = createContext<TModalContext>({
   isOpen: false,
   openModal: () => {},
   closeModal: () => {},
-  content: null,
+  children: null,
 });
 
 export const ModalProvider: TLayout = ({ children }) => {
-  const [content, setContent] = useState<modalWindows | null>(null);
+  const [content, setContent] = useState<ReactNode | null>(null);
 
-  const openModal = (content: modalWindows) => {
+  const openModal = (content: ReactNode) => {
     setContent(content);
   };
   const closeModal = () => {
@@ -30,8 +29,14 @@ export const ModalProvider: TLayout = ({ children }) => {
   };
 
   return (
-    <ModalContext.Provider value={{ isOpen: content !== null, openModal, closeModal, content }}>
+    <ModalContext.Provider
+      value={{ isOpen: content !== null, openModal, closeModal, children: content }}
+    >
       {children}
     </ModalContext.Provider>
   );
+};
+
+export const useModalContext = () => {
+  return useContext(ModalContext);
 };

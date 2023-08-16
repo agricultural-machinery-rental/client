@@ -1,10 +1,12 @@
 import { usePathname } from 'next/navigation';
-import { FC, useContext } from 'react';
+import { FC } from 'react';
 
-import { ModalContext } from '@/entities/Modal';
+import { Callback } from '@/features/Callback';
+import { Signin } from '@/features/Signin';
+
+import { useModalContext } from '@/entities/Modal';
 
 import { PATH } from '@/shared/constants/path';
-import { modalWindows } from '@/shared/modal/modalWindows';
 import { useUserContext } from '@/shared/model/userContext';
 import { StContainer, StFlex } from '@/shared/styles/global';
 import { Logo } from '@/shared/ui/Logo';
@@ -17,7 +19,7 @@ export const Header: FC = () => {
   const pathName = usePathname();
   const { user } = useUserContext();
 
-  const { openModal } = useContext(ModalContext);
+  const { openModal } = useModalContext();
 
   return (
     <StHeader>
@@ -32,7 +34,7 @@ export const Header: FC = () => {
               <StNextLinkStyled href='tel:+74954954949' $justifyContent='center'>
                 +7 (495) XXX XX XX
               </StNextLinkStyled>
-              <PhoneButton onClick={() => openModal(modalWindows.callback)} />
+              <PhoneButton onClick={() => openModal(<Callback />)} />
             </StFlex>
 
             {user ? (
@@ -44,7 +46,7 @@ export const Header: FC = () => {
                 {user.firstName}
               </StNextLinkStyled>
             ) : (
-              <StSpan $justifyContent='center' onClick={() => openModal(modalWindows.signin)}>
+              <StSpan $justifyContent='center' onClick={() => openModal(<Signin />)}>
                 Войти
               </StSpan>
             )}

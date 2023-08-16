@@ -5,7 +5,7 @@ import { validationPattern } from '@/shared/form';
 
 import { Field } from './Field';
 import { StFieldset } from './styled';
-import type { TForm } from './typing';
+import type { TForm, TFormData } from './typing';
 
 export const Form: FC<TForm> = ({ footer, fields, handleFormSubmit, defaultValues, asterisk }) => {
   const {
@@ -14,7 +14,10 @@ export const Form: FC<TForm> = ({ footer, fields, handleFormSubmit, defaultValue
     handleSubmit,
     watch,
     setValue,
-  } = useForm({ mode: 'onBlur', defaultValues: useMemo(() => defaultValues, [defaultValues]) });
+  } = useForm<TFormData>({
+    mode: 'onBlur',
+    defaultValues: useMemo(() => defaultValues, [defaultValues]),
+  });
 
   return (
     <form onSubmit={handleSubmit(handleFormSubmit)}>
