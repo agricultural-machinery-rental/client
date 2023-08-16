@@ -1,3 +1,12 @@
 {
-  "files.eol": "\n"
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "files.eol": "\n",
+  "[typescript]": {
+    "editor.formatOnSave": false
+  },
+  "prettier.requireConfig": true
 }

@@ -1,9 +1,9 @@
+import { AddToFavorite } from '@/features/AddToFavorite';
 import { MakeOrder } from '@/features/MakeOrder';
 import { Swiper } from '@/features/Swiper';
 
 import { useModalContext } from '@/entities/Modal';
 
-import StarSVG from './assets/icons/star.svg';
 import { dataTractors } from './constants';
 import {
   StProductHeader,
@@ -23,6 +23,7 @@ import {
 export const ProductCard = () => {
   const { openModal } = useModalContext();
 
+  // TODO Все данные подтягивать из объекта, полученного с бэка
   const productName = 'Трактор Название TRY-45';
 
   return (
@@ -67,7 +68,7 @@ export const ProductCard = () => {
           </div>
           <Swiper dataArray={dataTractors} />
           <StStarButton>
-            <StarSVG />
+            <AddToFavorite />
           </StStarButton>
         </StProductMain>
         <StProductFooter>
