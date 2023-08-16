@@ -1,9 +1,8 @@
-import { PasswordInput } from '@/entities/PasswordInput';
-
 import { type TKindOfField } from '@/shared/form';
 import { Checkbox } from '@/shared/ui/Checkbox';
 import { DateRange } from '@/shared/ui/DateRange';
 import { Input } from '@/shared/ui/Input';
+import { PasswordInput } from '@/shared/ui/PasswordInput';
 import { Textarea } from '@/shared/ui/Textarea';
 
 export const switchFieldComponent = (

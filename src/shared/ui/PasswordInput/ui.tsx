@@ -1,14 +1,20 @@
 import React, { FC, useState } from 'react';
 
-import { Input } from '@/shared/ui/Input';
-
 import EyeOff from './assets/eye-off.svg';
 import Eye from './assets/eye.svg';
 import { passwordInputTypes } from './consts';
-import { StContainer, StIcon } from './styled';
+import { StContainer, StIcon, StInputContainer, StInput, StLabel } from './styled';
 import { TPasswordInput } from './typing';
 
-export const PasswordInput: FC<TPasswordInput> = ({ type, ...props }) => {
+export const PasswordInput: FC<TPasswordInput> = ({
+  type,
+  name,
+  register,
+  label,
+  watch,
+  setValue,
+  ...props
+}) => {
   const [inputType, setInputType] = useState(type);
 
   const toggleType = () => {
@@ -19,7 +25,12 @@ export const PasswordInput: FC<TPasswordInput> = ({ type, ...props }) => {
 
   return (
     <StContainer>
-      <Input type={inputType} {...props} />
+      <StInputContainer>
+        <StInput type={inputType} {...register} name={name} {...props} />
+        <StLabel htmlFor={name} $inputValue={!!(name && watch?.(name))}>
+          {label}
+        </StLabel>
+      </StInputContainer>
       <StIcon onClick={toggleType}>{inputType === 'password' ? <Eye /> : <EyeOff />}</StIcon>
     </StContainer>
   );
