@@ -1,8 +1,7 @@
 import { FC } from 'react';
 
-import { Form, type TSignupParams } from '@/features/Form';
-
 import { Consent } from '@/entities/Consent';
+import { Form, type TSignupParams } from '@/entities/Form';
 import { useModalContext } from '@/entities/Modal';
 
 import { StTextBox } from '@/shared/styles/global';

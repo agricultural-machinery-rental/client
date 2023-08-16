@@ -1,9 +1,9 @@
 import { FC } from 'react';
 
-import { Form, type TSigninParams } from '@/features/Form';
 import { RecoverPassword } from '@/features/RecoverPassword';
 import { Signup } from '@/features/Signup';
 
+import { Form, type TSigninParams } from '@/entities/Form';
 import { useModalContext } from '@/entities/Modal';
 
 import { StFlex, StTextBox } from '@/shared/styles/global';

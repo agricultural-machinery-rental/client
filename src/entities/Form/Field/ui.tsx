@@ -1,9 +1,8 @@
 import { FC } from 'react';
 
-import { switchFieldComponent } from '@/features/Form/lib';
-
 import { Error } from '@/shared/ui/Error';
 
+import { switchFieldComponent } from './lib';
 import { StFieldWrapper, StRelativeBox, StAsterick } from './styled';
 import { type TField } from './typing';
 

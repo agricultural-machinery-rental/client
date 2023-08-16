@@ -1,5 +1,4 @@
-import { type TSigninParams } from '@/features/Form';
-import { type TFieldConfig } from '@/features/Form/Field';
+import { type TSigninParams, type TFieldConfig } from '@/entities/Form';
 
 import { validationTypes } from '@/shared/form';
 

@@ -1,5 +1,4 @@
-import { type TSignupParams } from '@/features/Form';
-import { type TFieldConfig } from '@/features/Form/Field';
+import { type TSignupParams, type TFieldConfig } from '@/entities/Form';
 
 import { validationTypes } from '@/shared/form';
 

@@ -1,5 +1,4 @@
-import { type TBookingFormParams } from '@/features/Form';
-import { type TFieldConfig } from '@/features/Form/Field';
+import { type TBookingFormParams, type TFieldConfig } from '@/entities/Form';
 
 import { validationTypes } from '@/shared/form';
 

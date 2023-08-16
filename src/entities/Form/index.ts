@@ -9,3 +9,5 @@ export type {
   TCallbackParams,
   TNewPassword,
 } from './typing';
+
+export { type TFieldConfig } from './Field';

@@ -20,7 +20,7 @@ const defaultUserState = {
 export const UserContext = createContext<TUserContext>(defaultUserState);
 
 export const UserProvider: TLayout = ({ children }) => {
-  const [user, setUser] = useState<TUser | null>(null);
+  const [user, setUser] = useState<TUser | null>(defaultUserState.user);
 
   const signup = (user: TUser) => {
     setUser(user);
