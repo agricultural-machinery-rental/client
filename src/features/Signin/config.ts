@@ -1,6 +1,6 @@
-import { type TSigninParams, type TFieldConfig } from '@/entities/Form';
+import { type TFieldConfig } from '@/entities/Form';
 
-import { validationTypes } from '@/shared/form';
+import { validationTypes, type TSigninParams } from '@/shared/form';
 
 export const signinConfig: TFieldConfig<keyof TSigninParams>[] = [
   {

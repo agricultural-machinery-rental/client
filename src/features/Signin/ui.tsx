@@ -3,9 +3,10 @@ import { FC } from 'react';
 import { RecoverPassword } from '@/features/RecoverPassword';
 import { Signup } from '@/features/Signup';
 
-import { Form, type TSigninParams } from '@/entities/Form';
+import { Form } from '@/entities/Form';
 import { useModalContext } from '@/entities/Modal';
 
+import { type TSigninParams } from '@/shared/form';
 import { StFlex, StTextBox } from '@/shared/styles/global';
 import { Button } from '@/shared/ui/Button';
 

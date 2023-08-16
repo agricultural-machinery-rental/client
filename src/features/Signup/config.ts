@@ -1,6 +1,6 @@
-import { type TSignupParams, type TFieldConfig } from '@/entities/Form';
+import { type TFieldConfig } from '@/entities/Form';
 
-import { validationTypes } from '@/shared/form';
+import { validationTypes, type TSignupParams } from '@/shared/form';
 
 type TSignupFieldNames = TSignupParams & {
   passwordRepeat: string;

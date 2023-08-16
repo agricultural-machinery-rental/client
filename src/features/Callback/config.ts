@@ -1,6 +1,6 @@
-import { type TCallbackParams, type TFieldConfig } from '@/entities/Form';
+import { type TFieldConfig } from '@/entities/Form';
 
-import { validationTypes } from '@/shared/form';
+import { validationTypes, type TCallbackParams } from '@/shared/form';
 
 export const callbackConfig: TFieldConfig<keyof TCallbackParams>[] = [
   {

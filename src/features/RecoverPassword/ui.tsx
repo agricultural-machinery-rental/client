@@ -1,7 +1,8 @@
 import { FC, useState } from 'react';
 
-import { Form, type TRecoverPasswordParams } from '@/entities/Form';
+import { Form } from '@/entities/Form';
 
+import { type TRecoverPasswordParams } from '@/shared/form';
 import { Button } from '@/shared/ui/Button';
 
 import { passwordResetConfig } from './config';

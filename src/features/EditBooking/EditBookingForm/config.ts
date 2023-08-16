@@ -1,6 +1,6 @@
-import { type TBookingFormParams, type TFieldConfig } from '@/entities/Form';
+import { type TFieldConfig } from '@/entities/Form';
 
-import { validationTypes } from '@/shared/form';
+import { validationTypes, type TBookingFormParams } from '@/shared/form';
 
 export const bookingConfig: TFieldConfig<keyof TBookingFormParams>[] = [
   {

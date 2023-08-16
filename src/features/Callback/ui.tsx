@@ -1,7 +1,8 @@
 import { FC, useState } from 'react';
 
-import { Form, type TCallbackParams } from '@/entities/Form';
+import { Form } from '@/entities/Form';
 
+import { type TCallbackParams } from '@/shared/form';
 import { StTextBox } from '@/shared/styles/global';
 import { Button } from '@/shared/ui/Button';
 

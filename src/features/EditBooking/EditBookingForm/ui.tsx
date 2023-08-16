@@ -1,7 +1,8 @@
 import { FC, useState } from 'react';
 
-import { Form, type TBookingFormParams } from '@/entities/Form';
+import { Form } from '@/entities/Form';
 
+import { type TBookingFormParams } from '@/shared/form';
 import { StFlex, StTextBox } from '@/shared/styles/global';
 import { Button } from '@/shared/ui/Button';
 

@@ -1,6 +1,6 @@
-import { type TRecoverPasswordParams, type TFieldConfig } from '@/entities/Form';
+import { type TFieldConfig } from '@/entities/Form';
 
-import { validationTypes } from '@/shared/form';
+import { validationTypes, type TRecoverPasswordParams } from '@/shared/form';
 
 export const passwordResetConfig: TFieldConfig<keyof TRecoverPasswordParams>[] = [
   {

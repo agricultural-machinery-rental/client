@@ -1,6 +1,6 @@
-import { type TNewPassword, type TFieldConfig } from '@/entities/Form';
+import { type TFieldConfig } from '@/entities/Form';
 
-import { validationTypes } from '@/shared/form';
+import { validationTypes, type TNewPassword } from '@/shared/form';
 
 type TNewPasswordFieldNames = TNewPassword & {
   passwordRepeat: string;

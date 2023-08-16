@@ -1,6 +1,11 @@
 import { HTMLInputTypeAttribute } from 'react';
 
-import { TKindOfField, TReactHookFormInputElement, validationTypes } from '@/shared/form';
+import {
+  type TKindOfField,
+  type TReactHookFormInputElement,
+  validationTypes,
+  type TFormData,
+} from '@/shared/form';
 
 export type TAsterisk = {
   visibility?: 'visible' | 'hidden';
@@ -12,7 +17,7 @@ export type TField = {
 } & TReactHookFormInputElement &
   TFieldConfig;
 
-export type TFieldConfig<T = string> = {
+export type TFieldConfig<T = keyof TFormData> = {
   kindOfField: TKindOfField;
   name: T;
   pattern?: validationTypes;

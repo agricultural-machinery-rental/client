@@ -1,11 +1,11 @@
 import { FC, useMemo } from 'react';
 import { useForm } from 'react-hook-form';
 
-import { validationPattern } from '@/shared/form';
+import { validationPattern, type TFormData } from '@/shared/form';
 
 import { Field } from './Field';
 import { StFieldset } from './styled';
-import type { TForm, TFormData } from './typing';
+import type { TForm } from './typing';
 
 export const Form: FC<TForm> = ({ footer, fields, handleFormSubmit, defaultValues, asterisk }) => {
   const {
