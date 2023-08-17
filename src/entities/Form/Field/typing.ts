@@ -3,8 +3,8 @@ import { HTMLInputTypeAttribute } from 'react';
 import {
   type TKindOfField,
   type TReactHookFormInputElement,
-  validationTypes,
   type TFormData,
+  validationTypes,
 } from '@/shared/form';
 
 export type TAsterisk = {
