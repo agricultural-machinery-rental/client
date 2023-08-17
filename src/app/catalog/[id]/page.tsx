@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 
 const SomeTractor: TDynamicRoute<'id'> = ({ params }) => {
   const { id } = params;
+  console.log(id);
   return <ProductCard />;
 };
 

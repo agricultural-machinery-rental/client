@@ -24,7 +24,7 @@ export const Catalog = () => {
   return (
     <StCatalogFlex>
       {temporatyItemData.map((item, id) => (
-        <Item key={id} itemData={item} />
+        <Item key={id} itemData={item} buttonClick={() => openModalWithContent(item)} />
       ))}
     </StCatalogFlex>
   );
