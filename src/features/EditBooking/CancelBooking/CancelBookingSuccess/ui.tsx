@@ -1,4 +1,4 @@
-import router from 'next/router';
+import { useRouter } from 'next/navigation';
 import { FC } from 'react';
 
 import { useModalContext } from '@/entities/Modal';
@@ -10,6 +10,7 @@ import { Button } from '@/shared/ui/Button';
 import { StContainer, StTitle, StWrapper } from './styled';
 
 export const CancelBookingSuccess: FC = () => {
+  const router = useRouter();
   const { closeModal } = useModalContext();
 
   const handleClick = () => {

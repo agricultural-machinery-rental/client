@@ -1,23 +1,28 @@
-import { useContext } from 'react';
+import { EditBooking } from '@/features/EditBooking';
 
 import { BookingCurrentItem } from '@/entities/BookingCurrentItem';
-import { ModalContext } from '@/entities/Modal';
+import { useModalContext } from '@/entities/Modal';
 
 import Edit from '@/shared/icons/edit.svg';
-import { modalWindows } from '@/shared/modal/modalWindows';
 
 import { orders } from './constants';
 import { StButton, StContainer } from './styled';
 
 const CurrentBookingsList = () => {
-  const { openModal } = useContext(ModalContext);
+  const { openModal, closeModal } = useModalContext();
 
   return (
     <section>
       <StContainer $flexDirection='column' $gap={16}>
         {orders.map((orderData, key) => {
           const EditButton = () => (
-            <StButton onClick={() => openModal(modalWindows.bookingEdit)}>
+            <StButton
+              onClick={() =>
+                openModal(
+                  <EditBooking productId={''} productName={''} daterange={[]} message={''} />,
+                )
+              }
+            >
               <Edit width={24} height={24} />
             </StButton>
           );
