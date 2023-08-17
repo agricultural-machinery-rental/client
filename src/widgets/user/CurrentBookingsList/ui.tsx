@@ -9,7 +9,7 @@ import { orders } from './constants';
 import { StButton, StContainer } from './styled';
 
 const CurrentBookingsList = () => {
-  const { openModal, closeModal } = useModalContext();
+  const { openModal } = useModalContext();
 
   return (
     <section>
