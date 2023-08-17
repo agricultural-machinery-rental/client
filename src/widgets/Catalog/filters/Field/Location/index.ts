@@ -1,0 +1,1 @@
+export { LocationFieldContent } from './ui';

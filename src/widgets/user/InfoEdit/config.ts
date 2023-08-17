@@ -1,9 +1,8 @@
-import { TFieldConfig } from '@/features/Form/Field';
+import { type TFieldConfig } from '@/entities/Form';
 
-import { type TUser } from '@/shared/api/mockUser';
-import { validationTypes } from '@/shared/form';
+import { type TSignupParams, validationTypes } from '@/shared/form';
 
-export const profileConfig: TFieldConfig<keyof TUser>[] = [
+export const profileConfig: TFieldConfig<keyof TSignupParams>[] = [
   {
     kindOfField: 'input',
     name: 'lastName',

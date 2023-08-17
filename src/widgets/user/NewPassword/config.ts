@@ -1,24 +1,22 @@
-import { type TFieldConfig } from '@/features/Form/Field';
+import { type TFieldConfig } from '@/entities/Form';
 
-import { validationTypes } from '@/shared/form';
+import { validationTypes, type TNewPassword } from '@/shared/form';
 
-export enum newPasswordFieldNames {
-  code = 'code',
-  password = 'password',
-  passwordRepeat = 'passwordRepeat',
-}
+type TNewPasswordFieldNames = TNewPassword & {
+  passwordRepeat: string;
+};
 
-export const newPasswordConfig: TFieldConfig[] = [
+export const newPasswordConfig: TFieldConfig<keyof TNewPasswordFieldNames>[] = [
   {
     kindOfField: 'input',
-    name: newPasswordFieldNames.code,
+    name: 'token',
     required: true,
     type: 'text',
     label: 'Введите код',
   },
   {
     kindOfField: 'passwordInput',
-    name: newPasswordFieldNames.password,
+    name: 'password',
     pattern: validationTypes.password,
     required: true,
     type: 'password',
@@ -26,7 +24,7 @@ export const newPasswordConfig: TFieldConfig[] = [
   },
   {
     kindOfField: 'passwordInput',
-    name: newPasswordFieldNames.passwordRepeat,
+    name: 'passwordRepeat',
     pattern: validationTypes.password,
     required: true,
     type: 'password',

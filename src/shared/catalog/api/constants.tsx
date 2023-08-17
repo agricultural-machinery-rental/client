@@ -1,6 +1,7 @@
 import { JSX } from 'react';
 
-import photo from './assets/photo.jpg';
+import harvester_1 from './assets/harvester_1.jpg';
+import tractor_2 from './assets/tractor_2.png';
 import { TCatalogItem, TCatalogItemCharacteristics } from './typing';
 
 type TUnits = {
@@ -23,18 +24,149 @@ export const catalogItemCharacteristicsUnits: Record<keyof TCatalogItemCharacter
 };
 
 // Temporary preview item
-export const itemData: TCatalogItem = {
-  name: 'Гусеничный трактор Марка Модель',
-  photo,
-  prices: {
-    perHour: 1600,
-    perShift: 12800,
+export const temporatyItemData: TCatalogItem[] = [
+  {
+    name: 'Комбайн Марка Модель',
+    class: 'harvester',
+    photo: harvester_1,
+    prices: {
+      perHour: 1600,
+      perShift: 12800,
+    },
+    characteristics: {
+      itemWeight: 7800,
+      bucketVolume: 0.3,
+      diggingDepth: 4150,
+      trackWidth: 450,
+    },
+    itemDimensions: [6080, 2260, 2640],
   },
-  characteristics: {
-    itemWeight: 7800,
-    bucketVolume: 0.3,
-    diggingDepth: 4150,
-    trackWidth: 450,
+  {
+    name: 'Гусеничный трактор Марка Модель 1',
+    class: 'tractor',
+    photo: tractor_2,
+    prices: {
+      perHour: 1600,
+      perShift: 12800,
+    },
+    characteristics: {
+      itemWeight: 7800,
+      bucketVolume: 0.3,
+      diggingDepth: 4150,
+      trackWidth: 450,
+    },
+    itemDimensions: [6080, 2260, 2640],
   },
-  itemDimensions: [6080, 2260, 2640],
-};
+  {
+    name: 'Гусеничный трактор Марка Модель 2',
+    class: 'tractor',
+    photo: tractor_2,
+    prices: {
+      perHour: 1600,
+      perShift: 12800,
+    },
+    characteristics: {
+      itemWeight: 7800,
+      bucketVolume: 0.3,
+      diggingDepth: 4150,
+      trackWidth: 450,
+    },
+    itemDimensions: [6080, 2260, 2640],
+  },
+  {
+    name: 'Посевная техника Марка Модель',
+    class: 'seeding',
+    photo: harvester_1,
+    prices: {
+      perHour: 1600,
+      perShift: 12800,
+    },
+    characteristics: {
+      itemWeight: 7800,
+      bucketVolume: 0.3,
+      diggingDepth: 4150,
+      trackWidth: 450,
+    },
+    itemDimensions: [6080, 2260, 2640],
+  },
+  {
+    name: 'Мототрактор Марка Модель',
+    class: 'motor_tractor',
+    photo: tractor_2,
+    prices: {
+      perHour: 1600,
+      perShift: 12800,
+    },
+    characteristics: {
+      itemWeight: 7800,
+      bucketVolume: 0.3,
+      diggingDepth: 4150,
+      trackWidth: 450,
+    },
+    itemDimensions: [6080, 2260, 2640],
+  },
+  {
+    name: 'Прицеп Марка Модель',
+    class: 'trailer',
+    photo: tractor_2,
+    prices: {
+      perHour: 1600,
+      perShift: 12800,
+    },
+    characteristics: {
+      itemWeight: 7800,
+      bucketVolume: 0.3,
+      diggingDepth: 4150,
+      trackWidth: 450,
+    },
+    itemDimensions: [6080, 2260, 2640],
+  },
+  {
+    name: 'Плуг Марка Модель',
+    class: 'plow',
+    photo: tractor_2,
+    prices: {
+      perHour: 1600,
+      perShift: 12800,
+    },
+    characteristics: {
+      itemWeight: 7800,
+      bucketVolume: 0.3,
+      diggingDepth: 4150,
+      trackWidth: 450,
+    },
+    itemDimensions: [6080, 2260, 2640],
+  },
+  {
+    name: 'Погрузчик Марка Модель',
+    class: 'loader',
+    photo: tractor_2,
+    prices: {
+      perHour: 1600,
+      perShift: 12800,
+    },
+    characteristics: {
+      itemWeight: 7800,
+      bucketVolume: 0.3,
+      diggingDepth: 4150,
+      trackWidth: 450,
+    },
+    itemDimensions: [6080, 2260, 2640],
+  },
+  {
+    name: 'Навесное оборудование Марка Модель',
+    class: 'attachment',
+    photo: tractor_2,
+    prices: {
+      perHour: 1600,
+      perShift: 12800,
+    },
+    characteristics: {
+      itemWeight: 7800,
+      bucketVolume: 0.3,
+      diggingDepth: 4150,
+      trackWidth: 450,
+    },
+    itemDimensions: [6080, 2260, 2640],
+  },
+];

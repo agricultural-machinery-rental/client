@@ -1,0 +1,11 @@
+.github
+.husky
+.next
+.storybook
+.vscode
+docs
+node_modules
+.dockerignore
+.gitignore
+.prettierignore
+Dockerfile
