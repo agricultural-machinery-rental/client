@@ -16,7 +16,7 @@ export const StButtonIcon = styled.button<TButton>`
   border-radius: 50%;
 
   &:hover {
-    background: ${theme.colors.border};
-    box-shadow: inset 0 0 2px ${theme.colors.border};
+    background: ${theme.colors.borderFirst};
+    box-shadow: inset 0 0 2px ${theme.colors.borderFirst};
   }
 `;

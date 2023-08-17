@@ -26,11 +26,6 @@ export const Catalog = () => {
       {temporatyItemData.map((item, id) => (
         <Item key={id} itemData={item} buttonClick={() => openModalWithContent(item)} />
       ))}
-      {/* Зачем это здесь?
-      {temporatyItemData.map((item, id) => (
-        <Item key={id} itemData={item} />
-      ))}
-*/}
     </StCatalogFlex>
   );
 };
