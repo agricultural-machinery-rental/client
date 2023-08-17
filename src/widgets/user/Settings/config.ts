@@ -1,4 +1,4 @@
-import { TFieldConfig } from '@/features/Form/Field';
+import { TFieldConfig } from '@/entities/Form';
 
 import { validationTypes } from '@/shared/form';
 

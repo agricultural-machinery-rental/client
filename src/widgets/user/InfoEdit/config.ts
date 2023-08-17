@@ -1,4 +1,4 @@
-import { TFieldConfig } from '@/features/Form/Field';
+import { type TFieldConfig } from '@/entities/Form';
 
 import { type TUser } from '@/shared/api/mockUser';
 import { validationTypes } from '@/shared/form';

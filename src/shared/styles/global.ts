@@ -55,6 +55,7 @@ export const StNextLink = styled(Link)<TNextLink>`
   }
 `;
 
+// Поправить наименование на StSpanLink
 export const StNextSpan = styled.span<TNextLink>`
   font-size: 0.6rem;
   text-decoration: none;
