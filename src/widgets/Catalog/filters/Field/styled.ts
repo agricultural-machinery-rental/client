@@ -9,11 +9,11 @@ export const StHeader = styled.div`
     opacity: 0.75;
   }
 `;
-export const StHeaderName = styled.h5<{ $expanded: number }>`
+export const StHeaderName = styled.h5<{ $expanded: boolean }>`
   font-size: 0.75rem;
   margin-left: ${({ $expanded }) => ($expanded ? '1rem' : 0)};
 `;
-export const StExpandIcon = styled.div<{ $expanded: number }>`
+export const StExpandIcon = styled.div<{ $expanded: boolean }>`
   position: absolute;
   top: 1rem;
   left: ${({ $expanded }) => ($expanded ? '0.5rem' : 'auto')};

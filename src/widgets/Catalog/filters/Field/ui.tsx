@@ -32,8 +32,8 @@ export const FiltersField: FC<TFiltersField> = props => {
   return (
     <StWrapFiltersField>
       <StHeader onClick={() => setExpand(!expanded)}>
-        <StHeaderName $expanded={+expanded}>{name}</StHeaderName>
-        <StExpandIcon $expanded={+expanded}>
+        <StHeaderName $expanded={expanded}>{name}</StHeaderName>
+        <StExpandIcon $expanded={expanded}>
           <ArrowDown />
         </StExpandIcon>
       </StHeader>
