@@ -2,5 +2,11 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "files.eol": "\n"
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "files.eol": "\n",
+  "[typescript]": {
+    "editor.formatOnSave": false
+  },
+  "prettier.requireConfig": true
 }

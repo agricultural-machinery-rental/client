@@ -1,11 +1,13 @@
 import { Metadata } from 'next';
 
+import { FavoritesList } from '@/widgets/user/FavoritesList';
+
 export const metadata: Metadata = {
   title: 'Favourites',
 };
 
 const Favourites = () => {
-  return <h1>Favourites</h1>;
+  return <FavoritesList />;
 };
 
 export default Favourites;

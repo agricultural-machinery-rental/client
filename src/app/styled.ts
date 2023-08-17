@@ -13,9 +13,11 @@ export const PageContent = styled.div`
 
 export const StMain = styled.main`
   flex-grow: 1;
-  padding: 200px 0 80px; // TODO поправить верхний отступ, когда будут хлебные крошки
+  background: url('/background.png') no-repeat center;
+  background-size: cover;
+  padding-bottom: 80px;
 `;
 
 export const StMainHeading = styled(StFlex)`
-  padding: 80px 0;
+  padding: 80px 0 56px;
 `;

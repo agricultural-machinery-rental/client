@@ -5,8 +5,6 @@ import { theme } from '@/shared/styles/theme';
 
 export const StFooter = styled.footer`
   width: 100%;
-  display: flex;
-  justify-content: center;
   background-color: ${theme.colors.bgSecondary};
 `;
 

@@ -23,18 +23,80 @@ export const catalogItemCharacteristicsUnits: Record<keyof TCatalogItemCharacter
 };
 
 // Temporary preview item
-export const itemData: TCatalogItem = {
-  name: 'Гусеничный трактор Марка Модель',
-  photo,
-  prices: {
-    perHour: 1600,
-    perShift: 12800,
+export const itemData: TCatalogItem[] = [
+  {
+    name: 'Гусеничный трактор Марка Модель',
+    photo,
+    prices: {
+      perHour: 1600,
+      perShift: 12800,
+    },
+    characteristics: {
+      itemWeight: 7800,
+      bucketVolume: 0.3,
+      diggingDepth: 4150,
+      trackWidth: 450,
+    },
+    itemDimensions: [6080, 2260, 2640],
   },
-  characteristics: {
-    itemWeight: 7800,
-    bucketVolume: 0.3,
-    diggingDepth: 4150,
-    trackWidth: 450,
+  {
+    name: 'Гусеничный трактор Марка Модель',
+    photo,
+    prices: {
+      perHour: 1600,
+      perShift: 12800,
+    },
+    characteristics: {
+      itemWeight: 7800,
+      bucketVolume: 0.3,
+      diggingDepth: 4150,
+      trackWidth: 450,
+    },
+    itemDimensions: [6080, 2260, 2640],
   },
-  itemDimensions: [6080, 2260, 2640],
-};
+  {
+    name: 'Гусеничный трактор Марка Модель',
+    photo,
+    prices: {
+      perHour: 1600,
+      perShift: 12800,
+    },
+    characteristics: {
+      itemWeight: 7800,
+      bucketVolume: 0.3,
+      diggingDepth: 4150,
+      trackWidth: 450,
+    },
+    itemDimensions: [6080, 2260, 2640],
+  },
+  {
+    name: 'Гусеничный трактор Марка Модель',
+    photo,
+    prices: {
+      perHour: 1600,
+      perShift: 12800,
+    },
+    characteristics: {
+      itemWeight: 7800,
+      bucketVolume: 0.3,
+      diggingDepth: 4150,
+      trackWidth: 450,
+    },
+    itemDimensions: [6080, 2260, 2640],
+  },
+  {
+    name: 'Гусеничный трактор Марка Модель',
+    photo,
+    prices: {
+      perHour: 1600,
+      perShift: 12800,
+    },
+    characteristics: {
+      itemWeight: 7800,
+      bucketVolume: 0.3,
+      diggingDepth: 4150,
+      trackWidth: 450,
+    },
+    itemDimensions: [6080, 2260, 2640],
+  },
+];

@@ -6,7 +6,7 @@ import { theme } from '@/shared/styles/theme';
 export const StBreadcrumbsItemWrap = styled(StContainer)`
   display: flex;
   font-size: 0.66rem;
-  margin: 32px auto 0;
+  margin: 32px auto 128px;
   align-items: center;
   color: ${theme.colors.bgSecondary};
 `;
