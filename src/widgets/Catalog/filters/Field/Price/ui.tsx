@@ -36,7 +36,7 @@ export const PriceFieldContent = () => {
   };
   const changeMin = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = parseInt(event.target.value);
-    if (event.target.type === 'range' ?? value > valueMax - range.step) return;
+    if (event.target.type === 'range' && value > valueMax - range.step) return;
     setValueMin(value);
     setProgress('min', value);
   };

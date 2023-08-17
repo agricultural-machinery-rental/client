@@ -7,6 +7,7 @@ import { PriceFieldContent } from './Price';
 import { StWrapFiltersField } from './shared';
 import { StHeader, StHeaderName, StExpandIcon } from './styled';
 import { TFiltersField } from './types';
+// import { filterName } from '../filters'; // Want to break the shackles!!!
 
 const autoExpand = ['category', 'location', 'price'];
 
@@ -32,6 +33,7 @@ export const FiltersField: FC<TFiltersField> = props => {
         return <></>;
     }
   };
+
   return (
     <StWrapFiltersField>
       <StHeader onClick={() => setExpand(!expanded)}>
