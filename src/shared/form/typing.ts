@@ -15,7 +15,7 @@ export type TValidation = {
 };
 
 export type TBookingFormParams = {
-  daterange: number[];
+  daterange: Date[];
   message: string;
 };
 

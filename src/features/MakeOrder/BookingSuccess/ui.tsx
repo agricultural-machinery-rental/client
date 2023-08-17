@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { FC } from 'react';
 
+import { toRuDateString } from '@/shared/lib';
 import { StFlex, StTextBox } from '@/shared/styles/global';
 
 import { StContainer, StTitle, StWrapper, StSubtitle, StButton } from './styled';
@@ -21,7 +22,8 @@ export const BookingSuccess: FC<TBookingSuccess> = ({ productName, daterange, me
       </StSubtitle>
       <StFlex $flexDirection='column' $alignItems='center' $gap={52}>
         <StTextBox $fontSize={0.67} $lineHeight={1} $textAlign='center'>
-          {productName} забронирован с {daterange[0]} по {daterange[1]}
+          {productName} забронирован с {toRuDateString(daterange[0])} по{' '}
+          {toRuDateString(daterange[1])}
         </StTextBox>
         <StTextBox $fontSize={0.67} $lineHeight={1} $textAlign='center'>
           Ваш комментарий: {message}
