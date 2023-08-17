@@ -11,23 +11,24 @@ export const Breadcrumbs = () => {
   const activeBreadcrumbs: Tbreadcrumb[] = BREADCRUMBS.filter(breadcrumb =>
     pathname.includes(breadcrumb.url),
   );
-  if (pathname !== '/') {
-    return (
-      <StBreadcrumbsItemWrap>
-        {activeBreadcrumbs.map((breadcrumb, index) => (
-          <StBreadcrumbsItem key={breadcrumb.url}>
-            {index < activeBreadcrumbs.length - 1 ? (
-              <>
-                <StBreadcrumbsLink href={breadcrumb.url}>{breadcrumb.text}</StBreadcrumbsLink>
-                <ArrowSVG width={14} height={14} />
-              </>
-            ) : (
-              breadcrumb.text
-            )}
-          </StBreadcrumbsItem>
-        ))}
-      </StBreadcrumbsItemWrap>
-    );
+  if (pathname === '/') {
+    return null;
   }
-  return null;
+
+  return (
+    <StBreadcrumbsItemWrap>
+      {activeBreadcrumbs.map((breadcrumb, index) => (
+        <StBreadcrumbsItem key={index}>
+          {index < activeBreadcrumbs.length - 1 ? (
+            <>
+              <StBreadcrumbsLink href={breadcrumb.url}>{breadcrumb.text}</StBreadcrumbsLink>
+              <ArrowSVG width={14} height={14} />
+            </>
+          ) : (
+            breadcrumb.text
+          )}
+        </StBreadcrumbsItem>
+      ))}
+    </StBreadcrumbsItemWrap>
+  );
 };

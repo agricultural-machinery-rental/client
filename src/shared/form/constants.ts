@@ -1,19 +1,5 @@
 import { TValidation } from './typing';
 
-export enum FormFieldNames {
-  lastName = 'lastName',
-  firstName = 'firstName',
-  middleName = 'middleName',
-  login = 'login',
-  phone = 'phone',
-  email = 'email',
-  password = 'password',
-  passwordRepeat = 'repeatablePassword',
-  message = 'message',
-  checkbox = 'checkbox',
-  daterange = 'daterange',
-}
-
 export enum validationTypes {
   name = 'name',
   phoneOrEmail = 'phoneOrEmail',

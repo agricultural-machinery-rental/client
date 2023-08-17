@@ -37,6 +37,8 @@ export const theme = {
     button: '80px',
     input: '56px',
     dateRange: '56px',
+    bookingItem: '160px',
+    textarea: '120px',
   },
   sizesWidth: {
     button: '347px',

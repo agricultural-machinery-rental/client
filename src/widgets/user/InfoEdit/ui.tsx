@@ -1,4 +1,4 @@
-import { Form } from '@/features/Form';
+import { Form } from '@/entities/Form';
 
 import { mockUser, type TUser } from '@/shared/api/mockUser';
 import { Button } from '@/shared/ui/Button';

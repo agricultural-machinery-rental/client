@@ -1,12 +1,13 @@
 import { FC } from 'react';
 
-import { Form } from '@/features/Form';
+import { Form } from '@/entities/Form';
 
 import { Button } from '@/shared/ui/Button';
 
 import { newPasswordConfig } from './config';
 import { StContainer, StTitle, StFooterWrapper, StTip } from './styled';
 
+// TODO Эту форму проще сделать на отдельной странице, а не модалкой
 export const NewPassword: FC = () => {
   const success = true; // TODO заменить на ответ с бэка
 

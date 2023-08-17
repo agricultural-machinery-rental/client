@@ -23,10 +23,7 @@ export const StProductTitle = styled(StHeading3)`
   margin-bottom: 67px;
 `;
 
-export const StStarButton = styled.button`
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
+export const StStarButton = styled.div`
   position: absolute;
   top: 20px;
   right: 20px;
