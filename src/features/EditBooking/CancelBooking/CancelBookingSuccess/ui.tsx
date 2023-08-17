@@ -1,11 +1,5 @@
-<<<<<<< HEAD:src/features/EditBooking/CancelBooking/CancelBookingSuccess/ui.tsx
 import { useRouter } from 'next/navigation';
 import { FC } from 'react';
-=======
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { FC, useContext } from 'react';
->>>>>>> d8a296b (fix Link on Button):src/widgets/user/Booking/BookingCancelSuccess/ui.tsx
 
 import { useModalContext } from '@/entities/Modal';
 
