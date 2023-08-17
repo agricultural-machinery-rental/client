@@ -1,4 +1,11 @@
-type TFilterName = 'category' | 'location' | 'price' | 'mark' | 'model' | 'purpose' | 'condition';
+export type TFilterName =
+  | 'category'
+  | 'location'
+  | 'price'
+  | 'mark'
+  | 'model'
+  | 'purpose'
+  | 'condition';
 
 type TFiltersMap = {
   [key in TFilterName]: Record<string, string>;
