@@ -1,11 +1,13 @@
 import { Metadata } from 'next';
 
+import { BookingHistory } from '@/widgets/BookigHistory';
+
 export const metadata: Metadata = {
   title: 'Booking history',
 };
 
-const BookingHistory = () => {
-  return <h1>Booking history</h1>;
+const BookingHistoryPage = () => {
+  return <BookingHistory />;
 };
 
-export default BookingHistory;
+export default BookingHistoryPage;

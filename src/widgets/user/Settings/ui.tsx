@@ -1,4 +1,4 @@
-import { Form } from '@/features/Form';
+import { Form } from '@/entities/Form';
 
 import { useUserContext } from '@/shared/model/userContext';
 import { Button } from '@/shared/ui/Button';

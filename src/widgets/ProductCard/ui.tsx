@@ -1,11 +1,8 @@
-import { useContext } from 'react';
-
 import { AddToFavorite } from '@/features/AddToFavorite';
+import { MakeOrder } from '@/features/MakeOrder';
 import { Swiper } from '@/features/Swiper';
 
-import { ModalContext } from '@/entities/Modal';
-
-import { modalWindows } from '@/shared/modal/modalWindows';
+import { useModalContext } from '@/entities/Modal';
 
 import { dataTractors } from './constants';
 import {
@@ -24,13 +21,16 @@ import {
 } from './styled';
 
 export const ProductCard = () => {
-  const { openModal } = useContext(ModalContext);
+  const { openModal } = useModalContext();
+
+  // TODO Все данные подтягивать из объекта, полученного с бэка
+  const productName = 'Трактор Название TRY-45';
 
   return (
     <StSection>
       <article>
         <StProductHeader>
-          <StProductTitle>Трактор Название TRY-45</StProductTitle>
+          <StProductTitle>{productName}</StProductTitle>
         </StProductHeader>
         <StProductMain>
           <div>
@@ -84,7 +84,9 @@ export const ProductCard = () => {
             $designType={'primary'}
             label='Забронировать'
             type='button'
-            onClick={() => openModal(modalWindows.booking)}
+            onClick={() =>
+              openModal(<MakeOrder productId={productName} productName={productName} />)
+            }
           />
         </StProductFooter>
       </article>
