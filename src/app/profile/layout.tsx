@@ -17,7 +17,7 @@ const ProfileLayout: TLayout = ({ children }) => {
 
   if (!user) {
     router.push(PATH.MainPage);
-    return;
+    return null;
   }
 
   return (
