@@ -9,42 +9,40 @@ import {
   StPriceInput,
 } from './styled';
 
-const Range = {
+const range = {
   min: 1000,
   max: 20000,
   step: 1000,
 };
 
 export const PriceFieldContent = () => {
-  const [rangeMin, setRangeMin] = useState(1000);
-  const [rangeMax, setRangeMax] = useState(20000);
   const [valueMin, setValueMin] = useState(1000);
   const [valueMax, setValueMax] = useState(20000);
   const refProgress = useRef<HTMLInputElement>(null);
 
   const setProgress = (selector: 'min' | 'max', value: number) => {
-    const min = Math.max(selector === 'min' ? value : valueMin, Range.min);
-    const max = Math.min(selector === 'max' ? value : valueMax, Range.max);
-    if (min >= Range.min && max - min >= Range.step && max <= Range.max) {
+    const min = Math.max(selector === 'min' ? value : valueMin, range.min);
+    const max = Math.min(selector === 'max' ? value : valueMax, range.max);
+    if (min >= range.min && max - min >= range.step && max <= range.max) {
       const progress = refProgress.current;
       if (progress) {
         if (selector === 'min') {
-          progress.style.left = (min / Range.max) * 96 + '%';
+          progress.style.left = (min / range.max) * 96 + '%';
         } else {
-          progress.style.right = 104 - (max / Range.max) * 100 + '%';
+          progress.style.right = 104 - (max / range.max) * 100 + '%';
         }
       }
     }
   };
   const changeMin = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = parseInt(event.target.value);
-    setRangeMin(value);
+    if (event.target.type === 'range' ?? value > valueMax - range.step) return;
     setValueMin(value);
     setProgress('min', value);
   };
   const changeMax = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = parseInt(event.target.value);
-    setRangeMax(value);
+    if (event.target.type === 'range' && value < valueMin + range.step) return;
     setValueMax(value);
     setProgress('max', value);
   };
@@ -55,22 +53,8 @@ export const PriceFieldContent = () => {
         <StSliderProgress ref={refProgress} />
       </StWrapSlider>
       <StWrapRange>
-        <StRangeInput
-          type='range'
-          min={Range.min}
-          max={Range.max}
-          step={Range.step}
-          value={rangeMin}
-          onChange={changeMin}
-        />
-        <StRangeInput
-          type='range'
-          min={Range.min}
-          max={Range.max}
-          step={Range.step}
-          value={rangeMax}
-          onChange={changeMax}
-        />
+        <StRangeInput type='range' {...range} value={valueMin} onChange={changeMin} />
+        <StRangeInput type='range' {...range} value={valueMax} onChange={changeMax} />
       </StWrapRange>
       <StWrapPrice>
         <StPriceInput type='text' value={valueMin} onChange={changeMin} />
