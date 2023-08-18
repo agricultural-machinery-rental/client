@@ -22,8 +22,9 @@ export const BookingSuccess: FC<TBookingSuccess> = ({ productName, daterange, me
       </StSubtitle>
       <StFlex $flexDirection='column' $alignItems='center' $gap={52}>
         <StTextBox $fontSize={0.67} $lineHeight={1} $textAlign='center'>
-          {productName} забронирован с {toRuDateString(daterange[0])} по{' '}
-          {toRuDateString(daterange[1])}
+          {productName} забронирован с {toRuDateString(daterange[0])}
+          <br />
+          по {toRuDateString(daterange[1])}
         </StTextBox>
         <StTextBox $fontSize={0.67} $lineHeight={1} $textAlign='center'>
           Ваш комментарий: {message}
