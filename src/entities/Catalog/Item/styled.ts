@@ -1,7 +1,7 @@
 'use client';
 import { styled } from 'styled-components';
 
-import { StFlex } from '@/shared/styles/global';
+import { StFlex, StNextLink } from '@/shared/styles/global';
 import { theme } from '@/shared/styles/theme';
 import { Button } from '@/shared/ui/Button';
 
@@ -20,11 +20,14 @@ export const StDescriptionBlock = styled.div`
   flex-grow: 1;
 `;
 
-export const StTitle = styled.h3`
-  font-family: 'Open Sans', serif;
+export const StTitle = styled(StNextLink)`
   margin: 18px 0 12px;
-  font-size: 1rem;
-  font-weight: 700;
+
+  & h3 {
+    font-family: 'Open Sans', serif;
+    font-size: 1rem;
+    font-weight: 700;
+  }
 `;
 
 export const StDescriptionText = styled(StFlex)`
