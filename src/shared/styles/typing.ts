@@ -26,3 +26,8 @@ export type TTextBox = {
   $fontSize?: number;
   $lineHeight?: number;
 };
+
+export type THeading2 = {
+  $margin?: string;
+  $textAlign?: string;
+};

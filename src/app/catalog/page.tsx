@@ -12,7 +12,9 @@ export const metadata: Metadata = {
 const PageCatalog = () => {
   return (
     <>
-      <StHeading2>Каталог</StHeading2>
+      <StHeading2 $margin='0 0 80px' $textAlign='left'>
+        Каталог
+      </StHeading2>
       <StFlex $flexDirection={'row'}>
         <Filters />
         <Catalog />
