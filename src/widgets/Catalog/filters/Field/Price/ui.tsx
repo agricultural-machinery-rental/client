@@ -1,5 +1,6 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 
+import { usePriceRange } from './hook';
 import {
   StWrapSlider,
   StSliderProgress,
@@ -16,36 +17,8 @@ const range = {
 };
 
 export const PriceFieldContent = () => {
-  const [valueMin, setValueMin] = useState(1000);
-  const [valueMax, setValueMax] = useState(20000);
   const refProgress = useRef<HTMLInputElement>(null);
-
-  const setProgress = (selector: 'min' | 'max', value: number) => {
-    const min = Math.max(selector === 'min' ? value : valueMin, range.min);
-    const max = Math.min(selector === 'max' ? value : valueMax, range.max);
-    if (min >= range.min && max - min >= range.step && max <= range.max) {
-      const progress = refProgress.current;
-      if (progress) {
-        if (selector === 'min') {
-          progress.style.left = (min / range.max) * 96 + '%';
-        } else {
-          progress.style.right = 104 - (max / range.max) * 100 + '%';
-        }
-      }
-    }
-  };
-  const changeMin = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const value = parseInt(event.target.value);
-    if (event.target.type === 'range' && value > valueMax - range.step) return;
-    setValueMin(value);
-    setProgress('min', value);
-  };
-  const changeMax = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const value = parseInt(event.target.value);
-    if (event.target.type === 'range' && value < valueMin + range.step) return;
-    setValueMax(value);
-    setProgress('max', value);
-  };
+  const { valueMin, valueMax, changeMin, changeMax } = usePriceRange(refProgress.current, range);
 
   return (
     <>
