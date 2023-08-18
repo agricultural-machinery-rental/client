@@ -1,17 +1,20 @@
-import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { FC } from 'react';
 
 import { useModalContext } from '@/entities/Modal';
 
+import { PATH } from '@/shared/constants/path';
 import { StFlex, StTextBox } from '@/shared/styles/global';
 import { Button } from '@/shared/ui/Button';
 
 import { StContainer, StTitle, StWrapper } from './styled';
 
 export const CancelBookingSuccess: FC = () => {
+  const router = useRouter();
   const { closeModal } = useModalContext();
 
   const handleClick = () => {
+    router.push(PATH.MainPage);
     closeModal();
   };
 
@@ -23,14 +26,7 @@ export const CancelBookingSuccess: FC = () => {
           <StTextBox $fontSize={0.75} $lineHeight={1.2} $textAlign='center'>
             Будем рады снова видеть Вас в числе наших клиентов!
           </StTextBox>
-          <Link href='/'>
-            <Button
-              type='button'
-              label='На главную'
-              $designType='secondary'
-              onClick={handleClick}
-            />
-          </Link>
+          <Button type='button' label='На главную' $designType='secondary' onClick={handleClick} />
         </StFlex>
       </StWrapper>
     </StContainer>

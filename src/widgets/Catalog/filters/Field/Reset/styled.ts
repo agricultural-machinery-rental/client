@@ -11,7 +11,7 @@ export const StWrapFiltersFieldReset = styled.div`
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.625);
 `;
 
-export const ResetButton = styled.button`
+export const StResetButton = styled.button`
   padding: 0.25rem 1rem;
   cursor: pointer;
   font-size: 0.75rem;

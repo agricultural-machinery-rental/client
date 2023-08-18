@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import React from 'react';
 
 import {
@@ -17,11 +18,13 @@ export const CategoryItemList = () => {
     <StSection>
       <StContainer>
         <StHeading1>Аренда сельхозтехники</StHeading1>
-        <StCategoryList>
-          {CategoryItemData.map((item: TCategoryItemContainer, index) => (
-            <CategoryItemContainer image={item.image} title={item.title} key={`item-${index}`} />
-          ))}
-        </StCategoryList>
+        <Link href='/catalog'>
+          <StCategoryList>
+            {CategoryItemData.map((item: TCategoryItemContainer, index) => (
+              <CategoryItemContainer image={item.image} title={item.title} key={`item-${index}`} />
+            ))}
+          </StCategoryList>
+        </Link>
       </StContainer>
     </StSection>
   );

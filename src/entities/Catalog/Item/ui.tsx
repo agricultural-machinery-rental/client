@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { FC } from 'react';
 
 import { catalogItemCharacteristicsUnits, TCatalogItemCharacteristics } from '@/shared/catalog';
+import { PATH } from '@/shared/constants/path';
 import { StFlex } from '@/shared/styles/global';
 
 import { dimensionsUnit, priceUnit } from './constants';
@@ -24,7 +25,9 @@ export const Item: FC<TItem> = ({ itemData, buttonClick }) => (
       <Image src={itemData.photo} alt={itemData.name} width={216} />
     </div>
     <StDescriptionBlock>
-      <StTitle>{itemData.name}</StTitle>
+      <StTitle href={`${PATH.Catalog}/${itemData.name}`}>
+        <h3>{itemData.name}</h3>
+      </StTitle>
       {/*TODO Здесь будет кнопка для добавления в избранное*/}
       <StDescriptionText>
         <StCharacteristics>
