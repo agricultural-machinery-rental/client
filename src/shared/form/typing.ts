@@ -32,6 +32,9 @@ export type TSignupParams = {
   email: string;
   password: string;
   passwordRepeat: string;
+  birthday?: string;
+  companyName?: string;
+  companyTIN?: string;
 };
 
 export type TRecoverPasswordParams = {
@@ -48,9 +51,16 @@ export type TCallbackParams = {
   comment: string;
 };
 
+export type TChangePassword = {
+  oldPassword: string;
+  newPassword: string;
+  passwordRepeat: string;
+};
+
 export type TFormData = TBookingFormParams &
   TSigninParams &
   TSignupParams &
   TRecoverPasswordParams &
   TNewPassword &
-  TCallbackParams;
+  TCallbackParams &
+  TChangePassword;

@@ -1,34 +1,24 @@
 import { styled } from 'styled-components';
 
-import { theme } from '@/shared/styles/theme';
-
-export const StWrapFiltersField = styled.div`
-  position: relative;
-  width: 252px;
-  background-color: ${theme.colors.primary};
-  padding: 1rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.625);
-`;
 export const StHeader = styled.div`
   cursor: pointer;
-  & h5 {
+  &h5 {
     font-size: 0.75rem;
   }
-  & :hover {
+  &:hover {
     opacity: 0.75;
   }
 `;
-export const StHeaderName = styled.h5<{ down: boolean }>`
+export const StHeaderName = styled.h5<{ $expanded: boolean }>`
   font-size: 0.75rem;
-  margin-left: ${props => (props.down ? 0 : '1rem')};
+  margin-left: ${({ $expanded }) => ($expanded ? '1rem' : 0)};
 `;
-export const StExpandIcon = styled.div<{ down: boolean }>`
+export const StExpandIcon = styled.div<{ $expanded: boolean }>`
   position: absolute;
   top: 1rem;
-  left: ${props => (props.down ? 'auto' : '0.5rem')};
-  right: ${props => (props.down ? '1rem' : 'auto')};
+  left: ${({ $expanded }) => ($expanded ? '0.5rem' : 'auto')};
+  right: ${({ $expanded }) => ($expanded ? 'auto' : '1rem')};
   width: 1rem;
   height: 1rem;
-  transform: rotate(${props => (props.down ? 0 : '90deg')});
+  transform: rotate(${({ $expanded }) => ($expanded ? '90deg' : 0)});
 `;

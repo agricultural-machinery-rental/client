@@ -8,5 +8,6 @@ export type {
   TRecoverPasswordParams,
   TNewPassword,
   TCallbackParams,
+  TChangePassword,
 } from './typing';
 export { validationTypes, validationPattern } from './constants';

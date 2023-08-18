@@ -1,6 +1,6 @@
+import { ResetField } from './Field/Reset/ui';
 import { FiltersField } from './Field/ui';
 import { filters } from './filters';
-import { ResetField } from './Reset/ui';
 import { StWrapFilters } from './styled';
 
 export const Filters = () => {

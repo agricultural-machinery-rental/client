@@ -1,5 +1,7 @@
+type TFilterName = 'category' | 'location' | 'price' | 'mark' | 'model' | 'purpose' | 'condition';
+
 type TFiltersMap = {
-  [key: string]: Record<string, string>;
+  [key in TFilterName]: Record<string, string>;
 };
 
 export const filters: TFiltersMap = {

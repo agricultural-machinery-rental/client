@@ -4,7 +4,7 @@ import { Signin } from '@/features/Signin';
 import { Item } from '@/entities/Catalog';
 import { useModalContext } from '@/entities/Modal';
 
-import { TCatalogItem, itemData } from '@/shared/catalog';
+import { TCatalogItem, temporatyItemData } from '@/shared/catalog';
 import { useUserContext } from '@/shared/model/userContext';
 
 import { StCatalogFlex } from './styled';
@@ -23,8 +23,8 @@ export const Catalog = () => {
 
   return (
     <StCatalogFlex>
-      {itemData.map((data, key) => (
-        <Item key={key} itemData={data} buttonClick={() => openModalWithContent(data)} />
+      {temporatyItemData.map((item, id) => (
+        <Item key={id} itemData={item} buttonClick={() => openModalWithContent(item)} />
       ))}
     </StCatalogFlex>
   );
