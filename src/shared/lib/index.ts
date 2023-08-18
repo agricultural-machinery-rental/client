@@ -1,2 +1,2 @@
 export { objectEntries } from './objectEntries';
-export { toRuDateString } from './toRuDateString';
+export { convertUTCDateToRussianDateString } from './convertUTCDateToRussianDateString';
