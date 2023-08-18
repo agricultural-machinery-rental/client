@@ -4,6 +4,7 @@ import { FC } from 'react';
 import { useModalContext } from '@/entities/Modal';
 
 import { PATH } from '@/shared/constants/path';
+import { convertUTCDateToRussianDateString } from '@/shared/lib';
 import { StFlex, StTextBox } from '@/shared/styles/global';
 
 import { StContainer, StTitle, StWrapper, StSubtitle, StButton } from './styled';
@@ -33,7 +34,8 @@ export const EditBookingSuccess: FC<TBookingSuccess> = ({ productName, daterange
         </StSubtitle>
         <StFlex $flexDirection='column' $alignItems='center' $gap={52}>
           <StTextBox $fontSize={0.67} $lineHeight={1} $textAlign='center'>
-            {productName} забронирован с {daterange[0]} по {daterange[1]}
+            {productName} забронирован с {convertUTCDateToRussianDateString(daterange[0])} по{' '}
+            {convertUTCDateToRussianDateString(daterange[1])}
           </StTextBox>
           <StTextBox $fontSize={0.67} $lineHeight={1} $textAlign='center'>
             Ваш комментарий: {message}

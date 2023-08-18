@@ -13,7 +13,7 @@ import { StContainer, StTitle, StButton, StFormWrapper } from './styled';
 export type TEditBookingForm = {
   productId: string;
   productName: string;
-  daterange: number[];
+  daterange: Date[];
   message: string;
   openBookingCancel: () => void;
 };
@@ -26,7 +26,7 @@ export const EditBookingForm: FC<TEditBookingForm> = ({
   openBookingCancel,
 }) => {
   const [status, setStatus] = useState<'pending' | 'success'>('pending');
-  const [newDaterange, setNewDaterange] = useState<number[]>([]);
+  const [newDaterange, setNewDaterange] = useState<Date[]>([]);
   const [newMessage, setNewMessage] = useState<string>('');
 
   const handleEditBooking = (data: TBookingFormParams) => {
