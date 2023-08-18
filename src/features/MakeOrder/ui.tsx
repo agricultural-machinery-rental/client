@@ -12,7 +12,7 @@ import type { TMakeOrder } from './typing';
 
 export const MakeOrder: FC<TMakeOrder> = ({ productId, productName }) => {
   const [status, setStatus] = useState<'pending' | 'success'>('pending');
-  const [daterange, setDaterange] = useState<number[]>([]);
+  const [daterange, setDaterange] = useState<Date[]>([]);
   const [message, setmessage] = useState<string>('');
 
   const handleBookingConfirm = (data: TBookingFormParams) => {

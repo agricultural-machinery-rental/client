@@ -17,11 +17,9 @@ export const DateRange: FC<TDateRange> = ({ name, required, placeholder, setValu
   const minDate = new Date();
 
   useEffect(() => {
-    const dateRangeValue = () => {
-      if (!startDate || !endDate) return '';
-      return `${startDate?.toDateString()} - ${endDate?.toDateString()}`;
-    };
-    name && setValue?.(name, dateRangeValue());
+    if (startDate && endDate && name && setValue) {
+      setValue(name, [startDate, endDate]);
+    }
   }, [name, setValue, startDate, endDate]);
 
   return (

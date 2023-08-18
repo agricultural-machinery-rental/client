@@ -32,3 +32,7 @@ export const StButton = styled(Button)`
 export const StSubtitle = styled(StTextBox)`
   margin: 0 0 24px;
 `;
+
+export const StDateSpan = styled.span`
+  white-space: nowrap;
+`;
