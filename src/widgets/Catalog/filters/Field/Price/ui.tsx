@@ -18,7 +18,18 @@ const range = {
 
 export const PriceFieldContent = () => {
   const refProgress = useRef<HTMLInputElement>(null);
-  const { valueMin, valueMax, changeMin, changeMax } = usePriceRange(refProgress.current, range);
+  const {
+    rangeValueMin,
+    rangeValueMax,
+    inputValueMin,
+    inputValueMax,
+    changeMin,
+    changeMax,
+    changeInputMin,
+    changeInputMax,
+    changeRangeMin,
+    changeRangeMax,
+  } = usePriceRange(refProgress.current, range);
 
   return (
     <>
@@ -26,13 +37,23 @@ export const PriceFieldContent = () => {
         <StSliderProgress ref={refProgress} />
       </StWrapSlider>
       <StWrapRange>
-        <StRangeInput type='range' {...range} value={valueMin} onChange={changeMin} />
-        <StRangeInput type='range' {...range} value={valueMax} onChange={changeMax} />
+        <StRangeInput type='range' {...range} value={rangeValueMin} onChange={changeRangeMin} />
+        <StRangeInput type='range' {...range} value={rangeValueMax} onChange={changeRangeMax} />
       </StWrapRange>
       <StWrapPrice>
-        <StPriceInput type='text' value={valueMin} onChange={changeMin} />
+        <StPriceInput
+          type='text'
+          value={inputValueMin}
+          onChange={changeInputMin}
+          onBlur={changeMin}
+        />
         <span>&mdash;</span>
-        <StPriceInput type='text' value={valueMax} onChange={changeMax} />
+        <StPriceInput
+          type='text'
+          value={inputValueMax}
+          onChange={changeInputMax}
+          onBlur={changeMax}
+        />
       </StWrapPrice>
     </>
   );
