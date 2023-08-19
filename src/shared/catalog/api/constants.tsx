@@ -27,7 +27,7 @@ export const catalogItemCharacteristicsUnits: Record<keyof TCatalogItemCharacter
 export const temporatyItemData: TCatalogItem[] = [
   {
     name: 'Комбайн Марка Модель',
-    class: 'harvester',
+    category: 'harvester',
     photo: harvester_1,
     prices: {
       perHour: 1600,
@@ -43,7 +43,7 @@ export const temporatyItemData: TCatalogItem[] = [
   },
   {
     name: 'Гусеничный трактор Марка Модель 1',
-    class: 'tractor',
+    category: 'tractor',
     photo: tractor_2,
     prices: {
       perHour: 1600,
@@ -59,7 +59,7 @@ export const temporatyItemData: TCatalogItem[] = [
   },
   {
     name: 'Гусеничный трактор Марка Модель 2',
-    class: 'tractor',
+    category: 'tractor',
     photo: tractor_2,
     prices: {
       perHour: 1600,
@@ -75,7 +75,7 @@ export const temporatyItemData: TCatalogItem[] = [
   },
   {
     name: 'Посевная техника Марка Модель',
-    class: 'seeding',
+    category: 'seeding',
     photo: harvester_1,
     prices: {
       perHour: 1600,
@@ -91,7 +91,7 @@ export const temporatyItemData: TCatalogItem[] = [
   },
   {
     name: 'Мототрактор Марка Модель',
-    class: 'motor_tractor',
+    category: 'motor_tractor',
     photo: tractor_2,
     prices: {
       perHour: 1600,
@@ -107,7 +107,7 @@ export const temporatyItemData: TCatalogItem[] = [
   },
   {
     name: 'Прицеп Марка Модель',
-    class: 'trailer',
+    category: 'trailer',
     photo: tractor_2,
     prices: {
       perHour: 1600,
@@ -123,7 +123,7 @@ export const temporatyItemData: TCatalogItem[] = [
   },
   {
     name: 'Плуг Марка Модель',
-    class: 'plow',
+    category: 'plow',
     photo: tractor_2,
     prices: {
       perHour: 1600,
@@ -139,7 +139,7 @@ export const temporatyItemData: TCatalogItem[] = [
   },
   {
     name: 'Погрузчик Марка Модель',
-    class: 'loader',
+    category: 'loader',
     photo: tractor_2,
     prices: {
       perHour: 1600,
@@ -155,7 +155,7 @@ export const temporatyItemData: TCatalogItem[] = [
   },
   {
     name: 'Навесное оборудование Марка Модель',
-    class: 'attachment',
+    category: 'attachment',
     photo: tractor_2,
     prices: {
       perHour: 1600,
