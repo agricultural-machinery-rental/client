@@ -4,7 +4,7 @@ import { Signin } from '@/features/Signin';
 import { Item } from '@/entities/Catalog';
 import { useModalContext } from '@/entities/Modal';
 
-import { TCatalogItem, temporatyItemData } from '@/shared/catalog';
+import { TCatalogItem, getItemData } from '@/shared/catalog';
 import { useUserContext } from '@/shared/model/userContext';
 
 import { useCategoryByUrl } from './filters/Field/Category/hook';
@@ -25,11 +25,9 @@ export const Catalog = () => {
 
   return (
     <StCatalogFlex>
-      {temporatyItemData
-        .filter(item => !category || item.category === category)
-        .map((item, id) => (
-          <Item key={id} itemData={item} buttonClick={() => openModalWithContent(item)} />
-        ))}
+      {getItemData({ category }).map((item, id) => (
+        <Item key={id} itemData={item} buttonClick={() => openModalWithContent(item)} />
+      ))}
     </StCatalogFlex>
   );
 };

@@ -30,8 +30,10 @@ export const temporatyItemData: TCatalogItem[] = [
     category: 'harvester',
     photo: harvester_1,
     prices: {
-      perHour: 1600,
-      perShift: 12800,
+      perHour: 3200,
+      get perShift(): number {
+        return this.perHour! * 8;
+      },
     },
     characteristics: {
       itemWeight: 7800,
@@ -46,8 +48,10 @@ export const temporatyItemData: TCatalogItem[] = [
     category: 'tractor',
     photo: tractor_2,
     prices: {
-      perHour: 1600,
-      perShift: 12800,
+      perHour: 2600,
+      get perShift(): number {
+        return this.perHour! * 8;
+      },
     },
     characteristics: {
       itemWeight: 7800,
@@ -62,8 +66,10 @@ export const temporatyItemData: TCatalogItem[] = [
     category: 'tractor',
     photo: tractor_2,
     prices: {
-      perHour: 1600,
-      perShift: 12800,
+      perHour: 2800,
+      get perShift(): number {
+        return this.perHour! * 8;
+      },
     },
     characteristics: {
       itemWeight: 7800,
@@ -78,8 +84,10 @@ export const temporatyItemData: TCatalogItem[] = [
     category: 'seeding',
     photo: harvester_1,
     prices: {
-      perHour: 1600,
-      perShift: 12800,
+      perHour: 3600,
+      get perShift(): number {
+        return this.perHour! * 8;
+      },
     },
     characteristics: {
       itemWeight: 7800,
@@ -94,8 +102,10 @@ export const temporatyItemData: TCatalogItem[] = [
     category: 'motor_tractor',
     photo: tractor_2,
     prices: {
-      perHour: 1600,
-      perShift: 12800,
+      perHour: 800,
+      get perShift(): number {
+        return this.perHour! * 8;
+      },
     },
     characteristics: {
       itemWeight: 7800,
@@ -110,8 +120,10 @@ export const temporatyItemData: TCatalogItem[] = [
     category: 'trailer',
     photo: tractor_2,
     prices: {
-      perHour: 1600,
-      perShift: 12800,
+      perHour: 600,
+      get perShift(): number {
+        return this.perHour! * 8;
+      },
     },
     characteristics: {
       itemWeight: 7800,
@@ -126,8 +138,10 @@ export const temporatyItemData: TCatalogItem[] = [
     category: 'plow',
     photo: tractor_2,
     prices: {
-      perHour: 1600,
-      perShift: 12800,
+      perHour: 1800,
+      get perShift(): number {
+        return this.perHour! * 8;
+      },
     },
     characteristics: {
       itemWeight: 7800,
@@ -142,8 +156,10 @@ export const temporatyItemData: TCatalogItem[] = [
     category: 'loader',
     photo: tractor_2,
     prices: {
-      perHour: 1600,
-      perShift: 12800,
+      perHour: 3200,
+      get perShift(): number {
+        return this.perHour! * 8;
+      },
     },
     characteristics: {
       itemWeight: 7800,
@@ -158,8 +174,10 @@ export const temporatyItemData: TCatalogItem[] = [
     category: 'attachment',
     photo: tractor_2,
     prices: {
-      perHour: 1600,
-      perShift: 12800,
+      perHour: 3600,
+      get perShift(): number {
+        return this.perHour! * 8;
+      },
     },
     characteristics: {
       itemWeight: 7800,
