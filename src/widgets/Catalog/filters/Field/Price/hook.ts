@@ -27,7 +27,6 @@ export const usePriceRange = (
           progress.style.right = 104 - (max / range.max) * 100 + '%';
         }
       }
-      if (setPriceRange) setPriceRange({ min, max });
     }
   };
 
@@ -36,6 +35,7 @@ export const usePriceRange = (
     if (event.target.type === 'range' && value > valueMax - range.step) return;
     setValueMin(value);
     setProgress('min', value);
+    if (setPriceRange) setPriceRange({ min: value, max: valueMax });
   };
 
   const changeMax = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -43,7 +43,13 @@ export const usePriceRange = (
     if (event.target.type === 'range' && value < valueMin + range.step) return;
     setValueMax(value);
     setProgress('max', value);
+    if (setPriceRange) setPriceRange({ min: valueMin, max: value });
   };
 
-  return { valueMin, valueMax, changeMin, changeMax };
+  const changeRange = (range: Record<'min' | 'max', number>) => {
+    setProgress('min', range.min);
+    setProgress('max', range.max);
+  };
+
+  return { valueMin, valueMax, changeMin, changeMax, changeRange };
 };

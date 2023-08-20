@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 
 import { priceRange } from '@/shared/catalog';
+import { useCatalogFilters } from '@/shared/model/filterContext';
 
 import { usePriceRange } from './hook';
 import {
@@ -14,10 +15,12 @@ import {
 
 export const PriceFieldContent = () => {
   const refProgress = useRef<HTMLInputElement>(null);
-  const { valueMin, valueMax, changeMin, changeMax } = usePriceRange(
-    refProgress.current,
-    priceRange,
-  );
+  const { filters } = useCatalogFilters();
+  const filtersPrice = filters?.price
+    ? (filters.price as Record<'min' | 'max', number>)
+    : priceRange;
+  const { changeMin, changeMax, changeRange } = usePriceRange(refProgress.current, priceRange);
+  changeRange(filtersPrice);
 
   return (
     <>
@@ -25,13 +28,13 @@ export const PriceFieldContent = () => {
         <StSliderProgress ref={refProgress} />
       </StWrapSlider>
       <StWrapRange>
-        <StRangeInput type='range' {...priceRange} value={valueMin} onChange={changeMin} />
-        <StRangeInput type='range' {...priceRange} value={valueMax} onChange={changeMax} />
+        <StRangeInput type='range' {...priceRange} value={filtersPrice.min} onChange={changeMin} />
+        <StRangeInput type='range' {...priceRange} value={filtersPrice.max} onChange={changeMax} />
       </StWrapRange>
       <StWrapPrice>
-        <StPriceInput type='text' value={valueMin} onChange={changeMin} />
+        <StPriceInput type='text' value={filtersPrice.min} onChange={changeMin} />
         <span>&mdash;</span>
-        <StPriceInput type='text' value={valueMax} onChange={changeMax} />
+        <StPriceInput type='text' value={filtersPrice.max} onChange={changeMax} />
       </StWrapPrice>
     </>
   );
