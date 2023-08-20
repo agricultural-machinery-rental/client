@@ -26,11 +26,7 @@ export const ModalProvider: TLayout = ({ children }) => {
 
   const openModal = (content: ReactNode, noClose?: boolean) => {
     setContent(content);
-    if (noClose !== undefined) {
-      setNoClose(true);
-    } else {
-      setNoClose(false);
-    }
+    setNoClose(!!noClose);
   };
   const closeModal = () => {
     setContent(null);
