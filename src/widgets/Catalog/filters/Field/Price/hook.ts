@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import { useCatalogFilters } from '@/shared/model/filterContext';
+
 /**
  * React hook for the price range slider component
  * @param progress HTMLDivElement of the range bar
@@ -12,6 +14,7 @@ export const usePriceRange = (
 ) => {
   const [valueMin, setValueMin] = useState(1000);
   const [valueMax, setValueMax] = useState(20000);
+  const { setPriceRange } = useCatalogFilters();
 
   const setProgress = (selector: 'min' | 'max', value: number) => {
     const min = Math.max(selector === 'min' ? value : valueMin, range.min);
@@ -24,6 +27,7 @@ export const usePriceRange = (
           progress.style.right = 104 - (max / range.max) * 100 + '%';
         }
       }
+      if (setPriceRange) setPriceRange({ min, max });
     }
   };
 

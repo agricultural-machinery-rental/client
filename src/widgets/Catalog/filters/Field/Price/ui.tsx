@@ -1,5 +1,7 @@
 import React, { useRef } from 'react';
 
+import { priceRange } from '@/shared/catalog';
+
 import { usePriceRange } from './hook';
 import {
   StWrapSlider,
@@ -10,15 +12,12 @@ import {
   StPriceInput,
 } from './styled';
 
-const range = {
-  min: 1000,
-  max: 20000,
-  step: 1000,
-};
-
 export const PriceFieldContent = () => {
   const refProgress = useRef<HTMLInputElement>(null);
-  const { valueMin, valueMax, changeMin, changeMax } = usePriceRange(refProgress.current, range);
+  const { valueMin, valueMax, changeMin, changeMax } = usePriceRange(
+    refProgress.current,
+    priceRange,
+  );
 
   return (
     <>
@@ -26,8 +25,8 @@ export const PriceFieldContent = () => {
         <StSliderProgress ref={refProgress} />
       </StWrapSlider>
       <StWrapRange>
-        <StRangeInput type='range' {...range} value={valueMin} onChange={changeMin} />
-        <StRangeInput type='range' {...range} value={valueMax} onChange={changeMax} />
+        <StRangeInput type='range' {...priceRange} value={valueMin} onChange={changeMin} />
+        <StRangeInput type='range' {...priceRange} value={valueMax} onChange={changeMax} />
       </StWrapRange>
       <StWrapPrice>
         <StPriceInput type='text' value={valueMin} onChange={changeMin} />

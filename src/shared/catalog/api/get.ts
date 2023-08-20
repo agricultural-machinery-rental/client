@@ -4,7 +4,7 @@ import { temporatyItemData } from './constants';
 
 // import { TFilters } from '@/app/catalog'; // Want to break the shakles
 
-export const getItemData = (
+export const getFilteredItemData = (
   filters: Record<string, null | string | Record<string, number>> = {},
 ) => {
   return temporatyItemData.filter(item =>
@@ -17,7 +17,7 @@ export const getItemData = (
         case 'price': {
           if (!value || !item.prices.perShift) return true;
           const priceRange = value as Record<string, number>;
-          return item.prices.perShift > priceRange.min && item.prices.perShift < priceRange.max;
+          return item.prices.perShift >= priceRange.min && item.prices.perShift <= priceRange.max;
         }
         case 'mark':
           return true;
