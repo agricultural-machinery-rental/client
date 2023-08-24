@@ -8,6 +8,11 @@ export const StCategoryItem = styled.li`
   position: relative;
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: scale(1.03);
+  }
 `;
 
 export const StCategoryTitleWrapper = styled.div`
