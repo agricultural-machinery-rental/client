@@ -6,8 +6,6 @@ export const StCategoryItem = styled.li`
   border-radius: ${theme.borderRadius.round};
   overflow: hidden;
   position: relative;
-  display: flex;
-  flex-direction: column;
   margin: 0 auto;
   transition: transform 0.3s ease;
   &:hover {
@@ -16,7 +14,7 @@ export const StCategoryItem = styled.li`
 `;
 
 export const StCategoryTitleWrapper = styled.div`
-  min-height: 88px;
+  min-height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
