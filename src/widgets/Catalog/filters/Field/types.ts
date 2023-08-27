@@ -1,4 +1,6 @@
+import { filterName } from '@/shared/model/filterContext';
+
 export type TFiltersField = {
-  id: string;
+  id: filterName;
   name: string;
 };

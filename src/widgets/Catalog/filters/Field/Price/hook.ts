@@ -4,52 +4,91 @@ import { useCatalogFilters } from '@/shared/model/filterContext';
 
 /**
  * React hook for the price range slider component
- * @param progress HTMLDivElement of the range bar
  * @param range Record<'min' | 'max' | 'step', number>
- * @returns valueMin, valueMax, changeMin, changeMax
+ * @returns inputValueMin, inputValueMax, changeInputMin, changeInputMax, changeRangeMin, changeRangeMax, changeMin, changeMax
  */
-export const usePriceRange = (
-  progress: HTMLDivElement | null,
-  range: Record<'min' | 'max' | 'step', number>,
-) => {
-  const [valueMin, setValueMin] = useState(1000);
-  const [valueMax, setValueMax] = useState(20000);
-  const { setPriceRange } = useCatalogFilters();
+export const usePriceRange = (range: Record<'min' | 'max' | 'step', number>) => {
+  const { filters, setPriceRange } = useCatalogFilters();
 
-  const setProgress = (selector: 'min' | 'max', value: number) => {
-    const min = Math.max(selector === 'min' ? value : valueMin, range.min);
-    const max = Math.min(selector === 'max' ? value : valueMax, range.max);
-    if (min >= range.min && max - min >= range.step && max <= range.max) {
-      if (progress) {
-        if (selector === 'min') {
-          progress.style.left = (min / range.max) * 100 - 4 + '%';
-        } else {
-          progress.style.right = 104 - (max / range.max) * 100 + '%';
-        }
-      }
+  const [inputValueMin, setInputValueMin] = useState(range.min);
+  const [inputValueMax, setInputValueMax] = useState(range.max);
+
+  const changeRangeMin = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const value = event.target.value;
+    const number = parseInt(value);
+
+    if (number > inputValueMax - range.step) return;
+
+    setInputValueMin(number);
+    if (setPriceRange) setPriceRange({ min: number, max: inputValueMax });
+  };
+
+  const changeRangeMax = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const value = event.target.value;
+    const number = parseInt(value);
+
+    if (number < inputValueMin + range.step) return;
+
+    setInputValueMax(number);
+    if (setPriceRange) setPriceRange({ min: inputValueMin, max: number });
+  };
+
+  const changeInputMin = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const value = parseInt(event.target.value);
+    setInputValueMin(value);
+  };
+
+  const changeInputMax = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const value = parseInt(event.target.value);
+    setInputValueMax(value);
+  };
+
+  const changeMin = () => {
+    let number = inputValueMin;
+
+    if (Number.isNaN(number)) return;
+
+    if (number > filters.price.max - range.step) {
+      number = filters.price.max - range.step;
     }
+
+    if (number < range.min) {
+      number = range.min;
+    }
+
+    const value = Math.round(number / range.step) * range.step;
+
+    setInputValueMin(value);
+    if (setPriceRange) setPriceRange({ min: value, max: filters.price.max });
   };
 
-  const changeMin = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const value = parseInt(event.target.value) || 0;
-    if (event.target.type === 'range' && value > valueMax - range.step) return;
-    setValueMin(value);
-    setProgress('min', value);
-    if (setPriceRange) setPriceRange({ min: value, max: valueMax });
+  const changeMax = () => {
+    let number = inputValueMax;
+
+    if (Number.isNaN(number)) return;
+
+    if (number < filters.price.min + range.step) {
+      number = filters.price.min + range.step;
+    }
+
+    if (number > range.max) {
+      number = range.max;
+    }
+
+    const value = Math.round(number / range.step) * range.step;
+
+    setInputValueMax(value);
+    if (setPriceRange) setPriceRange({ min: filters.price.min, max: value });
   };
 
-  const changeMax = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const value = parseInt(event.target.value) || 0;
-    if (event.target.type === 'range' && value < valueMin + range.step) return;
-    setValueMax(value);
-    setProgress('max', value);
-    if (setPriceRange) setPriceRange({ min: valueMin, max: value });
+  return {
+    inputValueMin,
+    inputValueMax,
+    changeInputMin,
+    changeInputMax,
+    changeRangeMin,
+    changeRangeMax,
+    changeMin,
+    changeMax,
   };
-
-  const changeRange = (range: Record<'min' | 'max', number>) => {
-    setProgress('min', range.min);
-    setProgress('max', range.max);
-  };
-
-  return { valueMin, valueMax, changeMin, changeMax, changeRange };
 };
