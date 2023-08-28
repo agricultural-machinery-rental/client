@@ -20,14 +20,14 @@ export type TCatalogItem = {
 };
 
 export enum catalogItemCategory {
-  'tractor',
-  'harvester',
-  'seeding',
-  'motor_tractor',
-  'trailer',
-  'plow',
-  'loader',
-  'attachment',
+  tractor = 'tractor',
+  harvester = 'harvester',
+  seeding = 'seeding',
+  motor_tractor = 'motor_tractor',
+  trailer = 'trailer',
+  plow = 'plow',
+  loader = 'loader',
+  attachment = 'attachment',
 }
 
 export const CatalogItemCategoryName: Record<keyof typeof catalogItemCategory, string> = {

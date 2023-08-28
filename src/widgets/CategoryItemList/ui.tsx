@@ -18,13 +18,13 @@ export const CategoryItemList = () => {
     <StSection>
       <StContainer>
         <StHeading1>Аренда сельхозтехники</StHeading1>
-        <Link href='/catalog'>
-          <StCategoryList>
-            {CategoryItemData.map((item: TCategoryItemContainer, index) => (
-              <CategoryItemContainer image={item.image} title={item.title} key={`item-${index}`} />
-            ))}
-          </StCategoryList>
-        </Link>
+        <StCategoryList>
+          {CategoryItemData.map((item: TCategoryItemContainer, index) => (
+            <Link href={'/catalog?' + item.category} key={`item-${index}`}>
+              <CategoryItemContainer {...item} />
+            </Link>
+          ))}
+        </StCategoryList>
       </StContainer>
     </StSection>
   );
