@@ -1,13 +1,18 @@
-import { CatalogItemClassName } from '@/shared/catalog';
+import { CatalogItemCategoryName } from '@/shared/catalog';
 
+import { useCategoryByUrl } from './hook';
 import { StNextLinkCategory } from './styled';
 
 export const CategoryFieldContent = () => {
+  const category = useCategoryByUrl();
+
   return (
     <ul>
-      {Object.entries(CatalogItemClassName).map(([key, name]) => (
+      {Object.entries(CatalogItemCategoryName).map(([key, name]) => (
         <li key={key}>
-          <StNextLinkCategory href={'/catalog?' + key}>{name}</StNextLinkCategory>
+          <StNextLinkCategory $disabled={category === key} href={'/catalog?' + key}>
+            {name}
+          </StNextLinkCategory>
         </li>
       ))}
     </ul>

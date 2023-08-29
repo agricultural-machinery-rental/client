@@ -9,7 +9,7 @@ export const StWrapFiltersField = styled.div`
   background-color: ${theme.colors.primary};
   padding: 1rem;
   border-radius: 0.5rem;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.625);
+  box-shadow: 0 4px 4px ${theme.colors.boxShadow};
 `;
 
 export const StNextLinkAccend = styled(Link)`

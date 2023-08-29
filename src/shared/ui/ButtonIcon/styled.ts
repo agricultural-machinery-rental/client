@@ -10,13 +10,13 @@ export const StButtonIcon = styled.button<TButton>`
   box-sizing: border-box;
   cursor: pointer;
   border: none;
-  background-color: transparent;
+  background-color: ${theme.colors.bgBtnFirst};
   height: 40px;
   width: 40px;
   border-radius: 50%;
 
   &:hover {
-    background: ${theme.colors.borderFirst};
+    background: ${theme.colors.bgBtnHover};
     box-shadow: inset 0 0 2px ${theme.colors.borderFirst};
   }
 `;

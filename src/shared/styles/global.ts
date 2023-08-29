@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { styled, css } from 'styled-components';
 
 import { theme } from './theme';
-import type { TFlex, TNextLink, TTextBox } from './typing';
+import type { TFlex, TNextLink, TTextBox, THeading2 } from './typing';
 
 export const StFlex = styled.div<TFlex>(props => {
   const { $flexDirection, $justifyContent, $alignItems, $gap, $flexWrap } = props;
@@ -30,9 +30,11 @@ export const StHeading1 = styled.h1`
   margin-bottom: 56px;
 `;
 
-export const StHeading2 = styled.h2`
-  font-size: 2em;
-  line-height: 1.167em;
+export const StHeading2 = styled.h2<THeading2>`
+  font-size: 1.33rem;
+  line-height: 1.66rem;
+  text-align: ${({ $textAlign }) => ($textAlign ? $textAlign : 'center')};
+  margin: ${({ $margin }) => ($margin ? $margin : 0)};
 `;
 
 export const StHeading3 = styled.h3`

@@ -19,9 +19,9 @@ export const FooterBlock: FC<TFooterBlockProps> = ({ col }) => {
         {col.lines.map((row, index) => {
           if (row.link) {
             return (
-              <StFooterLink href={row.link} key={`footer-item-${index}`}>
-                {row.text}
-              </StFooterLink>
+              <div key={`footer-item-${index}`}>
+                <StFooterLink href={row.link}>{row.text}</StFooterLink>
+              </div>
             );
           }
           return <div key={`footer-item-${index}`}>{row.text}</div>;

@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 import { Catalog } from '@/widgets/Catalog';
 import { Filters } from '@/widgets/Catalog/filters';
 
+import { FiltersProvider } from '@/shared/model/filterContext';
 import { StFlex, StHeading2 } from '@/shared/styles/global';
 
 export const metadata: Metadata = {
@@ -12,10 +13,14 @@ export const metadata: Metadata = {
 const PageCatalog = () => {
   return (
     <>
-      <StHeading2>Каталог</StHeading2>
+      <StHeading2 $margin='0 0 80px' $textAlign='left'>
+        Каталог
+      </StHeading2>
       <StFlex $flexDirection={'row'}>
-        <Filters />
-        <Catalog />
+        <FiltersProvider>
+          <Filters />
+          <Catalog />
+        </FiltersProvider>
       </StFlex>
     </>
   );

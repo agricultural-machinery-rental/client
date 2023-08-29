@@ -1,5 +1,5 @@
 export type TBookingSuccess = {
   productName: string;
-  daterange: number[];
+  daterange: Date[];
   message: string;
 };

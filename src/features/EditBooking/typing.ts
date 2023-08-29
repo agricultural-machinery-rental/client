@@ -1,6 +1,6 @@
 export type TBookingEditForm = {
   productId: string;
   productName: string;
-  daterange: number[];
+  daterange: Date[];
   message: string;
 };

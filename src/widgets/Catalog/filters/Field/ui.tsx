@@ -3,13 +3,17 @@ import { FC, useState } from 'react';
 import ArrowDown from './assets/arrow-down.svg';
 import { CategoryFieldContent } from './Category';
 import { LocationFieldContent } from './Location';
+import { PriceFieldContent } from './Price';
 import { StWrapFiltersField } from './shared';
 import { StHeader, StHeaderName, StExpandIcon } from './styled';
 import { TFiltersField } from './types';
+// import { filterName } from '../filters'; // Want to break the shackles!!!
+
+const autoExpand = ['category', 'location', 'price'];
 
 export const FiltersField: FC<TFiltersField> = props => {
   const { id, name } = props;
-  const [expanded, setExpand] = useState(id === 'category');
+  const [expanded, setExpand] = useState(autoExpand.includes(id));
 
   const content = () => {
     switch (id) {
@@ -18,7 +22,7 @@ export const FiltersField: FC<TFiltersField> = props => {
       case 'location':
         return <LocationFieldContent />;
       case 'price':
-        return <></>;
+        return <PriceFieldContent />;
       case 'mark':
         return <></>;
       case 'model':
@@ -29,6 +33,7 @@ export const FiltersField: FC<TFiltersField> = props => {
         return <></>;
     }
   };
+
   return (
     <StWrapFiltersField>
       <StHeader onClick={() => setExpand(!expanded)}>
