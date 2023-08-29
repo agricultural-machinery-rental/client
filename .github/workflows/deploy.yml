@@ -29,8 +29,8 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/your-image-name .
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/your-image-name
+          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/amr .
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/amr
 
       - name: Clean up
         run: npm ci
