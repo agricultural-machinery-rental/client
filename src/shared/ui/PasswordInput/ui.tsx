@@ -11,6 +11,7 @@ export const PasswordInput: FC<TPasswordInput> = ({
   name,
   register,
   label,
+  placeholder,
   watch,
   setValue,
   ...props
@@ -26,10 +27,12 @@ export const PasswordInput: FC<TPasswordInput> = ({
   return (
     <StContainer>
       <StInputContainer>
-        <StInput type={inputType} {...register} name={name} {...props} />
-        <StLabel htmlFor={name} $inputValue={!!(name && watch?.(name))}>
-          {label}
-        </StLabel>
+        <StInput type={inputType} {...register} name={name} placeholder={placeholder} {...props} />
+        {!placeholder && (
+          <StLabel htmlFor={name} $inputValue={!!(name && watch?.(name))}>
+            {label}
+          </StLabel>
+        )}
       </StInputContainer>
       <StIcon onClick={toggleType}>{inputType === 'password' ? <Eye /> : <EyeOff />}</StIcon>
     </StContainer>
