@@ -1,20 +1,18 @@
 import { Dispatch, SetStateAction } from 'react';
 
-import type { PartialRecord, Overwrite } from '@/shared/types';
-
 import { filterName } from './consts';
 
 export type TPriceFilter = Record<'min' | 'max', number>;
 
-type TFiltersGeneralType = PartialRecord<filterName, unknown>;
-
-export type TFilters = Overwrite<
-  TFiltersGeneralType,
-  {
-    [filterName.category]: string | null;
-    [filterName.price]: TPriceFilter;
-  }
->;
+export type TFilters = {
+  [filterName.category]: string | null;
+  [filterName.price]: TPriceFilter;
+  [filterName.location]: unknown;
+  [filterName.mark]: unknown;
+  [filterName.model]: unknown;
+  [filterName.condition]: unknown;
+  [filterName.purpose]: unknown;
+};
 
 export type TCatalogFilters = {
   filters: TFilters;

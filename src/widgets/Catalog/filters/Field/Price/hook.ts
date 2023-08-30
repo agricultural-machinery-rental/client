@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+import { TPriceRangeParameters } from '@/shared/catalog';
 import { useCatalogFilters } from '@/shared/model/filterContext';
 
 /**
@@ -7,7 +8,7 @@ import { useCatalogFilters } from '@/shared/model/filterContext';
  * @param range Record<'min' | 'max' | 'step', number>
  * @returns inputValueMin, inputValueMax, changeInputMin, changeInputMax, changeRangeMin, changeRangeMax, changeMin, changeMax
  */
-export const usePriceRange = (range: Record<'min' | 'max' | 'step', number>) => {
+export const usePriceRange = (range: TPriceRangeParameters) => {
   const { filters, setPriceRange } = useCatalogFilters();
 
   const [inputValueMin, setInputValueMin] = useState(range.min);
