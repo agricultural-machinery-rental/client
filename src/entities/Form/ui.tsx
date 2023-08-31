@@ -39,6 +39,7 @@ export const Form: FC<TForm> = ({ footer, fields, handleFormSubmit, defaultValue
               watch={watch}
               setValue={setValue}
               required={required}
+              aria-label={name}
               {...rest}
             />
           );
