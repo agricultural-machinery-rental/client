@@ -4,10 +4,11 @@ import { theme } from '@/shared/styles/theme';
 
 export const StCategoryItem = styled.li`
   border-radius: ${theme.borderRadius.round};
-
   overflow: hidden;
-  position: relative;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
   transition: all 0.3s ease;
 
   &:hover {
