@@ -4,12 +4,16 @@ import { theme } from '@/shared/styles/theme';
 
 export const StCategoryItem = styled.li`
   border-radius: ${theme.borderRadius.round};
+
   overflow: hidden;
   position: relative;
   margin: 0 auto;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
+
   &:hover {
-    transform: scale(1.03);
+    background-color: ${theme.colors.bgElPrimary};
+    transform: scale(1.3);
+    box-shadow: 0px 16px 16px 0px ${theme.colors.boxShadow};
   }
 `;
 
