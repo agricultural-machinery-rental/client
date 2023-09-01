@@ -9,7 +9,7 @@ export type TCatalogItemCharacteristics = {
 
 export type TCatalogItem = {
   name: string;
-  class: TCatalogItemClass;
+  category: keyof typeof catalogItemCategory;
   photo: StaticImageData;
   prices: {
     perHour?: number;
@@ -19,17 +19,18 @@ export type TCatalogItem = {
   itemDimensions?: number[];
 };
 
-export type TCatalogItemClass =
-  | 'tractor'
-  | 'harvester'
-  | 'seeding'
-  | 'motor_tractor'
-  | 'trailer'
-  | 'plow'
-  | 'loader'
-  | 'attachment';
+export enum catalogItemCategory {
+  tractor = 'tractor',
+  harvester = 'harvester',
+  seeding = 'seeding',
+  motor_tractor = 'motor_tractor',
+  trailer = 'trailer',
+  plow = 'plow',
+  loader = 'loader',
+  attachment = 'attachment',
+}
 
-export const CatalogItemClassName: Record<TCatalogItemClass, string> = {
+export const CatalogItemCategoryName: Record<keyof typeof catalogItemCategory, string> = {
   // null: 'Вся техника',
   tractor: 'Тракторы',
   harvester: 'Комбайны',
