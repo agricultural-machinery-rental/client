@@ -7,6 +7,7 @@ import { Field } from './ui';
 export default {
   title: 'Form/Field',
   component: Field,
+  tags: ['autodocs'],
 } as Meta;
 
 const Template: Story<TField> = args => <Field {...args} />;

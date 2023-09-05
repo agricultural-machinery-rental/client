@@ -7,6 +7,7 @@ import { Button } from './ui';
 export default {
   title: 'Components/Button',
   component: Button,
+  tags: ['autodocs'],
 } as Meta;
 
 const Template: Story<TButton> = args => <Button {...args} />;
