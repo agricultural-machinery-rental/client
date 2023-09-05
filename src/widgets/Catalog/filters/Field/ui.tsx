@@ -1,5 +1,7 @@
 import { FC, useState } from 'react';
 
+import { filterName } from '@/shared/model/filterContext';
+
 import ArrowDown from './assets/arrow-down.svg';
 import { CategoryFieldContent } from './Category';
 import { LocationFieldContent } from './Location';
@@ -7,9 +9,8 @@ import { PriceFieldContent } from './Price';
 import { StWrapFiltersField } from './shared';
 import { StHeader, StHeaderName, StExpandIcon } from './styled';
 import { TFiltersField } from './types';
-// import { filterName } from '../filters'; // Want to break the shackles!!!
 
-const autoExpand = ['category', 'location', 'price'];
+const autoExpand: filterName[] = [filterName.category, filterName.location, filterName.price];
 
 export const FiltersField: FC<TFiltersField> = props => {
   const { id, name } = props;

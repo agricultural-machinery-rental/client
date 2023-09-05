@@ -1,16 +1,6 @@
-export enum filterName {
-  'category',
-  'location',
-  'price',
-  'mark',
-  'model',
-  'purpose',
-  'condition',
-}
+import { filterName } from '@/shared/model/filterContext';
 
-type TFiltersMap = {
-  [key in keyof typeof filterName]: Record<string, string>;
-};
+type TFiltersMap = Record<filterName, Record<'name', string>>;
 
 export const filters: TFiltersMap = {
   category: { name: 'Категория' },
