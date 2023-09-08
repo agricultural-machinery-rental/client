@@ -1,0 +1,1 @@
+export { productAPI } from './api';
