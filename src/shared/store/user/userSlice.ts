@@ -40,5 +40,5 @@ export const userSlice = createSlice({
 
 export const { setIsAuth, setUser } = userSlice.actions;
 
-export const isAuth = (state: RootState) => state.user.authorized;
-export const getUser = (state: RootState) => state.user.data;
+export const isAuth = (state: TRootState) => state.user.authorized;
+export const getUser = (state: TRootState) => state.user.data;
