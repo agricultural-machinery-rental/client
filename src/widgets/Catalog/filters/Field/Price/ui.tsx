@@ -30,10 +30,7 @@ export const PriceFieldContent = () => {
     changeRangeMax,
   } = usePriceRange(priceRange);
 
-  const rangeLength = useMemo(
-    () => priceRange.max - priceRange.min,
-    [priceRange.max, priceRange.min],
-  );
+  const rangeLength = useMemo(() => priceRange.max - priceRange.min, []);
 
   useEffect(() => {
     if (!refProgress.current) return;
@@ -45,7 +42,7 @@ export const PriceFieldContent = () => {
 
     progress.style.left = Math.round(min * 100) + '%';
     progress.style.right = Math.round(max * 100) + '%';
-  }, [filters.price, priceRange, rangeLength]);
+  }, [filters.price, rangeLength]);
 
   return (
     <>
