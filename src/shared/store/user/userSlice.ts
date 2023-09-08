@@ -1,26 +1,27 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-import type { TUser } from '@/shared/api/mockUser';
+import type { TUserDto } from '@/shared/api/typing';
 
 import type { RootState } from '../store';
 
 type TUserStatus = {
   authorized: boolean;
-  data: TUser;
+  data: TUserDto;
 };
 
-// Define the initial state using that type
+// Define the initial state
 const initialState: TUserStatus = {
   authorized: false,
   data: {
-    lastName: '',
-    firstName: '',
-    middleName: '',
-    birthday: undefined,
-    phone: '',
+    id: 0,
+    last_name: '',
+    first_name: '',
+    patronymic: null,
+    birthday: null,
+    phone_number: '',
     email: '',
-    companyName: undefined,
-    companyTIN: undefined,
+    organization_name: null,
+    inn: null,
   },
 };
 
@@ -31,7 +32,7 @@ export const userSlice = createSlice({
     setIsAuth: (state, action: PayloadAction<boolean>) => {
       state.authorized = action.payload;
     },
-    setUser: (state, action: PayloadAction<TUser>) => {
+    setUser: (state, action: PayloadAction<TUserDto>) => {
       state.data = action.payload;
     },
   },
