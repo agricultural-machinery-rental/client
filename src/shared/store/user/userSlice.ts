@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 import type { TUserDto } from '@/shared/api/typing';
 
-import type { RootState } from '../store';
+import type { TRootState } from '../store';
 
 type TUserStatus = {
   authorized: boolean;
