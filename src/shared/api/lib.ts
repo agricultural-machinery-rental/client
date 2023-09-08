@@ -1,6 +1,4 @@
 export const queryStringify = (data: Record<string, unknown>) => {
   const keys = Object.keys(data);
-  return keys.reduce((result, key, index) => {
-    return `${result}${key}=${data[key]}${index < keys.length - 1 ? '&' : ''}`;
-  }, '?');
+  return keys.reduce((acc, key) => `${acc}${acc === '?' ? '' : '&'}${key}=${data[key]}`, '?');
 };
