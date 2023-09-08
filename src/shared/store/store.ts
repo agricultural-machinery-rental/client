@@ -12,6 +12,6 @@ export const store = configureStore({
 store.subscribe(() => console.log(store.getState()));
 
 // Infer the `RootState` and `AppDispatch` types from the store itself
-export type RootState = ReturnType<typeof store.getState>;
+export type TRootState = ReturnType<typeof store.getState>;
 // Inferred type: {user: TUserStatus}
 export type AppDispatch = typeof store.dispatch;
