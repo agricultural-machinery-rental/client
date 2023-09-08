@@ -26,6 +26,13 @@ export const Form: FC<TForm> = ({ footer, fields, handleFormSubmit, defaultValue
           const registerOptions = {
             ...(required && { required: 'Поле не может быть пустым' }),
             ...(pattern && { pattern: validationPattern[pattern] }),
+            ...(name === 'passwordRepeat' && {
+              validate: (val: unknown) => {
+                if (val !== watch('password')) {
+                  return 'Пароли не совпадают';
+                }
+              },
+            }),
           };
 
           return (

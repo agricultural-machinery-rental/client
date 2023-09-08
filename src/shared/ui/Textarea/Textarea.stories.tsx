@@ -7,12 +7,20 @@ import { Textarea } from './ui';
 export default {
   title: 'Components/Textarea',
   component: Textarea,
+  decorators: [
+    Story => (
+      <div style={{ width: '500px' }}>
+        <Story />
+      </div>
+    ),
+  ],
 } as Meta;
 
 const Template: Story<TTextarea> = args => <Textarea {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  placeholder: 'Поле для ввода',
+  placeholder: 'Начните вводить сообщение',
   resize: false,
+  label: 'Сообщение',
 };

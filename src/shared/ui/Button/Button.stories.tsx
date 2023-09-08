@@ -7,6 +7,7 @@ import { Button } from './ui';
 export default {
   title: 'Components/Button',
   component: Button,
+  tags: ['autodocs'],
 } as Meta;
 
 const Template: Story<TButton> = args => <Button {...args} />;
@@ -14,9 +15,19 @@ const Template: Story<TButton> = args => <Button {...args} />;
 export const Primary = Template.bind({});
 Primary.args = {
   label: 'Кнопка-кнопка',
+  $designType: 'primary',
+  disabled: false,
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
   label: 'Кнопка-кнопка',
+  $designType: 'secondary',
+  disabled: false,
+};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  label: 'Кнопка-кнопка',
+  disabled: true,
 };

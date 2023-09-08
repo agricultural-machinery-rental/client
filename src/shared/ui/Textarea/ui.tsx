@@ -8,14 +8,17 @@ export const Textarea: FC<TTextarea> = ({
   resize,
   register,
   label,
+  placeholder,
   watch,
   setValue,
   ...props
 }) => (
   <StTextareaContainer>
-    <StTextarea {...register} name={name} $resize={resize} {...props} />
-    <StLabel htmlFor={name} $textareaValue={!!(name && watch?.(name))}>
-      {label}
-    </StLabel>
+    <StTextarea {...register} name={name} placeholder={placeholder} $resize={resize} {...props} />
+    {!placeholder && (
+      <StLabel htmlFor={name} $textareaValue={!!(name && watch?.(name))}>
+        {label}
+      </StLabel>
+    )}
   </StTextareaContainer>
 );
