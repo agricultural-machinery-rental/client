@@ -10,7 +10,6 @@ export const Textarea: FC<TTextarea> = ({
   label,
   placeholder,
   watch,
-  setValue,
   ...props
 }) => (
   <StTextareaContainer>
