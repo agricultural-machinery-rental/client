@@ -1,4 +1,6 @@
-import axios from 'axios';
+import axios, { AxiosResponse, InternalAxiosRequestConfig } from 'axios';
+
+import { sessionAPI } from './session';
 
 export const BASE_URL = 'https://agropark.acceleratorpracticum.ru';
 
@@ -18,3 +20,32 @@ export const instance = axios.create({
     'Content-Type': 'application/json',
   },
 });
+
+instance.interceptors.request.use(
+  (config: InternalAxiosRequestConfig): InternalAxiosRequestConfig => {
+    config.headers.Authorization = `Bearer ${localStorage.getItem('token')}`;
+    return config;
+  },
+);
+
+instance.interceptors.response.use(
+  (config: AxiosResponse) => {
+    return config;
+  },
+  async error => {
+    const originalRequest = error.config;
+
+    if (error.response.status == 401 && error.config && !error.config._isRetry) {
+      originalRequest._isRetry = true;
+      try {
+        const response = await sessionAPI.refreshToken();
+        localStorage.setItem('token', response.data.access);
+
+        return instance.request(originalRequest);
+      } catch (err) {
+        console.error(err);
+      }
+    }
+    throw error;
+  },
+);

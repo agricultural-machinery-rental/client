@@ -5,7 +5,7 @@ import { validationTypes, type TSigninParams } from '@/shared/form';
 export const signinConfig: TFieldConfig<keyof TSigninParams>[] = [
   {
     kindOfField: 'input',
-    name: 'login',
+    name: 'email_or_phone',
     pattern: validationTypes.phoneOrEmail,
     required: true,
     type: 'text',

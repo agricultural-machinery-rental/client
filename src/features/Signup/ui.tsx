@@ -3,8 +3,10 @@ import { FC } from 'react';
 import { Consent } from '@/entities/Consent';
 import { Form } from '@/entities/Form';
 import { useModalContext } from '@/entities/Modal';
+import { fetchSignup } from '@/entities/user/model';
 
 import { type TSignupParams } from '@/shared/form';
+import { useAppDispatch } from '@/shared/model';
 import { StTextBox } from '@/shared/styles/global';
 import { Button } from '@/shared/ui/Button';
 
@@ -14,12 +16,10 @@ import { StTitle, StFooterWrapper, StLink, StContainer, StTip, StSpan } from './
 export const Signup: FC = () => {
   const { openModal, closeModal } = useModalContext();
 
-  const onSubmitHandler = (data: TSignupParams) => {
-    // TODO заменить на функцию отправки данных на сервер
-    // postUser(data);
+  const dispatch = useAppDispatch();
 
-    closeModal();
-    console.log(data);
+  const onSubmitHandler = (data: TSignupParams) => {
+    dispatch(fetchSignup(data)).then(() => closeModal());
   };
 
   const footer = (

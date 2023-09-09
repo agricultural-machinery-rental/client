@@ -23,3 +23,7 @@ export type TSigninResponseData = {
 };
 
 export type TSignupResponseData = TUserDto;
+
+export type TRefreshTokenResponseData = {
+  access: string;
+};
