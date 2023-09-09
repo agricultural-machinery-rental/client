@@ -12,9 +12,7 @@ export const StCategoryItem = styled.li`
   transition: all 0.3s ease;
 
   &:hover {
-    background-color: ${theme.colors.bgElPrimary};
     transform: scale(1.3);
-    box-shadow: 0px 16px 16px 0px ${theme.colors.boxShadow};
   }
 `;
 
