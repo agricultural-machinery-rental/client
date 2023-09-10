@@ -7,7 +7,7 @@ import { Signin } from '@/features/Signin';
 import { useModalContext } from '@/entities/Modal';
 
 import { PATH } from '@/shared/constants/path';
-import { useUserContext } from '@/shared/model/userContext';
+import { useAppSelector } from '@/shared/model';
 import { StContainer, StFlex } from '@/shared/styles/global';
 import { Logo } from '@/shared/ui/Logo';
 
@@ -17,7 +17,7 @@ import { StHeader, StMenu, StNextLinkStyled, StSpan } from './styled';
 
 export const Header: FC = () => {
   const pathName = usePathname();
-  const { user } = useUserContext();
+  const userState = useAppSelector(state => state.user.user);
 
   const { openModal } = useModalContext();
 
@@ -37,13 +37,13 @@ export const Header: FC = () => {
               <PhoneButton onClick={() => openModal(<Callback />)} />
             </StFlex>
 
-            {user ? (
+            {userState ? (
               <StNextLinkStyled
                 href={PATH.Profile}
                 $justifyContent='center'
                 className={`${pathName.includes(PATH.Profile) && 'active'}`}
               >
-                {user.firstName}
+                {userState.first_name}
               </StNextLinkStyled>
             ) : (
               <StSpan $justifyContent='center' onClick={() => openModal(<Signin />)}>

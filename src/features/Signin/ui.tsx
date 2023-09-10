@@ -20,8 +20,9 @@ export const Signin: FC = () => {
 
   const dispatch = useAppDispatch();
 
-  const onSubmitHandler = (data: TSigninParams) => {
-    dispatch(fetchSignin(data)).then(() => closeModal());
+  const onSubmitHandler = async (data: TSigninParams) => {
+    await dispatch(fetchSignin(data));
+    closeModal();
   };
 
   const footer = (

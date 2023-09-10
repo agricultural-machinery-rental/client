@@ -9,5 +9,6 @@ export type {
   TNewPassword,
   TCallbackParams,
   TChangePassword,
+  TProfileParams,
 } from './typing';
 export { validationTypes, validationPattern } from './constants';

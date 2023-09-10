@@ -1,5 +1,7 @@
 import { FC } from 'react';
 
+import { Signin } from '@/features/Signin';
+
 import { Consent } from '@/entities/Consent';
 import { Form } from '@/entities/Form';
 import { useModalContext } from '@/entities/Modal';
@@ -14,12 +16,12 @@ import { signupConfig } from './config';
 import { StTitle, StFooterWrapper, StLink, StContainer, StTip, StSpan } from './styled';
 
 export const Signup: FC = () => {
-  const { openModal, closeModal } = useModalContext();
+  const { openModal } = useModalContext();
 
   const dispatch = useAppDispatch();
 
   const onSubmitHandler = (data: TSignupParams) => {
-    dispatch(fetchSignup(data)).then(() => closeModal());
+    dispatch(fetchSignup(data)).then(() => openModal(<Signin />));
   };
 
   const footer = (

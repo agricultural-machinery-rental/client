@@ -1,2 +1,2 @@
-export { userSlice, isAuth, setIsAuth, getUser, setUser } from './slice';
+export { userSlice, userState, setUser, isLoading, error } from './slice';
 export { fetchGetUser, fetchSignin, fetchSignup } from './sessionThunks';

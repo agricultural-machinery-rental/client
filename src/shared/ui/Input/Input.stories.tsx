@@ -26,7 +26,7 @@ const Template: Story<TInput> = args => <Input {...args} />;
 
 export const InputDefault = Template.bind({});
 InputDefault.args = {
-  name: 'firstName',
+  name: 'first_name',
   label: 'Имя',
   type: 'text',
   disabled: false,

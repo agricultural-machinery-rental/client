@@ -1,11 +1,11 @@
 import { type TFieldConfig } from '@/entities/Form';
 
-import { type TSignupParams, validationTypes } from '@/shared/form';
+import { type TProfileParams, validationTypes } from '@/shared/form';
 
-export const profileConfig: TFieldConfig<keyof TSignupParams>[] = [
+export const profileConfig: TFieldConfig<keyof TProfileParams>[] = [
   {
     kindOfField: 'input',
-    name: 'lastName',
+    name: 'last_name',
     pattern: validationTypes.name,
     required: true,
     type: 'text',
@@ -13,7 +13,7 @@ export const profileConfig: TFieldConfig<keyof TSignupParams>[] = [
   },
   {
     kindOfField: 'input',
-    name: 'firstName',
+    name: 'first_name',
     pattern: validationTypes.name,
     required: true,
     type: 'text',
@@ -21,7 +21,7 @@ export const profileConfig: TFieldConfig<keyof TSignupParams>[] = [
   },
   {
     kindOfField: 'input',
-    name: 'middleName',
+    name: 'patronymic',
     pattern: validationTypes.name,
     required: false,
     type: 'text',
@@ -36,7 +36,7 @@ export const profileConfig: TFieldConfig<keyof TSignupParams>[] = [
   },
   {
     kindOfField: 'input',
-    name: 'phone',
+    name: 'phone_number',
     pattern: validationTypes.phone,
     required: true,
     type: 'tel',
@@ -52,14 +52,14 @@ export const profileConfig: TFieldConfig<keyof TSignupParams>[] = [
   },
   {
     kindOfField: 'input',
-    name: 'companyName',
+    name: 'organization_name',
     required: false,
     type: 'text',
     label: 'Название организации',
   },
   {
     kindOfField: 'input',
-    name: 'companyTIN',
+    name: 'inn',
     required: false,
     type: 'text',
     label: 'ИНН организации',

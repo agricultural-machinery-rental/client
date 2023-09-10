@@ -11,9 +11,8 @@ type TDynamicRoute<ParamName extends string> = FC<{ params: { [key in ParamName]
  * and use it in @/shared/model/hooks.ts
  */
 
-// eslint-disable-next-line @typescript-eslint/consistent-type-imports
-type TRootState = import('../../app/store').TRootState;
-// eslint-disable-next-line @typescript-eslint/consistent-type-imports
-type TAppDispatch = import('../../app/store').TAppDispatch;
+type TRootState = import('@/app/store').TRootState;
+
+type TAppDispatch = import('@/app/store').TAppDispatch;
 
 export type { TLayout, TDynamicRoute, TRootState, TAppDispatch };

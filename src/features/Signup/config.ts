@@ -9,7 +9,7 @@ type TSignupFieldNames = TSignupParams & {
 export const signupConfig: TFieldConfig<keyof TSignupFieldNames>[] = [
   {
     kindOfField: 'input',
-    name: 'lastName',
+    name: 'last_name',
     pattern: validationTypes.name,
     required: true,
     type: 'text',
@@ -17,7 +17,7 @@ export const signupConfig: TFieldConfig<keyof TSignupFieldNames>[] = [
   },
   {
     kindOfField: 'input',
-    name: 'firstName',
+    name: 'first_name',
     pattern: validationTypes.name,
     required: true,
     type: 'text',
@@ -25,15 +25,7 @@ export const signupConfig: TFieldConfig<keyof TSignupFieldNames>[] = [
   },
   {
     kindOfField: 'input',
-    name: 'middleName',
-    pattern: validationTypes.name,
-    required: false,
-    type: 'text',
-    label: 'Отчество',
-  },
-  {
-    kindOfField: 'input',
-    name: 'phone',
+    name: 'phone_number',
     pattern: validationTypes.phone,
     required: true,
     type: 'tel',

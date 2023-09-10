@@ -6,7 +6,6 @@ import { TRootState } from '@/shared/types';
 import { fetchGetUser, fetchSignin, fetchSignup } from './sessionThunks';
 
 type TUserStatus = {
-  authorized: boolean;
   user: TUserDto | null;
   isLoading: boolean;
   error: string;
@@ -14,7 +13,6 @@ type TUserStatus = {
 
 // Define the initial state
 const initialState: TUserStatus = {
-  authorized: false,
   user: null,
   isLoading: false,
   error: '',
@@ -24,9 +22,6 @@ export const userSlice = createSlice({
   name: 'user',
   initialState,
   reducers: {
-    setIsAuth: (state, action: PayloadAction<boolean>) => {
-      state.authorized = action.payload;
-    },
     setUser: (state, action: PayloadAction<TUserDto>) => {
       state.user = action.payload;
     },
@@ -53,6 +48,11 @@ export const userSlice = createSlice({
         state.isLoading = false;
         state.error = action.error.message ?? 'Возникла неизвестная ошибка';
       })
+      .addCase(fetchSignup.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.error = '';
+        state.user = action.payload;
+      })
       .addCase(fetchSignup.pending, state => {
         state.isLoading = true;
       })
@@ -64,7 +64,8 @@ export const userSlice = createSlice({
   },
 });
 
-export const { setIsAuth, setUser } = userSlice.actions;
+export const { setUser } = userSlice.actions;
 
-export const isAuth = (state: TRootState) => state.user.authorized;
-export const getUser = (state: TRootState) => state.user.user;
+export const userState = (state: TRootState) => state.user.user;
+export const isLoading = (state: TRootState) => state.user.isLoading;
+export const error = (state: TRootState) => state.user.error;
