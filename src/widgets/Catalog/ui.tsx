@@ -17,7 +17,7 @@ export const Catalog = () => {
 
   const openModalWithContent = (data: TCatalogItem) => {
     if (user) {
-      openModal(<MakeOrder productId={data.name} productName={data.name} />);
+      openModal(<MakeOrder productId={data.id} productName={data.name} />);
     } else {
       openModal(<Signin />);
     }

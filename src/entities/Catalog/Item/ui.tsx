@@ -5,7 +5,7 @@ import { catalogItemCharacteristicsUnits, TCatalogItemCharacteristics } from '@/
 import { PATH } from '@/shared/constants/path';
 import { StFlex } from '@/shared/styles/global';
 
-import { dimensionsUnit, priceUnit } from './constants';
+import { priceUnit } from './constants';
 import {
   StButton,
   StCharacteristics,
@@ -26,7 +26,9 @@ export const Item: FC<TItem> = ({ itemData, buttonClick }) => (
     </div>
     <StDescriptionBlock>
       <StTitle href={`${PATH.Catalog}/${itemData.name}`}>
-        <h3>{itemData.name}</h3>
+        <h3>
+          {itemData.brand} {itemData.name}
+        </h3>
       </StTitle>
       {/*TODO Здесь будет кнопка для добавления в избранное*/}
       <StDescriptionText>
@@ -43,15 +45,6 @@ export const Item: FC<TItem> = ({ itemData, buttonClick }) => (
               </StCharacteristicsLine>
             );
           })}
-          {/*{Затем выводим габариты}*/}
-          {itemData.itemDimensions && (
-            <StCharacteristicsLine>
-              <span>Габариты</span>
-              <span>
-                {itemData.itemDimensions?.join('x')} {dimensionsUnit}
-              </span>
-            </StCharacteristicsLine>
-          )}
         </StCharacteristics>
         <StFlex $flexDirection={'column'} $alignItems={'flex-end'} $gap={10}>
           {itemData.prices.perHour && (

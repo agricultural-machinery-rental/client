@@ -1,14 +1,29 @@
 import { StaticImageData } from 'next/image';
 
 export type TCatalogItemCharacteristics = {
-  itemWeight?: number;
-  bucketVolume?: number;
-  diggingDepth?: number;
-  trackWidth?: number;
+  yearOfManufacture?: number;
+  mileage?: number;
+  powerHp?: number;
+  payloadCapacity?: number;
+  location?: string;
+  countryOfOrigin?: string;
+  deliveryDistance?: number;
+  attachmentsAvailable?: boolean;
+  workType?: string;
+};
+
+export type TCatalogItemAdditionalCharacteristics = {
+  countryOfOrigin?: string;
+  deliveryDistance?: number;
+  attachmentsAvailable?: boolean;
+  workType?: string;
 };
 
 export type TCatalogItem = {
+  id: number;
+  brand: string;
   name: string;
+  description: string;
   category: keyof typeof catalogItemCategory;
   photo: StaticImageData;
   prices: {
@@ -16,7 +31,7 @@ export type TCatalogItem = {
     perShift?: number;
   };
   characteristics: TCatalogItemCharacteristics;
-  itemDimensions?: number[];
+  additionalCharacteristics: TCatalogItemAdditionalCharacteristics;
 };
 
 export enum catalogItemCategory {
