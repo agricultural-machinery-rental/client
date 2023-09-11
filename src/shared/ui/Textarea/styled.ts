@@ -25,7 +25,6 @@ export const StTextarea = styled.textarea<TTextareaStyledComponent>`
   width: 100%;
   font-size: 0.6rem;
   line-height: 1rem;
-  }
 `;
 
 export const StLabel = styled.label<TLabel>`

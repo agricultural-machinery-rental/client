@@ -4,15 +4,7 @@ import { StInput, StLabel, StInputContainer } from './styled';
 import { type TInput } from './typing';
 
 // TODO передавать setValue только в те компоненты, которые его требуют
-export const Input: FC<TInput> = ({
-  name,
-  register,
-  label,
-  placeholder,
-  watch,
-  setValue,
-  ...props
-}) => (
+export const Input: FC<TInput> = ({ name, register, label, placeholder, watch, ...props }) => (
   <StInputContainer>
     <StInput {...register} name={name} placeholder={placeholder} {...props} />
     {!placeholder && (

@@ -13,7 +13,6 @@ export const PasswordInput: FC<TPasswordInput> = ({
   label,
   placeholder,
   watch,
-  setValue,
   ...props
 }) => {
   const [inputType, setInputType] = useState(type);
