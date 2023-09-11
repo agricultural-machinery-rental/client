@@ -5,8 +5,10 @@ import { Signup } from '@/features/Signup';
 
 import { Form } from '@/entities/Form';
 import { useModalContext } from '@/entities/Modal';
+import { fetchSignin } from '@/entities/user/model';
 
 import { type TSigninParams } from '@/shared/form';
+import { useAppDispatch } from '@/shared/model';
 import { StFlex, StTextBox } from '@/shared/styles/global';
 import { Button } from '@/shared/ui/Button';
 
@@ -16,12 +18,11 @@ import { StContainer, StTitle, StAuthFormLink } from './styled';
 export const Signin: FC = () => {
   const { openModal, closeModal } = useModalContext();
 
-  const onSubmitHandler = (data: TSigninParams) => {
-    // TODO заменить на функцию отправки данных на сервер
-    // getUser(data);
+  const dispatch = useAppDispatch();
 
+  const onSubmitHandler = async (data: TSigninParams) => {
+    await dispatch(fetchSignin(data));
     closeModal();
-    console.log(data);
   };
 
   const footer = (

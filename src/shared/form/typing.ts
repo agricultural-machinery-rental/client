@@ -20,21 +20,28 @@ export type TBookingFormParams = {
 };
 
 export type TSigninParams = {
-  login: string;
+  email_or_phone: string;
   password: string;
 };
 
 export type TSignupParams = {
-  lastName: string;
-  firstName: string;
-  middleName: string;
-  phone: string;
+  last_name: string;
+  first_name: string;
+  phone_number: string;
   email: string;
   password: string;
   passwordRepeat: string;
-  birthday?: string;
-  companyName?: string;
-  companyTIN?: string;
+};
+
+export type TProfileParams = {
+  last_name: string;
+  first_name: string;
+  patronymic: string;
+  birthday: string;
+  phone_number: string;
+  email: string;
+  organization_name: string;
+  inn: string;
 };
 
 export type TRecoverPasswordParams = {
@@ -63,4 +70,5 @@ export type TFormData = TBookingFormParams &
   TRecoverPasswordParams &
   TNewPassword &
   TCallbackParams &
-  TChangePassword;
+  TChangePassword &
+  TProfileParams;

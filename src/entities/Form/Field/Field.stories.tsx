@@ -14,7 +14,7 @@ const Template: Story<TField> = args => <Field {...args} />;
 
 export const FieldInput = Template.bind({});
 FieldInput.args = {
-  name: 'firstName',
+  name: 'first_name',
   asterisk: true,
   errorMessage: '',
   kindOfField: 'input',

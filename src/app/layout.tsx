@@ -1,5 +1,8 @@
+'use client';
+
 import type { Metadata } from 'next';
 import React from 'react';
+import { Provider as StoreProvider } from 'react-redux';
 
 import { Footer } from '@/widgets/Footer';
 import { Header } from '@/widgets/Header';
@@ -13,6 +16,7 @@ import { UserProvider } from '@/shared/model/userContext';
 import StyledComponentsRegistry from '@/shared/styles/registry';
 import { GlobalStyles } from '@/shared/styles/reset';
 
+import { store } from './store';
 import { PageContent, StMain } from './styled';
 
 export const metadata: Metadata = {
@@ -26,19 +30,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <StyledComponentsRegistry>
           <GlobalStyles />
-          <PageContent>
-            <UserProvider>
-              <ModalProvider>
-                <Header />
-                <StMain>
-                  <Breadcrumbs />
-                  {children}
-                </StMain>
-                <Footer />
-                <Modal />
-              </ModalProvider>
-            </UserProvider>
-          </PageContent>
+          <StoreProvider store={store}>
+            <PageContent>
+              <UserProvider>
+                <ModalProvider>
+                  <Header />
+                  <StMain>
+                    <Breadcrumbs />
+                    {children}
+                  </StMain>
+                  <Footer />
+                  <Modal />
+                </ModalProvider>
+              </UserProvider>
+            </PageContent>
+          </StoreProvider>
         </StyledComponentsRegistry>
       </body>
     </html>
