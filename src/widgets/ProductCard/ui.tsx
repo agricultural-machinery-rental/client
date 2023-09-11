@@ -1,91 +1,110 @@
+import { FC } from 'react';
+
 import { AddToFavorite } from '@/features/AddToFavorite';
 import { MakeOrder } from '@/features/MakeOrder';
 import { Swiper } from '@/features/Swiper';
 
+import { TItem, priceUnit } from '@/entities/Catalog/Item';
 import { useModalContext } from '@/entities/Modal';
+
+import { catalogItemCharacteristicsUnits, TCatalogItemCharacteristics } from '@/shared/catalog';
+import { StFlex } from '@/shared/styles/global';
 
 import { dataTractors } from './constants';
 import {
   StProductHeader,
-  StProductList,
   StProductMain,
-  StProductItemInfo,
   StProductText,
   StProductTitle,
   StSection,
-  StStarButton,
   StProductFooter,
   StProductFooterInfo,
   StProductPrice,
   StButton,
+  StCharacteristics,
+  StCharacteristicsLine,
+  StHeaderLine,
 } from './styled';
 
-export const ProductCard = () => {
+export const ProductCard: FC<TItem> = ({ itemData }) => {
   const { openModal } = useModalContext();
 
   // TODO Все данные подтягивать из объекта, полученного с бэка
-  const productName = 'Трактор Название TRY-45';
-
   return (
     <StSection>
       <article>
-        <StProductHeader>
-          <StProductTitle>{productName}</StProductTitle>
-        </StProductHeader>
+        <StHeaderLine>
+          <StProductHeader>
+            <StProductTitle>
+              {itemData.brand} {itemData.name}
+            </StProductTitle>
+          </StProductHeader>
+          <AddToFavorite />
+        </StHeaderLine>
         <StProductMain>
           <div>
-            <StProductText>
-              Описание, Характеристики и остальное, типа такая то модель, производство Беларусь 2018
-              года выпуска, используется для таких то целей, расход топлива и бла бла
-            </StProductText>
-            <StProductList>
-              <li>требуемая категория прав - C</li>
-              <li>Возможность почасовой оплаты</li>
-              <li>Подходит для ...</li>
-            </StProductList>
+            <StProductText>{itemData.description}</StProductText>
             <ul>
-              <StProductItemInfo>
-                <span>Общая масса</span>
-                <span>7800 кг</span>
-              </StProductItemInfo>
-              <StProductItemInfo>
-                <span>Объём ковша</span>
-                <span>0,3 м³</span>
-              </StProductItemInfo>
-              <StProductItemInfo>
-                <span>Глубина копания</span>
-                <span>4150 мм</span>
-              </StProductItemInfo>
-              <StProductItemInfo>
-                <span>Ширина гусеницы</span>
-                <span>450 мм</span>
-              </StProductItemInfo>
-              <StProductItemInfo>
-                <span>Габариты</span>
-                <span>6080×2260×2640 мм</span>
-              </StProductItemInfo>
+              <StCharacteristics>
+                {/*{Сначала выводим характеристики}*/}
+                {Object.entries(itemData.characteristics).map(([key, value]) => {
+                  const units =
+                    catalogItemCharacteristicsUnits[key as keyof TCatalogItemCharacteristics];
+                  return (
+                    <StCharacteristicsLine key={key}>
+                      <span>{units?.label}</span>
+                      <span>
+                        {value} {units?.unit}
+                      </span>
+                    </StCharacteristicsLine>
+                  );
+                })}
+                {Object.entries(itemData.additionalCharacteristics).map(([key, value]) => {
+                  const units =
+                    catalogItemCharacteristicsUnits[key as keyof TCatalogItemCharacteristics];
+                  const displayValue =
+                    key === 'attachmentsAvailable' ? (value ? 'Да' : 'Нет') : value;
+                  return (
+                    <StCharacteristicsLine key={key}>
+                      <span>{units?.label}</span>
+                      <span>
+                        {displayValue} {units?.unit}
+                      </span>
+                    </StCharacteristicsLine>
+                  );
+                })}
+              </StCharacteristics>
             </ul>
           </div>
           <Swiper dataArray={dataTractors} />
-          <StStarButton>
-            <AddToFavorite />
-          </StStarButton>
         </StProductMain>
         <StProductFooter>
           <StProductFooterInfo>
-            <span>Стоимость за 1 ч.</span>
-            <StProductPrice>1600 ₽</StProductPrice>
-          </StProductFooterInfo>
-          <StProductFooterInfo>
-            <span>Стоимость за смену 8 ч.</span>
-            <StProductPrice>12800 ₽</StProductPrice>
+            <StFlex $alignItems={'flex-end'} $gap={60}>
+              {itemData.prices.perHour && (
+                <StFlex $flexDirection={'column'} $alignItems={'flex-end'} $gap={10}>
+                  <span>Стоимость за 1 ч.</span>
+                  <StProductPrice>
+                    {itemData.prices.perHour} {priceUnit}
+                  </StProductPrice>
+                </StFlex>
+              )}
+              {itemData.prices.perShift && (
+                <StFlex $flexDirection={'column'} $alignItems={'flex-end'} $gap={10}>
+                  <span>Стоимость за смену 8 ч.</span>
+                  <StProductPrice>
+                    {itemData.prices.perShift} {priceUnit}
+                  </StProductPrice>
+                </StFlex>
+              )}
+            </StFlex>
           </StProductFooterInfo>
           <StButton
             $designType={'primary'}
             label='Забронировать'
             type='button'
             onClick={() =>
-              openModal(<MakeOrder productId={productName} productName={productName} />)
+              openModal(<MakeOrder productId={itemData.id} productName={itemData.name} />)
             }
           />
         </StProductFooter>
