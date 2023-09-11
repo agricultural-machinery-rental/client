@@ -18,7 +18,6 @@ import {
 
 export const InfoConditions = () => {
   const { openModal } = useModalContext();
-
   return (
     <StInfoConditions>
       <StInfoConditionsWrap>
