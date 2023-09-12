@@ -1,4 +1,4 @@
-import { TMachineryInfoDto } from '@/shared/api/typing';
+import { TMachineryInfoDto } from '@/shared/model/typing';
 
 export type TBrandNamesResponseData = {
   brand: string;

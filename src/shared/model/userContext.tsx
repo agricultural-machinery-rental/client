@@ -2,8 +2,9 @@
 
 import React, { createContext, useContext, useState } from 'react';
 
-import { TUser, mockUser } from '../api/mockUser';
-import { TLayout } from '../types';
+import { TUser } from '@/shared/api/mockUser';
+
+import { TLayout } from '.';
 
 type TUserContext = {
   user: TUser | null;
@@ -12,7 +13,7 @@ type TUserContext = {
 };
 
 const defaultUserState = {
-  user: mockUser,
+  user: null,
   signup: () => {},
   logout: () => {},
 };

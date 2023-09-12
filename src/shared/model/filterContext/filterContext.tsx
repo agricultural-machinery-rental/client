@@ -4,7 +4,7 @@ import { createContext, useContext, useState } from 'react';
 
 import { priceRange } from '@/shared/catalog';
 import { useCategoryByUrl } from '@/shared/hooks';
-import { TLayout } from '@/shared/types';
+import { TLayout } from '@/shared/model';
 
 import type { TPriceFilter, TCatalogFilters } from './typing';
 

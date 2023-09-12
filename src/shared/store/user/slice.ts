@@ -1,19 +1,19 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-import type { TUserDto } from '@/shared/api/typing';
-import { TRootState } from '@/shared/types';
+import type { TUserDto } from '@/shared/model/typing';
+import { TRootState } from '@/shared/store/store';
 
-import { fetchGetUser, fetchSignin, fetchSignup } from './sessionThunks';
+import { fetchGetUser, fetchSignin, fetchSignup } from './thunks';
 
 type TUserStatus = {
-  user: TUserDto | null;
+  data: TUserDto | null;
   isLoading: boolean;
   error: string;
 };
 
 // Define the initial state
 const initialState: TUserStatus = {
-  user: null,
+  data: null,
   isLoading: false,
   error: '',
 };
@@ -23,7 +23,7 @@ export const userSlice = createSlice({
   initialState,
   reducers: {
     setUser: (state, action: PayloadAction<TUserDto>) => {
-      state.user = action.payload;
+      state.data = action.payload;
     },
   },
   extraReducers: builder => {
@@ -31,7 +31,7 @@ export const userSlice = createSlice({
       .addCase(fetchGetUser.fulfilled, (state, action) => {
         state.isLoading = false;
         state.error = '';
-        state.user = action.payload;
+        state.data = action.payload;
       })
       .addCase(fetchGetUser.pending, state => {
         state.isLoading = true;
@@ -39,7 +39,7 @@ export const userSlice = createSlice({
       .addCase(fetchGetUser.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.error.message ?? 'Возникла неизвестная ошибка';
-        state.user = null;
+        state.data = null;
       })
       .addCase(fetchSignin.pending, state => {
         state.isLoading = true;
@@ -51,7 +51,7 @@ export const userSlice = createSlice({
       .addCase(fetchSignup.fulfilled, (state, action) => {
         state.isLoading = false;
         state.error = '';
-        state.user = action.payload;
+        state.data = action.payload;
       })
       .addCase(fetchSignup.pending, state => {
         state.isLoading = true;
@@ -59,13 +59,13 @@ export const userSlice = createSlice({
       .addCase(fetchSignup.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.error.message ?? 'Возникла неизвестная ошибка';
-        state.user = null;
+        state.data = null;
       });
   },
 });
 
 export const { setUser } = userSlice.actions;
 
-export const userState = (state: TRootState) => state.user.user;
+export const getUser = (state: TRootState) => state.user.data;
 export const isLoading = (state: TRootState) => state.user.isLoading;
 export const error = (state: TRootState) => state.user.error;

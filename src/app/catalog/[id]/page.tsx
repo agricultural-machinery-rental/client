@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import { ProductCard } from '@/widgets/ProductCard';
 
 import { temporatyItem } from '@/shared/catalog';
-import { type TDynamicRoute } from '@/shared/types';
+import type { TDynamicRoute } from '@/shared/model';
 
 export const metadata: Metadata = {
   title: 'Categories',

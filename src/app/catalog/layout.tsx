@@ -1,5 +1,5 @@
+import { TLayout } from '@/shared/model';
 import { StContainer } from '@/shared/styles/global';
-import { TLayout } from '@/shared/types';
 
 const CatalogLayout: TLayout = ({ children }) => {
   return <StContainer>{children}</StContainer>;
