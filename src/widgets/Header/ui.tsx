@@ -7,9 +7,7 @@ import { Signin } from '@/features/Signin';
 import { useModalContext } from '@/entities/Modal';
 
 import { PATH } from '@/shared/constants/path';
-import { TUserDto } from '@/shared/model/typing';
-import { store } from '@/shared/store/store';
-import { getUser } from '@/shared/store/user';
+import { useGetUser } from '@/shared/store/user';
 import { StContainer, StFlex } from '@/shared/styles/global';
 import { Logo } from '@/shared/ui/Logo';
 
@@ -19,7 +17,7 @@ import { StHeader, StMenu, StNextLinkStyled, StSpan } from './styled';
 
 export const Header: FC = () => {
   const pathName = usePathname();
-  const user: TUserDto | null = getUser(store.getState());
+  const user = useGetUser();
 
   const { openModal } = useModalContext();
 
