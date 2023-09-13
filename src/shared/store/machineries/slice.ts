@@ -46,6 +46,6 @@ export const machineriesSlice = createSlice({
 
 export const { setMachineries } = machineriesSlice.actions;
 
-export const getMachineries = (state: TRootState) => state.user.data;
-export const isLoading = (state: TRootState) => state.user.isLoading;
-export const error = (state: TRootState) => state.user.error;
+export const getMachineries = (state: TRootState) => state.machineries.data;
+export const isLoading = (state: TRootState) => state.machineries.isLoading;
+export const error = (state: TRootState) => state.machineries.error;
