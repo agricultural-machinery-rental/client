@@ -1,4 +1,4 @@
-import { TMachineryDto } from '@/shared/api/typing';
+import { TMachineryDto } from '@/shared/model/typing';
 
 export type TMachineriesRequestData = Partial<{
   category: number;

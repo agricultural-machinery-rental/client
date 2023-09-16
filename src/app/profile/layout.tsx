@@ -5,9 +5,9 @@ import { useRouter } from 'next/navigation';
 import { ProfileNav } from '@/widgets/ProfileNav';
 
 import { PATH } from '@/shared/constants/path';
+import { TLayout } from '@/shared/model';
 import { useUserContext } from '@/shared/model/userContext';
 import { StFlex, StContainer } from '@/shared/styles/global';
-import { TLayout } from '@/shared/types';
 
 import { profileLinks } from './consts';
 

@@ -1,4 +1,4 @@
-import { TUserDto } from '@/shared/api/typing';
+import { TUserDto } from '@/shared/model/typing';
 
 export type TSigninRequestData = {
   email_or_phone: string;

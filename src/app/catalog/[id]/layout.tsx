@@ -1,4 +1,4 @@
-import { TLayout } from '@/shared/types';
+import { TLayout } from '@/shared/model';
 
 const SomeTractorLayout: TLayout = ({ children }) => {
   return <>{children}</>;

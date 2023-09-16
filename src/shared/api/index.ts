@@ -1,4 +1,4 @@
-export type { ValidationErrors } from './typing';
+export type { ValidationErrors } from '@/shared/model/typing';
 export {
   sessionAPI,
   decodeToken,

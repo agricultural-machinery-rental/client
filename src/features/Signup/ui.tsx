@@ -5,10 +5,10 @@ import { Signin } from '@/features/Signin';
 import { Consent } from '@/entities/Consent';
 import { Form } from '@/entities/Form';
 import { useModalContext } from '@/entities/Modal';
-import { fetchSignup } from '@/entities/user/model';
 
 import { type TSignupParams } from '@/shared/form';
-import { useAppDispatch } from '@/shared/model';
+import { useAppDispatch } from '@/shared/store';
+import { fetchSignup } from '@/shared/store/user';
 import { StTextBox } from '@/shared/styles/global';
 import { Button } from '@/shared/ui/Button';
 

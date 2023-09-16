@@ -5,10 +5,10 @@ import { Signup } from '@/features/Signup';
 
 import { Form } from '@/entities/Form';
 import { useModalContext } from '@/entities/Modal';
-import { fetchSignin } from '@/entities/user/model';
 
 import { type TSigninParams } from '@/shared/form';
-import { useAppDispatch } from '@/shared/model';
+import { useAppDispatch } from '@/shared/store';
+import { fetchSignin } from '@/shared/store/user';
 import { StFlex, StTextBox } from '@/shared/styles/global';
 import { Button } from '@/shared/ui/Button';
 

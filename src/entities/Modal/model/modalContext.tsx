@@ -2,7 +2,7 @@
 
 import { ReactNode, createContext, useState, useContext } from 'react';
 
-import { TLayout } from '@/shared/types';
+import { TLayout } from '@/shared/model';
 
 type TModalContext = {
   isOpen: boolean;
