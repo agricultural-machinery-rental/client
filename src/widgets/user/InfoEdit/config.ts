@@ -33,6 +33,7 @@ export const profileConfig: TFieldConfig<keyof TProfileParams>[] = [
     required: false,
     type: 'text',
     label: 'День рождения',
+    pattern: validationTypes.date,
   },
   {
     kindOfField: 'input',
