@@ -1,4 +1,3 @@
-'use client';
 import { Catalog } from '@/widgets/Catalog';
 import { Filters } from '@/widgets/Catalog/filters';
 

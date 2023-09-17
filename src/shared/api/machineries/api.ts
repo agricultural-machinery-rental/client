@@ -1,4 +1,6 @@
-import { instance, API_ENDPOINTS } from '@/shared/api/config';
+import axios from 'axios';
+
+import { API_ENDPOINTS, BASE_URL } from '@/shared/api/config';
 
 import type { TMachineriesResponseData, TMachineryResponseData } from './typing';
 
@@ -6,8 +8,8 @@ export const machineriesAPI = {
   getMachineries: (categoryId: number | null) => {
     let query = '';
     query += categoryId ? `category=${categoryId}` : '';
-    return instance.get<TMachineriesResponseData>(`${API_ENDPOINTS.machinery}?${query}`);
+    return axios.get<TMachineriesResponseData>(`${BASE_URL}/${API_ENDPOINTS.machinery}?${query}`);
   },
   getMachinery: (id: number) =>
-    instance.get<TMachineryResponseData>(`${API_ENDPOINTS.machinery}/${id}`),
+    axios.get<TMachineryResponseData>(`${BASE_URL}/${API_ENDPOINTS.machinery}/${id}`),
 };
