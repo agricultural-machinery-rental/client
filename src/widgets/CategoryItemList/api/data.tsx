@@ -14,7 +14,7 @@ import photo_8 from './assets/foto-8.png';
 export const CategoryItemData: TCategoryItemContainer[] = [
   {
     image: photo_1,
-    title: 'Тракторы',
+    title: 'Трактора',
     category: catalogItemCategory.tractor,
   },
   {

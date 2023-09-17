@@ -3,7 +3,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import type { TMachineryDto } from '@/shared/model/typing';
 import { TRootState } from '@/shared/store/store';
 
-import { fetchGetMachineries } from './thunks';
+import { fetchGetMachineries, fetchGetMachinery } from './thunks';
 
 type TMachineryStatus = {
   data: TMachineryDto[] | null;
@@ -37,6 +37,24 @@ export const machineriesSlice = createSlice({
         state.isLoading = true;
       })
       .addCase(fetchGetMachineries.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.error.message ?? 'Возникла неизвестная ошибка';
+        state.data = null;
+      })
+      .addCase(fetchGetMachinery.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.error = '';
+        // if (state.data?.length) {
+        //   state.data = state.data.filter(m => m.id !== action.payload.id);
+        //   state.data.push(action.payload);
+        // } else {
+        state.data = [action.payload];
+        // }
+      })
+      .addCase(fetchGetMachinery.pending, state => {
+        state.isLoading = true;
+      })
+      .addCase(fetchGetMachinery.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.error.message ?? 'Возникла неизвестная ошибка';
         state.data = null;

@@ -1,16 +1,15 @@
 import { Form } from '@/entities/Form';
 
-import { mockUser, type TUser } from '@/shared/api/mockUser';
+import { useGetUser } from '@/shared/store/user';
 import { Button } from '@/shared/ui/Button';
 
 import { profileConfig } from './config';
 import { StContainer, StFooterWrapper } from './styled';
 
 export const InfoEdit = () => {
-  const defaultValues: Record<string, string> = profileConfig.reduce(
-    (acc, { name }) => ({ ...acc, [name]: mockUser![name as keyof TUser] }),
-    {},
-  );
+  const user = useGetUser();
+
+  if (!user) return null;
 
   const footer = (
     <StFooterWrapper>
@@ -23,7 +22,7 @@ export const InfoEdit = () => {
       <Form
         fields={profileConfig}
         handleFormSubmit={console.log}
-        defaultValues={defaultValues}
+        defaultValues={user}
         footer={footer}
       />
     </StContainer>

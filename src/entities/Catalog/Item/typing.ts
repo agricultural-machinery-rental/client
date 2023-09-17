@@ -1,6 +1,6 @@
-import { type TCatalogItem } from '@/shared/catalog';
+import { TMachineryDto } from '@/shared/model/typing';
 
 export type TItem = {
-  itemData: TCatalogItem;
+  itemData: TMachineryDto;
   buttonClick?: () => void;
 };

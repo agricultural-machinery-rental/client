@@ -1,20 +1,15 @@
-import { Metadata } from 'next';
-
 import { ProductCard } from '@/widgets/ProductCard';
 
-import { temporatyItem } from '@/shared/catalog';
-import type { TDynamicRoute } from '@/shared/model';
+import { API_ENDPOINTS, BASE_URL } from '@/shared/api/config';
 
-export const metadata: Metadata = {
-  title: 'Categories',
-};
+const SomeTractor = async ({ params }: { params: { id: number } }) => {
+  const id = Number(params.id);
 
-const SomeTractor: TDynamicRoute<'id'> = ({ params }) => {
-  const { id } = params;
-  console.log(id);
-  //const itemData = fetchProductDataById(id);
+  const itemData = await fetch(`${BASE_URL}/${API_ENDPOINTS.machinery}/${id}`).then(data =>
+    data.json(),
+  );
 
-  return <ProductCard itemData={temporatyItem} />;
+  return <ProductCard itemData={itemData} />;
 };
 
 export default SomeTractor;

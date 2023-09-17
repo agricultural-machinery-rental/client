@@ -1,10 +1,6 @@
-import { Metadata } from 'next';
+'use client';
 
 import { Info } from '@/widgets/user/Info';
-
-export const metadata: Metadata = {
-  title: 'Profile Info',
-};
 
 const ProfileInfo = () => {
   return <Info />;

@@ -1,4 +1,4 @@
-import type { TOrderDto } from '@/shared/api/typing';
+import type { TOrderDto } from '@/shared/model/typing';
 
 export type TOrderRequestData = {
   number: string;

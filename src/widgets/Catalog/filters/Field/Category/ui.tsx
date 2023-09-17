@@ -1,6 +1,6 @@
 import { CatalogItemCategoryName } from '@/shared/catalog';
+import { useCategoryByUrl } from '@/shared/hooks';
 
-import { useCategoryByUrl } from './hook';
 import { StNextLinkCategory } from './styled';
 
 export const CategoryFieldContent = () => {

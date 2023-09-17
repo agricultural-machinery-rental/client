@@ -6,16 +6,16 @@ import { ProfileNav } from '@/widgets/ProfileNav';
 
 import { PATH } from '@/shared/constants/path';
 import { TLayout } from '@/shared/model';
-import { useUserContext } from '@/shared/model/userContext';
+import { useAuth } from '@/shared/store/user';
 import { StFlex, StContainer } from '@/shared/styles/global';
 
 import { profileLinks } from './consts';
 
 const ProfileLayout: TLayout = ({ children }) => {
+  const auth = useAuth();
   const router = useRouter();
-  const { user } = useUserContext();
 
-  if (!user) {
+  if (!auth) {
     router.push(PATH.MainPage);
     return null;
   }

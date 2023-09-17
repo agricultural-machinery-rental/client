@@ -13,7 +13,13 @@ export const Swiper: FC<TDataArray> = ({ dataArray }) => {
     <StSwiper>
       <Slider {...config}>
         {dataArray.map((item, index) => (
-          <Image key={index} src={item.src} alt={item.alt} height={476} />
+          <Image
+            key={index}
+            src={`${item.image}`}
+            alt={item.description_image}
+            height={476}
+            width={536}
+          />
         ))}
       </Slider>
     </StSwiper>

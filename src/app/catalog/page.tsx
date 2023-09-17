@@ -1,14 +1,9 @@
-import { Metadata } from 'next';
-
+'use client';
 import { Catalog } from '@/widgets/Catalog';
 import { Filters } from '@/widgets/Catalog/filters';
 
 import { FiltersProvider } from '@/shared/model/filterContext';
 import { StFlex, StHeading2 } from '@/shared/styles/global';
-
-export const metadata: Metadata = {
-  title: 'Catalog',
-};
 
 const PageCatalog = () => {
   return (
