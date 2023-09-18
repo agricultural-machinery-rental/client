@@ -3,6 +3,7 @@ import { FC } from 'react';
 
 import { catalogItemCharacteristicsUnits } from '@/shared/catalog';
 import { PATH } from '@/shared/constants/path';
+import { useCategoryByUrl } from '@/shared/hooks';
 import defaultImage from '@/shared/photos/no_image.png';
 import { StFlex } from '@/shared/styles/global';
 
@@ -29,6 +30,8 @@ export const Item: FC<TItem> = ({ itemData, buttonClick }) => {
     location: itemData.location.title,
   };
 
+  const category = useCategoryByUrl();
+
   return (
     <StItem>
       <div>
@@ -40,7 +43,7 @@ export const Item: FC<TItem> = ({ itemData, buttonClick }) => {
         />
       </div>
       <StDescriptionBlock>
-        <StTitle href={`${PATH.Catalog}/${itemData.id}`}>
+        <StTitle href={`${PATH.Catalog}/${category}/${itemData.id}`}>
           <h3>
             {itemData.machinery.mark.brand} {itemData.machinery.name}
           </h3>
