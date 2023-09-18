@@ -44,12 +44,12 @@ export const machineriesSlice = createSlice({
       .addCase(fetchGetMachinery.fulfilled, (state, action) => {
         state.isLoading = false;
         state.error = '';
-        // if (state.data?.length) {
-        //   state.data = state.data.filter(m => m.id !== action.payload.id);
-        //   state.data.push(action.payload);
-        // } else {
-        state.data = [action.payload];
-        // }
+        if (state.data?.length) {
+          state.data = state.data.filter(m => m.id !== action.payload.id);
+          state.data.push(action.payload);
+        } else {
+          state.data = [action.payload];
+        }
       })
       .addCase(fetchGetMachinery.pending, state => {
         state.isLoading = true;
