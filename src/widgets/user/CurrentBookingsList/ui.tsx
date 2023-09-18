@@ -44,13 +44,7 @@ const CurrentBookingsList = () => {
       <StContainer $flexDirection='column' $gap={16}>
         {activeOrders.map((orderData, key) => {
           const EditButton = () => (
-            <StButton
-              onClick={() =>
-                openModal(
-                  <EditBooking productId={''} productName={''} daterange={[]} message={''} />,
-                )
-              }
-            >
+            <StButton onClick={() => openModal(<EditBooking orderData={orderData} />)}>
               <Edit width={24} height={24} />
             </StButton>
           );

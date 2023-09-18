@@ -1,6 +1,5 @@
+import { TOrderDto } from '@/shared/model/typing';
+
 export type TBookingEditForm = {
-  productId: string;
-  productName: string;
-  daterange: Date[];
-  message: string;
+  orderData: TOrderDto;
 };

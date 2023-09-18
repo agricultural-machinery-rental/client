@@ -9,12 +9,23 @@ import { TDateRange } from './typing';
 
 registerLocale('ru', ru);
 
-export const DateRange: FC<TDateRange> = ({ name, required, placeholder, setValue }) => {
-  // TODO передавать дефолтное значение периода от родителя
+export const DateRange: FC<TDateRange> = ({
+  name,
+  required,
+  placeholder,
+  setValue,
+  forceDefaultValue,
+}) => {
   const [dateRange, setDateRange] = useState<(Date | null)[]>([new Date(), new Date()]);
   const [startDate, endDate] = dateRange;
 
   const minDate = new Date();
+
+  useEffect(() => {
+    if (forceDefaultValue instanceof Array) {
+      setDateRange(forceDefaultValue);
+    }
+  }, [forceDefaultValue]);
 
   useEffect(() => {
     if (startDate && endDate && name && setValue) {

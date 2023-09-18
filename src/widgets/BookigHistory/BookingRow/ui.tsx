@@ -25,7 +25,7 @@ export const BookingRow: FC<TBookingRow> = ({ orderData }) => {
       <div>{startDate}</div>
       <div>{machinery ? `${machinery.machinery.mark.brand} ${machinery.machinery.name}` : ''}</div>
       <div>{orderStatusRus[Number(orderData.status) as orderStatus]}</div>
-      <div>50.000</div>
+      {/*<div>50.000</div>*/}
     </>
   );
 };

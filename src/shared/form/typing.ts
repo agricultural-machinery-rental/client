@@ -5,6 +5,7 @@ export type TReactHookFormInputElement = {
   register?: UseFormRegisterReturn;
   watch?: UseFormWatch<TFormData>;
   setValue?: UseFormSetValue<TFormData>;
+  forceDefaultValue?: unknown;
 };
 
 export type TKindOfField = 'input' | 'textarea' | 'checkbox' | 'daterange' | 'passwordInput';
