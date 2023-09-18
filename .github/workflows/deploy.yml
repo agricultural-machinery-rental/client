@@ -4,9 +4,11 @@ on:
   push:
     branches:
       - feat/045-deploy
+      - deploy
 
 jobs:
   build-and-deploy:
+    needs: check
     runs-on: ubuntu-latest
 
     steps:
@@ -37,3 +39,17 @@ jobs:
 
       - name: Complete
         run: echo "Deploy to DockerHub completed"
+
+      - name: Update and restart server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_LOGIN }}
+          password: ${{ secrets.SERVER_PASSWORD }}
+          script: |
+            cd ${{ secrets.TARGET_SERVER_PATH }}
+            docker-compose stop
+            docker-compose rm -f frontend
+            docker rmi $(docker images '${{ secrets.DOCKERHUB_USERNAME }}/amr' -q)
+            docker-compose up -d
+        run: echo "Server updated and restarted"
