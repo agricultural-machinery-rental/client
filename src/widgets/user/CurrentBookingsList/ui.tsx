@@ -25,25 +25,29 @@ const CurrentBookingsList = () => {
   return (
     <section>
       <StContainer $flexDirection='column' $gap={16}>
-        {orders?.map((orderData, key) => {
-          const EditButton = () => (
-            <StButton
-              onClick={() =>
-                openModal(
-                  <EditBooking productId={''} productName={''} daterange={[]} message={''} />,
-                )
-              }
-            >
-              <Edit width={24} height={24} />
-            </StButton>
-          );
+        {orders ? (
+          orders.map((orderData, key) => {
+            const EditButton = () => (
+              <StButton
+                onClick={() =>
+                  openModal(
+                    <EditBooking productId={''} productName={''} daterange={[]} message={''} />,
+                  )
+                }
+              >
+                <Edit width={24} height={24} />
+              </StButton>
+            );
 
-          return (
-            <BookingCurrentItem key={key} orderData={orderData}>
-              <EditButton />
-            </BookingCurrentItem>
-          );
-        })}
+            return (
+              <BookingCurrentItem key={key} orderData={orderData}>
+                <EditButton />
+              </BookingCurrentItem>
+            );
+          })
+        ) : (
+          <p>Нет заказов</p>
+        )}
       </StContainer>
     </section>
   );
