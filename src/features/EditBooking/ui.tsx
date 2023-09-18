@@ -4,26 +4,26 @@ import { BookingCancel } from './CancelBooking';
 import { EditBookingForm } from './EditBookingForm';
 import type { TBookingEditForm } from './typing';
 
-export const EditBooking: FC<TBookingEditForm> = ({
-  productId,
-  productName,
-  daterange,
-  message,
-}) => {
+export const EditBooking: FC<TBookingEditForm> = ({ orderData }) => {
   const [content, setContent] = useState<'edit' | 'cancel'>('edit');
+
+  const daterange = [new Date(orderData.start_date), new Date(orderData.end_date)];
 
   return (
     <>
       {content === 'edit' ? (
         <EditBookingForm
-          productId={productId}
-          productName={productName}
+          productId={orderData.id.toString()}
+          productName={orderData.id.toString()}
           daterange={daterange}
-          message={message}
+          message={orderData.comment}
           openBookingCancel={() => setContent('cancel')}
         />
       ) : (
-        <BookingCancel productId={productId} buttonBackClick={() => setContent('edit')} />
+        <BookingCancel
+          productId={orderData.id.toString()}
+          buttonBackClick={() => setContent('edit')}
+        />
       )}
     </>
   );

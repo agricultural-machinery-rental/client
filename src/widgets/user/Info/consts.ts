@@ -1,14 +1,21 @@
-import { type TUser } from '@/shared/api/mockUser';
+import { TUserDto } from '@/shared/model/typing';
 
-export const profileLabels: Record<keyof TUser, string> = {
-  lastName: 'Фамилия',
-  firstName: 'Имя',
-  middleName: 'Отчество',
+export const profileLabels: Partial<Record<keyof TUserDto, string>> = {
+  last_name: 'Фамилия',
+  first_name: 'Имя',
+  patronymic: 'Отчество',
   birthday: 'Дата рождения',
-  phone: 'Телефон',
+  phone_number: 'Телефон',
   email: 'e-mail',
-  companyName: 'Название организации',
-  companyTIN: 'ИНН организации',
+  organization_name: 'Название организации',
+  inn: 'ИНН организации',
 };
 
-export const nameFields: (keyof TUser)[] = ['firstName', 'lastName', 'middleName'];
+export const nameFields: (keyof typeof profileLabels)[] = ['first_name', 'last_name', 'patronymic'];
+export const restFields: (keyof typeof profileLabels)[] = [
+  'email',
+  'phone_number',
+  'organization_name',
+  'inn',
+  'birthday',
+];

@@ -1,5 +1,6 @@
-export const convertUTCDateToRussianDateString = (date: Date) => {
-  const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+export const convertUTCDateToRussianDateString = (date: Date, year: boolean = true) => {
+  const options: Intl.DateTimeFormatOptions = { month: 'long', day: 'numeric' };
+  if (year) options.year = 'numeric';
 
   return date.toLocaleDateString('ru', options);
 };

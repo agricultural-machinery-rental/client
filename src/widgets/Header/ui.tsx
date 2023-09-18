@@ -1,5 +1,5 @@
 import { usePathname } from 'next/navigation';
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 
 import { Callback } from '@/features/Callback';
 import { Signin } from '@/features/Signin';
@@ -7,7 +7,8 @@ import { Signin } from '@/features/Signin';
 import { useModalContext } from '@/entities/Modal';
 
 import { PATH } from '@/shared/constants/path';
-import { useGetUser } from '@/shared/store/user';
+import { useAppDispatch, useAppSelector } from '@/shared/store';
+import { fetchGetUser, getUser } from '@/shared/store/user';
 import { StContainer, StFlex } from '@/shared/styles/global';
 import { Logo } from '@/shared/ui/Logo';
 
@@ -17,7 +18,13 @@ import { StHeader, StMenu, StNextLinkStyled, StSpan } from './styled';
 
 export const Header: FC = () => {
   const pathName = usePathname();
-  const user = useGetUser();
+  const user = useAppSelector(getUser);
+
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    dispatch(fetchGetUser());
+  }, [dispatch]);
 
   const { openModal } = useModalContext();
 

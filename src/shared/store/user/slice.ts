@@ -1,3 +1,4 @@
+'use client';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 import type { TUserDto } from '@/shared/model/typing';
