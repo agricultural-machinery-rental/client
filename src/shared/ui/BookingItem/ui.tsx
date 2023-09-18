@@ -22,7 +22,7 @@ const BookingItem: FC<TBookingItem> = ({ photo, name, dates, category, comment, 
         <StTitle>{name}</StTitle>
         {dates && <StDates>{dates}</StDates>}
         {category && <StCategory>{category}</StCategory>}
-        {comment?.length && <StComment>{comment}</StComment>}
+        {comment && <StComment>{comment}</StComment>}
       </StDescriptionBlock>
       {children}
     </StBookingItem>
