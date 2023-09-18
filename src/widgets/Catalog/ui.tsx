@@ -7,11 +7,12 @@ import { useModalContext } from '@/entities/Modal';
 import { getFilteredItemsData } from '@/shared/catalog';
 import { useCatalogFilters } from '@/shared/model/filterContext';
 import { TMachineryDto } from '@/shared/model/typing';
+import { useAppSelector } from '@/shared/store';
 import { useGetUser } from '@/shared/store/user';
 
 import { StCatalogFlex } from './styled';
 export const Catalog = ({ machineries }: { machineries: TMachineryDto[] }) => {
-  const user = useGetUser();
+  const user = useAppSelector(useGetUser);
   const { openModal } = useModalContext();
   const { filters } = useCatalogFilters();
 
