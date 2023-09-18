@@ -10,7 +10,7 @@ export const CategoryFieldContent = () => {
     <ul>
       {Object.entries(CatalogItemCategoryName).map(([key, name]) => (
         <li key={key}>
-          <StNextLinkCategory $disabled={category === key} href={'/catalog?' + key}>
+          <StNextLinkCategory $disabled={category === key} href={'/catalog/' + key}>
             {name}
           </StNextLinkCategory>
         </li>
