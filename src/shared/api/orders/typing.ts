@@ -1,7 +1,6 @@
 import type { TOrderDto } from '@/shared/model/typing';
 
 export type TOrderRequestData = {
-  number: string;
   machinery: number;
   start_date: string;
   end_date: string;
