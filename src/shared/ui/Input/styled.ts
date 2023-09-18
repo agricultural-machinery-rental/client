@@ -31,6 +31,9 @@ export const StInput = styled.input`
   &:focus {
     border: 1px solid ${theme.colors.borderThird};
   }
+  &.error {
+    border: 1px solid ${theme.colors.red};
+  }
 `;
 
 export const StLabel = styled.label<TLabel>`
