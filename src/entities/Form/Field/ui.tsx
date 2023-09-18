@@ -8,13 +8,12 @@ import { type TField } from './typing';
 
 export const Field: FC<TField> = ({ kindOfField, errorMessage, required, asterisk, ...props }) => {
   const Component = switchFieldComponent(kindOfField);
-  const hasError = !!errorMessage;
 
   return (
     <StFieldWrapper>
       <StRelativeBox>
         {asterisk && <StAsterick visibility={required ? 'visible' : 'hidden'}>*</StAsterick>}
-        <Component {...props} className={hasError ? 'error' : ''} />
+        <Component {...props}></Component>
       </StRelativeBox>
       {errorMessage && <Error errorMessage={errorMessage} />}
     </StFieldWrapper>

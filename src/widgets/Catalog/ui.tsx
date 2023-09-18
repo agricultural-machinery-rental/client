@@ -4,28 +4,35 @@ import { Signin } from '@/features/Signin';
 import { Item } from '@/entities/Catalog';
 import { useModalContext } from '@/entities/Modal';
 
-import { TCatalogItem, getFilteredItemData } from '@/shared/catalog';
+import { getFilteredItemsData } from '@/shared/catalog';
 import { useCatalogFilters } from '@/shared/model/filterContext';
-import { useUserContext } from '@/shared/model/userContext';
+import { TMachineryDto } from '@/shared/model/typing';
+import { useAppSelector } from '@/shared/store';
+import { useGetUser } from '@/shared/store/user';
 
 import { StCatalogFlex } from './styled';
-
-export const Catalog = () => {
-  const { user } = useUserContext();
+export const Catalog = ({ machineries }: { machineries: TMachineryDto[] }) => {
+  const user = useAppSelector(useGetUser);
   const { openModal } = useModalContext();
   const { filters } = useCatalogFilters();
 
-  const openModalWithContent = (data: TCatalogItem) => {
+  const openModalWithContent = (itemData: TMachineryDto) => {
     if (user) {
-      openModal(<MakeOrder productId={data.id} productName={data.name} />);
+      openModal(<MakeOrder itemData={itemData} />);
     } else {
       openModal(<Signin />);
     }
   };
 
+  const filteredItemsData = getFilteredItemsData(filters, machineries);
+
+  if (!filteredItemsData.length) {
+    return <b>Ничего не найдено</b>;
+  }
+
   return (
     <StCatalogFlex>
-      {getFilteredItemData(filters).map((item, id) => (
+      {filteredItemsData.map((item, id) => (
         <Item key={id} itemData={item} buttonClick={() => openModalWithContent(item)} />
       ))}
     </StCatalogFlex>

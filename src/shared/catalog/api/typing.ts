@@ -34,16 +34,16 @@ export type TCatalogItem = {
   additionalCharacteristics: TCatalogItemAdditionalCharacteristics;
 };
 
-export enum catalogItemCategory {
-  tractor = 'tractor',
-  harvester = 'harvester',
-  seeding = 'seeding',
-  motor_tractor = 'motor_tractor',
-  trailer = 'trailer',
-  plow = 'plow',
-  loader = 'loader',
-  attachment = 'attachment',
-}
+export const catalogItemCategory = {
+  tractor: 1,
+  harvester: 2,
+  seeding: 3,
+  motor_tractor: 4,
+  trailer: 5,
+  plow: 6,
+  loader: 7,
+  attachment: 8,
+};
 
 export const CatalogItemCategoryName: Record<keyof typeof catalogItemCategory, string> = {
   // null: 'Вся техника',

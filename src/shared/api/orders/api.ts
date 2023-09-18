@@ -1,4 +1,4 @@
-import { instance, API_ENDPOINTS } from '@/shared/api/config';
+import { API_ENDPOINTS, instance } from '@/shared/api/config';
 
 import {
   TOrderRequestData,
