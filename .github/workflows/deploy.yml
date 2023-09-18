@@ -37,7 +37,7 @@ jobs:
       - name: Clean up
         run: npm ci
 
-      - name: Complete
+      - name: Build and push completed
         run: echo "Deploy to DockerHub completed"
 
       - name: Update and restart server
@@ -52,4 +52,6 @@ jobs:
             docker-compose rm -f frontend
             docker rmi $(docker images '${{ secrets.DOCKERHUB_USERNAME }}/amr' -q)
             docker-compose up -d
+
+      - name: Update and restart server completed
         run: echo "Server updated and restarted"
