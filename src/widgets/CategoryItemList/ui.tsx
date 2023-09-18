@@ -20,7 +20,7 @@ export const CategoryItemList = () => {
         <StHeading1>Аренда сельхозтехники</StHeading1>
         <StCategoryList>
           {CategoryItemData.map((item: TCategoryItemContainer, index) => (
-            <Link href={'/catalog?' + item.category} key={`item-${index}`}>
+            <Link href={'/catalog/' + item.category} key={`item-${index}`}>
               <CategoryItemContainer {...item} />
             </Link>
           ))}
