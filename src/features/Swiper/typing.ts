@@ -1,5 +1,5 @@
-import { StaticImageData } from 'next/image';
+import { TImageDto } from '@/shared/model/typing';
 
 export type TDataArray = {
-  dataArray: { src: StaticImageData; alt: string }[];
+  dataArray: TImageDto[];
 };

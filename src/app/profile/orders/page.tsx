@@ -1,3 +1,5 @@
+'use client';
+
 import { CurrentBookingsList } from '@/widgets/user/CurrentBookingsList';
 
 const Orders = () => {

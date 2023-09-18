@@ -1,7 +1,5 @@
 import { TCategoryItemContainer } from '@/entities/Product/CategoryItemContainer';
 
-import { catalogItemCategory } from '@/shared/catalog';
-
 import photo_1 from './assets/foto-1.png';
 import photo_2 from './assets/foto-2.png';
 import photo_3 from './assets/foto-3.png';
@@ -14,42 +12,42 @@ import photo_8 from './assets/foto-8.png';
 export const CategoryItemData: TCategoryItemContainer[] = [
   {
     image: photo_1,
-    title: 'Тракторы',
-    category: catalogItemCategory.tractor,
+    title: 'Трактора',
+    category: 'tractor',
   },
   {
     image: photo_2,
     title: 'Комбайны',
-    category: catalogItemCategory.harvester,
+    category: 'harvester',
   },
   {
     image: photo_3,
     title: 'Посевная техника',
-    category: catalogItemCategory.seeding,
+    category: 'seeding',
   },
   {
     image: photo_4,
     title: 'Мототракторы',
-    category: catalogItemCategory.motor_tractor,
+    category: 'motor_tractor',
   },
   {
     image: photo_5,
     title: 'Прицепы',
-    category: catalogItemCategory.trailer,
+    category: 'trailer',
   },
   {
     image: photo_6,
     title: 'Плуги',
-    category: catalogItemCategory.plow,
+    category: 'plow',
   },
   {
     image: photo_7,
     title: 'Погрузчики',
-    category: catalogItemCategory.loader,
+    category: 'loader',
   },
   {
     image: photo_8,
     title: 'Навесное оборудование',
-    category: catalogItemCategory.attachment,
+    category: 'attachment',
   },
 ];

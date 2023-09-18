@@ -1,10 +1,6 @@
-import { Metadata } from 'next';
+'use client';
 
 import { FavoritesList } from '@/widgets/user/FavoritesList';
-
-export const metadata: Metadata = {
-  title: 'Favourites',
-};
 
 const Favourites = () => {
   return <FavoritesList />;
