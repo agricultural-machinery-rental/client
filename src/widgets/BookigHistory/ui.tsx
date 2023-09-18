@@ -33,7 +33,7 @@ export const BookingHistory: FC = () => {
       <StGridHead>Дата</StGridHead>
       <StGridHead>Техника</StGridHead>
       <StGridHead>Статус</StGridHead>
-      <StGridHead>Сумма</StGridHead>
+      {/*<StGridHead>Сумма</StGridHead>*/}
       {historyOrders.map((order, key) => (
         <BookingRow key={key} orderData={order} />
       ))}
