@@ -8,8 +8,6 @@ export type TOrderRequestData = {
   comment: string;
 };
 
-export type TOrdersResponseData = TOrderDto[];
-export type TGetOrderResponseData = TOrderDto;
 export type TPostOrderResponseData = {
   number: string;
   machinery: number;
@@ -17,3 +15,6 @@ export type TPostOrderResponseData = {
   end_date: string;
   comment: string;
 };
+
+export type TOrdersResponseData = TOrderDto[];
+export type TGetOrderResponseData = TOrderDto;

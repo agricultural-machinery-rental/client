@@ -7,3 +7,4 @@ export {
 } from './session';
 
 export { machineriesAPI } from './machineries';
+export { ordersAPI } from './orders';
