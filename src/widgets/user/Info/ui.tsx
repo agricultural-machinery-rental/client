@@ -3,6 +3,7 @@ import { FC } from 'react';
 import { PATH } from '@/shared/constants/path';
 import Edit from '@/shared/icons/edit.svg';
 import { objectEntries } from '@/shared/lib';
+import { useAppSelector } from '@/shared/store';
 import { useGetUser } from '@/shared/store/user';
 import { StFlex } from '@/shared/styles/global';
 import { Input } from '@/shared/ui/Input';
@@ -11,7 +12,7 @@ import { profileLabels, nameFields, restFields } from './consts';
 import { StContainer, StIcon, StNameWrapper, StName } from './styled';
 
 export const Info: FC = () => {
-  const user = useGetUser();
+  const user = useAppSelector(useGetUser);
 
   if (!user) return null;
 

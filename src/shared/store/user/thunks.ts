@@ -20,7 +20,6 @@ export const fetchGetUser = createAsyncThunk('session/getUser', async (_, { reje
     const id = decodedToken.user_id;
 
     const response = await sessionAPI.getUser(id);
-    console.log('fetchGetUser', response);
 
     return response.data;
   } catch (err) {

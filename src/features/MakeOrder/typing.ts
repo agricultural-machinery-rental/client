@@ -1,4 +1,5 @@
+import { TMachineryDto } from '@/shared/model/typing';
+
 export type TMakeOrder = {
-  productId: number;
-  productName: string;
+  itemData: TMachineryDto;
 };

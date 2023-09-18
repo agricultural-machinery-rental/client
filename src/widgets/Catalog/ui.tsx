@@ -7,22 +7,18 @@ import { useModalContext } from '@/entities/Modal';
 import { getFilteredItemsData } from '@/shared/catalog';
 import { useCatalogFilters } from '@/shared/model/filterContext';
 import { TMachineryDto } from '@/shared/model/typing';
+import { useAppSelector } from '@/shared/store';
 import { useGetUser } from '@/shared/store/user';
 
 import { StCatalogFlex } from './styled';
 export const Catalog = ({ machineries }: { machineries: TMachineryDto[] }) => {
-  const user = useGetUser();
+  const user = useAppSelector(useGetUser);
   const { openModal } = useModalContext();
   const { filters } = useCatalogFilters();
 
-  const openModalWithContent = (data: TMachineryDto) => {
+  const openModalWithContent = (itemData: TMachineryDto) => {
     if (user) {
-      openModal(
-        <MakeOrder
-          productId={data.id}
-          productName={`${data.machinery.mark.brand} ${data.machinery.name}`}
-        />,
-      );
+      openModal(<MakeOrder itemData={itemData} />);
     } else {
       openModal(<Signin />);
     }
