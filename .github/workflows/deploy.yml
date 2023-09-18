@@ -14,17 +14,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '18'
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build the project
-        run: npm run build
-
       - name: Log in to DockerHub
         run: docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
 
@@ -32,9 +21,6 @@ jobs:
         run: |
           docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/amr .
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/amr
-
-      - name: Clean up
-        run: npm ci
 
       - name: Build and push completed
         run: echo "Deploy to DockerHub completed"
