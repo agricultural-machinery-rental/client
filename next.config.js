@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  server: {
+    port: 3000,
+  },
   compiler: {
     styledComponents: true,
   },
@@ -21,6 +24,9 @@ const nextConfig = {
         permanent: true,
       },
     ];
+  },
+  images: {
+    domains: ['agropark.acceleratorpracticum.ru'],
   },
 };
 

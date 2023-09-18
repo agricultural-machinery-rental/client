@@ -1,10 +1,6 @@
-import { Metadata } from 'next';
+'use client';
 
 import { BookingHistory } from '@/widgets/BookigHistory';
-
-export const metadata: Metadata = {
-  title: 'Booking history',
-};
 
 const BookingHistoryPage = () => {
   return <BookingHistory />;

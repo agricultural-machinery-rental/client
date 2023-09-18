@@ -7,10 +7,9 @@ import { Swiper } from '@/features/Swiper';
 import { TItem, priceUnit } from '@/entities/Catalog/Item';
 import { useModalContext } from '@/entities/Modal';
 
-import { catalogItemCharacteristicsUnits, TCatalogItemCharacteristics } from '@/shared/catalog';
+import { catalogItemCharacteristicsUnits } from '@/shared/catalog';
 import { StFlex } from '@/shared/styles/global';
 
-import { dataTractors } from './constants';
 import {
   StProductHeader,
   StProductMain,
@@ -29,46 +28,42 @@ import {
 export const ProductCard: FC<TItem> = ({ itemData }) => {
   const { openModal } = useModalContext();
 
-  // TODO Все данные подтягивать из объекта, полученного с бэка
+  const characteristics: Record<keyof typeof catalogItemCharacteristicsUnits, string | number> = {
+    year_of_manufacture: itemData.year_of_manufacture,
+    mileage: itemData.mileage,
+    powerHp: itemData.machinery.power_hp,
+    payloadCapacity: itemData.machinery.payload_capacity_kg,
+    location: itemData.location.title,
+    countryOfOrigin: itemData.machinery.mark.country_of_origin,
+    deliveryDistance: itemData.delivery_distance_km,
+    attachmentsAvailable: itemData.machinery.attachments_available ? 'Да' : 'Нет',
+    workType: itemData.machinery.work_type.join(', '),
+  };
+
   return (
     <StSection>
       <article>
         <StHeaderLine>
           <StProductHeader>
             <StProductTitle>
-              {itemData.brand} {itemData.name}
+              {itemData.machinery.mark.brand} {itemData.machinery.name}
             </StProductTitle>
           </StProductHeader>
           <AddToFavorite />
         </StHeaderLine>
         <StProductMain>
           <div>
-            <StProductText>{itemData.description}</StProductText>
+            <StProductText>{itemData.machinery.description}</StProductText>
             <ul>
               <StCharacteristics>
-                {/*{Сначала выводим характеристики}*/}
-                {Object.entries(itemData.characteristics).map(([key, value]) => {
-                  const units =
-                    catalogItemCharacteristicsUnits[key as keyof TCatalogItemCharacteristics];
+                {Object.entries(characteristics).map(([key, value]) => {
+                  if (!value) return null;
+                  const { label = null, unit = null } = catalogItemCharacteristicsUnits[key] ?? {};
                   return (
                     <StCharacteristicsLine key={key}>
-                      <span>{units?.label}</span>
+                      <span>{label}</span>
                       <span>
-                        {value} {units?.unit}
-                      </span>
-                    </StCharacteristicsLine>
-                  );
-                })}
-                {Object.entries(itemData.additionalCharacteristics).map(([key, value]) => {
-                  const units =
-                    catalogItemCharacteristicsUnits[key as keyof TCatalogItemCharacteristics];
-                  const displayValue =
-                    key === 'attachmentsAvailable' ? (value ? 'Да' : 'Нет') : value;
-                  return (
-                    <StCharacteristicsLine key={key}>
-                      <span>{units?.label}</span>
-                      <span>
-                        {displayValue} {units?.unit}
+                        {value} {unit}
                       </span>
                     </StCharacteristicsLine>
                   );
@@ -76,36 +71,34 @@ export const ProductCard: FC<TItem> = ({ itemData }) => {
               </StCharacteristics>
             </ul>
           </div>
-          <Swiper dataArray={dataTractors} />
+          <Swiper dataArray={itemData.images} />
         </StProductMain>
         <StProductFooter>
           <StProductFooterInfo>
             <StFlex $alignItems={'flex-end'} $gap={60}>
-              {itemData.prices.perHour && (
+              {itemData.price_per_hour ? (
                 <StFlex $flexDirection={'column'} $alignItems={'flex-end'} $gap={10}>
                   <span>Стоимость за 1 ч.</span>
                   <StProductPrice>
-                    {itemData.prices.perHour} {priceUnit}
+                    {itemData.price_per_hour} {priceUnit}
                   </StProductPrice>
                 </StFlex>
-              )}
-              {itemData.prices.perShift && (
+              ) : null}
+              {itemData.price_per_shift ? (
                 <StFlex $flexDirection={'column'} $alignItems={'flex-end'} $gap={10}>
                   <span>Стоимость за смену 8 ч.</span>
                   <StProductPrice>
-                    {itemData.prices.perShift} {priceUnit}
+                    {itemData.price_per_shift} {priceUnit}
                   </StProductPrice>
                 </StFlex>
-              )}
+              ) : null}
             </StFlex>
           </StProductFooterInfo>
           <StButton
             $designType={'primary'}
             label='Забронировать'
             type='button'
-            onClick={() =>
-              openModal(<MakeOrder productId={itemData.id} productName={itemData.name} />)
-            }
+            onClick={() => openModal(<MakeOrder itemData={itemData} />)}
           />
         </StProductFooter>
       </article>

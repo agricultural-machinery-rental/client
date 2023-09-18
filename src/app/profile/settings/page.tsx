@@ -1,10 +1,6 @@
-import { Metadata } from 'next';
+'use client';
 
 import { ProfileSettings } from '@/widgets/user/Settings';
-
-export const metadata: Metadata = {
-  title: 'Settings',
-};
 
 const Settings = () => {
   return <ProfileSettings />;

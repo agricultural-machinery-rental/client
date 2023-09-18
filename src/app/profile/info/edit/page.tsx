@@ -1,10 +1,6 @@
-import { Metadata } from 'next';
+'use client';
 
 import { InfoEdit } from '@/widgets/user/InfoEdit';
-
-export const metadata: Metadata = {
-  title: 'Profile Edit',
-};
 
 const Edit = () => {
   return <InfoEdit />;

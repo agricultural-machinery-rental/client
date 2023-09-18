@@ -1,21 +1,26 @@
 import { objectEntries } from '@/shared/lib';
 import type { TPriceFilter, TFilters } from '@/shared/model/filterContext';
+import { TMachineryDto } from '@/shared/model/typing';
 
-import { temporatyItemData } from './constants';
-import { TCatalogItem } from './typing';
-
-export const getFilteredItemData = (filters: TFilters): TCatalogItem[] => {
-  return temporatyItemData.filter(item =>
+export const getFilteredItemsData = (
+  filters: TFilters,
+  machineries: TMachineryDto[] | null,
+): TMachineryDto[] => {
+  // console.log('original', machineries);
+  const array = machineries?.filter(item =>
     objectEntries(filters).every(([key, value]) => {
       switch (key) {
-        case 'category':
-          return !value || item.category === value;
+        // case 'category':
+        //   return !value || item.machinery.category === value;
         case 'location':
           return true;
         case 'price': {
-          if (!value || !item.prices.perShift) return true;
+          if (!value || !item.price_per_shift) return true;
           const priceRange = value as TPriceFilter;
-          return item.prices.perShift >= priceRange.min && item.prices.perShift <= priceRange.max;
+          return (
+            Number(item.price_per_shift) >= priceRange.min &&
+            Number(item.price_per_shift) <= priceRange.max
+          );
         }
         case 'mark':
           return true;
@@ -30,4 +35,6 @@ export const getFilteredItemData = (filters: TFilters): TCatalogItem[] => {
       }
     }),
   );
+  // console.log('filtered', array);
+  return array || [];
 };

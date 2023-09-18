@@ -1,0 +1,1 @@
+export { machineriesAPI } from './api';

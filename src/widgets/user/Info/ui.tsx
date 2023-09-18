@@ -1,18 +1,23 @@
 import { FC } from 'react';
 
-import { mockUser } from '@/shared/api/mockUser';
 import { PATH } from '@/shared/constants/path';
 import Edit from '@/shared/icons/edit.svg';
 import { objectEntries } from '@/shared/lib';
+import { useAppSelector } from '@/shared/store';
+import { useGetUser } from '@/shared/store/user';
 import { StFlex } from '@/shared/styles/global';
 import { Input } from '@/shared/ui/Input';
 
-import { profileLabels, nameFields } from './consts';
+import { profileLabels, nameFields, restFields } from './consts';
 import { StContainer, StIcon, StNameWrapper, StName } from './styled';
 
 export const Info: FC = () => {
-  const userName = objectEntries(mockUser).filter(([key]) => nameFields.includes(key));
-  const restUserInfo = objectEntries(mockUser).filter(([key]) => !nameFields.includes(key));
+  const user = useAppSelector(useGetUser);
+
+  if (!user) return null;
+
+  const userName = objectEntries(user).filter(([key]) => nameFields.includes(key));
+  const restUserInfo = objectEntries(user).filter(([key]) => restFields.includes(key));
 
   return (
     <StContainer $flexDirection='column' $gap={16}>
@@ -30,8 +35,8 @@ export const Info: FC = () => {
         {restUserInfo.map(([key, value]) => (
           <Input
             key={key}
-            placeholder={value}
-            label={!value ? profileLabels[key] : undefined}
+            placeholder={value?.toString()}
+            label={!value ? profileLabels[key]!.toString() : undefined}
             disabled
           />
         ))}

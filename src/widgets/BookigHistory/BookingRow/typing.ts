@@ -1,3 +1,5 @@
+import { TOrderDto } from '@/shared/model/typing';
+
 export type TBookingData = {
   date: string;
   name: string;
@@ -6,5 +8,5 @@ export type TBookingData = {
 };
 
 export type TBookingRow = {
-  data: TBookingData;
+  orderData: TOrderDto;
 };
