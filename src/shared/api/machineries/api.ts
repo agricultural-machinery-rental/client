@@ -10,6 +10,8 @@ export const machineriesAPI = {
     query += categoryId ? `category=${categoryId}` : '';
     return axios.get<TMachineriesResponseData>(`${BASE_URL}${API_ENDPOINTS.machinery}/?${query}`);
   },
+  getMachineriesTop: () =>
+    axios.get<TMachineriesResponseData>(`${BASE_URL}${API_ENDPOINTS.machinery}/top`),
   getMachinery: (id: number) =>
     axios.get<TMachineryResponseData>(`${BASE_URL}${API_ENDPOINTS.machinery}/${id}`),
 };
