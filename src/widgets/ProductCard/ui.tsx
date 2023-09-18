@@ -98,14 +98,7 @@ export const ProductCard: FC<TItem> = ({ itemData }) => {
             $designType={'primary'}
             label='Забронировать'
             type='button'
-            onClick={() =>
-              openModal(
-                <MakeOrder
-                  productId={itemData.id}
-                  productName={`${itemData.machinery.mark.brand} ${itemData.machinery.name}`}
-                />,
-              )
-            }
+            onClick={() => openModal(<MakeOrder itemData={itemData} />)}
           />
         </StProductFooter>
       </article>

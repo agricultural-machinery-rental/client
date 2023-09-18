@@ -15,14 +15,9 @@ export const Catalog = ({ machineries }: { machineries: TMachineryDto[] }) => {
   const { openModal } = useModalContext();
   const { filters } = useCatalogFilters();
 
-  const openModalWithContent = (data: TMachineryDto) => {
+  const openModalWithContent = (itemData: TMachineryDto) => {
     if (user) {
-      openModal(
-        <MakeOrder
-          productId={data.id}
-          productName={`${data.machinery.mark.brand} ${data.machinery.name}`}
-        />,
-      );
+      openModal(<MakeOrder itemData={itemData} />);
     } else {
       openModal(<Signin />);
     }

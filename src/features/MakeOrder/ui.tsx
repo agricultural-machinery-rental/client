@@ -10,10 +10,12 @@ import { bookingConfig } from './config';
 import { StContainer, StTitle, StButton, StFormWrapper } from './styled';
 import type { TMakeOrder } from './typing';
 
-export const MakeOrder: FC<TMakeOrder> = ({ productId, productName }) => {
+export const MakeOrder: FC<TMakeOrder> = ({ itemData }) => {
   const [status, setStatus] = useState<'pending' | 'success'>('pending');
   const [daterange, setDaterange] = useState<Date[]>([]);
   const [message, setmessage] = useState<string>('');
+
+  const productName = `${itemData.machinery.mark.brand} ${itemData.machinery.name}`;
 
   const handleBookingConfirm = (data: TBookingFormParams) => {
     // TODO заменить на фоункцию отправки данных на сервер
@@ -23,7 +25,6 @@ export const MakeOrder: FC<TMakeOrder> = ({ productId, productName }) => {
 
     // Для презентации отображаем успешную отправку данных
     setStatus('success');
-    console.log(productId, data);
   };
 
   const footer = (
