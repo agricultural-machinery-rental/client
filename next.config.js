@@ -25,9 +25,9 @@ const nextConfig = {
       },
     ];
   },
-  images: {
-    domains: ['agropark.acceleratorpracticum.ru'],
-  },
+  // images: {
+  //   domains: ['agropark.acceleratorpracticum.ru'],
+  // },
 };
 
 module.exports = nextConfig;
