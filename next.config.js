@@ -26,7 +26,7 @@ const nextConfig = {
     ];
   },
   images: {
-    domains: ['bugaton3.acceleratorpracticum.ru'],
+    domains: ['bugaton4.acceleratorpracticum.ru'],
   },
 };
 
