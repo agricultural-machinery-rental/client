@@ -24,7 +24,6 @@ jobs:
 
       - name: Build and push completed
         run: echo "Deploy to DockerHub completed"
-
 #      - name: Update and restart server
 #        uses: appleboy/ssh-action@master
 #        with:
