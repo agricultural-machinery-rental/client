@@ -26,7 +26,7 @@ const nextConfig = {
     ];
   },
   images: {
-    domains: ['bugaton5.acceleratorpracticum.ru'],
+    domains: ['agropark.sytes.net'], // 'bugaton5.acceleratorpracticum.ru'
   },
 };
 
