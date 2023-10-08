@@ -2,7 +2,7 @@ import axios, { AxiosResponse, InternalAxiosRequestConfig } from 'axios';
 
 import { sessionAPI } from './session';
 
-export const BASE_URL = 'https://bugaton1.acceleratorpracticum.ru';
+export const BASE_URL = 'https://bugaton2.acceleratorpracticum.ru';
 
 const API_MAIN_ENDPOINT = '/api/v1';
 
