@@ -2,7 +2,7 @@ import axios, { AxiosResponse, InternalAxiosRequestConfig } from 'axios';
 
 import { sessionAPI } from './session';
 
-export const BASE_URL = 'https://bugaton1.acceleratorpracticum.ru';
+// export const BASE_URL = '';
 
 const API_MAIN_ENDPOINT = '/api/v1';
 
@@ -14,7 +14,7 @@ export const API_ENDPOINTS = {
 };
 
 export const instance = axios.create({
-  baseURL: BASE_URL,
+  // baseURL: BASE_URL,
   headers: {
     'Content-Type': 'application/json',
   },
